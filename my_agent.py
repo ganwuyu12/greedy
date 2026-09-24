@@ -4,6 +4,7 @@ from client import chat_with_tools
 import logging
 import inspect
 from personality import SYSTEM_PROMPT
+from datetime import datetime
 
 TOOL_REGISTRY: list[dict] = []
 
@@ -48,28 +49,35 @@ DATA_DIR = Path("data/solutions")
 OUTPUT_DIR = Path("data/output")
 
 
-@tool(description="读取文件的指定区间内容", params={
-    "filename": "要读取的文件名",
+@tool(description="读取文件的指定区间内容，支持绝对路径和相对路径", params={
+    "path": "文件路径（绝对路径或相对路径）",
     "start": "起始字符位置，默认 0",
     "limit": "读取长度，默认 2000",
 })
-def read_file(filename: str, start: int = 0, limit: int = 2000) -> str:
-    path = DATA_DIR / filename
+def read_file(path: str, start: int = 0, limit: int = 2000) -> str:
+    p = Path(path)
+    if not p.is_absolute():
+        p = DATA_DIR / path
     try:
-        with open(path, "r", encoding="utf-8", errors="ignore") as f:
+        with open(p, "r", encoding="utf-8", errors="ignore") as f:
             content = f.read()
         return content[start:start+limit]
     except OSError as e:
-        return f"文件 {filename} 读取失败: {e}"
+        return f"文件 {path} 读取失败: {e}"
 
 
-@tool(description="写入本地文件内容", params={"filename": "要写入的文件名", "content": "要写入的内容"})
-def write_file(filename: str, content: str) -> str:
-    OUTPUT_DIR.mkdir(exist_ok=True)
-    path = OUTPUT_DIR / filename
+@tool(description="写入文件", params={
+    "filename": "文件名",
+    "content": "内容",
+    "directory": "目录，如 solutions 或 output，默认 output",
+})
+def write_file(filename: str, content: str, directory: str = "output") -> str:
+    target_dir = Path("data") / directory
+    target_dir.mkdir(parents=True, exist_ok=True)
+    path = target_dir / filename
     try:
         path.write_text(content, encoding="utf-8")
-        return f"已写入 {filename}，共 {len(content)} 字符"
+        return f"已写入 {path}，共 {len(content)} 字符"
     except OSError as e:
         return f"写入失败: {filename}，错误: {e}"
 
@@ -77,6 +85,11 @@ def write_file(filename: str, content: str) -> str:
 def list_files() -> str:
     files = [f.name for f in DATA_DIR.iterdir() if f.is_file()]
     return "\n".join(files)
+
+
+@tool(description="获取当前日期，格式 YYYY-MM-DD", params={})
+def get_date() -> str:
+    return datetime.now().strftime("%Y-%m-%d")
 
 def run_agent(user_input: str, max_turns: int = 8) -> str:
     logger.info(f"开始执行代理，用户输入: {user_input}")
@@ -129,6 +142,8 @@ def run_agent(user_input: str, max_turns: int = 8) -> str:
                 result = write_file(**args)
             elif name == "list_files":
                 result = list_files()
+            elif name == "get_date":
+                result = get_date()
             else:
                 result = f"未知工具: {name}"
 
@@ -149,5 +164,7 @@ if __name__ == '__main__':
         filename="agent.log",
         encoding="utf-8",
     )
-    answer = run_agent("我今天做了 CF 1065D，这题难吗？")
+    answer = run_agent(
+        "我做了 CF 1122D，代码在 D:\\c语言\\cf\\Codeforces Round 1122 (Div. 3)\\D.cpp，帮我整理成题解存进语料库"
+    )
     print(answer)

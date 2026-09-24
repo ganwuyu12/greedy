@@ -7,3 +7,4 @@ __pycache__/
 *.log
 data/records.json
 data/index/
+data/output/
