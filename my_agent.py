@@ -5,6 +5,9 @@ import logging
 import inspect
 from personality import SYSTEM_PROMPT
 from datetime import datetime
+from rag_search import Retriever
+
+retriever = Retriever(Path("data/index"))
 
 TOOL_REGISTRY: list[dict] = []
 
@@ -91,6 +94,15 @@ def list_files() -> str:
 def get_date() -> str:
     return datetime.now().strftime("%Y-%m-%d")
 
+@tool(description="搜索用户的题解库，回答「我之前怎么做的」这类问题时使用", params={
+    "query": "搜索关键词或问题",
+})
+def search_solutions(query: str) -> str:
+    hits = retriever.search(query, top_k=3)
+    if not hits:
+        return "语料库里没有相关记录"
+    return "\n\n".join(f"[来源: {h.source}]\n{h.text}" for h in hits)
+
 def run_agent(user_input: str, max_turns: int = 8) -> str:
     logger.info(f"开始执行代理，用户输入: {user_input}")
     messages = [
@@ -144,6 +156,8 @@ def run_agent(user_input: str, max_turns: int = 8) -> str:
                 result = list_files()
             elif name == "get_date":
                 result = get_date()
+            elif name == "search_solutions":
+                result = search_solutions(**args)
             else:
                 result = f"未知工具: {name}"
 
@@ -164,7 +178,5 @@ if __name__ == '__main__':
         filename="agent.log",
         encoding="utf-8",
     )
-    answer = run_agent(
-        "我做了 CF 1122D，代码在 D:\\c语言\\cf\\Codeforces Round 1122 (Div. 3)\\D.cpp，帮我整理成题解存进语料库"
-    )
+    answer = run_agent("我之前怎么做的 1122D？")
     print(answer)
