@@ -50,6 +50,7 @@ def tool(description: str,params: dict):
 
 DATA_DIR = Path("data/solutions")
 OUTPUT_DIR = Path("data/output")
+CF_CODE_DIR = Path("D:/c语言/cf")
 
 
 @tool(description="读取文件的指定区间内容，支持绝对路径和相对路径", params={
@@ -62,8 +63,10 @@ def read_file(path: str, start: int = 0, limit: int = 2000) -> str:
     if not p.is_absolute():
         p = DATA_DIR / path
     try:
-        with open(p, "r", encoding="utf-8", errors="ignore") as f:
-            content = f.read()
+        try:
+            content = p.read_text(encoding="utf-8")
+        except UnicodeDecodeError:
+            content = p.read_text(encoding="gbk")
         return content[start:start+limit]
     except OSError as e:
         return f"文件 {path} 读取失败: {e}"
@@ -103,13 +106,50 @@ def search_solutions(query: str) -> str:
         return "语料库里没有相关记录"
     return "\n\n".join(f"[来源: {h.source}]\n{h.text}" for h in hits)
 
-def run_agent(user_input: str, max_turns: int = 8) -> str:
+
+
+@tool(description="根据题目编号查找代码文件，如「1121C」", params={
+    "problem_id": "题目编号，如 1121C",
+})
+def find_code(problem_id: str) -> str:
+    """在 CF_CODE_DIR 下查找题目对应的代码文件"""
+    import re
+    m = re.match(r"(\d+)([A-Za-z])", problem_id.strip())
+    if not m:
+        return f"无法解析题目编号: {problem_id}"
+    round_num, letter = m.group(1), m.group(2).upper()
+
+    if not CF_CODE_DIR.exists():
+        return f"代码目录不存在: {CF_CODE_DIR}"
+
+    # 遍历所有子目录，找含 round_num 的（用单词边界，避免 1121 匹配 11210）
+    for d in CF_CODE_DIR.iterdir():
+        if not d.is_dir():
+            continue
+        if not re.search(rf"\b{round_num}\b", d.name):
+            continue
+        # 在这个目录里找 letter.cpp（大小写兼容）
+        for f in d.iterdir():
+            if f.name.upper() == f"{letter}.CPP":
+                return str(f)
+        return f"找到目录 {d.name}，但没有 {letter}.cpp"
+
+    return f"没有找到含 {round_num} 的目录"
+
+
+
+
+def run_agent(user_input: str, history: list | None = None, max_turns: int = 8) -> tuple[str, list]:
+    if history is None:
+        history = []
+
     logger.info(f"开始执行代理，用户输入: {user_input}")
     messages = [
-        {"role": "system", "content": SYSTEM_PROMPT},      # ← 加这条
+        {"role": "system", "content": SYSTEM_PROMPT},
+        *history,
         {"role": "user", "content": user_input},
     ]
-    recent_calls: list[str] = []                              # 记录最近的调用签名
+    recent_calls: list[str] = []
     total_tokens = 0
 
     for turn in range(max_turns):
@@ -122,32 +162,32 @@ def run_agent(user_input: str, max_turns: int = 8) -> str:
 
         if total_tokens > MAX_TOKENS:
             logger.warning(f"达到 token 预算上限（{total_tokens}），已停止")
-            return f"达到 token 预算上限（{total_tokens}），已停止"
+            return f"达到 token 预算上限（{total_tokens}），已停止", history
 
         if not message.get("tool_calls"):
             logger.info(f"任务结束，总轮数={turn+1}，总 tokens={total_tokens}")
-            return message["content"]
+            answer = message["content"]
+            new_history = history + [
+                {"role": "user", "content": user_input},
+                {"role": "assistant", "content": answer},
+            ]
+            return answer, new_history
 
         messages.append(message)
 
         for call in message["tool_calls"]:
             name = call["function"]["name"]
             args = json.loads(call["function"]["arguments"])
-
             logger.info(f"[轮 {turn+1}] 调用工具 {name}, 参数 {args}")
 
-            # 生成签名：工具名 + 排序后的参数
             signature = f"{name}:{json.dumps(args, sort_keys=True)}"
-
-            # 检查：这个签名在 recent_calls 里出现 3 次以上？
             if recent_calls.count(signature) >= 3:
                 messages.append({
                     "role": "user",
                     "content": "你已经重复调用同一个工具多次，请换一种方式，或直接给出最终答案。"
                 })
-                continue                          # 跳过这次工具执行
+                continue
 
-            # 执行工具
             if name == "read_file":
                 result = read_file(**args)
             elif name == "write_file":
@@ -158,10 +198,11 @@ def run_agent(user_input: str, max_turns: int = 8) -> str:
                 result = get_date()
             elif name == "search_solutions":
                 result = search_solutions(**args)
+            elif name == "find_code":
+                result = find_code(**args)
             else:
                 result = f"未知工具: {name}"
 
-            # 把结果和签名记录
             messages.append({
                 "role": "tool",
                 "tool_call_id": call["id"],
@@ -169,7 +210,7 @@ def run_agent(user_input: str, max_turns: int = 8) -> str:
             })
             recent_calls.append(signature)
 
-    return "达到最大轮数"
+    return "达到最大轮数", history
 
 if __name__ == '__main__':
     logging.basicConfig(
@@ -178,5 +219,12 @@ if __name__ == '__main__':
         filename="agent.log",
         encoding="utf-8",
     )
-    answer = run_agent("我之前怎么做的 1122D？")
-    print(answer)
+    print("贪心：哼，来了？说吧，什么事。")
+    history = []
+    while True:
+        user_input = input("你: ")
+        if user_input.strip() in ("exit", "quit", "拜拜"):
+            print("贪心：……行吧")
+            break
+        answer, history = run_agent(user_input, history)
+        print(f"贪心: {answer}")
