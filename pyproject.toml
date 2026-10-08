@@ -5,12 +5,14 @@ requires-python = ">=3.12"
 dependencies = [
     "av==14.0.0",
     "edge-tts>=7.2.8",
+    "fastapi>=0.142.4",
     "faster-whisper>=1.2.1",
     "numpy>=2.5.3",
     "python-dotenv>=1.2.3",
     "requests>=2.34.2",
     "sentence-transformers>=6.1.0",
     "streamlit>=1.64.0",
+    "uvicorn>=0.54.0",
 ]
 
 [dependency-groups]
