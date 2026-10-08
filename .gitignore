@@ -8,3 +8,4 @@ __pycache__/
 data/records.json
 data/index/
 data/output/
+*.mp3
