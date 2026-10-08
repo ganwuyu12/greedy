@@ -6,6 +6,7 @@ import inspect
 from personality import SYSTEM_PROMPT
 from datetime import datetime
 from rag_search import Retriever
+import subprocess
 
 retriever = Retriever(Path("data/index"))
 
@@ -106,7 +107,17 @@ def search_solutions(query: str) -> str:
         return "语料库里没有相关记录"
     return "\n\n".join(f"[来源: {h.source}]\n{h.text}" for h in hits)
 
-
+@tool(description="重建题解检索索引，整理完新题解后必须调用", params={})
+def rebuild_index() -> str:
+    result = subprocess.run(
+        ["uv", "run", "python", "rag_load.py"],
+        capture_output=True,
+        text=True,
+        cwd=str(Path(__file__).parent),
+    )
+    if result.returncode == 0:
+        return "索引重建完成"
+    return f"索引重建失败：{result.stderr}"
 
 @tool(description="根据题目编号查找代码文件，如「1121C」", params={
     "problem_id": "题目编号，如 1121C",
@@ -200,6 +211,8 @@ def run_agent(user_input: str, history: list | None = None, max_turns: int = 8) 
                 result = search_solutions(**args)
             elif name == "find_code":
                 result = find_code(**args)
+            elif name == "rebuild_index":
+                result = rebuild_index()
             else:
                 result = f"未知工具: {name}"
 
