@@ -119,6 +119,34 @@ def rebuild_index() -> str:
         return "索引重建完成"
     return f"索引重建失败：{result.stderr}"
 
+
+@tool(description="记录一道已完成的题，整理题解后调用", params={
+    "problem": "题号，如 CF 1122D",
+    "algorithm": "算法标签",
+    "date": "日期",
+    "solution_file": "题解文件名",
+})
+def add_record(problem: str, algorithm: str, date: str, solution_file: str) -> str:
+    records_path = Path("data/records.json")
+    records = json.loads(records_path.read_text(encoding="utf-8")) if records_path.exists() else []
+    records.append({
+        "problem": problem,
+        "algorithm": algorithm,
+        "date": date,
+        "status": "done",
+        "solution_file": solution_file,
+    })
+    records_path.write_text(json.dumps(records, ensure_ascii=False, indent=2), encoding="utf-8")
+    return f"已记录 {problem}"
+
+@tool(description="查看刷题记录，回答「我做了什么题」时使用", params={})
+def get_records() -> str:
+    records_path = Path("data/records.json")
+    if not records_path.exists():
+        return "还没记录"
+    records = json.loads(records_path.read_text(encoding="utf-8"))
+    return json.dumps(records, ensure_ascii=False, indent=2)
+
 @tool(description="根据题目编号查找代码文件，如「1121C」", params={
     "problem_id": "题目编号，如 1121C",
 })
@@ -213,6 +241,10 @@ def run_agent(user_input: str, history: list | None = None, max_turns: int = 8) 
                 result = find_code(**args)
             elif name == "rebuild_index":
                 result = rebuild_index()
+            elif name == "add_record":
+                result = add_record(**args)
+            elif name == "get_records":
+                result = get_records()
             else:
                 result = f"未知工具: {name}"
 
