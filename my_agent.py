@@ -222,8 +222,9 @@ def run_agent(user_input: str, history: list | None = None, max_turns: int = 8) 
             signature = f"{name}:{json.dumps(args, sort_keys=True)}"
             if recent_calls.count(signature) >= 3:
                 messages.append({
-                    "role": "user",
-                    "content": "你已经重复调用同一个工具多次，请换一种方式，或直接给出最终答案。"
+                    "role": "tool",
+                    "tool_call_id": call["id"],
+                    "content": "错误：你已经重复调用同一个工具多次，请换一种方式，或直接给出最终答案。",
                 })
                 continue
 
