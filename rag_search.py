@@ -48,6 +48,10 @@ class Retriever:
             self._chunks = json.loads(
                 (self.data_dir / "chunks.json").read_text(encoding="utf-8")
             )
+    def reload(self) -> None:
+        """清空缓存，下次 search 时重新加载"""
+        self._vectors = None
+        self._chunks = None
 
     def search(self, query: str, top_k: int = 3, rerank_top_n: int = 20) -> list[Hit]:
         self._ensure_loaded()

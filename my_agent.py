@@ -120,6 +120,7 @@ def rebuild_index() -> str:
             timeout=300,
         )
         if result.returncode == 0:
+            retriever.reload()
             return "索引重建完成"
         return f"索引重建失败：{result.stderr[:500]}"
     except subprocess.TimeoutExpired:
