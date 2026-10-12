@@ -228,26 +228,29 @@ def run_agent(user_input: str, history: list | None = None, max_turns: int = 8) 
                 })
                 continue
 
-            if name == "read_file":
-                result = read_file(**args)
-            elif name == "write_file":
-                result = write_file(**args)
-            elif name == "list_files":
-                result = list_files()
-            elif name == "get_date":
-                result = get_date()
-            elif name == "search_solutions":
-                result = search_solutions(**args)
-            elif name == "find_code":
-                result = find_code(**args)
-            elif name == "rebuild_index":
-                result = rebuild_index()
-            elif name == "add_record":
-                result = add_record(**args)
-            elif name == "get_records":
-                result = get_records()
-            else:
-                result = f"未知工具: {name}"
+            try:
+                if name == "read_file":
+                    result = read_file(**args)
+                elif name == "write_file":
+                    result = write_file(**args)
+                elif name == "list_files":
+                    result = list_files()
+                elif name == "get_date":
+                    result = get_date()
+                elif name == "search_solutions":
+                    result = search_solutions(**args)
+                elif name == "find_code":
+                    result = find_code(**args)
+                elif name == "rebuild_index":
+                    result = rebuild_index()
+                elif name == "add_record":
+                    result = add_record(**args)
+                elif name == "get_records":
+                    result = get_records()
+                else:
+                    result = f"未知工具: {name}"
+            except Exception as e:
+                result = f"工具调用失败：{e}。请检查参数格式，或换一种方式。"
 
             messages.append({
                 "role": "tool",
