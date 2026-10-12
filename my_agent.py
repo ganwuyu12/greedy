@@ -7,6 +7,7 @@ from personality import SYSTEM_PROMPT
 from datetime import datetime
 from rag_search import Retriever
 import subprocess
+import sys
 
 retriever = Retriever(Path("data/index"))
 
@@ -107,17 +108,24 @@ def search_solutions(query: str) -> str:
         return "语料库里没有相关记录"
     return "\n\n".join(f"[来源: {h.source}]\n{h.text}" for h in hits)
 
+
 @tool(description="重建题解检索索引，整理完新题解后必须调用", params={})
 def rebuild_index() -> str:
-    result = subprocess.run(
-        ["uv", "run", "python", "rag_load.py"],
-        capture_output=True,
-        text=True,
-        cwd=str(Path(__file__).parent),
-    )
-    if result.returncode == 0:
-        return "索引重建完成"
-    return f"索引重建失败：{result.stderr}"
+    try:
+        result = subprocess.run(
+            [sys.executable, "rag_load.py"],
+            capture_output=True,
+            text=True,
+            cwd=str(Path(__file__).parent),
+            timeout=300,
+        )
+        if result.returncode == 0:
+            return "索引重建完成"
+        return f"索引重建失败：{result.stderr[:500]}"
+    except subprocess.TimeoutExpired:
+        return "索引重建超时（5 分钟）"
+    except Exception as e:
+        return f"索引重建出错：{e}"
 
 
 @tool(description="记录一道已完成的题，整理题解后调用", params={
@@ -146,6 +154,8 @@ def get_records() -> str:
         return "还没记录"
     records = json.loads(records_path.read_text(encoding="utf-8"))
     return json.dumps(records, ensure_ascii=False, indent=2)
+
+
 
 @tool(description="根据题目编号查找代码文件，如「1121C」", params={
     "problem_id": "题目编号，如 1121C",
