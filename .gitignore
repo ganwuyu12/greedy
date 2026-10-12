@@ -9,3 +9,5 @@ data/records.json
 data/index/
 data/output/
 *.mp3
+data/oi_wiki_docs/
+data/cf_state.json
