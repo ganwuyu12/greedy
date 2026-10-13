@@ -9,6 +9,8 @@ from rag_search import Retriever
 import subprocess
 import sys
 
+wiki_retriever = Retriever(Path("data/wiki_index"))
+
 retriever = Retriever(Path("data/index"))
 
 TOOL_REGISTRY: list[dict] = []
@@ -93,6 +95,15 @@ def write_file(filename: str, content: str, directory: str = "output") -> str:
 def list_files() -> str:
     files = [f.name for f in DATA_DIR.iterdir() if f.is_file()]
     return "\n".join(files)
+
+@tool(description="搜索 OI Wiki 算法知识库，回答算法概念、原理、复杂度等问题时使用", params={
+    "query": "搜索关键词或问题",
+})
+def search_wiki(query: str) -> str:
+    hits = wiki_retriever.search(query, top_k=3)
+    if not hits:
+        return "没找到相关词条"
+    return "\n\n".join(f"[来源: {h.source}]\n{h.text}" for h in hits)
 
 
 @tool(description="获取当前日期，格式 YYYY-MM-DD", params={})
@@ -258,6 +269,8 @@ def run_agent(user_input: str, history: list | None = None, max_turns: int = 8) 
                     result = add_record(**args)
                 elif name == "get_records":
                     result = get_records()
+                elif name == "search_wiki":
+                    result = search_wiki(**args)
                 else:
                     result = f"未知工具: {name}"
             except Exception as e:
