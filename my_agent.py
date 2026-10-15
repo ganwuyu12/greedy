@@ -278,6 +278,87 @@ def get_records() -> str:
     return json.dumps(records, ensure_ascii=False, indent=2)
 
 
+# ---------------- 陪伴与成长记录 ----------------
+
+@tool(description="查看成长记录（累计做了多少题、活跃天数、最近一次做了什么）。"
+                  "用户问「我最近怎么样」「我做了多少题」时使用", params={})
+def get_progress() -> str:
+    from companion import compute_stats, today_summary
+    log_path = Path("data/practice_log.json")
+    if not log_path.exists():
+        return "还没有成长记录。需要先运行 python companion.py 生成。"
+    log = json.loads(log_path.read_text(encoding="utf-8"))
+    stats = compute_stats(log)
+    lines = [today_summary(log, stats), ""]
+    lines.append(f"累计解出 {stats['total_solved']} 道"
+                 f"（另有 {stats['total_left_unsolved']} 道碰过没过）")
+    lines.append(f"活跃 {stats['active_days']} 天"
+                 f"（{stats['first_day']} 起）")
+    if stats["current_streak"] > 1:
+        lines.append(f"连续 {stats['current_streak']} 天有通过")
+    lines.append("")
+    lines.append("常做的类型：")
+    for tag, n in list(stats["tag_counts"].items())[:8]:
+        lines.append(f"  {tag}：{n} 道")
+    return "\n".join(lines)
+
+
+@tool(description="查看里程碑（首次解出各个难度档位的日期）。"
+                  "用户问「我的里程碑」「我什么时候第一次过 X 分」时使用", params={})
+def get_milestones() -> str:
+    log_path = Path("data/practice_log.json")
+    if not log_path.exists():
+        return "还没有成长记录。需要先运行 python companion.py 生成。"
+    from companion import compute_stats
+    log = json.loads(log_path.read_text(encoding="utf-8"))
+    stats = compute_stats(log)
+    tiers = stats.get("tier_first_solved") or {}
+    if not tiers:
+        return "还没有难度里程碑记录。"
+    lines = ["你走过的路："]
+    for t, d in sorted(tiers.items()):
+        lines.append(f"  首次解出 {t}+   {d}")
+    if stats.get("hardest_solved"):
+        lines.append("")
+        lines.append(f"目前最高：{stats['hardest_solved']}")
+    return "\n".join(lines)
+
+
+@tool(description="查看某一天或最近一次练习的详情（解了哪些题、卡住哪些）", params={
+    "date": "日期 YYYY-MM-DD；不填则看最近一次",
+})
+def get_day_log(date: str = "") -> str:
+    log_path = Path("data/practice_log.json")
+    if not log_path.exists():
+        return "还没有成长记录。需要先运行 python companion.py 生成。"
+    log = json.loads(log_path.read_text(encoding="utf-8"))
+    days = log.get("days", [])
+    if not days:
+        return "还没有记录。"
+    if date:
+        d = next((x for x in days if x["date"] == date), None)
+        if not d:
+            return f"{date} 没有记录。"
+    else:
+        d = days[-1]
+
+    lines = [f"{d['date']}"]
+    if d["solved"]:
+        lines.append(f"  解出 {d['solved_count']} 道：")
+        for x in d["solved"]:
+            r = f"（{x['rating']}）" if x["rating"] else ""
+            t = "、".join(x["tags"][:3])
+            lines.append(f"    {x['key']} {x['name']}{r}  [{t}]")
+    if d["attempted"]:
+        lines.append(f"  碰过没过 {d['attempted_count']} 道：")
+        for x in d["attempted"]:
+            r = f"（{x['rating']}）" if x["rating"] else ""
+            lines.append(f"    {x['key']} {x['name']}{r}")
+    if d.get("contests"):
+        lines.append(f"  比赛场次：{d['contests']}")
+    return "\n".join(lines)
+
+
 
 @tool(description="根据题目编号查找代码文件，如「1121C」", params={
     "problem_id": "题目编号，如 1121C",
@@ -379,6 +460,12 @@ def run_agent(user_input: str, history: list | None = None, max_turns: int = 8) 
                     result = add_record(**args)
                 elif name == "get_records":
                     result = get_records()
+                elif name == "get_progress":
+                    result = get_progress()
+                elif name == "get_milestones":
+                    result = get_milestones()
+                elif name == "get_day_log":
+                    result = get_day_log(**args)
                 elif name == "search_wiki":
                     result = search_wiki(**args)
                 elif name == "get_next_topic":

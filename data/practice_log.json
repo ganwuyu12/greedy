@@ -1,0 +1,4643 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-10-15T14:39:16+08:00",
+  "note": "按题目去重；deep-night 提交归入前一练习日",
+  "problems": [
+    {
+      "key": "2148A",
+      "name": "Sublime Sequence",
+      "rating": 800,
+      "tags": [
+        "brute force",
+        "hashing",
+        "math"
+      ],
+      "contestId": 2148,
+      "index": "A",
+      "attempts": 2,
+      "solved": true,
+      "first_try_date": "2025-10-12",
+      "solved_date": "2025-10-12"
+    },
+    {
+      "key": "2148B",
+      "name": "Lasers",
+      "rating": 800,
+      "tags": [
+        "geometry"
+      ],
+      "contestId": 2148,
+      "index": "B",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2025-10-12",
+      "solved_date": "2025-10-12"
+    },
+    {
+      "key": "2148C",
+      "name": "Pacer",
+      "rating": 900,
+      "tags": [
+        "greedy",
+        "math"
+      ],
+      "contestId": 2148,
+      "index": "C",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2025-10-12",
+      "solved_date": "2025-10-12"
+    },
+    {
+      "key": "2148D",
+      "name": "Destruction of the Dandelion Fields",
+      "rating": 1000,
+      "tags": [
+        "constructive algorithms",
+        "greedy",
+        "sortings"
+      ],
+      "contestId": 2148,
+      "index": "D",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2025-10-12",
+      "solved_date": "2025-10-12"
+    },
+    {
+      "key": "2162A",
+      "name": "Beautiful Average",
+      "rating": 800,
+      "tags": [
+        "brute force",
+        "greedy"
+      ],
+      "contestId": 2162,
+      "index": "A",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2025-10-17",
+      "solved_date": "2025-10-17"
+    },
+    {
+      "key": "2162B",
+      "name": "Beautiful String",
+      "rating": 1000,
+      "tags": [
+        "brute force",
+        "constructive algorithms"
+      ],
+      "contestId": 2162,
+      "index": "B",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2025-10-17",
+      "solved_date": "2025-10-17"
+    },
+    {
+      "key": "2167A",
+      "name": "Square?",
+      "rating": 800,
+      "tags": [
+        "math",
+        "sortings"
+      ],
+      "contestId": 2167,
+      "index": "A",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2025-10-28",
+      "solved_date": "2025-10-28"
+    },
+    {
+      "key": "2167B",
+      "name": "Your Name",
+      "rating": 800,
+      "tags": [
+        "sortings",
+        "strings"
+      ],
+      "contestId": 2167,
+      "index": "B",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2025-10-28",
+      "solved_date": "2025-10-28"
+    },
+    {
+      "key": "2167C",
+      "name": "Isamatdin and His Magic Wand!",
+      "rating": 800,
+      "tags": [
+        "constructive algorithms",
+        "greedy",
+        "implementation",
+        "sortings"
+      ],
+      "contestId": 2167,
+      "index": "C",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2025-10-28",
+      "solved_date": "2025-10-28"
+    },
+    {
+      "key": "2167D",
+      "name": "Yet Another Array Problem",
+      "rating": 1000,
+      "tags": [
+        "brute force",
+        "implementation",
+        "math",
+        "number theory"
+      ],
+      "contestId": 2167,
+      "index": "D",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2025-10-28",
+      "solved_date": "2025-10-28"
+    },
+    {
+      "key": "2167E",
+      "name": "khba Loves to Sleep!",
+      "rating": 1600,
+      "tags": [
+        "binary search",
+        "data structures",
+        "geometry",
+        "greedy",
+        "implementation"
+      ],
+      "contestId": 2167,
+      "index": "E",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2025-10-28",
+      "solved_date": "2025-10-28"
+    },
+    {
+      "key": "2161A",
+      "name": "Round Trip",
+      "rating": 800,
+      "tags": [
+        "games",
+        "greedy",
+        "implementation",
+        "math"
+      ],
+      "contestId": 2161,
+      "index": "A",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2025-10-31",
+      "solved_date": "2025-10-31"
+    },
+    {
+      "key": "2168A1",
+      "name": "Encode and Decode (Easy Version)",
+      "rating": null,
+      "tags": [
+        "communication",
+        "constructive algorithms",
+        "interactive"
+      ],
+      "contestId": 2168,
+      "index": "A1",
+      "attempts": 2,
+      "solved": true,
+      "first_try_date": "2025-11-03",
+      "solved_date": "2025-11-03"
+    },
+    {
+      "key": "2164A",
+      "name": "Sequence Game",
+      "rating": 800,
+      "tags": [
+        "brute force",
+        "sortings"
+      ],
+      "contestId": 2164,
+      "index": "A",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2025-11-06",
+      "solved_date": "2025-11-06"
+    },
+    {
+      "key": "2164B",
+      "name": "Even Modulo Pair",
+      "rating": 1000,
+      "tags": [
+        "brute force",
+        "math",
+        "number theory"
+      ],
+      "contestId": 2164,
+      "index": "B",
+      "attempts": 5,
+      "solved": false,
+      "first_try_date": "2025-11-06",
+      "solved_date": null
+    },
+    {
+      "key": "2164C",
+      "name": "Dungeon",
+      "rating": 1400,
+      "tags": [
+        "binary search",
+        "brute force",
+        "data structures",
+        "greedy",
+        "sortings"
+      ],
+      "contestId": 2164,
+      "index": "C",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2025-11-06",
+      "solved_date": "2025-11-06"
+    },
+    {
+      "key": "2163A",
+      "name": "Souvlaki VS. Kalamaki",
+      "rating": 800,
+      "tags": [
+        "brute force",
+        "greedy",
+        "math",
+        "sortings"
+      ],
+      "contestId": 2163,
+      "index": "A",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2025-11-10",
+      "solved_date": "2025-11-10"
+    },
+    {
+      "key": "2163B",
+      "name": "Siga ta Kymata",
+      "rating": 1700,
+      "tags": [
+        "constructive algorithms",
+        "greedy",
+        "implementation",
+        "math"
+      ],
+      "contestId": 2163,
+      "index": "B",
+      "attempts": 2,
+      "solved": true,
+      "first_try_date": "2025-11-10",
+      "solved_date": "2025-11-11"
+    },
+    {
+      "key": "2169A",
+      "name": "Alice and Bob",
+      "rating": 900,
+      "tags": [
+        "greedy",
+        "implementation"
+      ],
+      "contestId": 2169,
+      "index": "A",
+      "attempts": 6,
+      "solved": true,
+      "first_try_date": "2025-11-14",
+      "solved_date": "2025-11-17"
+    },
+    {
+      "key": "2169B",
+      "name": "Drifting Away",
+      "rating": 1100,
+      "tags": [
+        "greedy",
+        "implementation"
+      ],
+      "contestId": 2169,
+      "index": "B",
+      "attempts": 4,
+      "solved": true,
+      "first_try_date": "2025-11-14",
+      "solved_date": "2025-11-17"
+    },
+    {
+      "key": "2169C",
+      "name": "Range Operation",
+      "rating": 1300,
+      "tags": [
+        "dp",
+        "greedy",
+        "math",
+        "two pointers"
+      ],
+      "contestId": 2169,
+      "index": "C",
+      "attempts": 2,
+      "solved": true,
+      "first_try_date": "2025-11-14",
+      "solved_date": "2025-11-17"
+    },
+    {
+      "key": "2171A",
+      "name": "Shizuku Hoshikawa and Farm Legs",
+      "rating": 800,
+      "tags": [
+        "brute force",
+        "math"
+      ],
+      "contestId": 2171,
+      "index": "A",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2025-11-20",
+      "solved_date": "2025-11-20"
+    },
+    {
+      "key": "2171B",
+      "name": "Yuu Koito and Minimum Absolute Sum",
+      "rating": 900,
+      "tags": [
+        "math"
+      ],
+      "contestId": 2171,
+      "index": "B",
+      "attempts": 2,
+      "solved": true,
+      "first_try_date": "2025-11-20",
+      "solved_date": "2025-11-20"
+    },
+    {
+      "key": "2171C1",
+      "name": "Renako Amaori and XOR Game (easy version)",
+      "rating": 1100,
+      "tags": [
+        "bitmasks",
+        "games",
+        "greedy"
+      ],
+      "contestId": 2171,
+      "index": "C1",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2025-11-20",
+      "solved_date": "2025-11-20"
+    },
+    {
+      "key": "2171D",
+      "name": "Rae Taylor and Trees (easy version)",
+      "rating": 1400,
+      "tags": [
+        "binary search",
+        "data structures",
+        "dp",
+        "dsu",
+        "greedy",
+        "implementation",
+        "trees"
+      ],
+      "contestId": 2171,
+      "index": "D",
+      "attempts": 2,
+      "solved": true,
+      "first_try_date": "2025-11-20",
+      "solved_date": "2025-11-23"
+    },
+    {
+      "key": "2170A",
+      "name": "Maximum Neighborhood",
+      "rating": 800,
+      "tags": [
+        "bitmasks",
+        "brute force",
+        "greedy",
+        "implementation",
+        "math"
+      ],
+      "contestId": 2170,
+      "index": "A",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2025-11-28",
+      "solved_date": "2025-11-28"
+    },
+    {
+      "key": "2170B",
+      "name": "Addition on a Segment",
+      "rating": 1200,
+      "tags": [
+        "greedy",
+        "math"
+      ],
+      "contestId": 2170,
+      "index": "B",
+      "attempts": 3,
+      "solved": true,
+      "first_try_date": "2025-11-28",
+      "solved_date": "2025-11-30"
+    },
+    {
+      "key": "2170C",
+      "name": "Quotient and Remainder",
+      "rating": 1300,
+      "tags": [
+        "binary search",
+        "greedy",
+        "two pointers"
+      ],
+      "contestId": 2170,
+      "index": "C",
+      "attempts": 3,
+      "solved": true,
+      "first_try_date": "2025-11-28",
+      "solved_date": "2025-11-28"
+    },
+    {
+      "key": "2171C2",
+      "name": "Renako Amaori and XOR Game (hard version)",
+      "rating": 1400,
+      "tags": [
+        "bitmasks",
+        "games",
+        "greedy"
+      ],
+      "contestId": 2171,
+      "index": "C2",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2025-12-03",
+      "solved_date": "2025-12-03"
+    },
+    {
+      "key": "2167G",
+      "name": "Mukhammadali and the Smooth Array",
+      "rating": 1600,
+      "tags": [
+        "data structures",
+        "dp"
+      ],
+      "contestId": 2167,
+      "index": "G",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2025-12-04",
+      "solved_date": "2025-12-04"
+    },
+    {
+      "key": "2149A",
+      "name": "Be Positive",
+      "rating": 800,
+      "tags": [
+        "math"
+      ],
+      "contestId": 2149,
+      "index": "A",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2025-12-04",
+      "solved_date": "2025-12-04"
+    },
+    {
+      "key": "2149B",
+      "name": "Unconventional Pairs",
+      "rating": 800,
+      "tags": [
+        "greedy",
+        "sortings"
+      ],
+      "contestId": 2149,
+      "index": "B",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2025-12-04",
+      "solved_date": "2025-12-04"
+    },
+    {
+      "key": "2149C",
+      "name": "MEX rose",
+      "rating": 900,
+      "tags": [
+        "greedy"
+      ],
+      "contestId": 2149,
+      "index": "C",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2025-12-04",
+      "solved_date": "2025-12-04"
+    },
+    {
+      "key": "2149E",
+      "name": "Hidden Knowledge of the Ancients",
+      "rating": 1500,
+      "tags": [
+        "data structures",
+        "two pointers"
+      ],
+      "contestId": 2149,
+      "index": "E",
+      "attempts": 1,
+      "solved": false,
+      "first_try_date": "2025-12-04",
+      "solved_date": null
+    },
+    {
+      "key": "2173A",
+      "name": "Sleeping Through Classes",
+      "rating": 800,
+      "tags": [
+        "greedy",
+        "implementation"
+      ],
+      "contestId": 2173,
+      "index": "A",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2025-12-05",
+      "solved_date": "2025-12-05"
+    },
+    {
+      "key": "2173B",
+      "name": "Niko's Tactical Cards",
+      "rating": 1100,
+      "tags": [
+        "dp",
+        "greedy",
+        "math"
+      ],
+      "contestId": 2173,
+      "index": "B",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2025-12-05",
+      "solved_date": "2025-12-05"
+    },
+    {
+      "key": "2173C",
+      "name": "Kanade's Perfect Multiples",
+      "rating": 1400,
+      "tags": [
+        "brute force",
+        "constructive algorithms",
+        "greedy",
+        "number theory"
+      ],
+      "contestId": 2173,
+      "index": "C",
+      "attempts": 2,
+      "solved": true,
+      "first_try_date": "2025-12-05",
+      "solved_date": "2025-12-08"
+    },
+    {
+      "key": "2173D",
+      "name": "Taiga's Carry Chains",
+      "rating": 1900,
+      "tags": [
+        "bitmasks",
+        "brute force",
+        "dp",
+        "greedy",
+        "math"
+      ],
+      "contestId": 2173,
+      "index": "D",
+      "attempts": 2,
+      "solved": true,
+      "first_try_date": "2025-12-10",
+      "solved_date": "2025-12-10"
+    },
+    {
+      "key": "2162C",
+      "name": "Beautiful XOR",
+      "rating": 1100,
+      "tags": [
+        "bitmasks",
+        "constructive algorithms",
+        "greedy"
+      ],
+      "contestId": 2162,
+      "index": "C",
+      "attempts": 4,
+      "solved": true,
+      "first_try_date": "2025-12-10",
+      "solved_date": "2025-12-10"
+    },
+    {
+      "key": "2137A",
+      "name": "Collatz Conjecture",
+      "rating": 800,
+      "tags": [
+        "constructive algorithms",
+        "math"
+      ],
+      "contestId": 2137,
+      "index": "A",
+      "attempts": 2,
+      "solved": true,
+      "first_try_date": "2025-12-18",
+      "solved_date": "2025-12-18"
+    },
+    {
+      "key": "2137B",
+      "name": "Fun Permutation",
+      "rating": 900,
+      "tags": [
+        "constructive algorithms",
+        "math",
+        "number theory"
+      ],
+      "contestId": 2137,
+      "index": "B",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2025-12-21",
+      "solved_date": "2025-12-21"
+    },
+    {
+      "key": "2137C",
+      "name": "Maximum Even Sum",
+      "rating": 1100,
+      "tags": [
+        "brute force",
+        "greedy",
+        "implementation",
+        "math"
+      ],
+      "contestId": 2137,
+      "index": "C",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2025-12-23",
+      "solved_date": "2025-12-23"
+    },
+    {
+      "key": "2137D",
+      "name": "Replace with Occurrences",
+      "rating": 1200,
+      "tags": [
+        "constructive algorithms"
+      ],
+      "contestId": 2137,
+      "index": "D",
+      "attempts": 6,
+      "solved": true,
+      "first_try_date": "2025-12-23",
+      "solved_date": "2025-12-23"
+    },
+    {
+      "key": "2179A",
+      "name": "Blackslex and Password",
+      "rating": 800,
+      "tags": [
+        "math",
+        "strings"
+      ],
+      "contestId": 2179,
+      "index": "A",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2025-12-23",
+      "solved_date": "2025-12-23"
+    },
+    {
+      "key": "2179B",
+      "name": "Blackslex and Showering",
+      "rating": 800,
+      "tags": [
+        "dp",
+        "greedy",
+        "implementation"
+      ],
+      "contestId": 2179,
+      "index": "B",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2025-12-23",
+      "solved_date": "2025-12-23"
+    },
+    {
+      "key": "2179C",
+      "name": "Blackslex and Number Theory",
+      "rating": 1100,
+      "tags": [
+        "implementation",
+        "math",
+        "number theory",
+        "sortings"
+      ],
+      "contestId": 2179,
+      "index": "C",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2025-12-23",
+      "solved_date": "2025-12-23"
+    },
+    {
+      "key": "2179D",
+      "name": "Blackslex and Penguin Civilization",
+      "rating": 1300,
+      "tags": [
+        "bitmasks",
+        "constructive algorithms",
+        "greedy",
+        "math"
+      ],
+      "contestId": 2179,
+      "index": "D",
+      "attempts": 4,
+      "solved": true,
+      "first_try_date": "2025-12-23",
+      "solved_date": "2025-12-25"
+    },
+    {
+      "key": "2179E",
+      "name": "Blackslex and Girls",
+      "rating": 1800,
+      "tags": [
+        "constructive algorithms",
+        "geometry",
+        "math"
+      ],
+      "contestId": 2179,
+      "index": "E",
+      "attempts": 2,
+      "solved": true,
+      "first_try_date": "2025-12-25",
+      "solved_date": "2025-12-25"
+    },
+    {
+      "key": "2155A",
+      "name": "El fucho",
+      "rating": 800,
+      "tags": [
+        "implementation",
+        "math"
+      ],
+      "contestId": 2155,
+      "index": "A",
+      "attempts": 2,
+      "solved": true,
+      "first_try_date": "2025-12-26",
+      "solved_date": "2025-12-26"
+    },
+    {
+      "key": "2182A",
+      "name": "New Year String",
+      "rating": 800,
+      "tags": [
+        "constructive algorithms",
+        "greedy",
+        "implementation",
+        "strings"
+      ],
+      "contestId": 2182,
+      "index": "A",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2025-12-29",
+      "solved_date": "2025-12-29"
+    },
+    {
+      "key": "2182B",
+      "name": "New Year Cake",
+      "rating": 800,
+      "tags": [
+        "brute force"
+      ],
+      "contestId": 2182,
+      "index": "B",
+      "attempts": 3,
+      "solved": true,
+      "first_try_date": "2025-12-29",
+      "solved_date": "2025-12-29"
+    },
+    {
+      "key": "2182C",
+      "name": "Production of Snowmen",
+      "rating": 1200,
+      "tags": [
+        "brute force",
+        "combinatorics",
+        "dp"
+      ],
+      "contestId": 2182,
+      "index": "C",
+      "attempts": 3,
+      "solved": true,
+      "first_try_date": "2025-12-29",
+      "solved_date": "2025-12-29"
+    },
+    {
+      "key": "2183A",
+      "name": "Binary Array Game",
+      "rating": 800,
+      "tags": [
+        "games"
+      ],
+      "contestId": 2183,
+      "index": "A",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-01-07",
+      "solved_date": "2026-01-07"
+    },
+    {
+      "key": "2183B",
+      "name": "Yet Another MEX Problem",
+      "rating": 1100,
+      "tags": [
+        "constructive algorithms",
+        "greedy"
+      ],
+      "contestId": 2183,
+      "index": "B",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-01-07",
+      "solved_date": "2026-01-07"
+    },
+    {
+      "key": "2183C",
+      "name": "War Strategy",
+      "rating": 1500,
+      "tags": [
+        "binary search",
+        "greedy",
+        "math",
+        "two pointers"
+      ],
+      "contestId": 2183,
+      "index": "C",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-01-07",
+      "solved_date": "2026-01-07"
+    },
+    {
+      "key": "2184A",
+      "name": "Social Experiment",
+      "rating": 800,
+      "tags": [
+        "math"
+      ],
+      "contestId": 2184,
+      "index": "A",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-02-03",
+      "solved_date": "2026-02-03"
+    },
+    {
+      "key": "2184B",
+      "name": "Hourglass",
+      "rating": 1100,
+      "tags": [
+        "math"
+      ],
+      "contestId": 2184,
+      "index": "B",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-02-03",
+      "solved_date": "2026-02-03"
+    },
+    {
+      "key": "2184C",
+      "name": "Huge Pile",
+      "rating": 1100,
+      "tags": [
+        "binary search",
+        "dfs and similar",
+        "dp",
+        "graphs",
+        "math"
+      ],
+      "contestId": 2184,
+      "index": "C",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-02-03",
+      "solved_date": "2026-02-03"
+    },
+    {
+      "key": "2184D",
+      "name": "Unfair Game",
+      "rating": 1600,
+      "tags": [
+        "combinatorics",
+        "dp",
+        "math"
+      ],
+      "contestId": 2184,
+      "index": "D",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-02-09",
+      "solved_date": "2026-02-09"
+    },
+    {
+      "key": "2191A",
+      "name": "Array Coloring",
+      "rating": 800,
+      "tags": [
+        "constructive algorithms"
+      ],
+      "contestId": 2191,
+      "index": "A",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-02-09",
+      "solved_date": "2026-02-09"
+    },
+    {
+      "key": "2203A",
+      "name": "Towers of Boxes",
+      "rating": 800,
+      "tags": [
+        "math"
+      ],
+      "contestId": 2203,
+      "index": "A",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-02-25",
+      "solved_date": "2026-02-25"
+    },
+    {
+      "key": "2203B",
+      "name": "Beautiful Numbers",
+      "rating": 1000,
+      "tags": [
+        "bitmasks",
+        "dp",
+        "fft",
+        "greedy",
+        "math"
+      ],
+      "contestId": 2203,
+      "index": "B",
+      "attempts": 3,
+      "solved": true,
+      "first_try_date": "2026-02-25",
+      "solved_date": "2026-02-25"
+    },
+    {
+      "key": "2203C",
+      "name": "Test Generator",
+      "rating": 1500,
+      "tags": [
+        "binary search",
+        "bitmasks",
+        "greedy",
+        "math"
+      ],
+      "contestId": 2203,
+      "index": "C",
+      "attempts": 3,
+      "solved": true,
+      "first_try_date": "2026-02-25",
+      "solved_date": "2026-02-25"
+    },
+    {
+      "key": "2205A",
+      "name": "Simons and Making It Beautiful",
+      "rating": 800,
+      "tags": [
+        "brute force",
+        "constructive algorithms"
+      ],
+      "contestId": 2205,
+      "index": "A",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-02-26",
+      "solved_date": "2026-02-26"
+    },
+    {
+      "key": "2205B",
+      "name": "Simons and Cakes for Success",
+      "rating": 800,
+      "tags": [
+        "implementation",
+        "math"
+      ],
+      "contestId": 2205,
+      "index": "B",
+      "attempts": 3,
+      "solved": true,
+      "first_try_date": "2026-02-26",
+      "solved_date": "2026-02-26"
+    },
+    {
+      "key": "2205C",
+      "name": "Simons and Posting Blogs",
+      "rating": 1500,
+      "tags": [
+        "greedy",
+        "sortings"
+      ],
+      "contestId": 2205,
+      "index": "C",
+      "attempts": 2,
+      "solved": true,
+      "first_try_date": "2026-02-26",
+      "solved_date": "2026-02-26"
+    },
+    {
+      "key": "2200C",
+      "name": "Specialty String",
+      "rating": 900,
+      "tags": [
+        "brute force",
+        "greedy",
+        "strings"
+      ],
+      "contestId": 2200,
+      "index": "C",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-03-05",
+      "solved_date": "2026-03-05"
+    },
+    {
+      "key": "2200D",
+      "name": "Portal",
+      "rating": 1300,
+      "tags": [
+        "greedy",
+        "sortings"
+      ],
+      "contestId": 2200,
+      "index": "D",
+      "attempts": 3,
+      "solved": true,
+      "first_try_date": "2026-03-06",
+      "solved_date": "2026-03-06"
+    },
+    {
+      "key": "2200E",
+      "name": "Divisive Battle",
+      "rating": 1500,
+      "tags": [
+        "games",
+        "greedy",
+        "math",
+        "number theory"
+      ],
+      "contestId": 2200,
+      "index": "E",
+      "attempts": 3,
+      "solved": true,
+      "first_try_date": "2026-03-06",
+      "solved_date": "2026-03-06"
+    },
+    {
+      "key": "438D",
+      "name": "The Child and Sequence",
+      "rating": 2300,
+      "tags": [
+        "data structures",
+        "math"
+      ],
+      "contestId": 438,
+      "index": "D",
+      "attempts": 2,
+      "solved": true,
+      "first_try_date": "2026-03-19",
+      "solved_date": "2026-03-19"
+    },
+    {
+      "key": "2211A",
+      "name": "Antimedian Deletion",
+      "rating": 800,
+      "tags": [
+        "implementation",
+        "math"
+      ],
+      "contestId": 2211,
+      "index": "A",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-03-28",
+      "solved_date": "2026-03-28"
+    },
+    {
+      "key": "2211B",
+      "name": "Mickey Mouse Constructive",
+      "rating": 1100,
+      "tags": [
+        "constructive algorithms",
+        "dp",
+        "greedy",
+        "math"
+      ],
+      "contestId": 2211,
+      "index": "B",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-03-28",
+      "solved_date": "2026-03-28"
+    },
+    {
+      "key": "2211C1",
+      "name": "Equal Multisets (Easy Version)",
+      "rating": 1300,
+      "tags": [
+        "binary search",
+        "brute force",
+        "greedy",
+        "two pointers"
+      ],
+      "contestId": 2211,
+      "index": "C1",
+      "attempts": 3,
+      "solved": true,
+      "first_try_date": "2026-03-28",
+      "solved_date": "2026-03-28"
+    },
+    {
+      "key": "2211D",
+      "name": "AND-array",
+      "rating": 1900,
+      "tags": [
+        "bitmasks",
+        "combinatorics",
+        "math"
+      ],
+      "contestId": 2211,
+      "index": "D",
+      "attempts": 2,
+      "solved": true,
+      "first_try_date": "2026-03-28",
+      "solved_date": "2026-03-28"
+    },
+    {
+      "key": "2210A",
+      "name": "A Simple Sequence",
+      "rating": 800,
+      "tags": [
+        "constructive algorithms",
+        "dp",
+        "greedy",
+        "number theory"
+      ],
+      "contestId": 2210,
+      "index": "A",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-03-29",
+      "solved_date": "2026-03-29"
+    },
+    {
+      "key": "2210B",
+      "name": "Simply Sitting on Chairs",
+      "rating": 900,
+      "tags": [
+        "data structures",
+        "greedy"
+      ],
+      "contestId": 2210,
+      "index": "B",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-03-29",
+      "solved_date": "2026-03-29"
+    },
+    {
+      "key": "2210C1",
+      "name": "A Simple GCD Problem (Easy Version)",
+      "rating": 1200,
+      "tags": [
+        "greedy",
+        "number theory"
+      ],
+      "contestId": 2210,
+      "index": "C1",
+      "attempts": 3,
+      "solved": true,
+      "first_try_date": "2026-03-29",
+      "solved_date": "2026-03-29"
+    },
+    {
+      "key": "2210C2",
+      "name": "A Simple GCD Problem (Hard Version)",
+      "rating": 2100,
+      "tags": [
+        "dp",
+        "greedy",
+        "number theory"
+      ],
+      "contestId": 2210,
+      "index": "C2",
+      "attempts": 2,
+      "solved": true,
+      "first_try_date": "2026-03-29",
+      "solved_date": "2026-03-31"
+    },
+    {
+      "key": "2210D",
+      "name": "A Simple RBS Problem",
+      "rating": 2100,
+      "tags": [
+        "constructive algorithms",
+        "math",
+        "strings",
+        "trees"
+      ],
+      "contestId": 2210,
+      "index": "D",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-03-31",
+      "solved_date": "2026-03-31"
+    },
+    {
+      "key": "2214A",
+      "name": "Odd One Out",
+      "rating": null,
+      "tags": [
+        "*special",
+        "graph matchings",
+        "implementation"
+      ],
+      "contestId": 2214,
+      "index": "A",
+      "attempts": 2,
+      "solved": true,
+      "first_try_date": "2026-04-01",
+      "solved_date": "2026-04-01"
+    },
+    {
+      "key": "2214B",
+      "name": "Are You Smiling?",
+      "rating": null,
+      "tags": [
+        "*special",
+        "strings"
+      ],
+      "contestId": 2214,
+      "index": "B",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-04-01",
+      "solved_date": "2026-04-01"
+    },
+    {
+      "key": "2220A",
+      "name": "Blocked",
+      "rating": 800,
+      "tags": [
+        "greedy",
+        "sortings"
+      ],
+      "contestId": 2220,
+      "index": "A",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-04-13",
+      "solved_date": "2026-04-13"
+    },
+    {
+      "key": "2220B",
+      "name": "OIE Excursion",
+      "rating": 1200,
+      "tags": [
+        "greedy"
+      ],
+      "contestId": 2220,
+      "index": "B",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-04-13",
+      "solved_date": "2026-04-13"
+    },
+    {
+      "key": "2220C",
+      "name": "Grid L",
+      "rating": 1400,
+      "tags": [
+        "brute force",
+        "math"
+      ],
+      "contestId": 2220,
+      "index": "C",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-04-13",
+      "solved_date": "2026-04-13"
+    },
+    {
+      "key": "2220D1",
+      "name": "Unique Values (Easy version)",
+      "rating": 1900,
+      "tags": [
+        "binary search",
+        "interactive"
+      ],
+      "contestId": 2220,
+      "index": "D1",
+      "attempts": 2,
+      "solved": false,
+      "first_try_date": "2026-04-13",
+      "solved_date": null
+    },
+    {
+      "key": "2225A",
+      "name": "A Number Between Two Others",
+      "rating": 800,
+      "tags": [
+        "greedy",
+        "math"
+      ],
+      "contestId": 2225,
+      "index": "A",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-04-21",
+      "solved_date": "2026-04-21"
+    },
+    {
+      "key": "2225B",
+      "name": "Alternating String",
+      "rating": 900,
+      "tags": [
+        "brute force",
+        "greedy"
+      ],
+      "contestId": 2225,
+      "index": "B",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-04-21",
+      "solved_date": "2026-04-21"
+    },
+    {
+      "key": "2225C",
+      "name": "Red-Black Pairs",
+      "rating": 1100,
+      "tags": [
+        "dp",
+        "greedy"
+      ],
+      "contestId": 2225,
+      "index": "C",
+      "attempts": 3,
+      "solved": true,
+      "first_try_date": "2026-04-21",
+      "solved_date": "2026-04-21"
+    },
+    {
+      "key": "2225D",
+      "name": "Exceptional Segments",
+      "rating": 1500,
+      "tags": [
+        "bitmasks",
+        "brute force",
+        "math"
+      ],
+      "contestId": 2225,
+      "index": "D",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-04-21",
+      "solved_date": "2026-04-21"
+    },
+    {
+      "key": "2226A",
+      "name": "Disturbing Distribution",
+      "rating": 800,
+      "tags": [
+        "greedy",
+        "math"
+      ],
+      "contestId": 2226,
+      "index": "A",
+      "attempts": 2,
+      "solved": true,
+      "first_try_date": "2026-04-28",
+      "solved_date": "2026-05-07"
+    },
+    {
+      "key": "2226B",
+      "name": "Everything Everywhere",
+      "rating": 900,
+      "tags": [
+        "greedy",
+        "math",
+        "number theory"
+      ],
+      "contestId": 2226,
+      "index": "B",
+      "attempts": 2,
+      "solved": true,
+      "first_try_date": "2026-04-28",
+      "solved_date": "2026-05-07"
+    },
+    {
+      "key": "2226C",
+      "name": "Mental Monumental (Easy Version)",
+      "rating": 1500,
+      "tags": [
+        "binary search",
+        "data structures",
+        "greedy",
+        "math",
+        "two pointers"
+      ],
+      "contestId": 2226,
+      "index": "C",
+      "attempts": 10,
+      "solved": true,
+      "first_try_date": "2026-04-28",
+      "solved_date": "2026-05-07"
+    },
+    {
+      "key": "2224A",
+      "name": "Zhily and Array Operating",
+      "rating": 800,
+      "tags": [
+        "constructive algorithms",
+        "greedy"
+      ],
+      "contestId": 2224,
+      "index": "A",
+      "attempts": 3,
+      "solved": true,
+      "first_try_date": "2026-05-07",
+      "solved_date": "2026-05-07"
+    },
+    {
+      "key": "2227D",
+      "name": "Palindromex",
+      "rating": 1200,
+      "tags": [
+        "binary search",
+        "brute force",
+        "constructive algorithms",
+        "data structures",
+        "greedy",
+        "implementation",
+        "two pointers"
+      ],
+      "contestId": 2227,
+      "index": "D",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-05-12",
+      "solved_date": "2026-05-12"
+    },
+    {
+      "key": "2227E",
+      "name": "It All Went Sideways",
+      "rating": 1400,
+      "tags": [
+        "binary search",
+        "data structures",
+        "dp",
+        "greedy"
+      ],
+      "contestId": 2227,
+      "index": "E",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-05-12",
+      "solved_date": "2026-05-12"
+    },
+    {
+      "key": "2192A",
+      "name": "String Rotation Game",
+      "rating": 800,
+      "tags": [
+        "brute force",
+        "strings"
+      ],
+      "contestId": 2192,
+      "index": "A",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-05-13",
+      "solved_date": "2026-05-13"
+    },
+    {
+      "key": "2192B",
+      "name": "Flipping Binary String",
+      "rating": 1000,
+      "tags": [
+        "constructive algorithms",
+        "strings"
+      ],
+      "contestId": 2192,
+      "index": "B",
+      "attempts": 4,
+      "solved": true,
+      "first_try_date": "2026-05-13",
+      "solved_date": "2026-05-14"
+    },
+    {
+      "key": "2192C",
+      "name": "All-in-one Gun",
+      "rating": 1300,
+      "tags": [
+        "binary search",
+        "greedy",
+        "math"
+      ],
+      "contestId": 2192,
+      "index": "C",
+      "attempts": 3,
+      "solved": true,
+      "first_try_date": "2026-05-13",
+      "solved_date": "2026-05-13"
+    },
+    {
+      "key": "2192D",
+      "name": "Cost of Tree",
+      "rating": 1800,
+      "tags": [
+        "dp",
+        "greedy",
+        "trees"
+      ],
+      "contestId": 2192,
+      "index": "D",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-05-14",
+      "solved_date": "2026-05-14"
+    },
+    {
+      "key": "2188A",
+      "name": "Divisible Permutation",
+      "rating": 800,
+      "tags": [
+        "constructive algorithms"
+      ],
+      "contestId": 2188,
+      "index": "A",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-05-15",
+      "solved_date": "2026-05-15"
+    },
+    {
+      "key": "2188B",
+      "name": "Seats",
+      "rating": 1000,
+      "tags": [
+        "greedy"
+      ],
+      "contestId": 2188,
+      "index": "B",
+      "attempts": 2,
+      "solved": true,
+      "first_try_date": "2026-05-15",
+      "solved_date": "2026-05-15"
+    },
+    {
+      "key": "2188C",
+      "name": "Restricted Sorting",
+      "rating": 1300,
+      "tags": [
+        "greedy",
+        "sortings"
+      ],
+      "contestId": 2188,
+      "index": "C",
+      "attempts": 7,
+      "solved": true,
+      "first_try_date": "2026-05-15",
+      "solved_date": "2026-05-15"
+    },
+    {
+      "key": "2176A",
+      "name": "Operations with Inversions",
+      "rating": 800,
+      "tags": [
+        "greedy",
+        "implementation",
+        "math"
+      ],
+      "contestId": 2176,
+      "index": "A",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-05-16",
+      "solved_date": "2026-05-16"
+    },
+    {
+      "key": "2228A",
+      "name": "Marisa Steals Reimu's Takeout",
+      "rating": 800,
+      "tags": [
+        "greedy",
+        "implementation"
+      ],
+      "contestId": 2228,
+      "index": "A",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-05-16",
+      "solved_date": "2026-05-16"
+    },
+    {
+      "key": "2228B",
+      "name": "Remilia Plays Soku",
+      "rating": 1100,
+      "tags": [
+        "games",
+        "implementation"
+      ],
+      "contestId": 2228,
+      "index": "B",
+      "attempts": 5,
+      "solved": true,
+      "first_try_date": "2026-05-16",
+      "solved_date": "2026-05-16"
+    },
+    {
+      "key": "2228C1",
+      "name": "Cirno and Number (Easy Version)",
+      "rating": 1500,
+      "tags": [
+        "binary search",
+        "brute force",
+        "dp",
+        "greedy",
+        "implementation"
+      ],
+      "contestId": 2228,
+      "index": "C1",
+      "attempts": 2,
+      "solved": true,
+      "first_try_date": "2026-05-16",
+      "solved_date": "2026-05-16"
+    },
+    {
+      "key": "2230A",
+      "name": "Optimal Purchase",
+      "rating": 800,
+      "tags": [
+        "implementation",
+        "math"
+      ],
+      "contestId": 2230,
+      "index": "A",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-05-18",
+      "solved_date": "2026-05-18"
+    },
+    {
+      "key": "2230B",
+      "name": "Digit String",
+      "rating": 1000,
+      "tags": [
+        "greedy",
+        "implementation",
+        "math"
+      ],
+      "contestId": 2230,
+      "index": "B",
+      "attempts": 6,
+      "solved": true,
+      "first_try_date": "2026-05-18",
+      "solved_date": "2026-05-22"
+    },
+    {
+      "key": "2230C",
+      "name": "Arrange the Numbers in a Circle",
+      "rating": 1300,
+      "tags": [
+        "constructive algorithms",
+        "implementation",
+        "math"
+      ],
+      "contestId": 2230,
+      "index": "C",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-05-18",
+      "solved_date": "2026-05-18"
+    },
+    {
+      "key": "2176B",
+      "name": "Optimal Shifts",
+      "rating": 1000,
+      "tags": [
+        "bitmasks",
+        "greedy",
+        "strings"
+      ],
+      "contestId": 2176,
+      "index": "B",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-05-19",
+      "solved_date": "2026-05-19"
+    },
+    {
+      "key": "2176C",
+      "name": "Odd Process",
+      "rating": 1300,
+      "tags": [
+        "greedy",
+        "sortings"
+      ],
+      "contestId": 2176,
+      "index": "C",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-05-19",
+      "solved_date": "2026-05-19"
+    },
+    {
+      "key": "2231A",
+      "name": "Construct an Array",
+      "rating": 800,
+      "tags": [
+        "constructive algorithms"
+      ],
+      "contestId": 2231,
+      "index": "A",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-05-21",
+      "solved_date": "2026-05-21"
+    },
+    {
+      "key": "2231B",
+      "name": "Another Sorting Problem",
+      "rating": 1100,
+      "tags": [
+        "constructive algorithms"
+      ],
+      "contestId": 2231,
+      "index": "B",
+      "attempts": 2,
+      "solved": true,
+      "first_try_date": "2026-05-21",
+      "solved_date": "2026-05-21"
+    },
+    {
+      "key": "2231C",
+      "name": "Chipmunk Theo and Equality",
+      "rating": 1400,
+      "tags": [
+        "implementation",
+        "sortings"
+      ],
+      "contestId": 2231,
+      "index": "C",
+      "attempts": 4,
+      "solved": true,
+      "first_try_date": "2026-05-21",
+      "solved_date": "2026-05-21"
+    },
+    {
+      "key": "2229A",
+      "name": "Slimes on a Line",
+      "rating": 800,
+      "tags": [
+        "brute force",
+        "greedy",
+        "math"
+      ],
+      "contestId": 2229,
+      "index": "A",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-05-23",
+      "solved_date": "2026-05-23"
+    },
+    {
+      "key": "2229B",
+      "name": "Absolute Cinema",
+      "rating": 800,
+      "tags": [
+        "greedy",
+        "math"
+      ],
+      "contestId": 2229,
+      "index": "B",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-05-23",
+      "solved_date": "2026-05-23"
+    },
+    {
+      "key": "2229C1",
+      "name": "We Be Flipping (Easy Version)",
+      "rating": 900,
+      "tags": [
+        "constructive algorithms",
+        "greedy"
+      ],
+      "contestId": 2229,
+      "index": "C1",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-05-23",
+      "solved_date": "2026-05-23"
+    },
+    {
+      "key": "2229C2",
+      "name": "We Be Flipping (Hard Version)",
+      "rating": 1400,
+      "tags": [
+        "constructive algorithms",
+        "dp",
+        "greedy"
+      ],
+      "contestId": 2229,
+      "index": "C2",
+      "attempts": 2,
+      "solved": true,
+      "first_try_date": "2026-05-26",
+      "solved_date": "2026-05-26"
+    },
+    {
+      "key": "2230D",
+      "name": "Good Schedule",
+      "rating": 1700,
+      "tags": [
+        "dp",
+        "greedy"
+      ],
+      "contestId": 2230,
+      "index": "D",
+      "attempts": 2,
+      "solved": true,
+      "first_try_date": "2026-05-26",
+      "solved_date": "2026-05-26"
+    },
+    {
+      "key": "2158A",
+      "name": "Suspension",
+      "rating": 800,
+      "tags": [
+        "constructive algorithms",
+        "greedy",
+        "math"
+      ],
+      "contestId": 2158,
+      "index": "A",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-06-02",
+      "solved_date": "2026-06-02"
+    },
+    {
+      "key": "2158B",
+      "name": "Split",
+      "rating": 1200,
+      "tags": [
+        "constructive algorithms",
+        "greedy",
+        "math"
+      ],
+      "contestId": 2158,
+      "index": "B",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-06-04",
+      "solved_date": "2026-06-04"
+    },
+    {
+      "key": "2158C",
+      "name": "Annoying Game",
+      "rating": 1400,
+      "tags": [
+        "dp",
+        "games",
+        "greedy"
+      ],
+      "contestId": 2158,
+      "index": "C",
+      "attempts": 3,
+      "solved": true,
+      "first_try_date": "2026-06-04",
+      "solved_date": "2026-06-04"
+    },
+    {
+      "key": "2156A",
+      "name": "Pizza Time",
+      "rating": 800,
+      "tags": [
+        "brute force",
+        "constructive algorithms",
+        "greedy"
+      ],
+      "contestId": 2156,
+      "index": "A",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-06-04",
+      "solved_date": "2026-06-04"
+    },
+    {
+      "key": "2156B",
+      "name": "Strange Machine",
+      "rating": 1000,
+      "tags": [
+        "binary search",
+        "brute force",
+        "greedy",
+        "implementation"
+      ],
+      "contestId": 2156,
+      "index": "B",
+      "attempts": 2,
+      "solved": true,
+      "first_try_date": "2026-06-04",
+      "solved_date": "2026-06-04"
+    },
+    {
+      "key": "2156C",
+      "name": "Maximum GCD on Whiteboard",
+      "rating": 1400,
+      "tags": [
+        "greedy",
+        "math",
+        "number theory"
+      ],
+      "contestId": 2156,
+      "index": "C",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-06-05",
+      "solved_date": "2026-06-05"
+    },
+    {
+      "key": "2234A",
+      "name": "Euclid, Sequence and Two Numbers",
+      "rating": 800,
+      "tags": [
+        "math",
+        "number theory",
+        "sortings"
+      ],
+      "contestId": 2234,
+      "index": "A",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-06-07",
+      "solved_date": "2026-06-07"
+    },
+    {
+      "key": "2234B",
+      "name": "Palindrome, Twelve and Two Terms",
+      "rating": 800,
+      "tags": [
+        "brute force",
+        "constructive algorithms",
+        "math"
+      ],
+      "contestId": 2234,
+      "index": "B",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-06-07",
+      "solved_date": "2026-06-07"
+    },
+    {
+      "key": "2234C",
+      "name": "Vessels, Heights and Two Versions (Easy Version)",
+      "rating": 1200,
+      "tags": [
+        "dfs and similar",
+        "dsu",
+        "greedy",
+        "implementation",
+        "two pointers"
+      ],
+      "contestId": 2234,
+      "index": "C",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-06-07",
+      "solved_date": "2026-06-07"
+    },
+    {
+      "key": "2233A",
+      "name": "AI Project Development",
+      "rating": 800,
+      "tags": [
+        "brute force",
+        "math"
+      ],
+      "contestId": 2233,
+      "index": "A",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-06-09",
+      "solved_date": "2026-06-09"
+    },
+    {
+      "key": "2233B",
+      "name": "Different Distances",
+      "rating": 900,
+      "tags": [
+        "constructive algorithms"
+      ],
+      "contestId": 2233,
+      "index": "B",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-06-09",
+      "solved_date": "2026-06-09"
+    },
+    {
+      "key": "2233C",
+      "name": "Cost of a Bracket Sequence",
+      "rating": 1400,
+      "tags": [
+        "brute force",
+        "dp",
+        "greedy"
+      ],
+      "contestId": 2233,
+      "index": "C",
+      "attempts": 4,
+      "solved": true,
+      "first_try_date": "2026-06-09",
+      "solved_date": "2026-06-12"
+    },
+    {
+      "key": "2236A",
+      "name": "Games on the Train",
+      "rating": 800,
+      "tags": [
+        "greedy",
+        "math"
+      ],
+      "contestId": 2236,
+      "index": "A",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-06-12",
+      "solved_date": "2026-06-12"
+    },
+    {
+      "key": "2236B",
+      "name": "Tatar TV Show",
+      "rating": 800,
+      "tags": [
+        "greedy",
+        "math",
+        "strings"
+      ],
+      "contestId": 2236,
+      "index": "B",
+      "attempts": 2,
+      "solved": true,
+      "first_try_date": "2026-06-12",
+      "solved_date": "2026-06-12"
+    },
+    {
+      "key": "2236C",
+      "name": "Omsk Programmers",
+      "rating": 1000,
+      "tags": [
+        "brute force",
+        "greedy",
+        "math"
+      ],
+      "contestId": 2236,
+      "index": "C",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-06-12",
+      "solved_date": "2026-06-12"
+    },
+    {
+      "key": "2236D",
+      "name": "Brand New Tatar TV Show",
+      "rating": 1300,
+      "tags": [
+        "binary search",
+        "constructive algorithms",
+        "dp",
+        "games",
+        "math"
+      ],
+      "contestId": 2236,
+      "index": "D",
+      "attempts": 3,
+      "solved": true,
+      "first_try_date": "2026-06-12",
+      "solved_date": "2026-06-12"
+    },
+    {
+      "key": "2237A",
+      "name": "Destroying Towers",
+      "rating": 800,
+      "tags": [
+        "games",
+        "greedy",
+        "schedules"
+      ],
+      "contestId": 2237,
+      "index": "A",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-06-18",
+      "solved_date": "2026-06-18"
+    },
+    {
+      "key": "2237B",
+      "name": "Annoying the Ghost",
+      "rating": 1000,
+      "tags": [
+        "brute force",
+        "greedy"
+      ],
+      "contestId": 2237,
+      "index": "B",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-06-18",
+      "solved_date": "2026-06-18"
+    },
+    {
+      "key": "2237C",
+      "name": "Duck Surplus",
+      "rating": 1000,
+      "tags": [
+        "binary search",
+        "greedy"
+      ],
+      "contestId": 2237,
+      "index": "C",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-06-18",
+      "solved_date": "2026-06-18"
+    },
+    {
+      "key": "2250A",
+      "name": "Threshold Movement",
+      "rating": 800,
+      "tags": [
+        "brute force",
+        "implementation",
+        "math"
+      ],
+      "contestId": 2250,
+      "index": "A",
+      "attempts": 2,
+      "solved": true,
+      "first_try_date": "2026-07-29",
+      "solved_date": "2026-07-29"
+    },
+    {
+      "key": "2250B",
+      "name": "String Construction",
+      "rating": 1000,
+      "tags": [
+        "constructive algorithms"
+      ],
+      "contestId": 2250,
+      "index": "B",
+      "attempts": 2,
+      "solved": true,
+      "first_try_date": "2026-08-10",
+      "solved_date": "2026-08-10"
+    },
+    {
+      "key": "2250C",
+      "name": "Rank Subsequence",
+      "rating": 1300,
+      "tags": [
+        "brute force",
+        "greedy",
+        "implementation"
+      ],
+      "contestId": 2250,
+      "index": "C",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-09-03",
+      "solved_date": "2026-09-03"
+    },
+    {
+      "key": "2248A",
+      "name": "You Delete, I Delete",
+      "rating": 800,
+      "tags": [
+        "greedy"
+      ],
+      "contestId": 2248,
+      "index": "A",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-09-04",
+      "solved_date": "2026-09-04"
+    },
+    {
+      "key": "2266C",
+      "name": "AND, OR, Sort!",
+      "rating": 1000,
+      "tags": [
+        "greedy",
+        "strings"
+      ],
+      "contestId": 2266,
+      "index": "C",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-09-23",
+      "solved_date": "2026-09-23"
+    },
+    {
+      "key": "2266D",
+      "name": "Falling Concrete",
+      "rating": 1400,
+      "tags": [
+        "constructive algorithms",
+        "data structures",
+        "math",
+        "sortings"
+      ],
+      "contestId": 2266,
+      "index": "D",
+      "attempts": 3,
+      "solved": true,
+      "first_try_date": "2026-09-24",
+      "solved_date": "2026-09-24"
+    },
+    {
+      "key": "2264A",
+      "name": "Rumb Needs a Hand",
+      "rating": 800,
+      "tags": [
+        "implementation",
+        "sortings",
+        "two pointers"
+      ],
+      "contestId": 2264,
+      "index": "A",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-09-28",
+      "solved_date": "2026-09-28"
+    },
+    {
+      "key": "2264B",
+      "name": "Knife's Pill Farm",
+      "rating": 1000,
+      "tags": [
+        "data structures",
+        "greedy",
+        "math"
+      ],
+      "contestId": 2264,
+      "index": "B",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-09-28",
+      "solved_date": "2026-09-28"
+    },
+    {
+      "key": "2264C",
+      "name": "Madamant's Skating Dynasty",
+      "rating": 1400,
+      "tags": [
+        "combinatorics",
+        "math",
+        "sortings"
+      ],
+      "contestId": 2264,
+      "index": "C",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-09-28",
+      "solved_date": "2026-09-28"
+    },
+    {
+      "key": "2275A",
+      "name": "In Search of Convenience",
+      "rating": null,
+      "tags": [
+        "geometry",
+        "implementation"
+      ],
+      "contestId": 2275,
+      "index": "A",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-10-07",
+      "solved_date": "2026-10-07"
+    },
+    {
+      "key": "2275B",
+      "name": "Did Not Go to Print",
+      "rating": null,
+      "tags": [
+        "data structures",
+        "implementation"
+      ],
+      "contestId": 2275,
+      "index": "B",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-10-07",
+      "solved_date": "2026-10-07"
+    },
+    {
+      "key": "2275C",
+      "name": "Unrequited Love",
+      "rating": null,
+      "tags": [
+        "brute force",
+        "data structures"
+      ],
+      "contestId": 2275,
+      "index": "C",
+      "attempts": 1,
+      "solved": true,
+      "first_try_date": "2026-10-07",
+      "solved_date": "2026-10-07"
+    },
+    {
+      "key": "2275D",
+      "name": "Precision Alignment",
+      "rating": null,
+      "tags": [
+        "binary search",
+        "brute force",
+        "greedy",
+        "implementation"
+      ],
+      "contestId": 2275,
+      "index": "D",
+      "attempts": 2,
+      "solved": true,
+      "first_try_date": "2026-10-07",
+      "solved_date": "2026-10-07"
+    }
+  ],
+  "days": [
+    {
+      "date": "2025-10-12",
+      "solved_count": 4,
+      "attempted_count": 0,
+      "contests": [
+        2148
+      ],
+      "max_rating": 1000,
+      "solved": [
+        {
+          "key": "2148A",
+          "name": "Sublime Sequence",
+          "rating": 800,
+          "tags": [
+            "brute force",
+            "hashing",
+            "math"
+          ]
+        },
+        {
+          "key": "2148B",
+          "name": "Lasers",
+          "rating": 800,
+          "tags": [
+            "geometry"
+          ]
+        },
+        {
+          "key": "2148C",
+          "name": "Pacer",
+          "rating": 900,
+          "tags": [
+            "greedy",
+            "math"
+          ]
+        },
+        {
+          "key": "2148D",
+          "name": "Destruction of the Dandelion Fields",
+          "rating": 1000,
+          "tags": [
+            "constructive algorithms",
+            "greedy",
+            "sortings"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2025-10-17",
+      "solved_count": 2,
+      "attempted_count": 0,
+      "contests": [
+        2162
+      ],
+      "max_rating": 1000,
+      "solved": [
+        {
+          "key": "2162A",
+          "name": "Beautiful Average",
+          "rating": 800,
+          "tags": [
+            "brute force",
+            "greedy"
+          ]
+        },
+        {
+          "key": "2162B",
+          "name": "Beautiful String",
+          "rating": 1000,
+          "tags": [
+            "brute force",
+            "constructive algorithms"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2025-10-28",
+      "solved_count": 5,
+      "attempted_count": 0,
+      "contests": [
+        2167
+      ],
+      "max_rating": 1600,
+      "solved": [
+        {
+          "key": "2167A",
+          "name": "Square?",
+          "rating": 800,
+          "tags": [
+            "math",
+            "sortings"
+          ]
+        },
+        {
+          "key": "2167B",
+          "name": "Your Name",
+          "rating": 800,
+          "tags": [
+            "sortings",
+            "strings"
+          ]
+        },
+        {
+          "key": "2167C",
+          "name": "Isamatdin and His Magic Wand!",
+          "rating": 800,
+          "tags": [
+            "constructive algorithms",
+            "greedy",
+            "implementation",
+            "sortings"
+          ]
+        },
+        {
+          "key": "2167D",
+          "name": "Yet Another Array Problem",
+          "rating": 1000,
+          "tags": [
+            "brute force",
+            "implementation",
+            "math",
+            "number theory"
+          ]
+        },
+        {
+          "key": "2167E",
+          "name": "khba Loves to Sleep!",
+          "rating": 1600,
+          "tags": [
+            "binary search",
+            "data structures",
+            "geometry",
+            "greedy",
+            "implementation"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2025-10-31",
+      "solved_count": 1,
+      "attempted_count": 0,
+      "contests": [
+        2161
+      ],
+      "max_rating": 800,
+      "solved": [
+        {
+          "key": "2161A",
+          "name": "Round Trip",
+          "rating": 800,
+          "tags": [
+            "games",
+            "greedy",
+            "implementation",
+            "math"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2025-11-03",
+      "solved_count": 1,
+      "attempted_count": 0,
+      "contests": [
+        2168
+      ],
+      "max_rating": null,
+      "solved": [
+        {
+          "key": "2168A1",
+          "name": "Encode and Decode (Easy Version)",
+          "rating": null,
+          "tags": [
+            "communication",
+            "constructive algorithms",
+            "interactive"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2025-11-06",
+      "solved_count": 2,
+      "attempted_count": 1,
+      "contests": [
+        2164
+      ],
+      "max_rating": 1400,
+      "solved": [
+        {
+          "key": "2164A",
+          "name": "Sequence Game",
+          "rating": 800,
+          "tags": [
+            "brute force",
+            "sortings"
+          ]
+        },
+        {
+          "key": "2164C",
+          "name": "Dungeon",
+          "rating": 1400,
+          "tags": [
+            "binary search",
+            "brute force",
+            "data structures",
+            "greedy",
+            "sortings"
+          ]
+        }
+      ],
+      "attempted": [
+        {
+          "key": "2164B",
+          "name": "Even Modulo Pair",
+          "rating": 1000,
+          "tags": [
+            "brute force",
+            "math",
+            "number theory"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-11-10",
+      "solved_count": 1,
+      "attempted_count": 0,
+      "contests": [
+        2163
+      ],
+      "max_rating": 800,
+      "solved": [
+        {
+          "key": "2163A",
+          "name": "Souvlaki VS. Kalamaki",
+          "rating": 800,
+          "tags": [
+            "brute force",
+            "greedy",
+            "math",
+            "sortings"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2025-11-11",
+      "solved_count": 1,
+      "attempted_count": 0,
+      "contests": [
+        2163
+      ],
+      "max_rating": 1700,
+      "solved": [
+        {
+          "key": "2163B",
+          "name": "Siga ta Kymata",
+          "rating": 1700,
+          "tags": [
+            "constructive algorithms",
+            "greedy",
+            "implementation",
+            "math"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2025-11-17",
+      "solved_count": 3,
+      "attempted_count": 0,
+      "contests": [
+        2169
+      ],
+      "max_rating": 1300,
+      "solved": [
+        {
+          "key": "2169A",
+          "name": "Alice and Bob",
+          "rating": 900,
+          "tags": [
+            "greedy",
+            "implementation"
+          ]
+        },
+        {
+          "key": "2169B",
+          "name": "Drifting Away",
+          "rating": 1100,
+          "tags": [
+            "greedy",
+            "implementation"
+          ]
+        },
+        {
+          "key": "2169C",
+          "name": "Range Operation",
+          "rating": 1300,
+          "tags": [
+            "dp",
+            "greedy",
+            "math",
+            "two pointers"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2025-11-20",
+      "solved_count": 3,
+      "attempted_count": 0,
+      "contests": [
+        2171
+      ],
+      "max_rating": 1100,
+      "solved": [
+        {
+          "key": "2171A",
+          "name": "Shizuku Hoshikawa and Farm Legs",
+          "rating": 800,
+          "tags": [
+            "brute force",
+            "math"
+          ]
+        },
+        {
+          "key": "2171B",
+          "name": "Yuu Koito and Minimum Absolute Sum",
+          "rating": 900,
+          "tags": [
+            "math"
+          ]
+        },
+        {
+          "key": "2171C1",
+          "name": "Renako Amaori and XOR Game (easy version)",
+          "rating": 1100,
+          "tags": [
+            "bitmasks",
+            "games",
+            "greedy"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2025-11-23",
+      "solved_count": 1,
+      "attempted_count": 0,
+      "contests": [
+        2171
+      ],
+      "max_rating": 1400,
+      "solved": [
+        {
+          "key": "2171D",
+          "name": "Rae Taylor and Trees (easy version)",
+          "rating": 1400,
+          "tags": [
+            "binary search",
+            "data structures",
+            "dp",
+            "dsu",
+            "greedy",
+            "implementation",
+            "trees"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2025-11-28",
+      "solved_count": 2,
+      "attempted_count": 0,
+      "contests": [
+        2170
+      ],
+      "max_rating": 1300,
+      "solved": [
+        {
+          "key": "2170A",
+          "name": "Maximum Neighborhood",
+          "rating": 800,
+          "tags": [
+            "bitmasks",
+            "brute force",
+            "greedy",
+            "implementation",
+            "math"
+          ]
+        },
+        {
+          "key": "2170C",
+          "name": "Quotient and Remainder",
+          "rating": 1300,
+          "tags": [
+            "binary search",
+            "greedy",
+            "two pointers"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2025-11-30",
+      "solved_count": 1,
+      "attempted_count": 0,
+      "contests": [
+        2170
+      ],
+      "max_rating": 1200,
+      "solved": [
+        {
+          "key": "2170B",
+          "name": "Addition on a Segment",
+          "rating": 1200,
+          "tags": [
+            "greedy",
+            "math"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2025-12-03",
+      "solved_count": 1,
+      "attempted_count": 0,
+      "contests": [
+        2171
+      ],
+      "max_rating": 1400,
+      "solved": [
+        {
+          "key": "2171C2",
+          "name": "Renako Amaori and XOR Game (hard version)",
+          "rating": 1400,
+          "tags": [
+            "bitmasks",
+            "games",
+            "greedy"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2025-12-04",
+      "solved_count": 4,
+      "attempted_count": 1,
+      "contests": [
+        2149,
+        2167
+      ],
+      "max_rating": 1600,
+      "solved": [
+        {
+          "key": "2167G",
+          "name": "Mukhammadali and the Smooth Array",
+          "rating": 1600,
+          "tags": [
+            "data structures",
+            "dp"
+          ]
+        },
+        {
+          "key": "2149A",
+          "name": "Be Positive",
+          "rating": 800,
+          "tags": [
+            "math"
+          ]
+        },
+        {
+          "key": "2149B",
+          "name": "Unconventional Pairs",
+          "rating": 800,
+          "tags": [
+            "greedy",
+            "sortings"
+          ]
+        },
+        {
+          "key": "2149C",
+          "name": "MEX rose",
+          "rating": 900,
+          "tags": [
+            "greedy"
+          ]
+        }
+      ],
+      "attempted": [
+        {
+          "key": "2149E",
+          "name": "Hidden Knowledge of the Ancients",
+          "rating": 1500,
+          "tags": [
+            "data structures",
+            "two pointers"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-12-05",
+      "solved_count": 2,
+      "attempted_count": 0,
+      "contests": [
+        2173
+      ],
+      "max_rating": 1100,
+      "solved": [
+        {
+          "key": "2173A",
+          "name": "Sleeping Through Classes",
+          "rating": 800,
+          "tags": [
+            "greedy",
+            "implementation"
+          ]
+        },
+        {
+          "key": "2173B",
+          "name": "Niko's Tactical Cards",
+          "rating": 1100,
+          "tags": [
+            "dp",
+            "greedy",
+            "math"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2025-12-08",
+      "solved_count": 1,
+      "attempted_count": 0,
+      "contests": [
+        2173
+      ],
+      "max_rating": 1400,
+      "solved": [
+        {
+          "key": "2173C",
+          "name": "Kanade's Perfect Multiples",
+          "rating": 1400,
+          "tags": [
+            "brute force",
+            "constructive algorithms",
+            "greedy",
+            "number theory"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2025-12-10",
+      "solved_count": 2,
+      "attempted_count": 0,
+      "contests": [
+        2162,
+        2173
+      ],
+      "max_rating": 1900,
+      "solved": [
+        {
+          "key": "2173D",
+          "name": "Taiga's Carry Chains",
+          "rating": 1900,
+          "tags": [
+            "bitmasks",
+            "brute force",
+            "dp",
+            "greedy",
+            "math"
+          ]
+        },
+        {
+          "key": "2162C",
+          "name": "Beautiful XOR",
+          "rating": 1100,
+          "tags": [
+            "bitmasks",
+            "constructive algorithms",
+            "greedy"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2025-12-18",
+      "solved_count": 1,
+      "attempted_count": 0,
+      "contests": [
+        2137
+      ],
+      "max_rating": 800,
+      "solved": [
+        {
+          "key": "2137A",
+          "name": "Collatz Conjecture",
+          "rating": 800,
+          "tags": [
+            "constructive algorithms",
+            "math"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2025-12-21",
+      "solved_count": 1,
+      "attempted_count": 0,
+      "contests": [
+        2137
+      ],
+      "max_rating": 900,
+      "solved": [
+        {
+          "key": "2137B",
+          "name": "Fun Permutation",
+          "rating": 900,
+          "tags": [
+            "constructive algorithms",
+            "math",
+            "number theory"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2025-12-23",
+      "solved_count": 5,
+      "attempted_count": 0,
+      "contests": [
+        2137,
+        2179
+      ],
+      "max_rating": 1200,
+      "solved": [
+        {
+          "key": "2137C",
+          "name": "Maximum Even Sum",
+          "rating": 1100,
+          "tags": [
+            "brute force",
+            "greedy",
+            "implementation",
+            "math"
+          ]
+        },
+        {
+          "key": "2137D",
+          "name": "Replace with Occurrences",
+          "rating": 1200,
+          "tags": [
+            "constructive algorithms"
+          ]
+        },
+        {
+          "key": "2179A",
+          "name": "Blackslex and Password",
+          "rating": 800,
+          "tags": [
+            "math",
+            "strings"
+          ]
+        },
+        {
+          "key": "2179B",
+          "name": "Blackslex and Showering",
+          "rating": 800,
+          "tags": [
+            "dp",
+            "greedy",
+            "implementation"
+          ]
+        },
+        {
+          "key": "2179C",
+          "name": "Blackslex and Number Theory",
+          "rating": 1100,
+          "tags": [
+            "implementation",
+            "math",
+            "number theory",
+            "sortings"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2025-12-25",
+      "solved_count": 2,
+      "attempted_count": 0,
+      "contests": [
+        2179
+      ],
+      "max_rating": 1800,
+      "solved": [
+        {
+          "key": "2179D",
+          "name": "Blackslex and Penguin Civilization",
+          "rating": 1300,
+          "tags": [
+            "bitmasks",
+            "constructive algorithms",
+            "greedy",
+            "math"
+          ]
+        },
+        {
+          "key": "2179E",
+          "name": "Blackslex and Girls",
+          "rating": 1800,
+          "tags": [
+            "constructive algorithms",
+            "geometry",
+            "math"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2025-12-26",
+      "solved_count": 1,
+      "attempted_count": 0,
+      "contests": [
+        2155
+      ],
+      "max_rating": 800,
+      "solved": [
+        {
+          "key": "2155A",
+          "name": "El fucho",
+          "rating": 800,
+          "tags": [
+            "implementation",
+            "math"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2025-12-29",
+      "solved_count": 3,
+      "attempted_count": 0,
+      "contests": [
+        2182
+      ],
+      "max_rating": 1200,
+      "solved": [
+        {
+          "key": "2182A",
+          "name": "New Year String",
+          "rating": 800,
+          "tags": [
+            "constructive algorithms",
+            "greedy",
+            "implementation",
+            "strings"
+          ]
+        },
+        {
+          "key": "2182B",
+          "name": "New Year Cake",
+          "rating": 800,
+          "tags": [
+            "brute force"
+          ]
+        },
+        {
+          "key": "2182C",
+          "name": "Production of Snowmen",
+          "rating": 1200,
+          "tags": [
+            "brute force",
+            "combinatorics",
+            "dp"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2026-01-07",
+      "solved_count": 3,
+      "attempted_count": 0,
+      "contests": [
+        2183
+      ],
+      "max_rating": 1500,
+      "solved": [
+        {
+          "key": "2183A",
+          "name": "Binary Array Game",
+          "rating": 800,
+          "tags": [
+            "games"
+          ]
+        },
+        {
+          "key": "2183B",
+          "name": "Yet Another MEX Problem",
+          "rating": 1100,
+          "tags": [
+            "constructive algorithms",
+            "greedy"
+          ]
+        },
+        {
+          "key": "2183C",
+          "name": "War Strategy",
+          "rating": 1500,
+          "tags": [
+            "binary search",
+            "greedy",
+            "math",
+            "two pointers"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2026-02-03",
+      "solved_count": 3,
+      "attempted_count": 0,
+      "contests": [
+        2184
+      ],
+      "max_rating": 1100,
+      "solved": [
+        {
+          "key": "2184A",
+          "name": "Social Experiment",
+          "rating": 800,
+          "tags": [
+            "math"
+          ]
+        },
+        {
+          "key": "2184B",
+          "name": "Hourglass",
+          "rating": 1100,
+          "tags": [
+            "math"
+          ]
+        },
+        {
+          "key": "2184C",
+          "name": "Huge Pile",
+          "rating": 1100,
+          "tags": [
+            "binary search",
+            "dfs and similar",
+            "dp",
+            "graphs",
+            "math"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2026-02-09",
+      "solved_count": 2,
+      "attempted_count": 0,
+      "contests": [
+        2184,
+        2191
+      ],
+      "max_rating": 1600,
+      "solved": [
+        {
+          "key": "2184D",
+          "name": "Unfair Game",
+          "rating": 1600,
+          "tags": [
+            "combinatorics",
+            "dp",
+            "math"
+          ]
+        },
+        {
+          "key": "2191A",
+          "name": "Array Coloring",
+          "rating": 800,
+          "tags": [
+            "constructive algorithms"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2026-02-25",
+      "solved_count": 3,
+      "attempted_count": 0,
+      "contests": [
+        2203
+      ],
+      "max_rating": 1500,
+      "solved": [
+        {
+          "key": "2203A",
+          "name": "Towers of Boxes",
+          "rating": 800,
+          "tags": [
+            "math"
+          ]
+        },
+        {
+          "key": "2203B",
+          "name": "Beautiful Numbers",
+          "rating": 1000,
+          "tags": [
+            "bitmasks",
+            "dp",
+            "fft",
+            "greedy",
+            "math"
+          ]
+        },
+        {
+          "key": "2203C",
+          "name": "Test Generator",
+          "rating": 1500,
+          "tags": [
+            "binary search",
+            "bitmasks",
+            "greedy",
+            "math"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2026-02-26",
+      "solved_count": 3,
+      "attempted_count": 0,
+      "contests": [
+        2205
+      ],
+      "max_rating": 1500,
+      "solved": [
+        {
+          "key": "2205A",
+          "name": "Simons and Making It Beautiful",
+          "rating": 800,
+          "tags": [
+            "brute force",
+            "constructive algorithms"
+          ]
+        },
+        {
+          "key": "2205B",
+          "name": "Simons and Cakes for Success",
+          "rating": 800,
+          "tags": [
+            "implementation",
+            "math"
+          ]
+        },
+        {
+          "key": "2205C",
+          "name": "Simons and Posting Blogs",
+          "rating": 1500,
+          "tags": [
+            "greedy",
+            "sortings"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2026-03-05",
+      "solved_count": 1,
+      "attempted_count": 0,
+      "contests": [
+        2200
+      ],
+      "max_rating": 900,
+      "solved": [
+        {
+          "key": "2200C",
+          "name": "Specialty String",
+          "rating": 900,
+          "tags": [
+            "brute force",
+            "greedy",
+            "strings"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2026-03-06",
+      "solved_count": 2,
+      "attempted_count": 0,
+      "contests": [
+        2200
+      ],
+      "max_rating": 1500,
+      "solved": [
+        {
+          "key": "2200D",
+          "name": "Portal",
+          "rating": 1300,
+          "tags": [
+            "greedy",
+            "sortings"
+          ]
+        },
+        {
+          "key": "2200E",
+          "name": "Divisive Battle",
+          "rating": 1500,
+          "tags": [
+            "games",
+            "greedy",
+            "math",
+            "number theory"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2026-03-19",
+      "solved_count": 1,
+      "attempted_count": 0,
+      "contests": [
+        438
+      ],
+      "max_rating": 2300,
+      "solved": [
+        {
+          "key": "438D",
+          "name": "The Child and Sequence",
+          "rating": 2300,
+          "tags": [
+            "data structures",
+            "math"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2026-03-28",
+      "solved_count": 4,
+      "attempted_count": 0,
+      "contests": [
+        2211
+      ],
+      "max_rating": 1900,
+      "solved": [
+        {
+          "key": "2211A",
+          "name": "Antimedian Deletion",
+          "rating": 800,
+          "tags": [
+            "implementation",
+            "math"
+          ]
+        },
+        {
+          "key": "2211B",
+          "name": "Mickey Mouse Constructive",
+          "rating": 1100,
+          "tags": [
+            "constructive algorithms",
+            "dp",
+            "greedy",
+            "math"
+          ]
+        },
+        {
+          "key": "2211C1",
+          "name": "Equal Multisets (Easy Version)",
+          "rating": 1300,
+          "tags": [
+            "binary search",
+            "brute force",
+            "greedy",
+            "two pointers"
+          ]
+        },
+        {
+          "key": "2211D",
+          "name": "AND-array",
+          "rating": 1900,
+          "tags": [
+            "bitmasks",
+            "combinatorics",
+            "math"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2026-03-29",
+      "solved_count": 3,
+      "attempted_count": 0,
+      "contests": [
+        2210
+      ],
+      "max_rating": 1200,
+      "solved": [
+        {
+          "key": "2210A",
+          "name": "A Simple Sequence",
+          "rating": 800,
+          "tags": [
+            "constructive algorithms",
+            "dp",
+            "greedy",
+            "number theory"
+          ]
+        },
+        {
+          "key": "2210B",
+          "name": "Simply Sitting on Chairs",
+          "rating": 900,
+          "tags": [
+            "data structures",
+            "greedy"
+          ]
+        },
+        {
+          "key": "2210C1",
+          "name": "A Simple GCD Problem (Easy Version)",
+          "rating": 1200,
+          "tags": [
+            "greedy",
+            "number theory"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2026-03-31",
+      "solved_count": 2,
+      "attempted_count": 0,
+      "contests": [
+        2210
+      ],
+      "max_rating": 2100,
+      "solved": [
+        {
+          "key": "2210C2",
+          "name": "A Simple GCD Problem (Hard Version)",
+          "rating": 2100,
+          "tags": [
+            "dp",
+            "greedy",
+            "number theory"
+          ]
+        },
+        {
+          "key": "2210D",
+          "name": "A Simple RBS Problem",
+          "rating": 2100,
+          "tags": [
+            "constructive algorithms",
+            "math",
+            "strings",
+            "trees"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2026-04-01",
+      "solved_count": 2,
+      "attempted_count": 0,
+      "contests": [
+        2214
+      ],
+      "max_rating": null,
+      "solved": [
+        {
+          "key": "2214A",
+          "name": "Odd One Out",
+          "rating": null,
+          "tags": [
+            "*special",
+            "graph matchings",
+            "implementation"
+          ]
+        },
+        {
+          "key": "2214B",
+          "name": "Are You Smiling?",
+          "rating": null,
+          "tags": [
+            "*special",
+            "strings"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2026-04-13",
+      "solved_count": 3,
+      "attempted_count": 1,
+      "contests": [
+        2220
+      ],
+      "max_rating": 1400,
+      "solved": [
+        {
+          "key": "2220A",
+          "name": "Blocked",
+          "rating": 800,
+          "tags": [
+            "greedy",
+            "sortings"
+          ]
+        },
+        {
+          "key": "2220B",
+          "name": "OIE Excursion",
+          "rating": 1200,
+          "tags": [
+            "greedy"
+          ]
+        },
+        {
+          "key": "2220C",
+          "name": "Grid L",
+          "rating": 1400,
+          "tags": [
+            "brute force",
+            "math"
+          ]
+        }
+      ],
+      "attempted": [
+        {
+          "key": "2220D1",
+          "name": "Unique Values (Easy version)",
+          "rating": 1900,
+          "tags": [
+            "binary search",
+            "interactive"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-04-21",
+      "solved_count": 4,
+      "attempted_count": 0,
+      "contests": [
+        2225
+      ],
+      "max_rating": 1500,
+      "solved": [
+        {
+          "key": "2225A",
+          "name": "A Number Between Two Others",
+          "rating": 800,
+          "tags": [
+            "greedy",
+            "math"
+          ]
+        },
+        {
+          "key": "2225B",
+          "name": "Alternating String",
+          "rating": 900,
+          "tags": [
+            "brute force",
+            "greedy"
+          ]
+        },
+        {
+          "key": "2225C",
+          "name": "Red-Black Pairs",
+          "rating": 1100,
+          "tags": [
+            "dp",
+            "greedy"
+          ]
+        },
+        {
+          "key": "2225D",
+          "name": "Exceptional Segments",
+          "rating": 1500,
+          "tags": [
+            "bitmasks",
+            "brute force",
+            "math"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2026-05-07",
+      "solved_count": 4,
+      "attempted_count": 0,
+      "contests": [
+        2224,
+        2226
+      ],
+      "max_rating": 1500,
+      "solved": [
+        {
+          "key": "2226A",
+          "name": "Disturbing Distribution",
+          "rating": 800,
+          "tags": [
+            "greedy",
+            "math"
+          ]
+        },
+        {
+          "key": "2226B",
+          "name": "Everything Everywhere",
+          "rating": 900,
+          "tags": [
+            "greedy",
+            "math",
+            "number theory"
+          ]
+        },
+        {
+          "key": "2226C",
+          "name": "Mental Monumental (Easy Version)",
+          "rating": 1500,
+          "tags": [
+            "binary search",
+            "data structures",
+            "greedy",
+            "math",
+            "two pointers"
+          ]
+        },
+        {
+          "key": "2224A",
+          "name": "Zhily and Array Operating",
+          "rating": 800,
+          "tags": [
+            "constructive algorithms",
+            "greedy"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2026-05-12",
+      "solved_count": 2,
+      "attempted_count": 0,
+      "contests": [
+        2227
+      ],
+      "max_rating": 1400,
+      "solved": [
+        {
+          "key": "2227D",
+          "name": "Palindromex",
+          "rating": 1200,
+          "tags": [
+            "binary search",
+            "brute force",
+            "constructive algorithms",
+            "data structures",
+            "greedy",
+            "implementation",
+            "two pointers"
+          ]
+        },
+        {
+          "key": "2227E",
+          "name": "It All Went Sideways",
+          "rating": 1400,
+          "tags": [
+            "binary search",
+            "data structures",
+            "dp",
+            "greedy"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2026-05-13",
+      "solved_count": 2,
+      "attempted_count": 0,
+      "contests": [
+        2192
+      ],
+      "max_rating": 1300,
+      "solved": [
+        {
+          "key": "2192A",
+          "name": "String Rotation Game",
+          "rating": 800,
+          "tags": [
+            "brute force",
+            "strings"
+          ]
+        },
+        {
+          "key": "2192C",
+          "name": "All-in-one Gun",
+          "rating": 1300,
+          "tags": [
+            "binary search",
+            "greedy",
+            "math"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2026-05-14",
+      "solved_count": 2,
+      "attempted_count": 0,
+      "contests": [
+        2192
+      ],
+      "max_rating": 1800,
+      "solved": [
+        {
+          "key": "2192B",
+          "name": "Flipping Binary String",
+          "rating": 1000,
+          "tags": [
+            "constructive algorithms",
+            "strings"
+          ]
+        },
+        {
+          "key": "2192D",
+          "name": "Cost of Tree",
+          "rating": 1800,
+          "tags": [
+            "dp",
+            "greedy",
+            "trees"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2026-05-15",
+      "solved_count": 3,
+      "attempted_count": 0,
+      "contests": [
+        2188
+      ],
+      "max_rating": 1300,
+      "solved": [
+        {
+          "key": "2188A",
+          "name": "Divisible Permutation",
+          "rating": 800,
+          "tags": [
+            "constructive algorithms"
+          ]
+        },
+        {
+          "key": "2188B",
+          "name": "Seats",
+          "rating": 1000,
+          "tags": [
+            "greedy"
+          ]
+        },
+        {
+          "key": "2188C",
+          "name": "Restricted Sorting",
+          "rating": 1300,
+          "tags": [
+            "greedy",
+            "sortings"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2026-05-16",
+      "solved_count": 4,
+      "attempted_count": 0,
+      "contests": [
+        2176,
+        2228
+      ],
+      "max_rating": 1500,
+      "solved": [
+        {
+          "key": "2176A",
+          "name": "Operations with Inversions",
+          "rating": 800,
+          "tags": [
+            "greedy",
+            "implementation",
+            "math"
+          ]
+        },
+        {
+          "key": "2228A",
+          "name": "Marisa Steals Reimu's Takeout",
+          "rating": 800,
+          "tags": [
+            "greedy",
+            "implementation"
+          ]
+        },
+        {
+          "key": "2228B",
+          "name": "Remilia Plays Soku",
+          "rating": 1100,
+          "tags": [
+            "games",
+            "implementation"
+          ]
+        },
+        {
+          "key": "2228C1",
+          "name": "Cirno and Number (Easy Version)",
+          "rating": 1500,
+          "tags": [
+            "binary search",
+            "brute force",
+            "dp",
+            "greedy",
+            "implementation"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2026-05-18",
+      "solved_count": 2,
+      "attempted_count": 0,
+      "contests": [
+        2230
+      ],
+      "max_rating": 1300,
+      "solved": [
+        {
+          "key": "2230A",
+          "name": "Optimal Purchase",
+          "rating": 800,
+          "tags": [
+            "implementation",
+            "math"
+          ]
+        },
+        {
+          "key": "2230C",
+          "name": "Arrange the Numbers in a Circle",
+          "rating": 1300,
+          "tags": [
+            "constructive algorithms",
+            "implementation",
+            "math"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2026-05-19",
+      "solved_count": 2,
+      "attempted_count": 0,
+      "contests": [
+        2176
+      ],
+      "max_rating": 1300,
+      "solved": [
+        {
+          "key": "2176B",
+          "name": "Optimal Shifts",
+          "rating": 1000,
+          "tags": [
+            "bitmasks",
+            "greedy",
+            "strings"
+          ]
+        },
+        {
+          "key": "2176C",
+          "name": "Odd Process",
+          "rating": 1300,
+          "tags": [
+            "greedy",
+            "sortings"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2026-05-21",
+      "solved_count": 3,
+      "attempted_count": 0,
+      "contests": [
+        2231
+      ],
+      "max_rating": 1400,
+      "solved": [
+        {
+          "key": "2231A",
+          "name": "Construct an Array",
+          "rating": 800,
+          "tags": [
+            "constructive algorithms"
+          ]
+        },
+        {
+          "key": "2231B",
+          "name": "Another Sorting Problem",
+          "rating": 1100,
+          "tags": [
+            "constructive algorithms"
+          ]
+        },
+        {
+          "key": "2231C",
+          "name": "Chipmunk Theo and Equality",
+          "rating": 1400,
+          "tags": [
+            "implementation",
+            "sortings"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2026-05-22",
+      "solved_count": 1,
+      "attempted_count": 0,
+      "contests": [
+        2230
+      ],
+      "max_rating": 1000,
+      "solved": [
+        {
+          "key": "2230B",
+          "name": "Digit String",
+          "rating": 1000,
+          "tags": [
+            "greedy",
+            "implementation",
+            "math"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2026-05-23",
+      "solved_count": 3,
+      "attempted_count": 0,
+      "contests": [
+        2229
+      ],
+      "max_rating": 900,
+      "solved": [
+        {
+          "key": "2229A",
+          "name": "Slimes on a Line",
+          "rating": 800,
+          "tags": [
+            "brute force",
+            "greedy",
+            "math"
+          ]
+        },
+        {
+          "key": "2229B",
+          "name": "Absolute Cinema",
+          "rating": 800,
+          "tags": [
+            "greedy",
+            "math"
+          ]
+        },
+        {
+          "key": "2229C1",
+          "name": "We Be Flipping (Easy Version)",
+          "rating": 900,
+          "tags": [
+            "constructive algorithms",
+            "greedy"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2026-05-26",
+      "solved_count": 2,
+      "attempted_count": 0,
+      "contests": [
+        2229,
+        2230
+      ],
+      "max_rating": 1700,
+      "solved": [
+        {
+          "key": "2229C2",
+          "name": "We Be Flipping (Hard Version)",
+          "rating": 1400,
+          "tags": [
+            "constructive algorithms",
+            "dp",
+            "greedy"
+          ]
+        },
+        {
+          "key": "2230D",
+          "name": "Good Schedule",
+          "rating": 1700,
+          "tags": [
+            "dp",
+            "greedy"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2026-06-02",
+      "solved_count": 1,
+      "attempted_count": 0,
+      "contests": [
+        2158
+      ],
+      "max_rating": 800,
+      "solved": [
+        {
+          "key": "2158A",
+          "name": "Suspension",
+          "rating": 800,
+          "tags": [
+            "constructive algorithms",
+            "greedy",
+            "math"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2026-06-04",
+      "solved_count": 4,
+      "attempted_count": 0,
+      "contests": [
+        2156,
+        2158
+      ],
+      "max_rating": 1400,
+      "solved": [
+        {
+          "key": "2158B",
+          "name": "Split",
+          "rating": 1200,
+          "tags": [
+            "constructive algorithms",
+            "greedy",
+            "math"
+          ]
+        },
+        {
+          "key": "2158C",
+          "name": "Annoying Game",
+          "rating": 1400,
+          "tags": [
+            "dp",
+            "games",
+            "greedy"
+          ]
+        },
+        {
+          "key": "2156A",
+          "name": "Pizza Time",
+          "rating": 800,
+          "tags": [
+            "brute force",
+            "constructive algorithms",
+            "greedy"
+          ]
+        },
+        {
+          "key": "2156B",
+          "name": "Strange Machine",
+          "rating": 1000,
+          "tags": [
+            "binary search",
+            "brute force",
+            "greedy",
+            "implementation"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2026-06-05",
+      "solved_count": 1,
+      "attempted_count": 0,
+      "contests": [
+        2156
+      ],
+      "max_rating": 1400,
+      "solved": [
+        {
+          "key": "2156C",
+          "name": "Maximum GCD on Whiteboard",
+          "rating": 1400,
+          "tags": [
+            "greedy",
+            "math",
+            "number theory"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2026-06-07",
+      "solved_count": 3,
+      "attempted_count": 0,
+      "contests": [
+        2234
+      ],
+      "max_rating": 1200,
+      "solved": [
+        {
+          "key": "2234A",
+          "name": "Euclid, Sequence and Two Numbers",
+          "rating": 800,
+          "tags": [
+            "math",
+            "number theory",
+            "sortings"
+          ]
+        },
+        {
+          "key": "2234B",
+          "name": "Palindrome, Twelve and Two Terms",
+          "rating": 800,
+          "tags": [
+            "brute force",
+            "constructive algorithms",
+            "math"
+          ]
+        },
+        {
+          "key": "2234C",
+          "name": "Vessels, Heights and Two Versions (Easy Version)",
+          "rating": 1200,
+          "tags": [
+            "dfs and similar",
+            "dsu",
+            "greedy",
+            "implementation",
+            "two pointers"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2026-06-09",
+      "solved_count": 2,
+      "attempted_count": 0,
+      "contests": [
+        2233
+      ],
+      "max_rating": 900,
+      "solved": [
+        {
+          "key": "2233A",
+          "name": "AI Project Development",
+          "rating": 800,
+          "tags": [
+            "brute force",
+            "math"
+          ]
+        },
+        {
+          "key": "2233B",
+          "name": "Different Distances",
+          "rating": 900,
+          "tags": [
+            "constructive algorithms"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2026-06-12",
+      "solved_count": 5,
+      "attempted_count": 0,
+      "contests": [
+        2233,
+        2236
+      ],
+      "max_rating": 1400,
+      "solved": [
+        {
+          "key": "2233C",
+          "name": "Cost of a Bracket Sequence",
+          "rating": 1400,
+          "tags": [
+            "brute force",
+            "dp",
+            "greedy"
+          ]
+        },
+        {
+          "key": "2236A",
+          "name": "Games on the Train",
+          "rating": 800,
+          "tags": [
+            "greedy",
+            "math"
+          ]
+        },
+        {
+          "key": "2236B",
+          "name": "Tatar TV Show",
+          "rating": 800,
+          "tags": [
+            "greedy",
+            "math",
+            "strings"
+          ]
+        },
+        {
+          "key": "2236C",
+          "name": "Omsk Programmers",
+          "rating": 1000,
+          "tags": [
+            "brute force",
+            "greedy",
+            "math"
+          ]
+        },
+        {
+          "key": "2236D",
+          "name": "Brand New Tatar TV Show",
+          "rating": 1300,
+          "tags": [
+            "binary search",
+            "constructive algorithms",
+            "dp",
+            "games",
+            "math"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2026-06-18",
+      "solved_count": 3,
+      "attempted_count": 0,
+      "contests": [
+        2237
+      ],
+      "max_rating": 1000,
+      "solved": [
+        {
+          "key": "2237A",
+          "name": "Destroying Towers",
+          "rating": 800,
+          "tags": [
+            "games",
+            "greedy",
+            "schedules"
+          ]
+        },
+        {
+          "key": "2237B",
+          "name": "Annoying the Ghost",
+          "rating": 1000,
+          "tags": [
+            "brute force",
+            "greedy"
+          ]
+        },
+        {
+          "key": "2237C",
+          "name": "Duck Surplus",
+          "rating": 1000,
+          "tags": [
+            "binary search",
+            "greedy"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2026-07-29",
+      "solved_count": 1,
+      "attempted_count": 0,
+      "contests": [
+        2250
+      ],
+      "max_rating": 800,
+      "solved": [
+        {
+          "key": "2250A",
+          "name": "Threshold Movement",
+          "rating": 800,
+          "tags": [
+            "brute force",
+            "implementation",
+            "math"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2026-08-10",
+      "solved_count": 1,
+      "attempted_count": 0,
+      "contests": [
+        2250
+      ],
+      "max_rating": 1000,
+      "solved": [
+        {
+          "key": "2250B",
+          "name": "String Construction",
+          "rating": 1000,
+          "tags": [
+            "constructive algorithms"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2026-09-03",
+      "solved_count": 1,
+      "attempted_count": 0,
+      "contests": [
+        2250
+      ],
+      "max_rating": 1300,
+      "solved": [
+        {
+          "key": "2250C",
+          "name": "Rank Subsequence",
+          "rating": 1300,
+          "tags": [
+            "brute force",
+            "greedy",
+            "implementation"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2026-09-04",
+      "solved_count": 1,
+      "attempted_count": 0,
+      "contests": [
+        2248
+      ],
+      "max_rating": 800,
+      "solved": [
+        {
+          "key": "2248A",
+          "name": "You Delete, I Delete",
+          "rating": 800,
+          "tags": [
+            "greedy"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2026-09-23",
+      "solved_count": 1,
+      "attempted_count": 0,
+      "contests": [
+        2266
+      ],
+      "max_rating": 1000,
+      "solved": [
+        {
+          "key": "2266C",
+          "name": "AND, OR, Sort!",
+          "rating": 1000,
+          "tags": [
+            "greedy",
+            "strings"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2026-09-24",
+      "solved_count": 1,
+      "attempted_count": 0,
+      "contests": [
+        2266
+      ],
+      "max_rating": 1400,
+      "solved": [
+        {
+          "key": "2266D",
+          "name": "Falling Concrete",
+          "rating": 1400,
+          "tags": [
+            "constructive algorithms",
+            "data structures",
+            "math",
+            "sortings"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2026-09-28",
+      "solved_count": 3,
+      "attempted_count": 0,
+      "contests": [
+        2264
+      ],
+      "max_rating": 1400,
+      "solved": [
+        {
+          "key": "2264A",
+          "name": "Rumb Needs a Hand",
+          "rating": 800,
+          "tags": [
+            "implementation",
+            "sortings",
+            "two pointers"
+          ]
+        },
+        {
+          "key": "2264B",
+          "name": "Knife's Pill Farm",
+          "rating": 1000,
+          "tags": [
+            "data structures",
+            "greedy",
+            "math"
+          ]
+        },
+        {
+          "key": "2264C",
+          "name": "Madamant's Skating Dynasty",
+          "rating": 1400,
+          "tags": [
+            "combinatorics",
+            "math",
+            "sortings"
+          ]
+        }
+      ],
+      "attempted": []
+    },
+    {
+      "date": "2026-10-07",
+      "solved_count": 4,
+      "attempted_count": 0,
+      "contests": [
+        2275
+      ],
+      "max_rating": null,
+      "solved": [
+        {
+          "key": "2275A",
+          "name": "In Search of Convenience",
+          "rating": null,
+          "tags": [
+            "geometry",
+            "implementation"
+          ]
+        },
+        {
+          "key": "2275B",
+          "name": "Did Not Go to Print",
+          "rating": null,
+          "tags": [
+            "data structures",
+            "implementation"
+          ]
+        },
+        {
+          "key": "2275C",
+          "name": "Unrequited Love",
+          "rating": null,
+          "tags": [
+            "brute force",
+            "data structures"
+          ]
+        },
+        {
+          "key": "2275D",
+          "name": "Precision Alignment",
+          "rating": null,
+          "tags": [
+            "binary search",
+            "brute force",
+            "greedy",
+            "implementation"
+          ]
+        }
+      ],
+      "attempted": []
+    }
+  ]
+}
