@@ -6,7 +6,7 @@ DST = Path("data/oi_wiki_clean")
 
 KEEP_DIRS = [
     "basic", "dp", "ds", "graph", "math", "string",
-    "search", "geometry", "misc", "topic", "contest",
+    "search", "geometry", "misc", "topic", "contest", "lang",
 ]
 
 

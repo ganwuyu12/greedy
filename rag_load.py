@@ -33,11 +33,18 @@ def split_mixed(text: str, max_size: int = 800) -> list[str]:
     return parts
 
 
-def load_and_split(split_fn) -> list[dict]:
+def load_and_split(split_fn, data_dir: Path) -> list[dict]:
     chunks = []
-    for f in DATA_DIR.iterdir():
+    # 只索引“核心目录”
+    core_dirs = ["basic", "dp", "ds", "graph", "math", "string", "search", "geometry", "misc", "topic"]
+
+    for f in data_dir.rglob("*.md"):
         if not f.is_file():
             continue
+        # 检查“路径里有没有核心目录”
+        if data_dir.name == "oi_wiki_docs":   # 只有 OI Wiki 才过滤
+            if not any(d in f.parts for d in core_dirs):
+                continue
         text = f.read_text(encoding="utf-8", errors="ignore")
         for part in split_fn(text):
             if len(part) < 20:
@@ -46,9 +53,9 @@ def load_and_split(split_fn) -> list[dict]:
     return chunks
 
 
-def build_index(split_fn, output_dir: Path) -> None:
+def build_index(split_fn, data_dir: Path, output_dir: Path) -> None:
     output_dir.mkdir(exist_ok=True)
-    chunks = load_and_split(split_fn)
+    chunks = load_and_split(split_fn, data_dir)
     print(f"切出 {len(chunks)} 块")
 
     model = SentenceTransformer("BAAI/bge-small-zh-v1.5")
@@ -63,4 +70,7 @@ def build_index(split_fn, output_dir: Path) -> None:
     print(f"已保存到 {output_dir}")
 
 if __name__ == '__main__':
-    build_index(split_by_blank_line, Path("data/index"))
+    import sys
+    data_dir = Path(sys.argv[1]) if len(sys.argv) > 1 else Path("data/solutions")
+    output_dir = Path(sys.argv[2]) if len(sys.argv) > 2 else Path("data/index")
+    build_index(split_by_blank_line, data_dir, output_dir)

@@ -5,9 +5,18 @@ __pycache__/
 .pytest_cache/
 .mypy_cache/
 *.log
-data/records.json
-data/index/
-data/output/
 *.mp3
-data/oi_wiki_docs/
+
+# ---- 用户数据（本地状态，不入库）----
+data/records.json
 data/cf_state.json
+
+# ---- 构建产物（可由脚本重建，不入库）----
+data/index/
+data/wiki_index/
+data/output/
+
+# ---- 第三方语料（体积大 + 版权，不入库）----
+# 用 fetch_corpus.py 或 git clone 重建，见 SETUP.md
+data/oi_wiki_docs/
+data/oi_wiki_clean/

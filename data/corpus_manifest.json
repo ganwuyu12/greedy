@@ -1,0 +1,2148 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-10-15T10:48:06+08:00",
+  "source": {
+    "name": "OI Wiki",
+    "repo": "https://github.com/OI-wiki/OI-wiki",
+    "url": "https://oi-wiki.org/",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "note": "知识内容采用 CC BY-SA 4.0，转载与演绎需署名并以相同方式共享"
+  },
+  "pipeline": {
+    "raw_dir": "data/oi_wiki_docs",
+    "clean_dir": "data/oi_wiki_clean",
+    "clean_script": "clean_corpus.py",
+    "keep_dirs": [
+      "basic",
+      "dp",
+      "ds",
+      "graph",
+      "math",
+      "string",
+      "search",
+      "geometry",
+      "misc",
+      "topic",
+      "contest",
+      "lang"
+    ],
+    "rule": "只保留主题目录下的 .md，剔除站点资源、测试数据、图片等"
+  },
+  "clean": {
+    "file_count": 418,
+    "total_bytes": 5568606,
+    "digest": "2538690b20911002afb2272a34aa5c2ac62a0420bfd6e119496966f694893ae0",
+    "by_dir": {
+      "basic": 26,
+      "dp": 22,
+      "ds": 59,
+      "graph": 61,
+      "math": 113,
+      "string": 22,
+      "search": 12,
+      "geometry": 14,
+      "misc": 32,
+      "topic": 4,
+      "contest": 12,
+      "lang": 41
+    },
+    "files": [
+      {
+        "path": "basic/amortized-analysis.md",
+        "size": 12236,
+        "sha256": "38dca3fddd36b94e6d139e25da4a69aca84d0e63158d48267ac37d77636bcb91"
+      },
+      {
+        "path": "basic/binary-lifting.md",
+        "size": 5356,
+        "sha256": "f2869eadb9432ffb045a24356ac14d4749e042ecce47d88f1145465329f7862c"
+      },
+      {
+        "path": "basic/binary.md",
+        "size": 39052,
+        "sha256": "3b1a38503e2ebd2239d57f56100fa832c4f55467aac50ca99a730dfea1b99c9e"
+      },
+      {
+        "path": "basic/bubble-sort.md",
+        "size": 2342,
+        "sha256": "f0582e010826f617556d785c0b71b27e63ae112f1a9634e5b57ef9a9f4e71149"
+      },
+      {
+        "path": "basic/bucket-sort.md",
+        "size": 1529,
+        "sha256": "fb68234fa31fec42383a2120744a9eb8f0b2cf17c45941023cb36e6acc1724c5"
+      },
+      {
+        "path": "basic/complexity.md",
+        "size": 13241,
+        "sha256": "60e681aac47e2f7d01af696c8ad10b53a294214d303c28231ce543f21bb068f5"
+      },
+      {
+        "path": "basic/construction.md",
+        "size": 8316,
+        "sha256": "50538b64f8199b0484453ce25ba2eed96538aede9a6a32e0da5af1bea788dbe9"
+      },
+      {
+        "path": "basic/counting-sort.md",
+        "size": 2814,
+        "sha256": "326d9b2dcc3dcfcef699761bdfc03f8c92ab6e7570bf782c99ed1cb6d8e7d02d"
+      },
+      {
+        "path": "basic/divide-and-conquer.md",
+        "size": 9804,
+        "sha256": "283f247c61dfa94a9d4acda865fc6fac03b0cbb408071fb20b865c757d2d07df"
+      },
+      {
+        "path": "basic/enumerate.md",
+        "size": 4422,
+        "sha256": "9620e8e797f903de805212f583fbe33a2df6d055b62fd267dac02c4dfa08959b"
+      },
+      {
+        "path": "basic/greedy.md",
+        "size": 6487,
+        "sha256": "8363dd5f38c5b8ed2015b97696c2e77def7c2596241fa67cfb4bac97ec76480d"
+      },
+      {
+        "path": "basic/heap-sort.md",
+        "size": 1643,
+        "sha256": "95e5a99bcda1850aebcc480af7be91f694519118fca65a9455b3608e34eef70c"
+      },
+      {
+        "path": "basic/index.md",
+        "size": 763,
+        "sha256": "a2cf1133d26381bf322813fcac3423ba87007cf1def1066a66f2ae4eb6c20e9d"
+      },
+      {
+        "path": "basic/insertion-sort.md",
+        "size": 2528,
+        "sha256": "926879090a4bdd61b0afc62cd903368de60b6bd645e0dcae23bf2781d2e40f50"
+      },
+      {
+        "path": "basic/merge-sort.md",
+        "size": 4589,
+        "sha256": "c00c947bef850838b9d88f3a837d89b67946691f08553c2c7ac8d467fb06d3b2"
+      },
+      {
+        "path": "basic/prefix-sum.md",
+        "size": 17314,
+        "sha256": "5a915813818146bc09c2462004dc2350dec1adcb6887287f4b7ee2112ff43d2c"
+      },
+      {
+        "path": "basic/quick-sort.md",
+        "size": 13275,
+        "sha256": "ae6d3bcfa61f0ede205079fb0f43ccf224752d66405e3b2660237697d2ae422b"
+      },
+      {
+        "path": "basic/radix-sort.md",
+        "size": 9566,
+        "sha256": "9d705faa9d30c5e567aa1fcde7406b8d2825be6579aa67c7551aa1e63f962e0d"
+      },
+      {
+        "path": "basic/selection-sort.md",
+        "size": 2364,
+        "sha256": "779528c7950d6a4595badfb84d9ed5f35c2c842730cbbd51d28d37a4449191fd"
+      },
+      {
+        "path": "basic/shell-sort.md",
+        "size": 14537,
+        "sha256": "2c8ec0ca774fd64cc7d8be9328be55595a75778ac039536a853d04c43be42ef7"
+      },
+      {
+        "path": "basic/simulate.md",
+        "size": 2390,
+        "sha256": "332ba803d044065d7680f67a95401201636e0a660a1fcf326030bd6e39a5188d"
+      },
+      {
+        "path": "basic/sort-intro.md",
+        "size": 2075,
+        "sha256": "7c13f81d609b7e508365ec17d7ac8f5d26170f025e847f746364c1e336ae0de3"
+      },
+      {
+        "path": "basic/stl-sort.md",
+        "size": 8298,
+        "sha256": "feac43dc8ac85c8bc263e4517ff9ec4fb1f9dfc1a57910555fe4898da7e05319"
+      },
+      {
+        "path": "basic/tim-sort.md",
+        "size": 11284,
+        "sha256": "f142d38dd5c79a502c218d3e9f407586c0a004fecb25ddc8d33aead3ea90e28d"
+      },
+      {
+        "path": "basic/tournament-sort.md",
+        "size": 2364,
+        "sha256": "69457ebf4104b2131561e5e54388c5e50caa552be223bcf11b61f9f54305945f"
+      },
+      {
+        "path": "basic/use-of-sort.md",
+        "size": 1567,
+        "sha256": "a03e9b148105de899ef97dad50b742f70a5a0339f9002c7492f018fa194b38ba"
+      },
+      {
+        "path": "contest/common-mistakes.md",
+        "size": 23878,
+        "sha256": "cd332d6734d63a3c93980111e4bea2785890f611aa4d4524988555604848938b"
+      },
+      {
+        "path": "contest/common-tricks.md",
+        "size": 6802,
+        "sha256": "fe32a16d2f584e68596fa98c330a1b3c9e826b109f05a1d8fa4e9ca46b9d1167"
+      },
+      {
+        "path": "contest/dictionary.md",
+        "size": 1806,
+        "sha256": "80c7b9209f2d9d00ce201acb8c00e8113decb91cb0f64a02d1c65be7f97f11b3"
+      },
+      {
+        "path": "contest/icpc.md",
+        "size": 2342,
+        "sha256": "6c7e82dd013be75a4eb800eac33ab9917b2bee009249ca13efb0b419c49d3000"
+      },
+      {
+        "path": "contest/index.md",
+        "size": 283,
+        "sha256": "37557501183b4ba04d1e3226ef3acdba021c87272822ad7948260c5dd4a4fab9"
+      },
+      {
+        "path": "contest/interaction.md",
+        "size": 26307,
+        "sha256": "a12bdfe8b5a37fee536983e5bcf80e5c8d9a865cce027d8c29e378e2b010b3f9"
+      },
+      {
+        "path": "contest/io.md",
+        "size": 10808,
+        "sha256": "56581920a05e87b6b9dd573f0878082832869cd53575909e17f3fa25a37e7fd2"
+      },
+      {
+        "path": "contest/oi.md",
+        "size": 22378,
+        "sha256": "a06301a7001a0803355df7e6752be62fdea5b48c53f79fd8f60d15243dddcc14"
+      },
+      {
+        "path": "contest/problems.md",
+        "size": 10897,
+        "sha256": "fd894be0ebde0d395d361a577d6a8fd663473493851224e9b41c84f05b8935be"
+      },
+      {
+        "path": "contest/problemsetting.md",
+        "size": 34747,
+        "sha256": "fedc0956099f0be63ca26c8a9ffec5eea3e54f2b8bb7ab06db39ab9757cee363"
+      },
+      {
+        "path": "contest/resources.md",
+        "size": 16957,
+        "sha256": "9859486ad101f76d14dcc05849692038d349b0d7bb499d4329e01ee7030b4c8d"
+      },
+      {
+        "path": "contest/roadmap.md",
+        "size": 9018,
+        "sha256": "3846ed28eeb8597a2cab3ec590e88178315dd548b37faeb1d32b35ca582cf293"
+      },
+      {
+        "path": "dp/basic.md",
+        "size": 10766,
+        "sha256": "69157480ea08f00f6b0b2b766971d7d0be35affe227a1ec17ce8e9137a20ef85"
+      },
+      {
+        "path": "dp/count.md",
+        "size": 6537,
+        "sha256": "e351d020845c8710211c62395704bf57a2911f411982b05d3337966f1fb47c50"
+      },
+      {
+        "path": "dp/dag.md",
+        "size": 2744,
+        "sha256": "1e02ec859ed4cc721bfd8d297cf6547123e141b597c13cc724c53e95507dc6c1"
+      },
+      {
+        "path": "dp/dp-of-dp.md",
+        "size": 12508,
+        "sha256": "4ee07a13cdcd1e4ffd46d1f9ee4bb9f3ccd9e7594933a21fdfe41800bb118bfb"
+      },
+      {
+        "path": "dp/dynamic.md",
+        "size": 3128,
+        "sha256": "c13e24b176eebe9ec2762cfd70f9ae4929c75415a4f4f13408ff657cd6aa390e"
+      },
+      {
+        "path": "dp/index.md",
+        "size": 800,
+        "sha256": "f20e932a7fb3d71747c23872343aff1db65a67bdc903ad7a4d2e8847439b1add"
+      },
+      {
+        "path": "dp/interval.md",
+        "size": 3198,
+        "sha256": "79924ec1e82c5b5cf950a009d5700d84fb79f926f8355fe994bc1e622312d8f4"
+      },
+      {
+        "path": "dp/knapsack/advanced.md",
+        "size": 10448,
+        "sha256": "22b2863c1b7b8e7e9802ac1a4fccf7a0adf34219ab61b2342399c806fbd0f869"
+      },
+      {
+        "path": "dp/knapsack/basic.md",
+        "size": 10474,
+        "sha256": "e62c1d55929bdd850dd3fdff2a0dc4e8475e5d7b4d80efe5d03bffa9c580fed0"
+      },
+      {
+        "path": "dp/memo.md",
+        "size": 7953,
+        "sha256": "fe71bb11c1f321cb64fa8cd3aad91a9e39b089399e36bf6595d8edcc51c7665a"
+      },
+      {
+        "path": "dp/number.md",
+        "size": 17389,
+        "sha256": "9a84531b49958db2161286025c33571cba5db68e26d1f3efc4bc523f252fb1bb"
+      },
+      {
+        "path": "dp/opt/dp-opt.md",
+        "size": 8337,
+        "sha256": "f03bd633d435be77940661085c7cdf8f4eaf045fad25c2548c7d43980aebc76c"
+      },
+      {
+        "path": "dp/opt/monotonic-queue-stack.md",
+        "size": 5406,
+        "sha256": "99aabcee919970cd396176826d0154ff87b3cdd2004a4c90022118a25b810cc8"
+      },
+      {
+        "path": "dp/opt/quadrangle.md",
+        "size": 37642,
+        "sha256": "a97ca008502b6256c619870972361f0d03a35303c776cf0b45e3b3edb98db6ae"
+      },
+      {
+        "path": "dp/opt/slope-trick.md",
+        "size": 35131,
+        "sha256": "48aae074fed2490a5da20ec29401e183f7ac81497f3f235f0b8677175f10e07c"
+      },
+      {
+        "path": "dp/opt/slope.md",
+        "size": 8293,
+        "sha256": "348bfc527a92915606ce3bc9049cdd466256a24958480f6d75c844f1e0f472ac"
+      },
+      {
+        "path": "dp/opt/state.md",
+        "size": 3388,
+        "sha256": "d7a207a70268c440a84a28afda7b6b098ab3cc285741ada9330a826fa940b431"
+      },
+      {
+        "path": "dp/opt/wqs-binary-search.md",
+        "size": 64497,
+        "sha256": "531d449cec313957e7e470cb46df71484b17a3db84b753fc150760de64926dd1"
+      },
+      {
+        "path": "dp/plug.md",
+        "size": 38832,
+        "sha256": "0c6bf7d03cf4a2e9a5b7e27ccabeca2125d06aeeb288686c15e767d783de44b3"
+      },
+      {
+        "path": "dp/probability.md",
+        "size": 9967,
+        "sha256": "43681fab87708c8bca6ea26719092c77f378a478a3331ff84cf638013d654718"
+      },
+      {
+        "path": "dp/state.md",
+        "size": 3318,
+        "sha256": "162cf8dee3fd4d646d50fb5580947ce6a5c2379ad2a76b7c76e4bb6633c95cc2"
+      },
+      {
+        "path": "dp/tree.md",
+        "size": 6779,
+        "sha256": "cd7ebaf4b0dc4db2eb24e597a04e611c4f82d2a16d7cab5ae96767cffa3e57e1"
+      },
+      {
+        "path": "ds/aa-tree.md",
+        "size": 7516,
+        "sha256": "83840014136b325c4d0bba9ccd67f51255978f6a082f32b299260b764566db15"
+      },
+      {
+        "path": "ds/avl.md",
+        "size": 5399,
+        "sha256": "823e52caa3e8fbd68463086129aa7be89fd7bdbcffc075382c63397b567d1087"
+      },
+      {
+        "path": "ds/balanced-in-seg.md",
+        "size": 4040,
+        "sha256": "0400a13ed641d76004928a3b096006ad1631fb42eb5e7808bbb0fb03bc2240e0"
+      },
+      {
+        "path": "ds/binary-heap.md",
+        "size": 5947,
+        "sha256": "a4ec012af893085545bc2d07201ef7925f75ecb1ad86114ff7348b3c966cfc41"
+      },
+      {
+        "path": "ds/bit-in-block-array.md",
+        "size": 18582,
+        "sha256": "9a433bba65f7614b207489899de8b3e200cdc335990660894e342e77cf05c450"
+      },
+      {
+        "path": "ds/block-array.md",
+        "size": 5535,
+        "sha256": "c7e1599ec4d6d17fee08932e67071d7d82d76960213465fd1dffa11bc75fd73c"
+      },
+      {
+        "path": "ds/block-list.md",
+        "size": 3636,
+        "sha256": "23c68ce1e0240ff08df8ce3312a5d6499bf22788df282d7cc6720dff338174a4"
+      },
+      {
+        "path": "ds/bst.md",
+        "size": 14511,
+        "sha256": "e220c91eaaecc60ec8ed591bf53c16df1a4a3a471c5d96df0d892710a415ef30"
+      },
+      {
+        "path": "ds/cartesian-tree.md",
+        "size": 4287,
+        "sha256": "962a51988d3d95d5b610fee6659f0c3db51e4c74c0442b5fdec9453453028114"
+      },
+      {
+        "path": "ds/cat-tree.md",
+        "size": 5751,
+        "sha256": "1ab6542df26bf76d56bc802ff89e12d2278a62fe554677dff4d13528fd6af1e1"
+      },
+      {
+        "path": "ds/decompose.md",
+        "size": 5781,
+        "sha256": "c5447cd869f78c311055f3abf19d25b7f4599da7aa53c59f47774ea02e10ae7f"
+      },
+      {
+        "path": "ds/divide-combine.md",
+        "size": 18684,
+        "sha256": "7ec610ab485693beb317a77979e2f8f4216965eaae3853fd3aaceb07c4094adb"
+      },
+      {
+        "path": "ds/dividing.md",
+        "size": 8518,
+        "sha256": "12aade4cb0e5c78dd7caed81445f7fc0029f3414d1fee9b8f148af5febacf6ab"
+      },
+      {
+        "path": "ds/dsu-complexity.md",
+        "size": 11454,
+        "sha256": "94fbf94a5d273ffa90dc7531dc397e723d86ee1dc612251008c50b33375d5a5f"
+      },
+      {
+        "path": "ds/dsu.md",
+        "size": 17741,
+        "sha256": "7b6544d5950cc92a82b4ead30895a1c2d7b6f52f23af3fb5cd30b0d53ecd17d2"
+      },
+      {
+        "path": "ds/ett.md",
+        "size": 12368,
+        "sha256": "2aa4fc66a7434fed05b02e280885d429659aa07a1f1625d73cd8b5216137c3a3"
+      },
+      {
+        "path": "ds/fenwick.md",
+        "size": 49135,
+        "sha256": "8fd46a71d997123a5414927d9f395001d43b1379b7245522ce23dd128834f6f3"
+      },
+      {
+        "path": "ds/finger-tree.md",
+        "size": 8691,
+        "sha256": "dd39bcf94f4b287981a9bddf170eed42e513b254976951e9ffc816f193b885dd"
+      },
+      {
+        "path": "ds/global-bst.md",
+        "size": 13230,
+        "sha256": "8f78ac701e398f440e7afd2fa0078ef0d75e963fff7dd4484a91d26fc0834c38"
+      },
+      {
+        "path": "ds/hash.md",
+        "size": 7884,
+        "sha256": "f253ecb4e56f3314deb9bab9e41af0e6a4e56d0bd58895b5d5a2744d607bfabc"
+      },
+      {
+        "path": "ds/heap.md",
+        "size": 2925,
+        "sha256": "19b8b925f5dcdc6b0dc2e43c03643941f8fc0ab5320d85c83923cdd2e56f7868"
+      },
+      {
+        "path": "ds/huffman-tree.md",
+        "size": 9709,
+        "sha256": "a42cd3be681e258da6f1b3841d253d7d8ebd27beaca11c666b68777f2a8b9687"
+      },
+      {
+        "path": "ds/index.md",
+        "size": 441,
+        "sha256": "8ca644b1e4bf6ceb9aa02f59b8d828ac5275db4fd15659e78ac23b6f5e5bd0f0"
+      },
+      {
+        "path": "ds/kdt.md",
+        "size": 14510,
+        "sha256": "7dc808b146ec5377943877cd851f4be9cbb9015cb5eb64c4c5a09dff93602020"
+      },
+      {
+        "path": "ds/kinetic-tournament-tree.md",
+        "size": 12180,
+        "sha256": "b51cebc1d99f8cf95515399e190c9406ea7163d3701b42d2d84b8ccabebfb311"
+      },
+      {
+        "path": "ds/lct.md",
+        "size": 45073,
+        "sha256": "6e4a8c99b864acfa52f99dd49160a5e295d7880585776ab1e85a2882c042e232"
+      },
+      {
+        "path": "ds/leftist-tree.md",
+        "size": 10856,
+        "sha256": "7dea0fc9c3be403546f72b516d7e5cea4284d964db518bc045ddb3506d9bb1c1"
+      },
+      {
+        "path": "ds/li-chao-tree.md",
+        "size": 8609,
+        "sha256": "e2ca0099b1972469dcdd9f77a859058cbb7e658d35ea61daf8a4240cca9971ac"
+      },
+      {
+        "path": "ds/linked-list.md",
+        "size": 8620,
+        "sha256": "7120966897ef0e1843e1f1ef55f114728b8afe6edcf10bf46a16c2a4873f00a1"
+      },
+      {
+        "path": "ds/llrbt.md",
+        "size": 20812,
+        "sha256": "6bfddbaa9fbf8d567cec35d6bd44e6cbe571618b3bd88fd86496834ec6a17d65"
+      },
+      {
+        "path": "ds/monotonic-queue.md",
+        "size": 5531,
+        "sha256": "98bf2aac416ce950f9a7d16382d5286838a476c0c20691995409bdd187ab9fb2"
+      },
+      {
+        "path": "ds/monotonic-stack.md",
+        "size": 2312,
+        "sha256": "eded1a8603b5251926c45571e55959f6b541be75cc5f2b273afd9395eb4e0242"
+      },
+      {
+        "path": "ds/pairing-heap.md",
+        "size": 9277,
+        "sha256": "3619963b33c994f27229f089d4f25a587ea555a97936f917efa765345b54f46c"
+      },
+      {
+        "path": "ds/persistent-balanced.md",
+        "size": 8468,
+        "sha256": "9b3b852e92f72499df1e20eb63677d4676554038a2133f79dd21a6e341c6b141"
+      },
+      {
+        "path": "ds/persistent-block-array.md",
+        "size": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "ds/persistent-heap.md",
+        "size": 2185,
+        "sha256": "5b30955bde2d06da40e93c5af2b83645e810028ddba5f8c2d18754d37c0db787"
+      },
+      {
+        "path": "ds/persistent-seg.md",
+        "size": 5475,
+        "sha256": "ac11c65862f03aa73f90c14be8a5bdb5ff548ab329e65a1787f9f1e967163d96"
+      },
+      {
+        "path": "ds/persistent-trie.md",
+        "size": 1780,
+        "sha256": "b90b9cfa8493343b789728dac48ee8408f64889f6c323f16fa048cad728fcf05"
+      },
+      {
+        "path": "ds/persistent.md",
+        "size": 2617,
+        "sha256": "ac4e76b3fb14c145617b6e3ede7df87ffe337ca7aa0d152ed21ba2a85e023165"
+      },
+      {
+        "path": "ds/pq-tree.md",
+        "size": 16054,
+        "sha256": "620f5877b67a53135a189bcdb27a1d800162811b97da387771f36faa1cf58b05"
+      },
+      {
+        "path": "ds/queue.md",
+        "size": 7563,
+        "sha256": "8c4f0d9268e58d593b1178957376614ddb07c441f80ada450727bd7463b2ea6a"
+      },
+      {
+        "path": "ds/rbtree.md",
+        "size": 15478,
+        "sha256": "c40c7327e921e051b30c21d9ed2c10c9702f55d6ce61f11dc4d22abaafc0a65e"
+      },
+      {
+        "path": "ds/sbt.md",
+        "size": 11432,
+        "sha256": "44da6c381fee98944c6b60d3577a4244ecb73d9c69270b099011ee0722499dc9"
+      },
+      {
+        "path": "ds/seg-beats.md",
+        "size": 12439,
+        "sha256": "e734a2efa7792a989fafe020881e9274438e263eb5a7e0e120eb9a3d4e2a2df4"
+      },
+      {
+        "path": "ds/seg-in-balanced.md",
+        "size": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "ds/seg-in-bit.md",
+        "size": 7823,
+        "sha256": "7d740c8c3dd5becae0006fbed12fb84a16118fbe69f015f84df0febedae84a20"
+      },
+      {
+        "path": "ds/seg-in-seg.md",
+        "size": 2956,
+        "sha256": "dc69398e4344aa6805ac837d604f3c7795a51ff119e73361af12bf40b714d785"
+      },
+      {
+        "path": "ds/seg-merge-split.md",
+        "size": 5388,
+        "sha256": "0b9d7e4852df69e14020c9fab20a6f5d4507c4a8ba47159c15c33332375dd418"
+      },
+      {
+        "path": "ds/seg.md",
+        "size": 54059,
+        "sha256": "bf8cc3d9836f949ad6792583f1d830bf5094c8cb5aac8bcf14be821c8714625c"
+      },
+      {
+        "path": "ds/sgt.md",
+        "size": 11549,
+        "sha256": "9de615963de7c003c49d260354f97e8f1f414b2214a06fb4cbc61e6a4f03c43d"
+      },
+      {
+        "path": "ds/skiplist.md",
+        "size": 13209,
+        "sha256": "931715b1f9222d77e985af793a4bad741485a26b1615a0417157e493ed7d2a10"
+      },
+      {
+        "path": "ds/sparse-table.md",
+        "size": 8329,
+        "sha256": "02888d870b7345c080a282611be99e45cf4024f4eb67e3cc7fab54cdda1377c4"
+      },
+      {
+        "path": "ds/splay.md",
+        "size": 22811,
+        "sha256": "9d024ba007e1613ce648c798969ab0f72bd08fd9660aa09bf1078c2e5cdcea99"
+      },
+      {
+        "path": "ds/sqrt-tree.md",
+        "size": 15115,
+        "sha256": "439c4125a3cf849042e43039ddc3d63888aa80b6206923fd6f4461598568c813"
+      },
+      {
+        "path": "ds/stack.md",
+        "size": 3785,
+        "sha256": "ee94a151db4c31d2a204fb92ba36cf8049a08b978e5a34db3794b04112d1cdd5"
+      },
+      {
+        "path": "ds/top-tree.md",
+        "size": 33841,
+        "sha256": "6c0457fc707c26b1a8e8331565f79bed55f40905b816175672369549d6d22d90"
+      },
+      {
+        "path": "ds/treap.md",
+        "size": 57188,
+        "sha256": "42b8b2678ce706e8439c960987bbe828802e3949058ac19db72fbc9d0895c98d"
+      },
+      {
+        "path": "ds/tree-decompose.md",
+        "size": 2478,
+        "sha256": "f9ac90082453e30e1cf918355d2eeba9ae3e0d268ff72d59cb45ed4ab5d7198e"
+      },
+      {
+        "path": "ds/wblt.md",
+        "size": 38778,
+        "sha256": "ed22a13568c41581d8b78c21d8f5f55c2b8d3f127584299dedfa65b7d1829401"
+      },
+      {
+        "path": "geometry/2d.md",
+        "size": 13412,
+        "sha256": "812ddde26e4263bd5d3c120be7286de00c4f83570356362719eab2eba89cdca5"
+      },
+      {
+        "path": "geometry/3d.md",
+        "size": 3884,
+        "sha256": "bbdba8af4455cb70ca7741600d5fac206a9e5d6df71b58a1cd99f5b4c2fb2213"
+      },
+      {
+        "path": "geometry/convex-hull.md",
+        "size": 12878,
+        "sha256": "64f6246a509590dcbc4655cfbd079ba74c1d1170a53d1ce13341d1df21b8ef6f"
+      },
+      {
+        "path": "geometry/distance.md",
+        "size": 13295,
+        "sha256": "97bd7d763e99a04bad6d4bc05b8c2e2af8d6f36b341f88b927b5d26d9688b58b"
+      },
+      {
+        "path": "geometry/half-plane.md",
+        "size": 7389,
+        "sha256": "d97e8b7124d08e807ce331e1f315db006dcd91e45d868428bd6a6b4c8e70f6d5"
+      },
+      {
+        "path": "geometry/index.md",
+        "size": 56,
+        "sha256": "c695ade5c19517ecdfd92f79c1572e1c228cb1e1f4a185071e7aa486a022d6a6"
+      },
+      {
+        "path": "geometry/inverse.md",
+        "size": 8610,
+        "sha256": "e59de5137f91e1a47d6d0fe24f5a70cb4d7f18e6f2a1998f2c165e4399ae30c9"
+      },
+      {
+        "path": "geometry/nearest-points.md",
+        "size": 8500,
+        "sha256": "12dea6f92bdd0171ff5e79f3ee66ac8bdcf19441d48291866e5ff7168bb0773b"
+      },
+      {
+        "path": "geometry/pick.md",
+        "size": 2253,
+        "sha256": "239127dd836537b6cc4cd47b003802a3e9aa1bed1fcbeee92a78f0559e7bb6ae"
+      },
+      {
+        "path": "geometry/random-incremental.md",
+        "size": 1656,
+        "sha256": "5ce86ce92d8a8dd18da24bf5bbaa17ce5b1c107a691903549ff2f90cbcaf9b91"
+      },
+      {
+        "path": "geometry/rotating-calipers.md",
+        "size": 8625,
+        "sha256": "63fba657272518b636e86437baa2d83f9e8766f3cbff615d78f544310196a22d"
+      },
+      {
+        "path": "geometry/scanning.md",
+        "size": 9417,
+        "sha256": "3d1c6b3a41722b9e8657b14c7104caed44015c09e1173725e1e139cd88e872cd"
+      },
+      {
+        "path": "geometry/smallest-enclosing-circle.md",
+        "size": 11998,
+        "sha256": "22adeac7768549452aa14716710b886c5f2e8010ee1671cefcd84bee892043a0"
+      },
+      {
+        "path": "geometry/triangulation.md",
+        "size": 11083,
+        "sha256": "518b63004256df325459dab65ae19daa84fad097ec7a28aef1291ce3d2c40833"
+      },
+      {
+        "path": "graph/2-sat.md",
+        "size": 5562,
+        "sha256": "f60da8ed487c6bae7abaf7cc79fee7983775cdb4898429251ca91c9398da1b6e"
+      },
+      {
+        "path": "graph/bcc.md",
+        "size": 7353,
+        "sha256": "5008fb248a81465528f7fbf0db529a424009671b7f1eea55d382c28cad50b5bb"
+      },
+      {
+        "path": "graph/bfs.md",
+        "size": 9333,
+        "sha256": "ba99af2634866a7b4e1119d3e788297664fcff33600bdb97fdb0bdd41971e3cd"
+      },
+      {
+        "path": "graph/bi-graph.md",
+        "size": 4351,
+        "sha256": "3db2b0c2e5c7fc8ebdb5e6487c1fcffb704ee311d53a4718b4c66e4dcf68d23d"
+      },
+      {
+        "path": "graph/block-forest.md",
+        "size": 18178,
+        "sha256": "84cc9616c7af906390be0b254dfc402576e8b28bf591c7a246a6dd92d9decb60"
+      },
+      {
+        "path": "graph/chord.md",
+        "size": 14510,
+        "sha256": "bc42be776aa579ba49a7cd3e9657bfd6099b881fb15408da6769936d7f3f59f2"
+      },
+      {
+        "path": "graph/color.md",
+        "size": 10259,
+        "sha256": "f71e79513b9809f4dd682ff08053207d6e379056002a6c2c49520574f7115fe4"
+      },
+      {
+        "path": "graph/concept.md",
+        "size": 25201,
+        "sha256": "ffe2636b4c16172eecd8faa7707e40bdd6b86e02b2d05cbf881829631009fd12"
+      },
+      {
+        "path": "graph/connectivity.md",
+        "size": 3033,
+        "sha256": "c582bf008ebaafc49ba7f8408ed959175020ec41d615ce7d838422737f1c394a"
+      },
+      {
+        "path": "graph/cut.md",
+        "size": 6716,
+        "sha256": "47565a02cf6bf8949c1f057a5983b641dbd6f5ed43326454993d42412973f37b"
+      },
+      {
+        "path": "graph/dag.md",
+        "size": 2736,
+        "sha256": "921352cf711e5c110c1c09fc32feb45bfdd1148e39d9186aa6ac4ec6a3f864ed"
+      },
+      {
+        "path": "graph/dfs.md",
+        "size": 6442,
+        "sha256": "8eab0d9d27757ad5b7035c2a767e0bbe3dd42ccadc065925d1c16e39ad806a62"
+      },
+      {
+        "path": "graph/diff-constraints.md",
+        "size": 4770,
+        "sha256": "ab8f845f648f00d2c966c76468eeaee731351e90b38dab0cc9e02756eab3dbb3"
+      },
+      {
+        "path": "graph/dmst.md",
+        "size": 8095,
+        "sha256": "d05916278100348a6e5be7aa809f09fe86756123f85e7226c84eb715b508cc45"
+      },
+      {
+        "path": "graph/dominator-tree.md",
+        "size": 22306,
+        "sha256": "f0e2f5897924825b4a6c34bd3c92507d12aef34f1c5c449714b934485321ca68"
+      },
+      {
+        "path": "graph/dsu-on-tree.md",
+        "size": 7670,
+        "sha256": "1a0a3aceb4cb7c3ba39b2878defd69ed12164ea7e157b7a31de4e3abcd773bb5"
+      },
+      {
+        "path": "graph/dynamic-tree-divide.md",
+        "size": 6917,
+        "sha256": "4f523ce9db584120b3ec77b20f035114df570f9dd1230fa83e31e4cfb6643681"
+      },
+      {
+        "path": "graph/euler.md",
+        "size": 10732,
+        "sha256": "1ecfedd4c9517529503f8e4f66319fdd44bdad53de5df350ca3ce13ea1165557"
+      },
+      {
+        "path": "graph/flow.md",
+        "size": 2709,
+        "sha256": "9c95a83c62bfadb0c330fe5dacdb706bbe508b3adb6511adc55ae081bd6cdd96"
+      },
+      {
+        "path": "graph/flow/bound.md",
+        "size": 4650,
+        "sha256": "af30ff34cd19ada1f9b06321241753d33b76954e032c24e56f80ed342a6f1c80"
+      },
+      {
+        "path": "graph/flow/max-flow.md",
+        "size": 56485,
+        "sha256": "db536150be70efac5e44d75f936106e5b734357fa106c1e7ded86a3cfe8bd3a8"
+      },
+      {
+        "path": "graph/flow/min-cost.md",
+        "size": 11870,
+        "sha256": "49a513ce61cf6ae04949e18ffccd76d1eb5c5daff4290e2d4ac20930bd1886e2"
+      },
+      {
+        "path": "graph/flow/min-cut.md",
+        "size": 8818,
+        "sha256": "3edad5f307f14ab885ea9acfcbf05c3a2d5a3cfa81a3fe46a52751ef1d59578c"
+      },
+      {
+        "path": "graph/graph-matching/bigraph-match.md",
+        "size": 35208,
+        "sha256": "f377aa6b52804969eac27a3aca05d8c010b70987de0fc4d225d01d00ac91cd7d"
+      },
+      {
+        "path": "graph/graph-matching/bigraph-weight-match.md",
+        "size": 12484,
+        "sha256": "a47752ec0e18e5155fafc63c07140b2f7e695ff3ab8f5836894b2d0e5cd7b76a"
+      },
+      {
+        "path": "graph/graph-matching/general-match.md",
+        "size": 15988,
+        "sha256": "0a0a9dba9f45875dba4f22e070e33b3dae341d45d933bd817a7e0c35d31427a5"
+      },
+      {
+        "path": "graph/graph-matching/general-weight-match.md",
+        "size": 21981,
+        "sha256": "ab9f307c5f179c420f0b2674b9fd5f959a5694e8a4b82499091826c388e77a1f"
+      },
+      {
+        "path": "graph/graph-matching/graph-match.md",
+        "size": 22183,
+        "sha256": "e17d55fe99c5d08441f7ff6d7eca62f81c19a78e2a4c5a482df3a4e1d29e6079"
+      },
+      {
+        "path": "graph/graph-matching/stable-match.md",
+        "size": 18405,
+        "sha256": "755384adc8315cbf4dedbbfdaafeb699976a8068960292f1c1ec370470e425c9"
+      },
+      {
+        "path": "graph/graph-random-walk.md",
+        "size": 14471,
+        "sha256": "e932fd12f7afd6a1fdf413de19dbf7691331c873cf055369c84e10ac7249013b"
+      },
+      {
+        "path": "graph/hamilton.md",
+        "size": 1932,
+        "sha256": "d993f981aaf93c8198a715979b6010ed36b06592e4a6e199c5179f2b1411f78b"
+      },
+      {
+        "path": "graph/hld.md",
+        "size": 22257,
+        "sha256": "20019cdbd8eb59682b8fb0f6ccc03b05cc94ddb7cd8b6997ccd2393cf2f4a0ae"
+      },
+      {
+        "path": "graph/index.md",
+        "size": 458,
+        "sha256": "72760fbb642cf4952e4a726b2e0f00c827aee9c84c2cca38fb9462a97673f280"
+      },
+      {
+        "path": "graph/kth-path.md",
+        "size": 10437,
+        "sha256": "f8ded8b97d26ce6c8d7e919ec5827e8e01b02bf68cd18740dc449acc8b2454a4"
+      },
+      {
+        "path": "graph/lca.md",
+        "size": 11913,
+        "sha256": "22267681a881480f6e271f6df86e48f9e9e28b4afcf1322765d814e3462e5cfc"
+      },
+      {
+        "path": "graph/lgv.md",
+        "size": 5252,
+        "sha256": "a899d05f2cea6ce6bdc2c4a7eb4ef7dedefa243282a45d77dba98c442755c66c"
+      },
+      {
+        "path": "graph/matrix-tree.md",
+        "size": 34232,
+        "sha256": "f50293806e9c394a063d257e77d4e21cbab2580afbfeff9182dd3165a13606e4"
+      },
+      {
+        "path": "graph/max-clique.md",
+        "size": 5117,
+        "sha256": "fa1aeca7c4cbc22ba02c3361a8b8bea8345892ef5e9583f1cc63a825a0a9eacb"
+      },
+      {
+        "path": "graph/mdst.md",
+        "size": 8842,
+        "sha256": "8ea96ba42f6188bffa650233fcb725166fda4a10f45f37fa2a10cde87e86858c"
+      },
+      {
+        "path": "graph/min-cycle.md",
+        "size": 24016,
+        "sha256": "cc64b90dd49f2b6506986df249a74dbb8c4cb47a3175988f55e3d0c77a312c01"
+      },
+      {
+        "path": "graph/mod-shortest-path.md",
+        "size": 5409,
+        "sha256": "0d6c795c01cd9b531d591e9ab6db01d6720236e1316f750001fac026b35f3b77"
+      },
+      {
+        "path": "graph/mst.md",
+        "size": 24445,
+        "sha256": "fb0731c8d6c140d406a24243d1775ad944e8bc02c063fb3cec11123152aca16a"
+      },
+      {
+        "path": "graph/node.md",
+        "size": 3944,
+        "sha256": "f3dc320a31ad6d1ab62afb3072839dd4bcf3ccb1b3e7137f87a97601d14b9480"
+      },
+      {
+        "path": "graph/planar.md",
+        "size": 24111,
+        "sha256": "325f7115bce34a1bec199a6ade693701a906c46e5bd4e52bf021263d4c03aaad"
+      },
+      {
+        "path": "graph/prufer.md",
+        "size": 12391,
+        "sha256": "2750e144a8bafbaed3ba42519be87c2b31492dc81f8d127d11afabc2f36c248a"
+      },
+      {
+        "path": "graph/rings-count.md",
+        "size": 7781,
+        "sha256": "c532c4f7fd9d8d0cce99e351be2da88a6870c96b660307d5d82428e3ec432819"
+      },
+      {
+        "path": "graph/save.md",
+        "size": 10199,
+        "sha256": "2740281f6dd39fc933bd545d6d92628885bc188152ccecb50570fdb51e28254a"
+      },
+      {
+        "path": "graph/scc.md",
+        "size": 14034,
+        "sha256": "416dd1c0ac7ea19c4b4738efa2a2eb232c1da3c678a85b43c5f7f607f40ccc1a"
+      },
+      {
+        "path": "graph/shortest-path.md",
+        "size": 27982,
+        "sha256": "30e21bc347e8d31651a323048819565ad600324052cf497299c7e520e6d478b3"
+      },
+      {
+        "path": "graph/steiner-tree.md",
+        "size": 6128,
+        "sha256": "500116086f173329c730258a9d54e220fd6147297a6c3eeb728df25a4957c4fb"
+      },
+      {
+        "path": "graph/stoer-wagner.md",
+        "size": 5932,
+        "sha256": "545c56fd692f0ccb4d3445e2f48c1c55b1f2db6a641c59a042a9bb4a9eeb51d0"
+      },
+      {
+        "path": "graph/topo.md",
+        "size": 13276,
+        "sha256": "e7c43a0ccd3addd7a08656546bb8b5cf353ec6fa471522fc9f8c6f3b8ae45add"
+      },
+      {
+        "path": "graph/tree-ahu.md",
+        "size": 7869,
+        "sha256": "6a0f1e6aacb4fe044575c44a48de54838458a523fd277841cc258457ea1204a9"
+      },
+      {
+        "path": "graph/tree-basic.md",
+        "size": 13392,
+        "sha256": "254dacbb09ab502baaa546f71fe9bd19322717f1ac0cdaf39bb9907e2c0cabf8"
+      },
+      {
+        "path": "graph/tree-center.md",
+        "size": 3939,
+        "sha256": "9aa358afe727df50e9395602f9108f86c256a5360f24f7f7c94c922c94f70ccb"
+      },
+      {
+        "path": "graph/tree-centroid.md",
+        "size": 14122,
+        "sha256": "c94804920ec746dc86e8e6c388cde15800ad341494e872a6cd149daf82083ee1"
+      },
+      {
+        "path": "graph/tree-diameter.md",
+        "size": 6382,
+        "sha256": "a807dfc96954a0cf77b7bdc77b2623233cd3f98a5ffd667880874374bf30bd1b"
+      },
+      {
+        "path": "graph/tree-divide.md",
+        "size": 9214,
+        "sha256": "82c2179e66291f5535480a0f5c9076a379a3f07d20a763fc37c3fe12f04e4d12"
+      },
+      {
+        "path": "graph/tree-hash.md",
+        "size": 4054,
+        "sha256": "3dec6e4cb655aac3a6c2949135065c964da9057ea465885314389d7a7f4493dc"
+      },
+      {
+        "path": "graph/tree-random-walk.md",
+        "size": 3606,
+        "sha256": "00084efe6576230be1fa19aad3a844aeb44293ba2983e60e0a06de2a6cf523d8"
+      },
+      {
+        "path": "graph/virtual-tree.md",
+        "size": 13794,
+        "sha256": "029fa05dc4edb743dcd5172a0c672b10871b954650b07baa5b2816282eef1501"
+      },
+      {
+        "path": "lang/array.md",
+        "size": 3477,
+        "sha256": "6d1728efa738137efb5866110e34856c2a86b55ffa8a8ff6f7c37c0990fcbe76"
+      },
+      {
+        "path": "lang/basic.md",
+        "size": 12011,
+        "sha256": "3f945e4125bec31493c00028832f4003af1130fad71a1a90f8e412211c9e0ce9"
+      },
+      {
+        "path": "lang/branch.md",
+        "size": 4802,
+        "sha256": "9621d5ce59f78be1d80d8ac5a50925cbd91181b7e00ed29c2026512e403bafa7"
+      },
+      {
+        "path": "lang/class.md",
+        "size": 12690,
+        "sha256": "bef391aa364510bc13613574cacd42ed5bfccca0e86a822782cebc6e088dc448"
+      },
+      {
+        "path": "lang/const.md",
+        "size": 8338,
+        "sha256": "e090fa17c6c17eac15cf0dbf581b82238578454ee899b224e8d5503ee710d60f"
+      },
+      {
+        "path": "lang/cpp-other-langs.md",
+        "size": 8086,
+        "sha256": "f2452070c36d3b3ae0b059071397889b182e90673d66b476065f9601e28109db"
+      },
+      {
+        "path": "lang/csl/algorithm.md",
+        "size": 7502,
+        "sha256": "5ec00dde02c68065d013136d1ec54e55328a3015f22acb2e59be82b05aa65a88"
+      },
+      {
+        "path": "lang/csl/associative-container.md",
+        "size": 9257,
+        "sha256": "a0730b35feac7f8d58d1aa403d05bb9dd35fbf116c4f430b088092cb36cc814b"
+      },
+      {
+        "path": "lang/csl/bitset.md",
+        "size": 22368,
+        "sha256": "25734d4b4db80ddd8d1773396181ac56e7439d3bc39abd5e1821c95657b4c341"
+      },
+      {
+        "path": "lang/csl/container-adapter.md",
+        "size": 4618,
+        "sha256": "4cf49fafd91fe5f7162ffcca36b3435b48b4cf523b41bc127acbac3aa210c994"
+      },
+      {
+        "path": "lang/csl/container.md",
+        "size": 3476,
+        "sha256": "d18d2054bc2e4ce98189b802d1eb3df3c93595a0e046faaef544f716aea658a0"
+      },
+      {
+        "path": "lang/csl/index.md",
+        "size": 3985,
+        "sha256": "faa683ce0f02af37872e3eaa2f6005f9ff4bd7b9860eb0311392b9e8cd8ee9b5"
+      },
+      {
+        "path": "lang/csl/iterator.md",
+        "size": 5015,
+        "sha256": "e340e0853b16b65e416e58cbe34bdb3f6d06382d9738426d6dc719774d999a21"
+      },
+      {
+        "path": "lang/csl/pair.md",
+        "size": 4889,
+        "sha256": "513f81a396c72afa262fb8e6a840f069e2724d8af95032d991f6f62e299aaae7"
+      },
+      {
+        "path": "lang/csl/sequence-container.md",
+        "size": 15672,
+        "sha256": "c3383524415cb9520403a77d65a47a46d3bf0a96d8b9e17a487473f6027a715b"
+      },
+      {
+        "path": "lang/csl/string.md",
+        "size": 6728,
+        "sha256": "c467e0c96df6fe9fc1b3c9e9002ea83e0e5a6c15546f62f13977bf14f5e38f11"
+      },
+      {
+        "path": "lang/csl/unordered-container.md",
+        "size": 4686,
+        "sha256": "687a606d74d41fdad26306a4f98050178de2c235bb5b15fa018786114e8b71a5"
+      },
+      {
+        "path": "lang/file-op.md",
+        "size": 5385,
+        "sha256": "14f3d6a862742fe50da664110acb099a860f1f6d545a0833901271246626b165"
+      },
+      {
+        "path": "lang/func.md",
+        "size": 5331,
+        "sha256": "316f509cd65edf40f7b914915f6f70154a2261417c02e65a63720d7af9055999"
+      },
+      {
+        "path": "lang/helloworld.md",
+        "size": 2517,
+        "sha256": "98addb5cba84a9300fe2c7dd1b40464503530c4ac9d2d797747543053672a73f"
+      },
+      {
+        "path": "lang/index.md",
+        "size": 290,
+        "sha256": "d0460ca0a7ac2001f41f2990308171073ee7bc703a9bccece36e78ad6bd9e202"
+      },
+      {
+        "path": "lang/java-pro.md",
+        "size": 60390,
+        "sha256": "5261ba780ce8b7529e1fed5f707a4c7620d171822faa1a8feea5e495949b8de1"
+      },
+      {
+        "path": "lang/java.md",
+        "size": 7037,
+        "sha256": "2b7fd689b853d78b174c84b4b9eb653fe997fa4803f3617b18b5127ce949eb41"
+      },
+      {
+        "path": "lang/lambda.md",
+        "size": 16794,
+        "sha256": "595e52db22a67ec412382d6f0be7f893518c26c9c76189c4c8d7c1deb2f0a92a"
+      },
+      {
+        "path": "lang/loop.md",
+        "size": 3992,
+        "sha256": "2f891c48979b426c090a0bb81a4771758f804667a9f0cf840f1bfed1c734f365"
+      },
+      {
+        "path": "lang/namespace.md",
+        "size": 5290,
+        "sha256": "a2ef3e91b79dd32f42e1bccef8ec72db60dcf1e77cd92ae5dc4aab93f8b8aba4"
+      },
+      {
+        "path": "lang/new.md",
+        "size": 19177,
+        "sha256": "d0d84382f9f16405992b8e1c33e4498077b1a5dd84156c4e5f9ea539d00dde53"
+      },
+      {
+        "path": "lang/op-overload.md",
+        "size": 8790,
+        "sha256": "5926a5fb76b80e33de8a039d4dc012d4cd70dc8749e06790a1a2baba5bdb9308"
+      },
+      {
+        "path": "lang/op.md",
+        "size": 18364,
+        "sha256": "1e3b4552262cec889f4b722c739b6808a7d1dc518337e24a1c7b576eca8ef3ae"
+      },
+      {
+        "path": "lang/optimizations.md",
+        "size": 25651,
+        "sha256": "14d46e3adb5ea56673da3f1a19a72957e729e58a93400ffa9e7fb6559a86e50f"
+      },
+      {
+        "path": "lang/pas-cpp.md",
+        "size": 24011,
+        "sha256": "78b4e9563d95c8447080c1bb0e7bd634f23c7504d7065dd0c367cfb98edaae5f"
+      },
+      {
+        "path": "lang/pb-ds/index.md",
+        "size": 1283,
+        "sha256": "a1f0f31e929192f1e5dc07a1597bd787dd4de277ef3b2ada32d21889b3601ea8"
+      },
+      {
+        "path": "lang/pb-ds/pq.md",
+        "size": 8361,
+        "sha256": "ce4b324e2591694edd0f7dbaf20e4505ac644674784c025ba415075cad580be6"
+      },
+      {
+        "path": "lang/pb-ds/tree.md",
+        "size": 5757,
+        "sha256": "a550b73075baca376eb9a12ee3d684a612d4ce87adead27cce84e7a788390b41"
+      },
+      {
+        "path": "lang/pointer.md",
+        "size": 16719,
+        "sha256": "de7c5251a1cdb0678fbef81a0bd8089dceb5976b5d72f172e3676d3b5df0ca86"
+      },
+      {
+        "path": "lang/python.md",
+        "size": 54283,
+        "sha256": "0e14cca3744db9a80500d55d71dbba850102cd8abd92990622b4b5098d4f9a84"
+      },
+      {
+        "path": "lang/reference.md",
+        "size": 6424,
+        "sha256": "d03e838a9360a530ce135c0088b94a9fdbf058c8fd8b612c4a9d8f4e9f3c3d3b"
+      },
+      {
+        "path": "lang/struct.md",
+        "size": 3718,
+        "sha256": "93454ea384d8f5f37f9469780124a42760be6252ccdb1b82930585ef010f6792"
+      },
+      {
+        "path": "lang/union.md",
+        "size": 1036,
+        "sha256": "517e46a680c703dd3e3cca14e708c20bf25b3479b59f21d7103b7e7c328b4105"
+      },
+      {
+        "path": "lang/value-category.md",
+        "size": 8039,
+        "sha256": "6f3437ec5a8a8bb4125c8d12dc7042e15e3661d2200c42618b3bd7d84a4873df"
+      },
+      {
+        "path": "lang/var.md",
+        "size": 27831,
+        "sha256": "a6f14d6f034066eced3d50305fc1855b5e1486ce45e404efe555c77e5083ee52"
+      },
+      {
+        "path": "math/algebra/basic.md",
+        "size": 22407,
+        "sha256": "e5c601412375d08f3b1dcb4d1e62ed9d1dc830d5522a9a19ee9e7bfc6494348d"
+      },
+      {
+        "path": "math/algebra/field-theory.md",
+        "size": 81026,
+        "sha256": "93d1c6079f557635ccdda4f4d0deea96ac88922b0c3e077baaacfc48c237fb8e"
+      },
+      {
+        "path": "math/algebra/group-theory.md",
+        "size": 55480,
+        "sha256": "c22afb92897c3b06d8be5e8639518ea506df29bb0d7325f8c574552920339eea"
+      },
+      {
+        "path": "math/algebra/ring-theory.md",
+        "size": 63037,
+        "sha256": "99ffa83485ac5e8f78e3dddfebc742156e8e791388e111672eedae95bdf9bc87"
+      },
+      {
+        "path": "math/algebra/schreier-sims.md",
+        "size": 35593,
+        "sha256": "999f722a3097b1b3a3e69a6ef02ab3997ae8d535e9f354a68416bab93f419774"
+      },
+      {
+        "path": "math/berlekamp-massey.md",
+        "size": 10993,
+        "sha256": "896fd5e94295d798684097c0da6db3c4961c46fd2fa6d21a4d17dcd18cbf5d00"
+      },
+      {
+        "path": "math/bignum.md",
+        "size": 33915,
+        "sha256": "d497961a7a3e5d09a9e16e2597c050e9f07e5521e5b1fd11d12e9d0dcc912677"
+      },
+      {
+        "path": "math/binary-exponentiation.md",
+        "size": 13072,
+        "sha256": "2bed843e67ea357e4e8c263cb0b582a433d20200aee21d2a6ca03a61bd71566e"
+      },
+      {
+        "path": "math/binary-set.md",
+        "size": 6590,
+        "sha256": "e69f68977233d959a153565ac6d56755056d18677c689347e8efab303a1c2aa9"
+      },
+      {
+        "path": "math/bit.md",
+        "size": 17121,
+        "sha256": "2b4f4a86d90aaaaf6213f0bbc7dd8074831b6ffe05cb019ac920a887ad4c796a"
+      },
+      {
+        "path": "math/boolean-algebra.md",
+        "size": 14567,
+        "sha256": "3636597b31c11bd5a776aee6c73d7baa45a0d9adbd2cc55077a4d04339ba1154"
+      },
+      {
+        "path": "math/combinatorics/bell.md",
+        "size": 4667,
+        "sha256": "4e2b8380cb9a81b9adf55c81953950a2cff8eff953156b354d21f174af2fc1d0"
+      },
+      {
+        "path": "math/combinatorics/bernoulli.md",
+        "size": 7889,
+        "sha256": "a467966b1f71d08a4aff6eec237661809581f6308f6591dc037d3c7a76d19d38"
+      },
+      {
+        "path": "math/combinatorics/catalan.md",
+        "size": 16375,
+        "sha256": "2aab50a999a55ab866eda50266a25caff21406f4cca6f8cfe1b1cb5efd80d9f8"
+      },
+      {
+        "path": "math/combinatorics/combination.md",
+        "size": 14467,
+        "sha256": "233326107dd0884b99e4a758e25432ed75e95b212ca7b9042566ad8a846af93c"
+      },
+      {
+        "path": "math/combinatorics/derangement.md",
+        "size": 3552,
+        "sha256": "84b4b439879b53184ef70dd1e005b4339e2e3979d69859ce0621d97a9c322260"
+      },
+      {
+        "path": "math/combinatorics/drawer-principle.md",
+        "size": 1648,
+        "sha256": "97b6db6fb193fedfe931795a6f6cd932fd012454c00ac2836c4ef505e4b78527"
+      },
+      {
+        "path": "math/combinatorics/entringer.md",
+        "size": 6873,
+        "sha256": "a79b9769bb80fe7b9fc6e89c864532477b26c793990413aff9d61aa9824914e6"
+      },
+      {
+        "path": "math/combinatorics/eulerian.md",
+        "size": 3950,
+        "sha256": "def6662ed23cd8708c6ff018186b53ea8e81fa2015397bfeae1d89683c5d1a2b"
+      },
+      {
+        "path": "math/combinatorics/fibonacci.md",
+        "size": 17943,
+        "sha256": "6e3dc7b6f179b340ef80b7327c6e45e0a7c8fff45ceb6e270fa4a7602d6c4a99"
+      },
+      {
+        "path": "math/combinatorics/graph-enumeration.md",
+        "size": 16405,
+        "sha256": "f6cd53873b0eed27ac0f1312025b86990f5b83222102af7e51897b65dd89f090"
+      },
+      {
+        "path": "math/combinatorics/inclusion-exclusion-principle.md",
+        "size": 23885,
+        "sha256": "e483924909897397c81de48b7461063933988143938b14d47c0bff1231a8189d"
+      },
+      {
+        "path": "math/combinatorics/partition.md",
+        "size": 11911,
+        "sha256": "3bee2e759652341e6e461b2ee8035e2916d8da747c7ee5b5c048517b9c78c1a3"
+      },
+      {
+        "path": "math/combinatorics/polya.md",
+        "size": 38804,
+        "sha256": "bd7e1a085ad4bc1420e66eea1693c4009983e2e199b04b79029b4247c8d85e56"
+      },
+      {
+        "path": "math/combinatorics/stirling.md",
+        "size": 30496,
+        "sha256": "9cee014dffafb54b1bfd81013974e4307a32d0a5d21779db450f069742b6394d"
+      },
+      {
+        "path": "math/combinatorics/vandermonde-convolution.md",
+        "size": 2726,
+        "sha256": "92dd414e89b490d278dfc1d2ecc79eb2dd8493da7b362937f6d1616984893a62"
+      },
+      {
+        "path": "math/complex.md",
+        "size": 18616,
+        "sha256": "e131d1f51441825df184762d6c4c9a43912c8947e5443252b662e200be542e19"
+      },
+      {
+        "path": "math/coordinate.md",
+        "size": 13087,
+        "sha256": "58cc06519033191ebc87b9cce0dcd7159897adfa5ad56803cc9959e9854a82ca"
+      },
+      {
+        "path": "math/game-theory/impartial-game.md",
+        "size": 58536,
+        "sha256": "688c305feff7d86767c07bb8fc415e2cd08cd863e265e19591920c8e446172b4"
+      },
+      {
+        "path": "math/game-theory/intro.md",
+        "size": 5606,
+        "sha256": "4703fa3b844083885219429a21de09d6ca607a8339b5c81fa69b2ed3ae1593b9"
+      },
+      {
+        "path": "math/game-theory/partizan-game.md",
+        "size": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "math/game-theory/zero-sum-game.md",
+        "size": 16939,
+        "sha256": "fd68a63d9b33be5ea1b7c90beb8b491557011f37d86499458f8d96eff5fd558f"
+      },
+      {
+        "path": "math/index.md",
+        "size": 1203,
+        "sha256": "faff1387f66b97875b34fa915690eb2bf0f5e7dc23a7e0f131798d264d2f18e3"
+      },
+      {
+        "path": "math/linear-algebra/basis.md",
+        "size": 25272,
+        "sha256": "28937f66e22412e782d39ac7bc01d9a77b962d974fbb1dc0acb6f599c3f001bd"
+      },
+      {
+        "path": "math/linear-algebra/char-poly.md",
+        "size": 17890,
+        "sha256": "c6d4dec2029b3c4e8437eef3dd5b931d0f8e9e47c0fba5373b38e2691b98153e"
+      },
+      {
+        "path": "math/linear-algebra/determinant.md",
+        "size": 6688,
+        "sha256": "6a6b48413f6778454e6335386ea9ec28310dcff253fbe833632818e2341051bf"
+      },
+      {
+        "path": "math/linear-algebra/diagonalization.md",
+        "size": 10085,
+        "sha256": "b5082dc6a32d85693b95e74b60165cd44dcdb29c36ff39a886470286ac9e3f2a"
+      },
+      {
+        "path": "math/linear-algebra/elementary-operations.md",
+        "size": 11433,
+        "sha256": "4acf5f0af2842c328579bd3e64562409a97e545ec8bbfa90ee1a9b1279c206eb"
+      },
+      {
+        "path": "math/linear-algebra/index.md",
+        "size": 1132,
+        "sha256": "c0944e2deca2f32559da74b97e8ce55dea139b38fac38a43c411c7e081ec2cc1"
+      },
+      {
+        "path": "math/linear-algebra/jordan.md",
+        "size": 14621,
+        "sha256": "3e0a284bd4a7b314e2d3881f0b5be7b1f58dc11263d93f7943feb2a19ac8cfd9"
+      },
+      {
+        "path": "math/linear-algebra/linear-mapping.md",
+        "size": 11434,
+        "sha256": "491d98834ac26281ad7818b43e951bc2df74a336706e609af5af358145d0d830"
+      },
+      {
+        "path": "math/linear-algebra/matrix.md",
+        "size": 22117,
+        "sha256": "5b6af97aacf760b142d35d85af369b2d5aefdad1bac42704c4213777aacdc80b"
+      },
+      {
+        "path": "math/linear-algebra/product.md",
+        "size": 20375,
+        "sha256": "601fc9a14e5631d99387afe86bfa6edfc907e80e7e0b6134bae198b2dcfa48cc"
+      },
+      {
+        "path": "math/linear-algebra/vector-space.md",
+        "size": 20461,
+        "sha256": "c0dc083ba2386f03d8b3602860256c531a8feb375b8f44f1db6a893bc41e4928"
+      },
+      {
+        "path": "math/linear-algebra/vector.md",
+        "size": 15908,
+        "sha256": "cad726dd9c132a9d0289f4e6678339151c85d0004382a179de187b0664a51522"
+      },
+      {
+        "path": "math/linear-programming.md",
+        "size": 40528,
+        "sha256": "fb6f2746e6a275765302daab2028c2990f0167d0ce752f5cf6c15cb3d7d4cffd"
+      },
+      {
+        "path": "math/matroid.md",
+        "size": 20375,
+        "sha256": "15c0270c29419c48a755dc926c5e028901e24c22e70af25782ab7fbcebf65f90"
+      },
+      {
+        "path": "math/number-theory/basic.md",
+        "size": 26249,
+        "sha256": "cd964e249c9c450c5b1951d06ce91fd054e4dd31d06e3aa97a6d6b054f1a5973"
+      },
+      {
+        "path": "math/number-theory/bezouts.md",
+        "size": 14059,
+        "sha256": "d8d062c70df35367244a1a07472e9e1369ed4eb6821872c0b8e4fd576cfcd229"
+      },
+      {
+        "path": "math/number-theory/congruence-equation.md",
+        "size": 10554,
+        "sha256": "97cf35905a7f7f56135f62e21a24ad2c94769c2b4b94af470a9a29c92aa60804"
+      },
+      {
+        "path": "math/number-theory/continued-fraction.md",
+        "size": 97911,
+        "sha256": "36bff87e88dd1e098cca60e75df84a55f17b9c83e05c3bf7a0ae547503b54b55"
+      },
+      {
+        "path": "math/number-theory/crt.md",
+        "size": 9946,
+        "sha256": "1e882d637b1a0e88cb18eb68e913882371952e7fb55398595b9d1fbb77ba90cd"
+      },
+      {
+        "path": "math/number-theory/dirichlet.md",
+        "size": 23211,
+        "sha256": "e5edb2af8fcda8fe431ac293c439b94bb5baaac6629ebe8728148979293d10cc"
+      },
+      {
+        "path": "math/number-theory/discrete-logarithm.md",
+        "size": 8948,
+        "sha256": "204abdd57983255c57f6cd34a85f80fb784762c365969f01cc694745abbfb1cf"
+      },
+      {
+        "path": "math/number-theory/euclidean.md",
+        "size": 39013,
+        "sha256": "bb42d88bbbc8b49964cd57fb98e9c0c48b97926ac1051322a1fc01c543ead1c8"
+      },
+      {
+        "path": "math/number-theory/euler-totient.md",
+        "size": 6973,
+        "sha256": "0bea927b5d7bd1d716a651f34003f265126d8c4a249b52db8babe96b8104712a"
+      },
+      {
+        "path": "math/number-theory/factorial.md",
+        "size": 25963,
+        "sha256": "d841ac18076ab002f9d6076ca96980b5b55716764706a890d658c98b72fd8a90"
+      },
+      {
+        "path": "math/number-theory/fermat.md",
+        "size": 15454,
+        "sha256": "08dbcf949a5b8f370f3eee8c6a040fd7874d08028b36193e84253cdd4fae938a"
+      },
+      {
+        "path": "math/number-theory/gcd.md",
+        "size": 18517,
+        "sha256": "9766ec15be60a5d42ce0bf73f9fb50b2d0a1fb050006841a76104f57e1446889"
+      },
+      {
+        "path": "math/number-theory/hyperbola.md",
+        "size": 26828,
+        "sha256": "ce3201c36ba86f2757a217b0ef48df10400ee736f29bf5b362caa4e2e196441d"
+      },
+      {
+        "path": "math/number-theory/inverse.md",
+        "size": 6626,
+        "sha256": "c0dc748dac64c617d8d4d3a1bca56c8b4ca05e6ffa95410af3efcad347eecd1b"
+      },
+      {
+        "path": "math/number-theory/lift-the-exponent.md",
+        "size": 3302,
+        "sha256": "04fb68785df46dd1a68ae7c30e4450bdf80f3be88ed734ef443f962adc091df6"
+      },
+      {
+        "path": "math/number-theory/linear-equation.md",
+        "size": 3896,
+        "sha256": "f3e903fb5328bded4526c6985fd0359395ff5dbd3e421a5ccd6c6eb97c408c85"
+      },
+      {
+        "path": "math/number-theory/lucas.md",
+        "size": 10757,
+        "sha256": "dc8e40d1b81b359da7740c027fe54cc514ed5ae2794fb1d64e0957be20d911f0"
+      },
+      {
+        "path": "math/number-theory/min-25.md",
+        "size": 10297,
+        "sha256": "6e4d802d0551e68ad6b41f31d2d8cf8a7c8083e96f10df51abd82a0e33f30581"
+      },
+      {
+        "path": "math/number-theory/mobius.md",
+        "size": 36544,
+        "sha256": "85fc8723386f52d7759bbec6986f257201297f425a9908d1dd6a5c52c4899b07"
+      },
+      {
+        "path": "math/number-theory/mod-arithmetic.md",
+        "size": 24031,
+        "sha256": "00c60d3f85688cd8a041a85ef5df71c1967f47bcf823b81bf62534340c3f11f3"
+      },
+      {
+        "path": "math/number-theory/pell-equation.md",
+        "size": 59249,
+        "sha256": "5b02519218f88e9fc6affe59ea8dbdf7fd3f7fcff9adce0a0a6d7adfb6ce6a74"
+      },
+      {
+        "path": "math/number-theory/pollard-rho.md",
+        "size": 16256,
+        "sha256": "d8640061c65af43b2ef3d38befd18fb3f17097ec56d7a641339eefcebf1acb89"
+      },
+      {
+        "path": "math/number-theory/powerful-number.md",
+        "size": 9307,
+        "sha256": "cb1706b85cc28c264765dcab617f746d53c51410fc61357cc31a883c81c08430"
+      },
+      {
+        "path": "math/number-theory/prime-counting.md",
+        "size": 43067,
+        "sha256": "40745626901fc010ee8affa7f79db20acf0ebf97074cc184968dcf72ba266813"
+      },
+      {
+        "path": "math/number-theory/prime.md",
+        "size": 23271,
+        "sha256": "4d4900c363cc85e1087bb16567fdabcff2dbed7729cafd86ed1ccc5b74499875"
+      },
+      {
+        "path": "math/number-theory/primitive-root.md",
+        "size": 36179,
+        "sha256": "53c3ccc82eb1c3baa466d5490c005c4f10ffb33c8c312978f5f6d961ec3a74bc"
+      },
+      {
+        "path": "math/number-theory/quad-residue.md",
+        "size": 24656,
+        "sha256": "2b194b2190632d946cf71ba2f17b3dc90836ce3a4a228d0614bf72cc1c4437d9"
+      },
+      {
+        "path": "math/number-theory/quadratic.md",
+        "size": 27939,
+        "sha256": "d51efde25eaa3d321e3d4891eed6240b7b95c24a180bfae30cfa6ef46626e712"
+      },
+      {
+        "path": "math/number-theory/residue.md",
+        "size": 30828,
+        "sha256": "64bb211be27d0602577efe2af75bf346d911245dae3f3dbd5f050854bd6119d3"
+      },
+      {
+        "path": "math/number-theory/sieve.md",
+        "size": 19483,
+        "sha256": "e3a19d1080ce0e12d33bb31e379016239db13bdd07534eea2e871fcc8140f1fb"
+      },
+      {
+        "path": "math/number-theory/sqrt-decomposition.md",
+        "size": 16268,
+        "sha256": "1905cd8d1554136608a430dff6170ff42d9176535355b9b00402efdfbb167cae"
+      },
+      {
+        "path": "math/number-theory/stern-brocot.md",
+        "size": 29751,
+        "sha256": "70f958d3ea93dc84326d4255fd7d8a5bd3157deea77e29850fb2176bf9f3cea7"
+      },
+      {
+        "path": "math/number-theory/zhou.md",
+        "size": 4183,
+        "sha256": "f4c965406290e2c210c4fab5212cdeeabfef5329f83642ee06394b19f596c9f9"
+      },
+      {
+        "path": "math/numeral-sys/balanced-ternary.md",
+        "size": 5052,
+        "sha256": "10f8263a550ccf986c0ab1cb8b0fb02c0c8fbcc33a8f1e2f5fe5b7cb5122a2ef"
+      },
+      {
+        "path": "math/numeral-sys/base.md",
+        "size": 16983,
+        "sha256": "28dca829b3cac9b753e442859104aced459e3dc25ae9050269eacb6ce57524b6"
+      },
+      {
+        "path": "math/numeral-sys/gray-code.md",
+        "size": 6072,
+        "sha256": "ea6a0fa4db427dc9213d796b2a41684e702e998d690c0e34363cb72f350f5b50"
+      },
+      {
+        "path": "math/numeral-sys/intro.md",
+        "size": 1126,
+        "sha256": "1dcafd5bef06c233f035be6ef92f8e13c8cc9d4f8bab687df4752bb6e231c1c5"
+      },
+      {
+        "path": "math/numerical/gauss.md",
+        "size": 13100,
+        "sha256": "51e9c50d12c262142d94eae79fcfbaace3aeee26a02344d70cc760fd9aa50e90"
+      },
+      {
+        "path": "math/numerical/integral.md",
+        "size": 7019,
+        "sha256": "ca2ad4f9520acfef20e3264fe921974de47cff12569f56ee267f62825e3d5979"
+      },
+      {
+        "path": "math/numerical/interp.md",
+        "size": 9202,
+        "sha256": "c64da0875ae9dc820f5ff84778d7e7129c0a9ceab2182ab0bc6dbcf8573c60ae"
+      },
+      {
+        "path": "math/numerical/newton.md",
+        "size": 5318,
+        "sha256": "665f1d5635efd5e5fa15bb78d1e894110b60c5b9375c35c589f96790afa40b5d"
+      },
+      {
+        "path": "math/order-theory.md",
+        "size": 19364,
+        "sha256": "10723b91ba12411868c654662136236ca4c44b9609b72810ba7fc6000942d97c"
+      },
+      {
+        "path": "math/permutation.md",
+        "size": 18766,
+        "sha256": "1dca01bb5046c4fb92bf6cf91d178c73dc7051b1ef6d8c13a7d406a0c303c225"
+      },
+      {
+        "path": "math/poly/comp-rev.md",
+        "size": 11560,
+        "sha256": "709c63fd7269653df0703d63ccc8119f950dc66f2b2f619bfdc1cfa8634802a1"
+      },
+      {
+        "path": "math/poly/czt.md",
+        "size": 4910,
+        "sha256": "e72984758b68b084b3d17afc24927e30ee997e605a7c0374b84b98fcc3994a61"
+      },
+      {
+        "path": "math/poly/egf.md",
+        "size": 12193,
+        "sha256": "6cb5e41219372ded2331629753d9df1e14efad4c655cb92da7cbdf5e5a69cd37"
+      },
+      {
+        "path": "math/poly/elementary-func.md",
+        "size": 19806,
+        "sha256": "bcd44035e4342a1c2390c1195c6f7540c9af4f03ce455f58be43de2e029174c6"
+      },
+      {
+        "path": "math/poly/fft.md",
+        "size": 26026,
+        "sha256": "55aedfe87eefffc26a38ee3008c33399759f7f5247b0bda7a947c7f88038d305"
+      },
+      {
+        "path": "math/poly/fundamental.md",
+        "size": 7802,
+        "sha256": "e4a2de6b8b4f3bdd72470620bd20013a449f763bebad7ac0afc413647e888493"
+      },
+      {
+        "path": "math/poly/fwt.md",
+        "size": 16931,
+        "sha256": "08a237ae14b740bd027e3d15bff96b1d1f1039f67076be655b3cc35adbc354e4"
+      },
+      {
+        "path": "math/poly/intro.md",
+        "size": 14935,
+        "sha256": "3bbbc9e85de670c15750cb8bbb5548d9ac7cc691106c16983316cd16e528ed81"
+      },
+      {
+        "path": "math/poly/lagrange-inversion.md",
+        "size": 5328,
+        "sha256": "0bff0e1f199c11b32b4bf7a4a1a3c6318cca691608d87a9997806a8a6de27694"
+      },
+      {
+        "path": "math/poly/linear-recurrence.md",
+        "size": 9778,
+        "sha256": "e66860b637061b33fe4e4f7aa04de95d33933673388473e1ce2fe90aafb72e9d"
+      },
+      {
+        "path": "math/poly/multipoint-eval-interpolation.md",
+        "size": 2930,
+        "sha256": "7bdb4fe0be6c0ab2aaf43e574ec4e3fadfcc2df60a5a8947d4ab3dbfaf7512b8"
+      },
+      {
+        "path": "math/poly/newton.md",
+        "size": 12352,
+        "sha256": "7330736a7eac7c37d91c87a1ac3506458d9d189de9f1a36c0fbf3f836c90aa79"
+      },
+      {
+        "path": "math/poly/ntt.md",
+        "size": 6035,
+        "sha256": "f32f03875d469abfc6f2d759c1a5742f7f8f691a4df8a282203e8461ab27bd3c"
+      },
+      {
+        "path": "math/poly/ogf.md",
+        "size": 9934,
+        "sha256": "fe83c875e51d2046878b0f5991c75adbc86238510e676e94c60fd9adf86c658f"
+      },
+      {
+        "path": "math/poly/shift.md",
+        "size": 14050,
+        "sha256": "5f4355b00635618f05131c3ca9ae42af4849a5c8a5c03d9f1dad4c5c8916dc3b"
+      },
+      {
+        "path": "math/poly/symbolic-method.md",
+        "size": 20310,
+        "sha256": "3d9dc8bee76f36f421afe47ee115cff69902eaf2959d8993986f44a3ef0d5490"
+      },
+      {
+        "path": "math/probability/basic-conception.md",
+        "size": 5904,
+        "sha256": "717e5c3a52eb077dc481326118842303c7cde981676c6e25f066d4c0ad4a6634"
+      },
+      {
+        "path": "math/probability/concentration-inequality.md",
+        "size": 9905,
+        "sha256": "b3ac8c973f43a75c70a34db8d118e41d44695ca95d26e1bf0c244dc091bf821e"
+      },
+      {
+        "path": "math/probability/conditional-probability.md",
+        "size": 3052,
+        "sha256": "f0826c3df345e2e2baeb2a06b28cad01e86b4f023103c8cb010f7c87e83da804"
+      },
+      {
+        "path": "math/probability/exp-var.md",
+        "size": 7853,
+        "sha256": "caa21cfdaa8ed8bb5a5b6aee8b1e1b0bbac84a139ec29d8061de5759cb6dcabc"
+      },
+      {
+        "path": "math/probability/random-variable.md",
+        "size": 3631,
+        "sha256": "b4b1d61bf2065421ce0c740c62c764423f3eeaf498339b9ba298461f1a202b2a"
+      },
+      {
+        "path": "math/simplex.md",
+        "size": 37210,
+        "sha256": "2772e8cec135154d2ec2c0b9c54697f49bb7184346e4e4d25edcc11a4a3e9ca6"
+      },
+      {
+        "path": "math/young-tableau.md",
+        "size": 11880,
+        "sha256": "34595cc84fdf52618f7b9cded596c5290bd47322cd4d5957d01df51738aee85d"
+      },
+      {
+        "path": "misc/15-puzzle.md",
+        "size": 4448,
+        "sha256": "53c3d914cdc8594b114b1886bd54d4b1a055d5701cda05c63bc49784e78dcefd"
+      },
+      {
+        "path": "misc/cc-basic.md",
+        "size": 24221,
+        "sha256": "8ffe1b0a201de7de53163c907e2e0abe6c383c5d95ff9272463e3111fb678c29"
+      },
+      {
+        "path": "misc/cdq-divide.md",
+        "size": 21276,
+        "sha256": "a0827ac172724805ea71e88e207147aedf3c0e88b0aeba7882cdab73c8c77d36"
+      },
+      {
+        "path": "misc/discrete.md",
+        "size": 3331,
+        "sha256": "e9836c35aaf255b23ff9fde8708be2e357923596c45005463be05775b14b4db2"
+      },
+      {
+        "path": "misc/endianness.md",
+        "size": 1970,
+        "sha256": "1a05b56b75751c22405edc14cea02c368da1c806db9f23b839ba1b716bd23e26"
+      },
+      {
+        "path": "misc/expression.md",
+        "size": 12800,
+        "sha256": "9c187255b7f2f353187a9e997728431cac6ab8672fce753e95c4929c32abaef4"
+      },
+      {
+        "path": "misc/frac-programming.md",
+        "size": 4800,
+        "sha256": "124087b603a31b0100482a99f31b2695db12f2943c26ddec2290e48e8fe10440"
+      },
+      {
+        "path": "misc/fsm.md",
+        "size": 41549,
+        "sha256": "a0e2adc64dea1acadd32530e83110f36aa1d794f5dfe65c220e1b9644b66413c"
+      },
+      {
+        "path": "misc/garsia-wachs.md",
+        "size": 7843,
+        "sha256": "41eac071aae2834034b78bdd04b6c62b8d684dacfb37d20bbc28f013940c3668"
+      },
+      {
+        "path": "misc/hill-climbing.md",
+        "size": 4473,
+        "sha256": "ea2afaa57324cdd3346ae92f44f372635c5c6527e4a115032793e0b52e54bd5a"
+      },
+      {
+        "path": "misc/hoverline.md",
+        "size": 3955,
+        "sha256": "0a523859ecee6e585220123898cc0ccbd82007ca91443691c2a82793af233261"
+      },
+      {
+        "path": "misc/index.md",
+        "size": 81,
+        "sha256": "3b9f2a9d88b1a1cd54867577efadd62da56c5b7fd1a33b670dc1a4de54b648eb"
+      },
+      {
+        "path": "misc/job-order.md",
+        "size": 2776,
+        "sha256": "560ceed74e40585be60b24145b0636777860b2a2839ae440de7f20331996e335"
+      },
+      {
+        "path": "misc/josephus.md",
+        "size": 4533,
+        "sha256": "9f6cac9c0f15656c2f83458a5432ea235c7a7547cb8fc69071a4c19869d8a45b"
+      },
+      {
+        "path": "misc/kahan-summation.md",
+        "size": 5593,
+        "sha256": "bf16ce55bedeca9e090e92d3f39b9885b784996b0e1edd9d6d2b121a1d2bafd9"
+      },
+      {
+        "path": "misc/main-element.md",
+        "size": 3426,
+        "sha256": "f798af87e1c00ad1f406fd594e727fb2b3f15eb34a5666588baf77449be49452"
+      },
+      {
+        "path": "misc/mo-algo-2dimen.md",
+        "size": 2599,
+        "sha256": "f0dc58df4ffc5f627e5e6be27506808b48f63d3f453c1012c0e438d7193067b3"
+      },
+      {
+        "path": "misc/mo-algo-intro.md",
+        "size": 627,
+        "sha256": "68073df9193eebe338cb53362b9b68efc1ae14c1132cdb1e39f9cbe719c1cac7"
+      },
+      {
+        "path": "misc/mo-algo-on-tree.md",
+        "size": 16037,
+        "sha256": "5289f7f17cd01187db93667fd2cf4b54eca7436dad4f4d3515c9036db906baba"
+      },
+      {
+        "path": "misc/mo-algo-secondary-offline.md",
+        "size": 4485,
+        "sha256": "9a7b1b68558ecdd64e43818862bf68ea194aac65b813a230b4f42f07fa848bd9"
+      },
+      {
+        "path": "misc/mo-algo-with-bitset.md",
+        "size": 2008,
+        "sha256": "b70ac92fd6f3e2536637ae0af2f0ea006cdec6d941dad15ed2235b03ccd7bb2c"
+      },
+      {
+        "path": "misc/mo-algo.md",
+        "size": 12765,
+        "sha256": "29805125e9a4756ebff8ade6ad7a5dda0d2e43e2bc1c73b09c2628a1ab54f4e0"
+      },
+      {
+        "path": "misc/modifiable-mo-algo.md",
+        "size": 5170,
+        "sha256": "d34bc1eb6846b217d9d959f497183ac3993b3227c31069feb3c2a415dfef6d45"
+      },
+      {
+        "path": "misc/odt.md",
+        "size": 11512,
+        "sha256": "57efd15539b29b6e4ed0995abe6ba0dcc063807a1cf3a43038f00894aef4d32c"
+      },
+      {
+        "path": "misc/offline.md",
+        "size": 1426,
+        "sha256": "80307e5062b16f12e7cc3f1dbee7e68c763271d84e8c206878d493f92aee471e"
+      },
+      {
+        "path": "misc/parallel-binsearch.md",
+        "size": 19970,
+        "sha256": "985349abd3be751836ab0a82b82ef1f53c92ebce40aaf810dee4db87ad1e274d"
+      },
+      {
+        "path": "misc/rand-technique.md",
+        "size": 38251,
+        "sha256": "a8d348a7e8077fea67b304f0710acff4fcbf856de52dd26accc62f687edc930a"
+      },
+      {
+        "path": "misc/random.md",
+        "size": 16411,
+        "sha256": "89787819785ab5dcc450b467ebf07720ca5cbdd30bd8a19a7d90258f4b681ad3"
+      },
+      {
+        "path": "misc/rollback-mo-algo.md",
+        "size": 3260,
+        "sha256": "d8984464ded41735a7b9906ce1603dff04ab13e0dcc560d736f3e678b9f5f898"
+      },
+      {
+        "path": "misc/simulated-annealing.md",
+        "size": 3905,
+        "sha256": "2da8b839b429f291033500a886216f3af58190fe70ffdc5dff6e349458ba2ae9"
+      },
+      {
+        "path": "misc/space-optimization.md",
+        "size": 3628,
+        "sha256": "efdd5302fe18fc257b4ed02bd46866a3723e89bd974cab77c7b8e596353dc259"
+      },
+      {
+        "path": "misc/two-pointer.md",
+        "size": 8649,
+        "sha256": "99034959aaa3846aeed77214df45f0c611e591dbfd8961288e3b05befdf5d795"
+      },
+      {
+        "path": "search/alpha-beta.md",
+        "size": 14533,
+        "sha256": "02f95c4f92be409176400377f3391cb7ae09838b4c97d6dea590b81488fe9641"
+      },
+      {
+        "path": "search/astar.md",
+        "size": 4206,
+        "sha256": "b47df46d1c0c517c4a5f26cf295d45fe1c756217c75929aaf3be925729a25859"
+      },
+      {
+        "path": "search/backtracking.md",
+        "size": 2463,
+        "sha256": "962ca3c47fe9fee12f27d6ea94bcf688d27d917209fbb1dd052bb16e4ffbc1ff"
+      },
+      {
+        "path": "search/bfs.md",
+        "size": 4147,
+        "sha256": "8b089482e61b2478de62a0c46e2e6e88495b6bf9f8d1a603522a3a0df0f9625a"
+      },
+      {
+        "path": "search/bidirectional.md",
+        "size": 4455,
+        "sha256": "fe11746b6c71510ec79a131ab4e9bebc96643c98087dfcec1347290d4424b609"
+      },
+      {
+        "path": "search/dfs.md",
+        "size": 4514,
+        "sha256": "6f3fc71c4dda57619395a9421e6cd0afaa49bed8532933781122a3c4de84d1bc"
+      },
+      {
+        "path": "search/dlx.md",
+        "size": 23947,
+        "sha256": "29324df05535c91490ef7cbd05451a3f16c8bac3c38355eff035248dc04052c0"
+      },
+      {
+        "path": "search/heuristic.md",
+        "size": 1451,
+        "sha256": "f9be43b95cd982269b7693c48e4294f8432d7b30627ea2b762ece0925d7f11a0"
+      },
+      {
+        "path": "search/idastar.md",
+        "size": 8377,
+        "sha256": "0221d3f71c6568f4bec13ea142a69bab18f7f94c626b4f743b1158e78d0e3718"
+      },
+      {
+        "path": "search/index.md",
+        "size": 723,
+        "sha256": "313c4cbbf1a77da44119105dbd04beafc201d09482c1c18b5be34a64c6bd2e58"
+      },
+      {
+        "path": "search/iterative.md",
+        "size": 1790,
+        "sha256": "49a586693b31c6437e5f40ff93b0671813229f3fce63a39b5cf4f15ee7c27711"
+      },
+      {
+        "path": "search/opt.md",
+        "size": 5545,
+        "sha256": "3a28477325fea869bbeb511e08f2821015a86b3796557a56888de6b079a150ef"
+      },
+      {
+        "path": "string/ac-automaton.md",
+        "size": 20118,
+        "sha256": "04cbe96f79792aec2693b225cb35b8381cc5874453a2b79021607402c07c3aa1"
+      },
+      {
+        "path": "string/basic.md",
+        "size": 3063,
+        "sha256": "0109d2014886647ce1253222529397da2585b61c4fdbe9e4576d2050549a918e"
+      },
+      {
+        "path": "string/bm.md",
+        "size": 45923,
+        "sha256": "de0de804aa0bedfd9818233cfd7cac9d6a49be952befb3a15cff4d3d47df5a59"
+      },
+      {
+        "path": "string/general-sam.md",
+        "size": 9519,
+        "sha256": "bced2050fafd97998de05fa2b8ffeff88509c99896d5ce68847abc218807c143"
+      },
+      {
+        "path": "string/hash.md",
+        "size": 16878,
+        "sha256": "1ecf3517e403a1791a63e6035d3f0051abff326d695412cbf6a6606835dccb6d"
+      },
+      {
+        "path": "string/index.md",
+        "size": 211,
+        "sha256": "ae8a603de67f81dd8fe292da5044a8ed9a0331f0fbd73312195fa2930a7b3142"
+      },
+      {
+        "path": "string/kmp.md",
+        "size": 30012,
+        "sha256": "efeb62c75479e93c71d7b85e1d9d1783fa238d456f5b380b5e5d2311d14aad97"
+      },
+      {
+        "path": "string/lib-func.md",
+        "size": 4082,
+        "sha256": "7fe9fdee991ca1a2e9bd29dc3a679842296312d6f3c4d00631be19dc5d425d06"
+      },
+      {
+        "path": "string/lyndon.md",
+        "size": 6906,
+        "sha256": "09f86121ba3bce222b0d8bd6f0f7f3b9f74b06d291e0deadb5d2deecfe37eae6"
+      },
+      {
+        "path": "string/main-lorentz.md",
+        "size": 9797,
+        "sha256": "bc1f8ac4571c9fd832d543619d256a65f418c88c4f86fd0c043b269ca100580b"
+      },
+      {
+        "path": "string/manacher.md",
+        "size": 12093,
+        "sha256": "5629dabb46eb80d69b6ac2a9f9cdc1a1a45b58ca83afb6b9efee39c45ef80e67"
+      },
+      {
+        "path": "string/match.md",
+        "size": 3178,
+        "sha256": "9cfdfb8bce4f152291411e42955329769469e859ab585c7dbc7aec4e3ffaf7db"
+      },
+      {
+        "path": "string/minimal-string.md",
+        "size": 3530,
+        "sha256": "b1dde79b441dad6615ffd781cb17aa3ec44b341a762f484c64920db626000046"
+      },
+      {
+        "path": "string/pam.md",
+        "size": 15647,
+        "sha256": "d8ce39c3e91ae206502cc6152e669514aa95900dc66220876b455dc2a60d958d"
+      },
+      {
+        "path": "string/sa-optimal-inplace.md",
+        "size": 39873,
+        "sha256": "97b8be1616db6cc75559fed6cf17265137f3b029f61251ee65eaa159e06bb2fb"
+      },
+      {
+        "path": "string/sa.md",
+        "size": 23354,
+        "sha256": "5c3e73d6c0bd5e1b3dcbac3700fa564d04a9498ea881ece6b5acaebe0d3bc26d"
+      },
+      {
+        "path": "string/sam.md",
+        "size": 70264,
+        "sha256": "f91226c4d3e42f33d4b55ec187ed5faca0a46844337ff43840993d12bbe08061"
+      },
+      {
+        "path": "string/seq-automaton.md",
+        "size": 2748,
+        "sha256": "b6ae79104614d30011cf7c9bfc5670c333e5db7aec4e4a3e6698dd22b8663032"
+      },
+      {
+        "path": "string/suffix-bst.md",
+        "size": 6213,
+        "sha256": "3abd17bfad2446d73282d61329df8ca7c1076fa9ffc57a7f8141e372964ab7c9"
+      },
+      {
+        "path": "string/suffix-tree.md",
+        "size": 14479,
+        "sha256": "175e634a4538883fa72cf155e623a3facf3c77bcfbdb357c49b40f52fc66bb4a"
+      },
+      {
+        "path": "string/trie.md",
+        "size": 16824,
+        "sha256": "e8adf0b82ac7a484ef4a0806534c300a1ece419a7c8214ddae1564e3e9ee15ee"
+      },
+      {
+        "path": "string/z-func.md",
+        "size": 8081,
+        "sha256": "bd22e0a4553b963e42d08c86ec0fa684b131e2da316d7a7b9b7f7ed19317f977"
+      },
+      {
+        "path": "topic/bracket.md",
+        "size": 4801,
+        "sha256": "795cfd8110bf08d22a25e4b117d6c3042e648946c4b8a52719b4b2843d0be0ba"
+      },
+      {
+        "path": "topic/dsu-app.md",
+        "size": 8181,
+        "sha256": "df54d405b5789fca7a35c1442f5fe36e27db392bb483a92f8c7b75e1ddaab06d"
+      },
+      {
+        "path": "topic/rmq.md",
+        "size": 10752,
+        "sha256": "ffcaa5023968ed082165d40be35faa2112f373c3c87b4eb4e7965e0ccc16798a"
+      },
+      {
+        "path": "topic/segment-tree-offline.md",
+        "size": 7358,
+        "sha256": "21bec8e6021d0a3a7b5dbbf9a7e042692708dc2625424c332c0e5248938dbf18"
+      }
+    ]
+  },
+  "raw": {
+    "file_count": 2930,
+    "md_count": 465,
+    "md_bytes": 6078888
+  }
+}
