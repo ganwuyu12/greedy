@@ -10,6 +10,7 @@ class Hit:
     text: str
     source: str
     score: float
+    path: str = ""          # 相对语料根目录的路径，用于区分同名文件
 
 
 class Retriever:
@@ -70,6 +71,7 @@ class Retriever:
                 text=self._chunks[i]["text"],
                 source=self._chunks[i]["source"],
                 score=float(sims[i]),
+                path=self._chunks[i].get("path", self._chunks[i]["source"]),
             )
             for i in idx
         ]

@@ -1,0 +1,2749 @@
+{
+  "retrieval": {
+    "hit": 61,
+    "total": 93,
+    "rate": 0.6559139784946236,
+    "by_variant": {
+      "bare": {
+        "hit": 40,
+        "total": 54,
+        "rate": 0.7407407407407407
+      },
+      "ctx": {
+        "hit": 21,
+        "total": 39,
+        "rate": 0.5384615384615384
+      }
+    },
+    "details": [
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_lang_helloworld",
+        "question": "Hello, World!是什么？",
+        "expect_path": "lang/helloworld.md",
+        "expect_name": "Hello, World!",
+        "note": "以一句 `Hello, World!`，开始算法竞赛之旅吧！ 同时了解一下 C++ 的源程序的大致框架是什么样子的．",
+        "hit": false,
+        "got": [
+          "pas-cpp.md",
+          "pas-cpp.md",
+          "basic.md"
+        ],
+        "got_paths": [
+          "lang/pas-cpp.md",
+          "lang/pas-cpp.md",
+          "lang/basic.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_lang_basic",
+        "question": "C++ 语法基础是什么？",
+        "expect_path": "lang/basic.md",
+        "expect_name": "C++ 语法基础",
+        "note": "以一句 `Hello, World!`，开始算法竞赛之旅吧！ 同时了解一下 C++ 的源程序的大致框架是什么样子的．",
+        "hit": false,
+        "got": [
+          "pas-cpp.md",
+          "pas-cpp.md",
+          "pas-cpp.md"
+        ],
+        "got_paths": [
+          "lang/pas-cpp.md",
+          "lang/pas-cpp.md",
+          "lang/pas-cpp.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "ctx",
+        "id": "concept_ctx_lang_basic",
+        "question": "Hello, World!里的C++ 语法基础是什么？",
+        "expect_path": "lang/basic.md",
+        "expect_name": "C++ 语法基础",
+        "hit": false,
+        "got": [
+          "pas-cpp.md",
+          "pas-cpp.md",
+          "complexity.md"
+        ],
+        "got_paths": [
+          "lang/pas-cpp.md",
+          "lang/pas-cpp.md",
+          "basic/complexity.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_lang_var",
+        "question": "变量是什么？",
+        "expect_path": "lang/var.md",
+        "expect_name": "变量",
+        "note": "计算机出现的最初目的就是计算．因此我们先学习如何完成一些简单的运算任务吧．",
+        "hit": true,
+        "got": [
+          "var.md",
+          "basic.md",
+          "complexity.md"
+        ],
+        "got_paths": [
+          "lang/var.md",
+          "lang/basic.md",
+          "basic/complexity.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "ctx",
+        "id": "concept_ctx_lang_var",
+        "question": "变量与运算里的变量是什么？",
+        "expect_path": "lang/var.md",
+        "expect_name": "变量",
+        "hit": false,
+        "got": [
+          "basic.md",
+          "pair.md",
+          "pas-cpp.md"
+        ],
+        "got_paths": [
+          "lang/basic.md",
+          "lang/csl/pair.md",
+          "lang/pas-cpp.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_lang_op",
+        "question": "运算是什么？",
+        "expect_path": "lang/op.md",
+        "expect_name": "运算",
+        "note": "计算机出现的最初目的就是计算．因此我们先学习如何完成一些简单的运算任务吧．",
+        "hit": false,
+        "got": [
+          "fwt.md",
+          "bit.md",
+          "vector.md"
+        ],
+        "got_paths": [
+          "math/poly/fwt.md",
+          "math/bit.md",
+          "math/linear-algebra/vector.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "ctx",
+        "id": "concept_ctx_lang_op",
+        "question": "变量与运算里的运算是什么？",
+        "expect_path": "lang/op.md",
+        "expect_name": "运算",
+        "hit": true,
+        "got": [
+          "fwt.md",
+          "op.md",
+          "pair.md"
+        ],
+        "got_paths": [
+          "math/poly/fwt.md",
+          "lang/op.md",
+          "lang/csl/pair.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_lang_branch",
+        "question": "分支是什么？",
+        "expect_path": "lang/branch.md",
+        "expect_name": "分支",
+        "note": "有的时候，我们需要在不同的条件下，选择执行不同的语句，这时候我们就需要借助分支语句． 分支语句包括下面几种： -   if 语句 -   if-else 语句 ",
+        "hit": false,
+        "got": [
+          "divide-and-conquer.md",
+          "block-list.md",
+          "bit-in-block-array.md"
+        ],
+        "got_paths": [
+          "basic/divide-and-conquer.md",
+          "ds/block-list.md",
+          "ds/bit-in-block-array.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "ctx",
+        "id": "concept_ctx_lang_branch",
+        "question": "分支结构里的分支是什么？",
+        "expect_path": "lang/branch.md",
+        "expect_name": "分支",
+        "hit": false,
+        "got": [
+          "bit-in-block-array.md",
+          "decompose.md",
+          "tree-random-walk.md"
+        ],
+        "got_paths": [
+          "ds/bit-in-block-array.md",
+          "ds/decompose.md",
+          "graph/tree-random-walk.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_lang_loop",
+        "question": "循环是什么？",
+        "expect_path": "lang/loop.md",
+        "expect_name": "循环",
+        "note": "将若干条语句重复执行多次，就需要用到循环语句． 循环语句包括下面几种： -   for 语句 -   while 语句 -   do-while 语句",
+        "hit": false,
+        "got": [
+          "optimizations.md",
+          "field-theory.md",
+          "optimizations.md"
+        ],
+        "got_paths": [
+          "lang/optimizations.md",
+          "math/algebra/field-theory.md",
+          "lang/optimizations.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "ctx",
+        "id": "concept_ctx_lang_loop",
+        "question": "循环结构里的循环是什么？",
+        "expect_path": "lang/loop.md",
+        "expect_name": "循环",
+        "hit": false,
+        "got": [
+          "optimizations.md",
+          "optimizations.md",
+          "fibonacci.md"
+        ],
+        "got_paths": [
+          "lang/optimizations.md",
+          "lang/optimizations.md",
+          "math/combinatorics/fibonacci.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_lang_array",
+        "question": "数组是什么？",
+        "expect_path": "lang/array.md",
+        "expect_name": "数组",
+        "note": "数组用于存储大量相同类型的数据．而结构体则可以将若干变量捆绑起来．",
+        "hit": true,
+        "got": [
+          "array.md",
+          "pointer.md",
+          "python.md"
+        ],
+        "got_paths": [
+          "lang/array.md",
+          "lang/pointer.md",
+          "lang/python.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "ctx",
+        "id": "concept_ctx_lang_array",
+        "question": "数组与结构体里的数组是什么？",
+        "expect_path": "lang/array.md",
+        "expect_name": "数组",
+        "hit": true,
+        "got": [
+          "array.md",
+          "block-list.md",
+          "pointer.md"
+        ],
+        "got_paths": [
+          "lang/array.md",
+          "ds/block-list.md",
+          "lang/pointer.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_lang_struct",
+        "question": "结构体是什么？",
+        "expect_path": "lang/struct.md",
+        "expect_name": "结构体",
+        "note": "数组用于存储大量相同类型的数据．而结构体则可以将若干变量捆绑起来．",
+        "hit": true,
+        "got": [
+          "block-list.md",
+          "2d.md",
+          "struct.md"
+        ],
+        "got_paths": [
+          "ds/block-list.md",
+          "geometry/2d.md",
+          "lang/struct.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "ctx",
+        "id": "concept_ctx_lang_struct",
+        "question": "数组与结构体里的结构体是什么？",
+        "expect_path": "lang/struct.md",
+        "expect_name": "结构体",
+        "hit": true,
+        "got": [
+          "block-list.md",
+          "struct.md",
+          "group-theory.md"
+        ],
+        "got_paths": [
+          "ds/block-list.md",
+          "lang/struct.md",
+          "math/algebra/group-theory.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_lang_func",
+        "question": "函数是什么？",
+        "expect_path": "lang/func.md",
+        "expect_name": "函数",
+        "note": "使用函数来让程序变得模块化，降低实现成本． 递归则是新手入门的一道坎，「自己调用自己」听起来并不是那么容易理解，不过仔细深究根本，就会发现「自己调用自己」和「自",
+        "hit": true,
+        "got": [
+          "func.md",
+          "new.md",
+          "stl-sort.md"
+        ],
+        "got_paths": [
+          "lang/func.md",
+          "lang/new.md",
+          "basic/stl-sort.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "ctx",
+        "id": "concept_ctx_lang_func",
+        "question": "函数与递归里的函数是什么？",
+        "expect_path": "lang/func.md",
+        "expect_name": "函数",
+        "hit": false,
+        "got": [
+          "divide-and-conquer.md",
+          "dfs.md",
+          "divide-and-conquer.md"
+        ],
+        "got_paths": [
+          "basic/divide-and-conquer.md",
+          "graph/dfs.md",
+          "basic/divide-and-conquer.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_basic_divide_and_conquer",
+        "question": "递归 & 分治是什么？",
+        "expect_path": "basic/divide-and-conquer.md",
+        "expect_name": "递归 & 分治",
+        "note": "使用函数来让程序变得模块化，降低实现成本． 递归则是新手入门的一道坎，「自己调用自己」听起来并不是那么容易理解，不过仔细深究根本，就会发现「自己调用自己」和「自",
+        "hit": true,
+        "got": [
+          "divide-and-conquer.md",
+          "divide-and-conquer.md",
+          "divide-and-conquer.md"
+        ],
+        "got_paths": [
+          "basic/divide-and-conquer.md",
+          "basic/divide-and-conquer.md",
+          "basic/divide-and-conquer.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "ctx",
+        "id": "concept_ctx_basic_divide_and_conquer",
+        "question": "函数与递归里的递归 & 分治是什么？",
+        "expect_path": "basic/divide-and-conquer.md",
+        "expect_name": "递归 & 分治",
+        "hit": true,
+        "got": [
+          "divide-and-conquer.md",
+          "divide-and-conquer.md",
+          "tree-divide.md"
+        ],
+        "got_paths": [
+          "basic/divide-and-conquer.md",
+          "basic/divide-and-conquer.md",
+          "graph/tree-divide.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_basic_enumerate",
+        "question": "枚举是什么？",
+        "expect_path": "basic/enumerate.md",
+        "expect_name": "枚举",
+        "note": "从现在开始，你已经会使用 C++ 语言完成一些简单的任务了，但是这远远不够． 为了做对一些简单的题目，你需要学会通过枚举或模拟脑海中的逻辑，来实现代码．这看起来",
+        "hit": false,
+        "got": [
+          "index.md",
+          "divide-and-conquer.md",
+          "primitive-root.md"
+        ],
+        "got_paths": [
+          "search/index.md",
+          "basic/divide-and-conquer.md",
+          "math/number-theory/primitive-root.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "ctx",
+        "id": "concept_ctx_basic_enumerate",
+        "question": "枚举与模拟里的枚举是什么？",
+        "expect_path": "basic/enumerate.md",
+        "expect_name": "枚举",
+        "hit": false,
+        "got": [
+          "divide-and-conquer.md",
+          "dirichlet.md",
+          "rings-count.md"
+        ],
+        "got_paths": [
+          "basic/divide-and-conquer.md",
+          "math/number-theory/dirichlet.md",
+          "graph/rings-count.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_basic_simulate",
+        "question": "模拟是什么？",
+        "expect_path": "basic/simulate.md",
+        "expect_name": "模拟",
+        "note": "从现在开始，你已经会使用 C++ 语言完成一些简单的任务了，但是这远远不够． 为了做对一些简单的题目，你需要学会通过枚举或模拟脑海中的逻辑，来实现代码．这看起来",
+        "hit": true,
+        "got": [
+          "simulate.md",
+          "matroid.md",
+          "problemsetting.md"
+        ],
+        "got_paths": [
+          "basic/simulate.md",
+          "math/matroid.md",
+          "contest/problemsetting.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "ctx",
+        "id": "concept_ctx_basic_simulate",
+        "question": "枚举与模拟里的模拟是什么？",
+        "expect_path": "basic/simulate.md",
+        "expect_name": "模拟",
+        "hit": false,
+        "got": [
+          "dirichlet.md",
+          "rand-technique.md",
+          "primitive-root.md"
+        ],
+        "got_paths": [
+          "math/number-theory/dirichlet.md",
+          "misc/rand-technique.md",
+          "math/number-theory/primitive-root.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_basic_divide_and_conquer",
+        "question": "递归 & 分治是什么？",
+        "expect_path": "basic/divide-and-conquer.md",
+        "expect_name": "递归 & 分治",
+        "note": "递归是指函数定义中不断调用自己的方法；而分治则是不断将这一个问题分解为若干子问题，求解后合并的操作．",
+        "hit": true,
+        "got": [
+          "divide-and-conquer.md",
+          "divide-and-conquer.md",
+          "divide-and-conquer.md"
+        ],
+        "got_paths": [
+          "basic/divide-and-conquer.md",
+          "basic/divide-and-conquer.md",
+          "basic/divide-and-conquer.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "ctx",
+        "id": "concept_ctx_basic_divide_and_conquer",
+        "question": "递归与分治里的递归 & 分治是什么？",
+        "expect_path": "basic/divide-and-conquer.md",
+        "expect_name": "递归 & 分治",
+        "hit": true,
+        "got": [
+          "divide-and-conquer.md",
+          "tree-divide.md",
+          "divide-and-conquer.md"
+        ],
+        "got_paths": [
+          "basic/divide-and-conquer.md",
+          "graph/tree-divide.md",
+          "basic/divide-and-conquer.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_string_basic",
+        "question": "字符串基础是什么？",
+        "expect_path": "string/basic.md",
+        "expect_name": "字符串基础",
+        "note": "在做信息学题目时，经常会碰到的一个数据类型就是字符串，你需要学习一些用于操作字符串的 STL 函数．当然，模拟也是解决字符串问题的好方法．",
+        "hit": false,
+        "got": [
+          "kmp.md",
+          "kmp.md",
+          "index.md"
+        ],
+        "got_paths": [
+          "string/kmp.md",
+          "string/kmp.md",
+          "string/index.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_string_lib_func",
+        "question": "STL 函数是什么？",
+        "expect_path": "string/lib-func.md",
+        "expect_name": "STL 函数",
+        "note": "在做信息学题目时，经常会碰到的一个数据类型就是字符串，你需要学习一些用于操作字符串的 STL 函数．当然，模拟也是解决字符串问题的好方法．",
+        "hit": false,
+        "got": [
+          "algorithm.md",
+          "pas-cpp.md",
+          "pas-cpp.md"
+        ],
+        "got_paths": [
+          "lang/csl/algorithm.md",
+          "lang/pas-cpp.md",
+          "lang/pas-cpp.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "ctx",
+        "id": "concept_ctx_string_lib_func",
+        "question": "字符串里的STL 函数是什么？",
+        "expect_path": "string/lib-func.md",
+        "expect_name": "STL 函数",
+        "hit": false,
+        "got": [
+          "algorithm.md",
+          "pas-cpp.md",
+          "problemsetting.md"
+        ],
+        "got_paths": [
+          "lang/csl/algorithm.md",
+          "lang/pas-cpp.md",
+          "contest/problemsetting.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_basic_sort_intro",
+        "question": "排序简介是什么？",
+        "expect_path": "basic/sort-intro.md",
+        "expect_name": "排序简介",
+        "note": "当你获得了一组数据时，如何将他们从无序变成有序也是个很重要的问题．在你没有思路的时候，不妨考虑一下将数组排个序吧．这也是接下来的很多算法的基础． 排序的方法有点",
+        "hit": true,
+        "got": [
+          "use-of-sort.md",
+          "sort-intro.md",
+          "selection-sort.md"
+        ],
+        "got_paths": [
+          "basic/use-of-sort.md",
+          "basic/sort-intro.md",
+          "basic/selection-sort.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_basic_selection_sort",
+        "question": "选择排序是什么？",
+        "expect_path": "basic/selection-sort.md",
+        "expect_name": "选择排序",
+        "note": "当你获得了一组数据时，如何将他们从无序变成有序也是个很重要的问题．在你没有思路的时候，不妨考虑一下将数组排个序吧．这也是接下来的很多算法的基础． 排序的方法有点",
+        "hit": true,
+        "got": [
+          "selection-sort.md",
+          "tournament-sort.md",
+          "insertion-sort.md"
+        ],
+        "got_paths": [
+          "basic/selection-sort.md",
+          "basic/tournament-sort.md",
+          "basic/insertion-sort.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_basic_bubble_sort",
+        "question": "冒泡排序是什么？",
+        "expect_path": "basic/bubble-sort.md",
+        "expect_name": "冒泡排序",
+        "note": "当你获得了一组数据时，如何将他们从无序变成有序也是个很重要的问题．在你没有思路的时候，不妨考虑一下将数组排个序吧．这也是接下来的很多算法的基础． 排序的方法有点",
+        "hit": true,
+        "got": [
+          "bubble-sort.md",
+          "bubble-sort.md",
+          "bubble-sort.md"
+        ],
+        "got_paths": [
+          "basic/bubble-sort.md",
+          "basic/bubble-sort.md",
+          "basic/bubble-sort.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_basic_insertion_sort",
+        "question": "插入排序是什么？",
+        "expect_path": "basic/insertion-sort.md",
+        "expect_name": "插入排序",
+        "note": "当你获得了一组数据时，如何将他们从无序变成有序也是个很重要的问题．在你没有思路的时候，不妨考虑一下将数组排个序吧．这也是接下来的很多算法的基础． 排序的方法有点",
+        "hit": true,
+        "got": [
+          "insertion-sort.md",
+          "offline.md",
+          "shell-sort.md"
+        ],
+        "got_paths": [
+          "basic/insertion-sort.md",
+          "misc/offline.md",
+          "basic/shell-sort.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_basic_counting_sort",
+        "question": "计数排序是什么？",
+        "expect_path": "basic/counting-sort.md",
+        "expect_name": "计数排序",
+        "note": "当你获得了一组数据时，如何将他们从无序变成有序也是个很重要的问题．在你没有思路的时候，不妨考虑一下将数组排个序吧．这也是接下来的很多算法的基础． 排序的方法有点",
+        "hit": true,
+        "got": [
+          "counting-sort.md",
+          "selection-sort.md",
+          "sort-intro.md"
+        ],
+        "got_paths": [
+          "basic/counting-sort.md",
+          "basic/selection-sort.md",
+          "basic/sort-intro.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_basic_radix_sort",
+        "question": "基数排序是什么？",
+        "expect_path": "basic/radix-sort.md",
+        "expect_name": "基数排序",
+        "note": "当你获得了一组数据时，如何将他们从无序变成有序也是个很重要的问题．在你没有思路的时候，不妨考虑一下将数组排个序吧．这也是接下来的很多算法的基础． 排序的方法有点",
+        "hit": true,
+        "got": [
+          "radix-sort.md",
+          "radix-sort.md",
+          "radix-sort.md"
+        ],
+        "got_paths": [
+          "basic/radix-sort.md",
+          "basic/radix-sort.md",
+          "basic/radix-sort.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_basic_quick_sort",
+        "question": "快速排序是什么？",
+        "expect_path": "basic/quick-sort.md",
+        "expect_name": "快速排序",
+        "note": "当你获得了一组数据时，如何将他们从无序变成有序也是个很重要的问题．在你没有思路的时候，不妨考虑一下将数组排个序吧．这也是接下来的很多算法的基础． 排序的方法有点",
+        "hit": true,
+        "got": [
+          "quick-sort.md",
+          "quick-sort.md",
+          "quick-sort.md"
+        ],
+        "got_paths": [
+          "basic/quick-sort.md",
+          "basic/quick-sort.md",
+          "basic/quick-sort.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_basic_merge_sort",
+        "question": "归并排序是什么？",
+        "expect_path": "basic/merge-sort.md",
+        "expect_name": "归并排序",
+        "note": "当你获得了一组数据时，如何将他们从无序变成有序也是个很重要的问题．在你没有思路的时候，不妨考虑一下将数组排个序吧．这也是接下来的很多算法的基础． 排序的方法有点",
+        "hit": true,
+        "got": [
+          "merge-sort.md",
+          "merge-sort.md",
+          "tim-sort.md"
+        ],
+        "got_paths": [
+          "basic/merge-sort.md",
+          "basic/merge-sort.md",
+          "basic/tim-sort.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_basic_heap_sort",
+        "question": "堆排序是什么？",
+        "expect_path": "basic/heap-sort.md",
+        "expect_name": "堆排序",
+        "note": "当你获得了一组数据时，如何将他们从无序变成有序也是个很重要的问题．在你没有思路的时候，不妨考虑一下将数组排个序吧．这也是接下来的很多算法的基础． 排序的方法有点",
+        "hit": true,
+        "got": [
+          "heap-sort.md",
+          "bucket-sort.md",
+          "bucket-sort.md"
+        ],
+        "got_paths": [
+          "basic/heap-sort.md",
+          "basic/bucket-sort.md",
+          "basic/bucket-sort.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_basic_bucket_sort",
+        "question": "桶排序是什么？",
+        "expect_path": "basic/bucket-sort.md",
+        "expect_name": "桶排序",
+        "note": "当你获得了一组数据时，如何将他们从无序变成有序也是个很重要的问题．在你没有思路的时候，不妨考虑一下将数组排个序吧．这也是接下来的很多算法的基础． 排序的方法有点",
+        "hit": true,
+        "got": [
+          "bucket-sort.md",
+          "bucket-sort.md",
+          "radix-sort.md"
+        ],
+        "got_paths": [
+          "basic/bucket-sort.md",
+          "basic/bucket-sort.md",
+          "basic/radix-sort.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_basic_stl_sort",
+        "question": "排序相关 STL是什么？",
+        "expect_path": "basic/stl-sort.md",
+        "expect_name": "排序相关 STL",
+        "note": "当你获得了一组数据时，如何将他们从无序变成有序也是个很重要的问题．在你没有思路的时候，不妨考虑一下将数组排个序吧．这也是接下来的很多算法的基础． 排序的方法有点",
+        "hit": false,
+        "got": [
+          "algorithm.md",
+          "container-adapter.md",
+          "order-theory.md"
+        ],
+        "got_paths": [
+          "lang/csl/algorithm.md",
+          "lang/csl/container-adapter.md",
+          "math/order-theory.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_basic_binary",
+        "question": "二分是什么？",
+        "expect_path": "basic/binary.md",
+        "expect_name": "二分",
+        "note": "二分查找，本质上是运用分治的思想，不断减少查找范围的大小，直至找到答案．但是需要注意，这个查找方式必须应用在有序的数据结构中． 而倍增则不同，它是不断翻倍，以把",
+        "hit": true,
+        "got": [
+          "bi-graph.md",
+          "binary.md",
+          "binary.md"
+        ],
+        "got_paths": [
+          "graph/bi-graph.md",
+          "basic/binary.md",
+          "basic/binary.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "ctx",
+        "id": "concept_ctx_basic_binary",
+        "question": "二分与倍增里的二分是什么？",
+        "expect_path": "basic/binary.md",
+        "expect_name": "二分",
+        "hit": false,
+        "got": [
+          "sparse-table.md",
+          "general-weight-match.md",
+          "seg.md"
+        ],
+        "got_paths": [
+          "ds/sparse-table.md",
+          "graph/graph-matching/general-weight-match.md",
+          "ds/seg.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_basic_binary_lifting",
+        "question": "倍增是什么？",
+        "expect_path": "basic/binary-lifting.md",
+        "expect_name": "倍增",
+        "note": "二分查找，本质上是运用分治的思想，不断减少查找范围的大小，直至找到答案．但是需要注意，这个查找方式必须应用在有序的数据结构中． 而倍增则不同，它是不断翻倍，以把",
+        "hit": true,
+        "got": [
+          "elementary-operations.md",
+          "binary-lifting.md",
+          "sa.md"
+        ],
+        "got_paths": [
+          "math/linear-algebra/elementary-operations.md",
+          "basic/binary-lifting.md",
+          "string/sa.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "ctx",
+        "id": "concept_ctx_basic_binary_lifting",
+        "question": "二分与倍增里的倍增是什么？",
+        "expect_path": "basic/binary-lifting.md",
+        "expect_name": "倍增",
+        "hit": true,
+        "got": [
+          "sa.md",
+          "sparse-table.md",
+          "binary-lifting.md"
+        ],
+        "got_paths": [
+          "string/sa.md",
+          "ds/sparse-table.md",
+          "basic/binary-lifting.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_search_dfs",
+        "question": "DFS（搜索）是什么？",
+        "expect_path": "search/dfs.md",
+        "expect_name": "DFS（搜索）",
+        "note": "深度优先搜索指利用递归函数方便地实现暴力枚举的算法，与图论中的 DFS 算法有一定相似之处，但并不完全相同．",
+        "hit": true,
+        "got": [
+          "dfs.md",
+          "dfs.md",
+          "opt.md"
+        ],
+        "got_paths": [
+          "graph/dfs.md",
+          "graph/dfs.md",
+          "search/opt.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "ctx",
+        "id": "concept_ctx_search_dfs",
+        "question": "深度优先搜索（DFS）里的DFS（搜索）是什么？",
+        "expect_path": "search/dfs.md",
+        "expect_name": "DFS（搜索）",
+        "hit": true,
+        "got": [
+          "dfs.md",
+          "opt.md",
+          "dfs.md"
+        ],
+        "got_paths": [
+          "graph/dfs.md",
+          "search/opt.md",
+          "graph/dfs.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_search_bfs",
+        "question": "BFS（搜索）是什么？",
+        "expect_path": "search/bfs.md",
+        "expect_name": "BFS（搜索）",
+        "note": "将每一个状态设计为图中的一个点，可以展开地毯式搜索．",
+        "hit": true,
+        "got": [
+          "bfs.md",
+          "bfs.md",
+          "iterative.md"
+        ],
+        "got_paths": [
+          "graph/bfs.md",
+          "search/bfs.md",
+          "search/iterative.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "ctx",
+        "id": "concept_ctx_search_bfs",
+        "question": "广度优先搜索（BFS）里的BFS（搜索）是什么？",
+        "expect_path": "search/bfs.md",
+        "expect_name": "BFS（搜索）",
+        "hit": true,
+        "got": [
+          "bfs.md",
+          "bfs.md",
+          "backtracking.md"
+        ],
+        "got_paths": [
+          "graph/bfs.md",
+          "search/bfs.md",
+          "search/backtracking.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_search_opt",
+        "question": "DFS 剪枝优化是什么？",
+        "expect_path": "search/opt.md",
+        "expect_name": "DFS 剪枝优化",
+        "note": "很多题目都可以用 DFS 来解决，而这个算法的复杂度显然是无法通过的．因此，需要一些优化使它跑得更快．这样的优化能够减少不可能成功的尝试，称为「剪枝」．BFS ",
+        "hit": true,
+        "got": [
+          "opt.md",
+          "idastar.md",
+          "tree.md"
+        ],
+        "got_paths": [
+          "search/opt.md",
+          "search/idastar.md",
+          "dp/tree.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "ctx",
+        "id": "concept_ctx_search_opt",
+        "question": "搜索优化里的DFS 剪枝优化是什么？",
+        "expect_path": "search/opt.md",
+        "expect_name": "DFS 剪枝优化",
+        "hit": true,
+        "got": [
+          "idastar.md",
+          "opt.md",
+          "dfs.md"
+        ],
+        "got_paths": [
+          "search/idastar.md",
+          "search/opt.md",
+          "graph/dfs.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_ds_queue",
+        "question": "队列是什么？",
+        "expect_path": "ds/queue.md",
+        "expect_name": "队列",
+        "note": "数组，链表，队列，栈，都是线性结构．巧用这些结构可以做出不少方便的事情．",
+        "hit": true,
+        "got": [
+          "queue.md",
+          "determinant.md",
+          "java-pro.md"
+        ],
+        "got_paths": [
+          "ds/queue.md",
+          "math/linear-algebra/determinant.md",
+          "lang/java-pro.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "ctx",
+        "id": "concept_ctx_ds_queue",
+        "question": "线性数据结构里的队列是什么？",
+        "expect_path": "ds/queue.md",
+        "expect_name": "队列",
+        "hit": false,
+        "got": [
+          "sequence-container.md",
+          "matrix.md",
+          "matrix.md"
+        ],
+        "got_paths": [
+          "lang/csl/sequence-container.md",
+          "math/linear-algebra/matrix.md",
+          "math/linear-algebra/matrix.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_ds_linked_list",
+        "question": "链表是什么？",
+        "expect_path": "ds/linked-list.md",
+        "expect_name": "链表",
+        "note": "数组，链表，队列，栈，都是线性结构．巧用这些结构可以做出不少方便的事情．",
+        "hit": true,
+        "got": [
+          "linked-list.md",
+          "linked-list.md",
+          "linked-list.md"
+        ],
+        "got_paths": [
+          "ds/linked-list.md",
+          "ds/linked-list.md",
+          "ds/linked-list.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "ctx",
+        "id": "concept_ctx_ds_linked_list",
+        "question": "线性数据结构里的链表是什么？",
+        "expect_path": "ds/linked-list.md",
+        "expect_name": "链表",
+        "hit": true,
+        "got": [
+          "linked-list.md",
+          "linked-list.md",
+          "sequence-container.md"
+        ],
+        "got_paths": [
+          "ds/linked-list.md",
+          "ds/linked-list.md",
+          "lang/csl/sequence-container.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_graph_tree_basic",
+        "question": "树及二叉树是什么？",
+        "expect_path": "graph/tree-basic.md",
+        "expect_name": "树及二叉树",
+        "note": "",
+        "hit": true,
+        "got": [
+          "tree-basic.md",
+          "tree-basic.md",
+          "tree-basic.md"
+        ],
+        "got_paths": [
+          "graph/tree-basic.md",
+          "graph/tree-basic.md",
+          "graph/tree-basic.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "ctx",
+        "id": "concept_ctx_graph_tree_basic",
+        "question": "复杂数据结构里的树及二叉树是什么？",
+        "expect_path": "graph/tree-basic.md",
+        "expect_name": "树及二叉树",
+        "hit": true,
+        "got": [
+          "treap.md",
+          "splay.md",
+          "tree-basic.md"
+        ],
+        "got_paths": [
+          "ds/treap.md",
+          "ds/splay.md",
+          "graph/tree-basic.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_graph_concept",
+        "question": "图的概念是什么？",
+        "expect_path": "graph/concept.md",
+        "expect_name": "图的概念",
+        "note": "",
+        "hit": false,
+        "got": [
+          "index.md",
+          "euler.md",
+          "save.md"
+        ],
+        "got_paths": [
+          "graph/index.md",
+          "graph/euler.md",
+          "graph/save.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "ctx",
+        "id": "concept_ctx_graph_concept",
+        "question": "复杂数据结构里的图的概念是什么？",
+        "expect_path": "graph/concept.md",
+        "expect_name": "图的概念",
+        "hit": false,
+        "got": [
+          "index.md",
+          "cc-basic.md",
+          "tree-divide.md"
+        ],
+        "got_paths": [
+          "ds/index.md",
+          "misc/cc-basic.md",
+          "graph/tree-divide.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_graph_save",
+        "question": "图的存储是什么？",
+        "expect_path": "graph/save.md",
+        "expect_name": "图的存储",
+        "note": "",
+        "hit": false,
+        "got": [
+          "dfs.md",
+          "mst.md",
+          "pair.md"
+        ],
+        "got_paths": [
+          "graph/dfs.md",
+          "graph/mst.md",
+          "lang/csl/pair.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "ctx",
+        "id": "concept_ctx_graph_save",
+        "question": "复杂数据结构里的图的存储是什么？",
+        "expect_path": "graph/save.md",
+        "expect_name": "图的存储",
+        "hit": false,
+        "got": [
+          "index.md",
+          "schreier-sims.md",
+          "powerful-number.md"
+        ],
+        "got_paths": [
+          "ds/index.md",
+          "math/algebra/schreier-sims.md",
+          "math/number-theory/powerful-number.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_dp_index",
+        "question": "动态规划简介是什么？",
+        "expect_path": "dp/index.md",
+        "expect_name": "动态规划简介",
+        "note": "动态规划（Dynamic Programming, DP）是一种通过把原问题分解为相对简单的子问题的方式求解复杂问题的方法． 由于动态规划并不是某种具体的算法，",
+        "hit": true,
+        "got": [
+          "index.md",
+          "index.md",
+          "basic.md"
+        ],
+        "got_paths": [
+          "dp/index.md",
+          "dp/index.md",
+          "dp/basic.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "ctx",
+        "id": "concept_ctx_dp_index",
+        "question": "动态规划入门里的动态规划简介是什么？",
+        "expect_path": "dp/index.md",
+        "expect_name": "动态规划简介",
+        "hit": true,
+        "got": [
+          "basic.md",
+          "index.md",
+          "index.md"
+        ],
+        "got_paths": [
+          "dp/basic.md",
+          "dp/index.md",
+          "dp/index.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_dp_knapsack_basic",
+        "question": "背包 DP是什么？",
+        "expect_path": "dp/knapsack/basic.md",
+        "expect_name": "背包 DP",
+        "note": "即给出一个有限制容量的背包，选择放入若干有容量和价值的物品，求解如何放置能使得价值总和最大．这是阻挡很多 OIer 的第一道坎，从这里开始，算法就有些难以理解．",
+        "hit": true,
+        "got": [
+          "monotonic-queue-stack.md",
+          "fsm.md",
+          "basic.md"
+        ],
+        "got_paths": [
+          "dp/opt/monotonic-queue-stack.md",
+          "misc/fsm.md",
+          "dp/knapsack/basic.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "ctx",
+        "id": "concept_ctx_dp_knapsack_basic",
+        "question": "背包问题里的背包 DP是什么？",
+        "expect_path": "dp/knapsack/basic.md",
+        "expect_name": "背包 DP",
+        "hit": false,
+        "got": [
+          "monotonic-queue-stack.md",
+          "advanced.md",
+          "advanced.md"
+        ],
+        "got_paths": [
+          "dp/opt/monotonic-queue-stack.md",
+          "dp/knapsack/advanced.md",
+          "dp/knapsack/advanced.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_basic_construction",
+        "question": "构造是什么？",
+        "expect_path": "basic/construction.md",
+        "expect_name": "构造",
+        "note": "在动态规划中，最难的部分之一就是设计状态，需要用到构造相关技巧．当你写出了状态和状态转移方程之后，完成一道动态规划的题目就不难了． 记忆化搜索是一种通过记录已经",
+        "hit": true,
+        "got": [
+          "construction.md",
+          "construction.md",
+          "problemsetting.md"
+        ],
+        "got_paths": [
+          "basic/construction.md",
+          "basic/construction.md",
+          "contest/problemsetting.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "ctx",
+        "id": "concept_ctx_basic_construction",
+        "question": "线性动态规划里的构造是什么？",
+        "expect_path": "basic/construction.md",
+        "expect_name": "构造",
+        "hit": false,
+        "got": [
+          "prufer.md",
+          "linear-programming.md",
+          "linear-programming.md"
+        ],
+        "got_paths": [
+          "graph/prufer.md",
+          "math/linear-programming.md",
+          "math/linear-programming.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_dp_basic",
+        "question": "动态规划基础是什么？",
+        "expect_path": "dp/basic.md",
+        "expect_name": "动态规划基础",
+        "note": "在动态规划中，最难的部分之一就是设计状态，需要用到构造相关技巧．当你写出了状态和状态转移方程之后，完成一道动态规划的题目就不难了． 记忆化搜索是一种通过记录已经",
+        "hit": true,
+        "got": [
+          "basic.md",
+          "index.md",
+          "cdq-divide.md"
+        ],
+        "got_paths": [
+          "dp/basic.md",
+          "dp/index.md",
+          "misc/cdq-divide.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "ctx",
+        "id": "concept_ctx_dp_basic",
+        "question": "线性动态规划里的动态规划基础是什么？",
+        "expect_path": "dp/basic.md",
+        "expect_name": "动态规划基础",
+        "hit": false,
+        "got": [
+          "interval.md",
+          "cdq-divide.md",
+          "index.md"
+        ],
+        "got_paths": [
+          "dp/interval.md",
+          "misc/cdq-divide.md",
+          "dp/index.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_dp_memo",
+        "question": "记忆化搜索是什么？",
+        "expect_path": "dp/memo.md",
+        "expect_name": "记忆化搜索",
+        "note": "在动态规划中，最难的部分之一就是设计状态，需要用到构造相关技巧．当你写出了状态和状态转移方程之后，完成一道动态规划的题目就不难了． 记忆化搜索是一种通过记录已经",
+        "hit": true,
+        "got": [
+          "memo.md",
+          "memo.md",
+          "memo.md"
+        ],
+        "got_paths": [
+          "dp/memo.md",
+          "dp/memo.md",
+          "dp/memo.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "ctx",
+        "id": "concept_ctx_dp_memo",
+        "question": "线性动态规划里的记忆化搜索是什么？",
+        "expect_path": "dp/memo.md",
+        "expect_name": "记忆化搜索",
+        "hit": true,
+        "got": [
+          "memo.md",
+          "memo.md",
+          "memo.md"
+        ],
+        "got_paths": [
+          "dp/memo.md",
+          "dp/memo.md",
+          "dp/memo.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_dp_interval",
+        "question": "区间 DP是什么？",
+        "expect_path": "dp/interval.md",
+        "expect_name": "区间 DP",
+        "note": "区间类动态规划是线性动态规划的扩展，它在分阶段地划分问题时，与阶段中元素出现的顺序和由前一阶段的哪些元素合并而来有很大的关系．",
+        "hit": true,
+        "got": [
+          "interval.md",
+          "fsm.md",
+          "dp-of-dp.md"
+        ],
+        "got_paths": [
+          "dp/interval.md",
+          "misc/fsm.md",
+          "dp/dp-of-dp.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "ctx",
+        "id": "concept_ctx_dp_interval",
+        "question": "复杂动态规划里的区间 DP是什么？",
+        "expect_path": "dp/interval.md",
+        "expect_name": "区间 DP",
+        "hit": true,
+        "got": [
+          "interval.md",
+          "cdq-divide.md",
+          "dp-of-dp.md"
+        ],
+        "got_paths": [
+          "dp/interval.md",
+          "misc/cdq-divide.md",
+          "dp/dp-of-dp.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_math_bignum",
+        "question": "高精度计算是什么？",
+        "expect_path": "math/bignum.md",
+        "expect_name": "高精度计算",
+        "note": "就算是 long long（或 int64）还不够怎么办？用高精度算法．本质上就是模拟了四则运算．",
+        "hit": true,
+        "got": [
+          "bignum.md",
+          "bignum.md",
+          "gcd.md"
+        ],
+        "got_paths": [
+          "math/bignum.md",
+          "math/bignum.md",
+          "math/number-theory/gcd.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "ctx",
+        "id": "concept_ctx_math_bignum",
+        "question": "高精度算法里的高精度计算是什么？",
+        "expect_path": "math/bignum.md",
+        "expect_name": "高精度计算",
+        "hit": true,
+        "got": [
+          "bignum.md",
+          "bignum.md",
+          "gcd.md"
+        ],
+        "got_paths": [
+          "math/bignum.md",
+          "math/bignum.md",
+          "math/number-theory/gcd.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_math_numeral_sys_base",
+        "question": "进位制是什么？",
+        "expect_path": "math/numeral-sys/base.md",
+        "expect_name": "进位制",
+        "note": "在计算机中，除了二进制，比较常用的还有八进制和十六进制．有的时候学会运用正确的进制对解题也有很大帮助．",
+        "hit": true,
+        "got": [
+          "bignum.md",
+          "base.md",
+          "number.md"
+        ],
+        "got_paths": [
+          "math/bignum.md",
+          "math/numeral-sys/base.md",
+          "dp/number.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "ctx",
+        "id": "concept_ctx_math_numeral_sys_base",
+        "question": "进制转换里的进位制是什么？",
+        "expect_path": "math/numeral-sys/base.md",
+        "expect_name": "进位制",
+        "hit": true,
+        "got": [
+          "bignum.md",
+          "base.md",
+          "fft.md"
+        ],
+        "got_paths": [
+          "math/bignum.md",
+          "math/numeral-sys/base.md",
+          "math/poly/fft.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_math_bit",
+        "question": "位操作是什么？",
+        "expect_path": "math/bit.md",
+        "expect_name": "位操作",
+        "note": "位操作就是基于整数的二进制表示进行的运算．由于计算机内部就是以二进制来存储数据，位操作是相当快的． 基本的位操作共 6 种，分别为按位与、按位或、按位异或、按位",
+        "hit": true,
+        "got": [
+          "bit.md",
+          "op.md",
+          "state.md"
+        ],
+        "got_paths": [
+          "math/bit.md",
+          "lang/op.md",
+          "dp/state.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_math_number_theory_basic",
+        "question": "数论基础是什么？",
+        "expect_path": "math/number-theory/basic.md",
+        "expect_name": "数论基础",
+        "note": "",
+        "hit": false,
+        "got": [
+          "mod-arithmetic.md",
+          "fermat.md",
+          "continued-fraction.md"
+        ],
+        "got_paths": [
+          "math/number-theory/mod-arithmetic.md",
+          "math/number-theory/fermat.md",
+          "math/number-theory/continued-fraction.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_math_number_theory_prime",
+        "question": "素数是什么？",
+        "expect_path": "math/number-theory/prime.md",
+        "expect_name": "素数",
+        "note": "",
+        "hit": true,
+        "got": [
+          "prime.md",
+          "sieve.md",
+          "prime.md"
+        ],
+        "got_paths": [
+          "math/number-theory/prime.md",
+          "math/number-theory/sieve.md",
+          "math/number-theory/prime.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "ctx",
+        "id": "concept_ctx_math_number_theory_prime",
+        "question": "数论里的素数是什么？",
+        "expect_path": "math/number-theory/prime.md",
+        "expect_name": "素数",
+        "hit": true,
+        "got": [
+          "prime.md",
+          "sieve.md",
+          "basic.md"
+        ],
+        "got_paths": [
+          "math/number-theory/prime.md",
+          "math/number-theory/sieve.md",
+          "math/number-theory/basic.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_math_number_theory_sieve",
+        "question": "筛法是什么？",
+        "expect_path": "math/number-theory/sieve.md",
+        "expect_name": "筛法",
+        "note": "",
+        "hit": true,
+        "got": [
+          "hyperbola.md",
+          "sieve.md",
+          "schreier-sims.md"
+        ],
+        "got_paths": [
+          "math/number-theory/hyperbola.md",
+          "math/number-theory/sieve.md",
+          "math/algebra/schreier-sims.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "ctx",
+        "id": "concept_ctx_math_number_theory_sieve",
+        "question": "数论里的筛法是什么？",
+        "expect_path": "math/number-theory/sieve.md",
+        "expect_name": "筛法",
+        "hit": true,
+        "got": [
+          "inclusion-exclusion-principle.md",
+          "sieve.md",
+          "hyperbola.md"
+        ],
+        "got_paths": [
+          "math/combinatorics/inclusion-exclusion-principle.md",
+          "math/number-theory/sieve.md",
+          "math/number-theory/hyperbola.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_math_number_theory_gcd",
+        "question": "最大公因数是什么？",
+        "expect_path": "math/number-theory/gcd.md",
+        "expect_name": "最大公因数",
+        "note": "",
+        "hit": true,
+        "got": [
+          "quadratic.md",
+          "gcd.md",
+          "intro.md"
+        ],
+        "got_paths": [
+          "math/number-theory/quadratic.md",
+          "math/number-theory/gcd.md",
+          "math/poly/intro.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "ctx",
+        "id": "concept_ctx_math_number_theory_gcd",
+        "question": "数论里的最大公因数是什么？",
+        "expect_path": "math/number-theory/gcd.md",
+        "expect_name": "最大公因数",
+        "hit": false,
+        "got": [
+          "quadratic.md",
+          "ring-theory.md",
+          "intro.md"
+        ],
+        "got_paths": [
+          "math/number-theory/quadratic.md",
+          "math/algebra/ring-theory.md",
+          "math/poly/intro.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_math_number_theory_euler_totient",
+        "question": "欧拉函数是什么？",
+        "expect_path": "math/number-theory/euler-totient.md",
+        "expect_name": "欧拉函数",
+        "note": "",
+        "hit": true,
+        "got": [
+          "euler-totient.md",
+          "ring-theory.md",
+          "euler-totient.md"
+        ],
+        "got_paths": [
+          "math/number-theory/euler-totient.md",
+          "math/algebra/ring-theory.md",
+          "math/number-theory/euler-totient.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "ctx",
+        "id": "concept_ctx_math_number_theory_euler_totient",
+        "question": "数论里的欧拉函数是什么？",
+        "expect_path": "math/number-theory/euler-totient.md",
+        "expect_name": "欧拉函数",
+        "hit": true,
+        "got": [
+          "euler-totient.md",
+          "ring-theory.md",
+          "euler-totient.md"
+        ],
+        "got_paths": [
+          "math/number-theory/euler-totient.md",
+          "math/algebra/ring-theory.md",
+          "math/number-theory/euler-totient.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_math_number_theory_pollard_rho",
+        "question": "分解质因数是什么？",
+        "expect_path": "math/number-theory/pollard-rho.md",
+        "expect_name": "分解质因数",
+        "note": "",
+        "hit": false,
+        "got": [
+          "basic.md",
+          "basic.md",
+          "sieve.md"
+        ],
+        "got_paths": [
+          "math/number-theory/basic.md",
+          "math/number-theory/basic.md",
+          "math/number-theory/sieve.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "ctx",
+        "id": "concept_ctx_math_number_theory_pollard_rho",
+        "question": "数论里的分解质因数是什么？",
+        "expect_path": "math/number-theory/pollard-rho.md",
+        "expect_name": "分解质因数",
+        "hit": false,
+        "got": [
+          "basic.md",
+          "basic.md",
+          "sieve.md"
+        ],
+        "got_paths": [
+          "math/number-theory/basic.md",
+          "math/number-theory/basic.md",
+          "math/number-theory/sieve.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_math_combinatorics_combination",
+        "question": "排列组合是什么？",
+        "expect_path": "math/combinatorics/combination.md",
+        "expect_name": "排列组合",
+        "note": "至此，你就学习完了入门组范畴内的所有算法，但是想要掌握它们，你需要继续进行足够数量的刷题，以巩固你所学到的知识点．",
+        "hit": true,
+        "got": [
+          "combination.md",
+          "selection-sort.md",
+          "egf.md"
+        ],
+        "got_paths": [
+          "math/combinatorics/combination.md",
+          "basic/selection-sort.md",
+          "math/poly/egf.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "ctx",
+        "id": "concept_ctx_math_combinatorics_combination",
+        "question": "组合计数里的排列组合是什么？",
+        "expect_path": "math/combinatorics/combination.md",
+        "expect_name": "排列组合",
+        "hit": true,
+        "got": [
+          "combination.md",
+          "combination.md",
+          "combination.md"
+        ],
+        "got_paths": [
+          "math/combinatorics/combination.md",
+          "math/combinatorics/combination.md",
+          "math/combinatorics/combination.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_math_combinatorics_drawer_principle",
+        "question": "抽屉原理是什么？",
+        "expect_path": "math/combinatorics/drawer-principle.md",
+        "expect_name": "抽屉原理",
+        "note": "至此，你就学习完了入门组范畴内的所有算法，但是想要掌握它们，你需要继续进行足够数量的刷题，以巩固你所学到的知识点．",
+        "hit": false,
+        "got": [
+          "basic.md",
+          "basic.md",
+          "bubble-sort.md"
+        ],
+        "got_paths": [
+          "math/number-theory/basic.md",
+          "math/number-theory/basic.md",
+          "basic/bubble-sort.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "ctx",
+        "id": "concept_ctx_math_combinatorics_drawer_principle",
+        "question": "组合计数里的抽屉原理是什么？",
+        "expect_path": "math/combinatorics/drawer-principle.md",
+        "expect_name": "抽屉原理",
+        "hit": false,
+        "got": [
+          "fibonacci.md",
+          "basic.md",
+          "basic.md"
+        ],
+        "got_paths": [
+          "math/combinatorics/fibonacci.md",
+          "math/number-theory/basic.md",
+          "math/number-theory/basic.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "bare",
+        "id": "concept_bare_math_combinatorics_inclusion_exclusion_principle",
+        "question": "容斥原理是什么？",
+        "expect_path": "math/combinatorics/inclusion-exclusion-principle.md",
+        "expect_name": "容斥原理",
+        "note": "至此，你就学习完了入门组范畴内的所有算法，但是想要掌握它们，你需要继续进行足够数量的刷题，以巩固你所学到的知识点．",
+        "hit": true,
+        "got": [
+          "inclusion-exclusion-principle.md",
+          "stirling.md",
+          "inclusion-exclusion-principle.md"
+        ],
+        "got_paths": [
+          "math/combinatorics/inclusion-exclusion-principle.md",
+          "math/combinatorics/stirling.md",
+          "math/combinatorics/inclusion-exclusion-principle.md"
+        ]
+      },
+      {
+        "type": "concept",
+        "variant": "ctx",
+        "id": "concept_ctx_math_combinatorics_inclusion_exclusion_principle",
+        "question": "组合计数里的容斥原理是什么？",
+        "expect_path": "math/combinatorics/inclusion-exclusion-principle.md",
+        "expect_name": "容斥原理",
+        "hit": true,
+        "got": [
+          "prefix-sum.md",
+          "inclusion-exclusion-principle.md",
+          "inclusion-exclusion-principle.md"
+        ],
+        "got_paths": [
+          "basic/prefix-sum.md",
+          "math/combinatorics/inclusion-exclusion-principle.md",
+          "math/combinatorics/inclusion-exclusion-principle.md"
+        ]
+      }
+    ]
+  },
+  "prereq": {
+    "match": 55,
+    "total": 55,
+    "rate": 1.0,
+    "details": [
+      {
+        "type": "prereq",
+        "id": "prereq_lang_helloworld",
+        "question": "学Hello, World!之前需要会什么？",
+        "target_path": "lang/helloworld.md",
+        "expect_refs": [],
+        "match": true,
+        "got": [],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_lang_basic",
+        "question": "学C++ 语法基础之前需要会什么？",
+        "target_path": "lang/basic.md",
+        "expect_refs": [
+          "lang/var.md"
+        ],
+        "match": true,
+        "got": [
+          "lang/var.md"
+        ],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_lang_var",
+        "question": "学变量之前需要会什么？",
+        "target_path": "lang/var.md",
+        "expect_refs": [
+          "math/bit.md"
+        ],
+        "match": true,
+        "got": [
+          "math/bit.md"
+        ],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_lang_op",
+        "question": "学运算之前需要会什么？",
+        "target_path": "lang/op.md",
+        "expect_refs": [
+          "lang/var.md",
+          "math/bit.md"
+        ],
+        "match": true,
+        "got": [
+          "lang/var.md",
+          "math/bit.md"
+        ],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_lang_branch",
+        "question": "学分支之前需要会什么？",
+        "target_path": "lang/branch.md",
+        "expect_refs": [],
+        "match": true,
+        "got": [],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_lang_loop",
+        "question": "学循环之前需要会什么？",
+        "target_path": "lang/loop.md",
+        "expect_refs": [],
+        "match": true,
+        "got": [],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_lang_array",
+        "question": "学数组之前需要会什么？",
+        "target_path": "lang/array.md",
+        "expect_refs": [],
+        "match": true,
+        "got": [],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_lang_struct",
+        "question": "学结构体之前需要会什么？",
+        "target_path": "lang/struct.md",
+        "expect_refs": [],
+        "match": true,
+        "got": [],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_lang_func",
+        "question": "学函数之前需要会什么？",
+        "target_path": "lang/func.md",
+        "expect_refs": [],
+        "match": true,
+        "got": [],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_basic_divide_and_conquer",
+        "question": "学递归 & 分治之前需要会什么？",
+        "target_path": "basic/divide-and-conquer.md",
+        "expect_refs": [
+          "basic/merge-sort.md",
+          "search/opt.md",
+          "dp/basic.md",
+          "dp/memo.md"
+        ],
+        "match": true,
+        "got": [
+          "basic/merge-sort.md",
+          "dp/basic.md",
+          "dp/memo.md",
+          "search/opt.md"
+        ],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_basic_enumerate",
+        "question": "学枚举之前需要会什么？",
+        "target_path": "basic/enumerate.md",
+        "expect_refs": [
+          "basic/bucket-sort.md"
+        ],
+        "match": true,
+        "got": [
+          "basic/bucket-sort.md"
+        ],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_basic_simulate",
+        "question": "学模拟之前需要会什么？",
+        "target_path": "basic/simulate.md",
+        "expect_refs": [],
+        "match": true,
+        "got": [],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_basic_divide_and_conquer",
+        "question": "学递归 & 分治之前需要会什么？",
+        "target_path": "basic/divide-and-conquer.md",
+        "expect_refs": [
+          "basic/merge-sort.md",
+          "search/opt.md",
+          "dp/basic.md",
+          "dp/memo.md"
+        ],
+        "match": true,
+        "got": [
+          "basic/merge-sort.md",
+          "dp/basic.md",
+          "dp/memo.md",
+          "search/opt.md"
+        ],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_string_basic",
+        "question": "学字符串基础之前需要会什么？",
+        "target_path": "string/basic.md",
+        "expect_refs": [],
+        "match": true,
+        "got": [],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_string_lib_func",
+        "question": "学STL 函数之前需要会什么？",
+        "target_path": "string/lib-func.md",
+        "expect_refs": [],
+        "match": true,
+        "got": [],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_basic_sort_intro",
+        "question": "学排序简介之前需要会什么？",
+        "target_path": "basic/sort-intro.md",
+        "expect_refs": [
+          "basic/counting-sort.md"
+        ],
+        "match": true,
+        "got": [
+          "basic/counting-sort.md"
+        ],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_basic_selection_sort",
+        "question": "学选择排序之前需要会什么？",
+        "target_path": "basic/selection-sort.md",
+        "expect_refs": [],
+        "match": true,
+        "got": [],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_basic_bubble_sort",
+        "question": "学冒泡排序之前需要会什么？",
+        "target_path": "basic/bubble-sort.md",
+        "expect_refs": [],
+        "match": true,
+        "got": [],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_basic_insertion_sort",
+        "question": "学插入排序之前需要会什么？",
+        "target_path": "basic/insertion-sort.md",
+        "expect_refs": [],
+        "match": true,
+        "got": [],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_basic_counting_sort",
+        "question": "学计数排序之前需要会什么？",
+        "target_path": "basic/counting-sort.md",
+        "expect_refs": [
+          "basic/radix-sort.md"
+        ],
+        "match": true,
+        "got": [
+          "basic/radix-sort.md"
+        ],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_basic_radix_sort",
+        "question": "学基数排序之前需要会什么？",
+        "target_path": "basic/radix-sort.md",
+        "expect_refs": [
+          "basic/counting-sort.md",
+          "basic/bucket-sort.md"
+        ],
+        "match": true,
+        "got": [
+          "basic/bucket-sort.md",
+          "basic/counting-sort.md"
+        ],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_basic_quick_sort",
+        "question": "学快速排序之前需要会什么？",
+        "target_path": "basic/quick-sort.md",
+        "expect_refs": [
+          "basic/divide-and-conquer.md",
+          "basic/heap-sort.md"
+        ],
+        "match": true,
+        "got": [
+          "basic/divide-and-conquer.md",
+          "basic/heap-sort.md"
+        ],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_basic_merge_sort",
+        "question": "学归并排序之前需要会什么？",
+        "target_path": "basic/merge-sort.md",
+        "expect_refs": [],
+        "match": true,
+        "got": [],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_basic_heap_sort",
+        "question": "学堆排序之前需要会什么？",
+        "target_path": "basic/heap-sort.md",
+        "expect_refs": [],
+        "match": true,
+        "got": [],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_basic_bucket_sort",
+        "question": "学桶排序之前需要会什么？",
+        "target_path": "basic/bucket-sort.md",
+        "expect_refs": [],
+        "match": true,
+        "got": [],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_basic_stl_sort",
+        "question": "学排序相关 STL之前需要会什么？",
+        "target_path": "basic/stl-sort.md",
+        "expect_refs": [
+          "basic/quick-sort.md"
+        ],
+        "match": true,
+        "got": [
+          "basic/quick-sort.md"
+        ],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_basic_binary",
+        "question": "学二分之前需要会什么？",
+        "target_path": "basic/binary.md",
+        "expect_refs": [
+          "lang/op.md",
+          "basic/stl-sort.md"
+        ],
+        "match": true,
+        "got": [
+          "basic/stl-sort.md",
+          "lang/op.md"
+        ],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_basic_binary_lifting",
+        "question": "学倍增之前需要会什么？",
+        "target_path": "basic/binary-lifting.md",
+        "expect_refs": [],
+        "match": true,
+        "got": [],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_search_dfs",
+        "question": "学DFS（搜索）之前需要会什么？",
+        "target_path": "search/dfs.md",
+        "expect_refs": [],
+        "match": true,
+        "got": [],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_search_bfs",
+        "question": "学BFS（搜索）之前需要会什么？",
+        "target_path": "search/bfs.md",
+        "expect_refs": [],
+        "match": true,
+        "got": [],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_search_opt",
+        "question": "学DFS 剪枝优化之前需要会什么？",
+        "target_path": "search/opt.md",
+        "expect_refs": [
+          "dp/memo.md"
+        ],
+        "match": true,
+        "got": [
+          "dp/memo.md"
+        ],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_ds_stack",
+        "question": "学栈之前需要会什么？",
+        "target_path": "ds/stack.md",
+        "expect_refs": [],
+        "match": true,
+        "got": [],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_ds_queue",
+        "question": "学队列之前需要会什么？",
+        "target_path": "ds/queue.md",
+        "expect_refs": [
+          "ds/stack.md"
+        ],
+        "match": true,
+        "got": [
+          "ds/stack.md"
+        ],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_ds_linked_list",
+        "question": "学链表之前需要会什么？",
+        "target_path": "ds/linked-list.md",
+        "expect_refs": [],
+        "match": true,
+        "got": [],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_graph_tree_basic",
+        "question": "学树及二叉树之前需要会什么？",
+        "target_path": "graph/tree-basic.md",
+        "expect_refs": [],
+        "match": true,
+        "got": [],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_graph_concept",
+        "question": "学图的概念之前需要会什么？",
+        "target_path": "graph/concept.md",
+        "expect_refs": [
+          "graph/tree-basic.md",
+          "math/combinatorics/drawer-principle.md"
+        ],
+        "match": true,
+        "got": [
+          "graph/tree-basic.md",
+          "math/combinatorics/drawer-principle.md"
+        ],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_graph_save",
+        "question": "学图的存储之前需要会什么？",
+        "target_path": "graph/save.md",
+        "expect_refs": [
+          "basic/binary.md",
+          "graph/concept.md"
+        ],
+        "match": true,
+        "got": [
+          "basic/binary.md",
+          "graph/concept.md"
+        ],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_dp_index",
+        "question": "学动态规划简介之前需要会什么？",
+        "target_path": "dp/index.md",
+        "expect_refs": [],
+        "match": true,
+        "got": [],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_dp_knapsack_basic",
+        "question": "学背包 DP之前需要会什么？",
+        "target_path": "dp/knapsack/basic.md",
+        "expect_refs": [
+          "dp/index.md"
+        ],
+        "match": true,
+        "got": [
+          "dp/index.md"
+        ],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_basic_construction",
+        "question": "学构造之前需要会什么？",
+        "target_path": "basic/construction.md",
+        "expect_refs": [],
+        "match": true,
+        "got": [],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_dp_basic",
+        "question": "学动态规划基础之前需要会什么？",
+        "target_path": "dp/basic.md",
+        "expect_refs": [
+          "string/basic.md"
+        ],
+        "match": true,
+        "got": [
+          "string/basic.md"
+        ],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_dp_memo",
+        "question": "学记忆化搜索之前需要会什么？",
+        "target_path": "dp/memo.md",
+        "expect_refs": [
+          "search/dfs.md"
+        ],
+        "match": true,
+        "got": [
+          "search/dfs.md"
+        ],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_dp_interval",
+        "question": "学区间 DP之前需要会什么？",
+        "target_path": "dp/interval.md",
+        "expect_refs": [],
+        "match": true,
+        "got": [],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_math_bignum",
+        "question": "学高精度计算之前需要会什么？",
+        "target_path": "math/bignum.md",
+        "expect_refs": [
+          "math/numeral-sys/base.md"
+        ],
+        "match": true,
+        "got": [
+          "math/numeral-sys/base.md"
+        ],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_math_numeral_sys_base",
+        "question": "学进位制之前需要会什么？",
+        "target_path": "math/numeral-sys/base.md",
+        "expect_refs": [
+          "math/bit.md"
+        ],
+        "match": true,
+        "got": [
+          "math/bit.md"
+        ],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_math_bit",
+        "question": "学位操作之前需要会什么？",
+        "target_path": "math/bit.md",
+        "expect_refs": [
+          "lang/var.md",
+          "lang/op.md",
+          "math/numeral-sys/base.md"
+        ],
+        "match": true,
+        "got": [
+          "lang/op.md",
+          "lang/var.md",
+          "math/numeral-sys/base.md"
+        ],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_math_number_theory_basic",
+        "question": "学数论基础之前需要会什么？",
+        "target_path": "math/number-theory/basic.md",
+        "expect_refs": [
+          "math/number-theory/prime.md",
+          "math/number-theory/gcd.md",
+          "math/number-theory/euler-totient.md",
+          "math/combinatorics/drawer-principle.md"
+        ],
+        "match": true,
+        "got": [
+          "math/combinatorics/drawer-principle.md",
+          "math/number-theory/euler-totient.md",
+          "math/number-theory/gcd.md",
+          "math/number-theory/prime.md"
+        ],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_math_number_theory_prime",
+        "question": "学素数之前需要会什么？",
+        "target_path": "math/number-theory/prime.md",
+        "expect_refs": [
+          "math/number-theory/basic.md",
+          "math/number-theory/euler-totient.md"
+        ],
+        "match": true,
+        "got": [
+          "math/number-theory/basic.md",
+          "math/number-theory/euler-totient.md"
+        ],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_math_number_theory_sieve",
+        "question": "学筛法之前需要会什么？",
+        "target_path": "math/number-theory/sieve.md",
+        "expect_refs": [
+          "math/bit.md",
+          "math/number-theory/basic.md"
+        ],
+        "match": true,
+        "got": [
+          "math/bit.md",
+          "math/number-theory/basic.md"
+        ],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_math_number_theory_gcd",
+        "question": "学最大公因数之前需要会什么？",
+        "target_path": "math/number-theory/gcd.md",
+        "expect_refs": [
+          "math/bignum.md",
+          "math/bit.md",
+          "math/number-theory/basic.md"
+        ],
+        "match": true,
+        "got": [
+          "math/bignum.md",
+          "math/bit.md",
+          "math/number-theory/basic.md"
+        ],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_math_number_theory_euler_totient",
+        "question": "学欧拉函数之前需要会什么？",
+        "target_path": "math/number-theory/euler-totient.md",
+        "expect_refs": [
+          "math/number-theory/basic.md",
+          "math/number-theory/sieve.md",
+          "math/number-theory/pollard-rho.md"
+        ],
+        "match": true,
+        "got": [
+          "math/number-theory/basic.md",
+          "math/number-theory/pollard-rho.md",
+          "math/number-theory/sieve.md"
+        ],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_math_number_theory_pollard_rho",
+        "question": "学分解质因数之前需要会什么？",
+        "target_path": "math/number-theory/pollard-rho.md",
+        "expect_refs": [
+          "math/number-theory/basic.md",
+          "math/number-theory/prime.md",
+          "math/number-theory/sieve.md"
+        ],
+        "match": true,
+        "got": [
+          "math/number-theory/basic.md",
+          "math/number-theory/prime.md",
+          "math/number-theory/sieve.md"
+        ],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_math_combinatorics_combination",
+        "question": "学排列组合之前需要会什么？",
+        "target_path": "math/combinatorics/combination.md",
+        "expect_refs": [],
+        "match": true,
+        "got": [],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_math_combinatorics_drawer_principle",
+        "question": "学抽屉原理之前需要会什么？",
+        "target_path": "math/combinatorics/drawer-principle.md",
+        "expect_refs": [],
+        "match": true,
+        "got": [],
+        "error": null
+      },
+      {
+        "type": "prereq",
+        "id": "prereq_math_combinatorics_inclusion_exclusion_principle",
+        "question": "学容斥原理之前需要会什么？",
+        "target_path": "math/combinatorics/inclusion-exclusion-principle.md",
+        "expect_refs": [],
+        "match": true,
+        "got": [],
+        "error": null
+      }
+    ]
+  },
+  "order": {
+    "match": 19,
+    "total": 20,
+    "rate": 0.95,
+    "details": [
+      {
+        "type": "order",
+        "id": "order_lang_helloworld",
+        "question": "Hello, World!在学习路线上是第几个？",
+        "target_path": "lang/helloworld.md",
+        "expect_order": 1,
+        "match": true,
+        "got": 1
+      },
+      {
+        "type": "order",
+        "id": "order_lang_basic",
+        "question": "C++ 语法基础在学习路线上是第几个？",
+        "target_path": "lang/basic.md",
+        "expect_order": 2,
+        "match": true,
+        "got": 2
+      },
+      {
+        "type": "order",
+        "id": "order_lang_var",
+        "question": "变量在学习路线上是第几个？",
+        "target_path": "lang/var.md",
+        "expect_order": 3,
+        "match": true,
+        "got": 3
+      },
+      {
+        "type": "order",
+        "id": "order_lang_op",
+        "question": "运算在学习路线上是第几个？",
+        "target_path": "lang/op.md",
+        "expect_order": 4,
+        "match": true,
+        "got": 4
+      },
+      {
+        "type": "order",
+        "id": "order_lang_branch",
+        "question": "分支在学习路线上是第几个？",
+        "target_path": "lang/branch.md",
+        "expect_order": 5,
+        "match": true,
+        "got": 5
+      },
+      {
+        "type": "order",
+        "id": "order_lang_loop",
+        "question": "循环在学习路线上是第几个？",
+        "target_path": "lang/loop.md",
+        "expect_order": 6,
+        "match": true,
+        "got": 6
+      },
+      {
+        "type": "order",
+        "id": "order_lang_array",
+        "question": "数组在学习路线上是第几个？",
+        "target_path": "lang/array.md",
+        "expect_order": 7,
+        "match": true,
+        "got": 7
+      },
+      {
+        "type": "order",
+        "id": "order_lang_struct",
+        "question": "结构体在学习路线上是第几个？",
+        "target_path": "lang/struct.md",
+        "expect_order": 8,
+        "match": true,
+        "got": 8
+      },
+      {
+        "type": "order",
+        "id": "order_lang_func",
+        "question": "函数在学习路线上是第几个？",
+        "target_path": "lang/func.md",
+        "expect_order": 9,
+        "match": true,
+        "got": 9
+      },
+      {
+        "type": "order",
+        "id": "order_basic_divide_and_conquer",
+        "question": "递归 & 分治在学习路线上是第几个？",
+        "target_path": "basic/divide-and-conquer.md",
+        "expect_order": 10,
+        "match": false,
+        "got": 13
+      },
+      {
+        "type": "order",
+        "id": "order_basic_enumerate",
+        "question": "枚举在学习路线上是第几个？",
+        "target_path": "basic/enumerate.md",
+        "expect_order": 11,
+        "match": true,
+        "got": 11
+      },
+      {
+        "type": "order",
+        "id": "order_basic_simulate",
+        "question": "模拟在学习路线上是第几个？",
+        "target_path": "basic/simulate.md",
+        "expect_order": 12,
+        "match": true,
+        "got": 12
+      },
+      {
+        "type": "order",
+        "id": "order_basic_divide_and_conquer",
+        "question": "递归 & 分治在学习路线上是第几个？",
+        "target_path": "basic/divide-and-conquer.md",
+        "expect_order": 13,
+        "match": true,
+        "got": 13
+      },
+      {
+        "type": "order",
+        "id": "order_string_basic",
+        "question": "字符串基础在学习路线上是第几个？",
+        "target_path": "string/basic.md",
+        "expect_order": 14,
+        "match": true,
+        "got": 14
+      },
+      {
+        "type": "order",
+        "id": "order_string_lib_func",
+        "question": "STL 函数在学习路线上是第几个？",
+        "target_path": "string/lib-func.md",
+        "expect_order": 15,
+        "match": true,
+        "got": 15
+      },
+      {
+        "type": "order",
+        "id": "order_basic_sort_intro",
+        "question": "排序简介在学习路线上是第几个？",
+        "target_path": "basic/sort-intro.md",
+        "expect_order": 16,
+        "match": true,
+        "got": 16
+      },
+      {
+        "type": "order",
+        "id": "order_basic_selection_sort",
+        "question": "选择排序在学习路线上是第几个？",
+        "target_path": "basic/selection-sort.md",
+        "expect_order": 17,
+        "match": true,
+        "got": 17
+      },
+      {
+        "type": "order",
+        "id": "order_basic_bubble_sort",
+        "question": "冒泡排序在学习路线上是第几个？",
+        "target_path": "basic/bubble-sort.md",
+        "expect_order": 18,
+        "match": true,
+        "got": 18
+      },
+      {
+        "type": "order",
+        "id": "order_basic_insertion_sort",
+        "question": "插入排序在学习路线上是第几个？",
+        "target_path": "basic/insertion-sort.md",
+        "expect_order": 19,
+        "match": true,
+        "got": 19
+      },
+      {
+        "type": "order",
+        "id": "order_basic_counting_sort",
+        "question": "计数排序在学习路线上是第几个？",
+        "target_path": "basic/counting-sort.md",
+        "expect_order": 20,
+        "match": true,
+        "got": 20
+      }
+    ]
+  },
+  "evaluated_at": "2026-10-15T11:52:36+08:00"
+}
