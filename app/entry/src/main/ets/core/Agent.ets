@@ -11,11 +11,14 @@
  *   5. 失败回灌（工具报错也要结构化返回给模型，让它自己改）
  *   6. Token 预算（防止单次任务烧太多）
  *   7. 追踪日志（每步留下记录，便于排查与演示）
+ *
+ * ⚠️ ArkTS 语法约束：禁止匿名对象字面量（arkts-no-untyped-obj-literals），
+ *    所以下面所有结构都先声明 interface 再用，不能直接写 { a: 1 }。
  */
 
 import { http } from '@kit.NetworkKit';
 
-// ---------------------------------------------------------------- 类型
+// ---------------------------------------------------------------- 工具侧类型
 
 export interface ToolParam {
   name: string;
@@ -32,12 +35,61 @@ export interface ToolDef {
   run: (args: Map<string, Object>) => Promise<string>;
 }
 
-/** 消息：与各家大模型的 chat 格式对齐 */
+export interface ToolResult {
+  ok: boolean;
+  text: string;
+}
+
+/** 参数 schema 片段 */
+interface PropSchema {
+  type: string;
+  description: string;
+}
+
+interface ParamSchema {
+  type: string;
+  properties: Record<string, PropSchema>;
+  required: string[];
+}
+
+interface FunctionSchema {
+  name: string;
+  description: string;
+  parameters: ParamSchema;
+}
+
+interface ToolSchema {
+  type: string;
+  function: FunctionSchema;
+}
+
+// ---------------------------------------------------------------- 消息类型
+
+/** 内部消息结构 */
 export interface ChatMessage {
   role: string;                 // 'system' | 'user' | 'assistant' | 'tool'
   content: string;
   toolCallId?: string;
   toolName?: string;
+}
+
+/** 发给模型时用的消息结构（字段名与接口约定一致） */
+interface WireMessage {
+  role: string;
+  content?: string;
+  tool_call_id?: string;
+  tool_calls?: WireToolCall[];
+}
+
+interface WireToolCallFunction {
+  name: string;
+  arguments: string;
+}
+
+interface WireToolCall {
+  id: string;
+  type: string;
+  function: WireToolCallFunction;
 }
 
 /** 模型返回的一次工具调用请求 */
@@ -53,6 +105,51 @@ export interface LLMReply {
   toolCalls: ToolCall[];
   promptTokens: number;
   completionTokens: number;
+}
+
+/** 请求体 */
+interface ChatPayload {
+  model: string;
+  messages: WireMessage[];
+  tools: ToolSchema[];
+  tool_choice: string;
+}
+
+/** 响应体里我们关心的部分 */
+interface RespMessageFunction {
+  name?: string;
+  arguments?: string;
+}
+
+interface RespToolCall {
+  id?: string;
+  function?: RespMessageFunction;
+}
+
+interface RespMessage {
+  content?: string;
+  tool_calls?: RespToolCall[];
+}
+
+interface RespChoice {
+  message?: RespMessage;
+}
+
+interface RespUsage {
+  prompt_tokens?: number;
+  completion_tokens?: number;
+}
+
+interface ChatResponse {
+  choices?: RespChoice[];
+  usage?: RespUsage;
+}
+
+/** 工具失败时回给模型的结构 */
+interface ToolErrorPayload {
+  error: string;
+  available?: string[];
+  hint?: string;
 }
 
 /** 追踪记录（第 7 件事） */
@@ -101,14 +198,14 @@ export class ToolRegistry {
   }
 
   /** 生成大模型要求的 function-calling schema */
-  toSchema(): Object[] {
-    const out: Object[] = [];
+  toSchema(): ToolSchema[] {
+    const out: ToolSchema[] = [];
     this.tools.forEach((def: ToolDef) => {
-      const props = new Map<string, Object>();
+      const props: Record<string, PropSchema> = {};
       const required: string[] = [];
       for (let i = 0; i < def.params.length; i++) {
         const p = def.params[i];
-        props.set(p.name, { type: p.type, description: p.description } as Object);
+        props[p.name] = { type: p.type, description: p.description };
         if (p.required) {
           required.push(p.name);
         }
@@ -118,13 +215,9 @@ export class ToolRegistry {
         function: {
           name: def.name,
           description: def.description,
-          parameters: {
-            type: 'object',
-            properties: props,
-            required: required
-          }
+          parameters: { type: 'object', properties: props, required: required }
         }
-      } as Object);
+      });
     });
     return out;
   }
@@ -138,33 +231,24 @@ export class ToolRegistry {
   async execute(name: string, args: Map<string, Object>): Promise<ToolResult> {
     const def = this.tools.get(name);
     if (def === undefined) {
-      return {
-        ok: false,
-        text: JSON.stringify({
-          error: `没有这个工具：${name}`,
-          available: this.names()
-        })
+      const payload: ToolErrorPayload = {
+        error: `没有这个工具：${name}`,
+        available: this.names()
       };
+      return { ok: false, text: JSON.stringify(payload) };
     }
     try {
       const text = await def.run(args);
       return { ok: true, text };
     } catch (e) {
       const msg = e instanceof Error ? e.message : String(e);
-      return {
-        ok: false,
-        text: JSON.stringify({
-          error: `工具执行失败：${msg}`,
-          hint: '请检查参数是否符合要求，或换一种方式'
-        })
+      const payload: ToolErrorPayload = {
+        error: `工具执行失败：${msg}`,
+        hint: '请检查参数是否符合要求，或换一种方式'
       };
+      return { ok: false, text: JSON.stringify(payload) };
     }
   }
-}
-
-export interface ToolResult {
-  ok: boolean;
-  text: string;
 }
 
 // ---------------------------------------------------------------- 主循环
@@ -222,7 +306,6 @@ export class Agent {
     // 否则长对话里合法的重复会被误拦
     let lastSignature = '';
     let repeatCount = 0;
-
     let answer = '';
 
     for (let round = 1; round <= this.config.maxRounds; round++) {
@@ -245,15 +328,19 @@ export class Agent {
       }
 
       // assistant 这一轮（含 tool_calls）入列
+      const names: string[] = [];
+      for (let i = 0; i < reply.toolCalls.length; i++) {
+        names.push(reply.toolCalls[i].name);
+      }
       messages.push({
         role: 'assistant',
         content: reply.content,
-        toolName: reply.toolCalls.map((c: ToolCall) => c.name).join(',')
+        toolName: names.join(',')
       });
 
       for (let i = 0; i < reply.toolCalls.length; i++) {
         const call = reply.toolCalls[i];
-        const signature = `${call.name}:${JSON.stringify(Array.from(call.args.entries()))}`;
+        const signature = `${call.name}:${this.argsKey(call.args)}`;
 
         if (signature === lastSignature) {
           repeatCount++;
@@ -267,13 +354,11 @@ export class Agent {
           // 关键：拦截时**也要**补一条 tool 消息。
           // 只往消息序列里插一条伪造的用户消息，会导致
           // tool_call_id 没有对应响应，下一次请求会被接口拒绝。
-          result = {
-            ok: false,
-            text: JSON.stringify({
-              error: `已经用相同参数调用过 ${call.name} ${repeatCount} 次了`,
-              hint: '请换关键词或换工具，或者基于已有信息直接回答'
-            })
+          const payload: ToolErrorPayload = {
+            error: `已经用相同参数调用过 ${call.name} ${repeatCount} 次了`,
+            hint: '请换关键词或换工具，或者基于已有信息直接回答'
           };
+          result = { ok: false, text: JSON.stringify(payload) };
         } else {
           result = await this.registry.execute(call.name, call.args);
         }
@@ -281,7 +366,7 @@ export class Agent {
         steps.push({
           round,
           tool: call.name,
-          args: JSON.stringify(Array.from(call.args.entries())),
+          args: this.argsKey(call.args),
           ok: result.ok,
           resultPreview: result.text.substring(0, 200)
         });
@@ -308,11 +393,38 @@ export class Agent {
     return { answer, steps, promptTokens, completionTokens, stopReason };
   }
 
+  /** 把参数拼成稳定的字符串（用于重复检测与日志） */
+  private argsKey(args: Map<string, Object>): string {
+    const keys: string[] = [];
+    args.forEach((_v: Object, k: string) => {
+      keys.push(k);
+    });
+    keys.sort();
+    const parts: string[] = [];
+    for (let i = 0; i < keys.length; i++) {
+      parts.push(`${keys[i]}=${String(args.get(keys[i]))}`);
+    }
+    return parts.join('&');
+  }
+
   /** 调一次大模型 */
   private async callModel(messages: ChatMessage[]): Promise<LLMReply> {
-    const payload = {
+    const wire: WireMessage[] = [];
+    for (let i = 0; i < messages.length; i++) {
+      const m = messages[i];
+      if (m.role === 'tool') {
+        wire.push({ role: 'tool', content: m.content, tool_call_id: m.toolCallId });
+      } else if (m.role === 'assistant') {
+        // 历史里的 assistant 消息不含 tool_calls（已完成），只带文本
+        wire.push({ role: 'assistant', content: m.content });
+      } else {
+        wire.push({ role: m.role, content: m.content });
+      }
+    }
+
+    const payload: ChatPayload = {
       model: this.config.model,
-      messages: messages.map((m: ChatMessage) => this.toWire(m)),
+      messages: wire,
       tools: this.registry.toSchema(),
       tool_choice: 'auto'
     };
@@ -333,12 +445,13 @@ export class Agent {
         });
         req.destroy();
 
-        if (resp.responseCode >= 400 && resp.responseCode < 500 && resp.responseCode !== 429) {
+        const code = resp.responseCode;
+        if (code >= 400 && code < 500 && code !== 429) {
           // 4xx（除限流）重试没意义，直接报出
-          throw new Error(`请求被拒绝（${resp.responseCode}）：${resp.result as string}`);
+          throw new Error(`请求被拒绝（${code}）：${resp.result as string}`);
         }
-        if (resp.responseCode !== 200) {
-          lastError = `HTTP ${resp.responseCode}`;
+        if (code !== 200) {
+          lastError = `HTTP ${code}`;
           await this.sleep(1000 * attempt);
           continue;
         }
@@ -353,32 +466,27 @@ export class Agent {
     throw new Error(`模型调用失败：${lastError}`);
   }
 
-  private toWire(m: ChatMessage): Object {
-    if (m.role === 'tool') {
-      return { role: 'tool', tool_call_id: m.toolCallId, content: m.content } as Object;
-    }
-    return { role: m.role, content: m.content } as Object;
-  }
-
   /** 解析模型返回 */
   private parseReply(body: string): LLMReply {
-    const obj = JSON.parse(body) as Record<string, Object>;
-    const choices = obj.choices as Object[];
-    const first = choices[0] as Record<string, Object>;
-    const message = first.message as Record<string, Object>;
-    const usage = (obj.usage ?? {}) as Record<string, Object>;
+    const obj = JSON.parse(body) as ChatResponse;
+    const choices = obj.choices;
+    if (choices === undefined || choices.length === 0) {
+      throw new Error('模型返回里没有 choices');
+    }
+    const message = choices[0].message;
+    const content = message?.content ?? '';
+    const usage = obj.usage;
 
-    const content = (message.content ?? '') as string;
     const calls: ToolCall[] = [];
-    const rawCalls = message.tool_calls as Object[] | undefined;
+    const rawCalls = message?.tool_calls;
     if (rawCalls !== undefined) {
       for (let i = 0; i < rawCalls.length; i++) {
-        const c = rawCalls[i] as Record<string, Object>;
-        const fn = c.function as Record<string, Object>;
-        const argStr = (fn.arguments ?? '{}') as string;
+        const c = rawCalls[i];
+        const fn = c.function;
+        const argStr = fn?.arguments ?? '{}';
         calls.push({
-          id: (c.id ?? '') as string,
-          name: (fn.name ?? '') as string,
+          id: c.id ?? '',
+          name: fn?.name ?? '',
           args: this.parseArgs(argStr)
         });
       }
@@ -387,8 +495,8 @@ export class Agent {
     return {
       content,
       toolCalls: calls,
-      promptTokens: (usage.prompt_tokens ?? 0) as number,
-      completionTokens: (usage.completion_tokens ?? 0) as number
+      promptTokens: usage?.prompt_tokens ?? 0,
+      completionTokens: usage?.completion_tokens ?? 0
     };
   }
 
