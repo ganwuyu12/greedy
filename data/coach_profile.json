@@ -1,0 +1,1285 @@
+{
+  "handle": "ganwuyu",
+  "current_rating": 1291,
+  "max_rating": 1451,
+  "overall": {
+    "submissions": 270,
+    "accepted_submissions": 151,
+    "ac_rate_submission": 0.559,
+    "problems_tried": 151,
+    "problems_solved": 148,
+    "solve_rate_problem": 0.98
+  },
+  "difficulty": {
+    "solved_by_rating": {
+      "1000-1099": 15,
+      "1100-1199": 13,
+      "1200-1299": 9,
+      "1300-1399": 11,
+      "1400-1499": 14,
+      "1500-1599": 8,
+      "1600-1699": 3,
+      "1700-1799": 2,
+      "1800-1899": 2,
+      "1900-1999": 2,
+      "2100-2199": 2,
+      "2300-2399": 1,
+      "800-899": 51,
+      "900-999": 11,
+      "未定级": 7
+    },
+    "tried_by_rating": {
+      "1000-1099": 33,
+      "1100-1199": 26,
+      "1200-1299": 19,
+      "1300-1399": 31,
+      "1400-1499": 26,
+      "1500-1599": 23,
+      "1600-1699": 3,
+      "1700-1799": 4,
+      "1800-1899": 3,
+      "1900-1999": 6,
+      "2100-2199": 3,
+      "2300-2399": 2,
+      "800-899": 63,
+      "900-999": 18,
+      "未定级": 10
+    },
+    "max_solved_rating": 2300,
+    "median_solved_rating": 1000
+  },
+  "tags": [
+    {
+      "tag": "greedy",
+      "tried": 88,
+      "solved": 88,
+      "rate": 1.0
+    },
+    {
+      "tag": "math",
+      "tried": 66,
+      "solved": 65,
+      "rate": 0.985
+    },
+    {
+      "tag": "brute force",
+      "tried": 36,
+      "solved": 35,
+      "rate": 0.972
+    },
+    {
+      "tag": "constructive algorithms",
+      "tried": 36,
+      "solved": 36,
+      "rate": 1.0
+    },
+    {
+      "tag": "implementation",
+      "tried": 35,
+      "solved": 35,
+      "rate": 1.0
+    },
+    {
+      "tag": "dp",
+      "tried": 22,
+      "solved": 22,
+      "rate": 1.0
+    },
+    {
+      "tag": "sortings",
+      "tried": 19,
+      "solved": 19,
+      "rate": 1.0
+    },
+    {
+      "tag": "binary search",
+      "tried": 18,
+      "solved": 17,
+      "rate": 0.944
+    },
+    {
+      "tag": "data structures",
+      "tried": 14,
+      "solved": 13,
+      "rate": 0.929
+    },
+    {
+      "tag": "number theory",
+      "tried": 12,
+      "solved": 11,
+      "rate": 0.917
+    },
+    {
+      "tag": "strings",
+      "tried": 11,
+      "solved": 11,
+      "rate": 1.0
+    },
+    {
+      "tag": "bitmasks",
+      "tried": 11,
+      "solved": 11,
+      "rate": 1.0
+    },
+    {
+      "tag": "two pointers",
+      "tried": 9,
+      "solved": 8,
+      "rate": 0.889
+    },
+    {
+      "tag": "games",
+      "tried": 9,
+      "solved": 9,
+      "rate": 1.0
+    },
+    {
+      "tag": "geometry",
+      "tried": 4,
+      "solved": 4,
+      "rate": 1.0
+    },
+    {
+      "tag": "combinatorics",
+      "tried": 4,
+      "solved": 4,
+      "rate": 1.0
+    },
+    {
+      "tag": "trees",
+      "tried": 3,
+      "solved": 3,
+      "rate": 1.0
+    },
+    {
+      "tag": "interactive",
+      "tried": 2,
+      "solved": 1,
+      "rate": 0.5
+    },
+    {
+      "tag": "dfs and similar",
+      "tried": 2,
+      "solved": 2,
+      "rate": 1.0
+    },
+    {
+      "tag": "dsu",
+      "tried": 2,
+      "solved": 2,
+      "rate": 1.0
+    },
+    {
+      "tag": "*special",
+      "tried": 2,
+      "solved": 2,
+      "rate": 1.0
+    },
+    {
+      "tag": "schedules",
+      "tried": 1,
+      "solved": 1,
+      "rate": 1.0
+    },
+    {
+      "tag": "graph matchings",
+      "tried": 1,
+      "solved": 1,
+      "rate": 1.0
+    },
+    {
+      "tag": "fft",
+      "tried": 1,
+      "solved": 1,
+      "rate": 1.0
+    },
+    {
+      "tag": "graphs",
+      "tried": 1,
+      "solved": 1,
+      "rate": 1.0
+    },
+    {
+      "tag": "communication",
+      "tried": 1,
+      "solved": 1,
+      "rate": 1.0
+    },
+    {
+      "tag": "hashing",
+      "tried": 1,
+      "solved": 1,
+      "rate": 1.0
+    }
+  ],
+  "weak_tags": [],
+  "strong_tags": [
+    {
+      "tag": "greedy",
+      "tried": 88,
+      "solved": 88,
+      "rate": 1.0
+    },
+    {
+      "tag": "constructive algorithms",
+      "tried": 36,
+      "solved": 36,
+      "rate": 1.0
+    },
+    {
+      "tag": "implementation",
+      "tried": 35,
+      "solved": 35,
+      "rate": 1.0
+    },
+    {
+      "tag": "dp",
+      "tried": 22,
+      "solved": 22,
+      "rate": 1.0
+    },
+    {
+      "tag": "sortings",
+      "tried": 19,
+      "solved": 19,
+      "rate": 1.0
+    },
+    {
+      "tag": "strings",
+      "tried": 11,
+      "solved": 11,
+      "rate": 1.0
+    },
+    {
+      "tag": "bitmasks",
+      "tried": 11,
+      "solved": 11,
+      "rate": 1.0
+    },
+    {
+      "tag": "games",
+      "tried": 9,
+      "solved": 9,
+      "rate": 1.0
+    },
+    {
+      "tag": "math",
+      "tried": 66,
+      "solved": 65,
+      "rate": 0.985
+    },
+    {
+      "tag": "brute force",
+      "tried": 36,
+      "solved": 35,
+      "rate": 0.972
+    },
+    {
+      "tag": "binary search",
+      "tried": 18,
+      "solved": 17,
+      "rate": 0.944
+    },
+    {
+      "tag": "data structures",
+      "tried": 14,
+      "solved": 13,
+      "rate": 0.929
+    },
+    {
+      "tag": "number theory",
+      "tried": 12,
+      "solved": 11,
+      "rate": 0.917
+    },
+    {
+      "tag": "two pointers",
+      "tried": 9,
+      "solved": 8,
+      "rate": 0.889
+    }
+  ],
+  "failed_tag_ranking": [
+    [
+      "brute force",
+      5
+    ],
+    [
+      "math",
+      5
+    ],
+    [
+      "number theory",
+      5
+    ],
+    [
+      "binary search",
+      2
+    ],
+    [
+      "interactive",
+      2
+    ],
+    [
+      "data structures",
+      1
+    ],
+    [
+      "two pointers",
+      1
+    ]
+  ],
+  "unsolved_problem_count": 3,
+  "unsolved_sample": [
+    {
+      "name": "Unique Values (Easy version)",
+      "rating": 1900,
+      "tags": [
+        "binary search",
+        "interactive"
+      ],
+      "attempts": 2,
+      "contestId": 2220
+    },
+    {
+      "name": "Hidden Knowledge of the Ancients",
+      "rating": 1500,
+      "tags": [
+        "data structures",
+        "two pointers"
+      ],
+      "attempts": 1,
+      "contestId": 2149
+    },
+    {
+      "name": "Even Modulo Pair",
+      "rating": 1000,
+      "tags": [
+        "brute force",
+        "math",
+        "number theory"
+      ],
+      "attempts": 5,
+      "contestId": 2164
+    }
+  ],
+  "speed": {
+    "by_contest": [
+      {
+        "contestId": 2162,
+        "name": "Codeforces Round 1059 (Div. 3)",
+        "solved": [
+          "A",
+          "B"
+        ],
+        "minutes": {
+          "A": 66,
+          "B": 131
+        }
+      },
+      {
+        "contestId": 2167,
+        "name": "Codeforces Round 1062 (Div. 4)",
+        "solved": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "minutes": {
+          "A": 6,
+          "B": 15,
+          "C": 29,
+          "D": 42,
+          "E": 93
+        }
+      },
+      {
+        "contestId": 2164,
+        "name": "Codeforces Global Round 30 (Div. 1 + Div. 2)",
+        "solved": [
+          "A",
+          "C"
+        ],
+        "minutes": {
+          "A": 12,
+          "C": 95
+        }
+      },
+      {
+        "contestId": 2163,
+        "name": "Codeforces Round 1063 (Div. 2)",
+        "solved": [
+          "A"
+        ],
+        "minutes": {
+          "A": 16
+        }
+      },
+      {
+        "contestId": 2169,
+        "name": "Educational Codeforces Round 184 (Rated for Div. 2)",
+        "solved": [],
+        "minutes": {}
+      },
+      {
+        "contestId": 2171,
+        "name": "Codeforces Round 1065 (Div. 3)",
+        "solved": [
+          "A",
+          "B",
+          "C1"
+        ],
+        "minutes": {
+          "A": 40,
+          "B": 69,
+          "C1": 65
+        }
+      },
+      {
+        "contestId": 2170,
+        "name": "Educational Codeforces Round 185 (Rated for Div. 2)",
+        "solved": [
+          "A",
+          "C"
+        ],
+        "minutes": {
+          "A": 24,
+          "C": 78
+        }
+      },
+      {
+        "contestId": 2173,
+        "name": "Codeforces Round 1068 (Div. 2)",
+        "solved": [
+          "A",
+          "B"
+        ],
+        "minutes": {
+          "A": 22,
+          "B": 34
+        }
+      },
+      {
+        "contestId": 2179,
+        "name": "Codeforces Round 1071 (Div. 3)",
+        "solved": [
+          "A",
+          "B",
+          "C"
+        ],
+        "minutes": {
+          "A": 35,
+          "B": 50,
+          "C": 59
+        }
+      },
+      {
+        "contestId": 2182,
+        "name": "Educational Codeforces Round 186 (Rated for Div. 2)",
+        "solved": [
+          "A",
+          "B",
+          "C"
+        ],
+        "minutes": {
+          "A": 15,
+          "B": 76,
+          "C": 107
+        }
+      },
+      {
+        "contestId": 2183,
+        "name": "Hello 2026",
+        "solved": [
+          "A",
+          "B",
+          "C"
+        ],
+        "minutes": {
+          "A": 20,
+          "B": 36,
+          "C": 89
+        }
+      },
+      {
+        "contestId": 2203,
+        "name": "Educational Codeforces Round 187 (Rated for Div. 2)",
+        "solved": [
+          "A",
+          "B",
+          "C"
+        ],
+        "minutes": {
+          "A": 26,
+          "B": 93,
+          "C": 115
+        }
+      },
+      {
+        "contestId": 2205,
+        "name": "Codeforces Round 1083 (Div. 2)",
+        "solved": [
+          "A",
+          "B",
+          "C"
+        ],
+        "minutes": {
+          "A": 40,
+          "B": 77,
+          "C": 80
+        }
+      },
+      {
+        "contestId": 2211,
+        "name": "Nebius Round 2 (Codeforces Round 1088, Div. 1 + Div. 2)",
+        "solved": [
+          "A",
+          "B",
+          "C1",
+          "D"
+        ],
+        "minutes": {
+          "A": 10,
+          "B": 38,
+          "C1": 108,
+          "D": 148
+        }
+      },
+      {
+        "contestId": 2210,
+        "name": "Codeforces Round 1089 (Div. 2)",
+        "solved": [
+          "A",
+          "B",
+          "C1"
+        ],
+        "minutes": {
+          "A": 27,
+          "B": 51,
+          "C1": 81
+        }
+      },
+      {
+        "contestId": 2220,
+        "name": "Codeforces Round 1093 (Div. 2)",
+        "solved": [
+          "A",
+          "B",
+          "C"
+        ],
+        "minutes": {
+          "A": 10,
+          "B": 24,
+          "C": 71
+        }
+      },
+      {
+        "contestId": 2225,
+        "name": "Educational Codeforces Round 189 (Rated for Div. 2)",
+        "solved": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "minutes": {
+          "A": 8,
+          "B": 19,
+          "C": 97,
+          "D": 91
+        }
+      },
+      {
+        "contestId": 2228,
+        "name": "Codeforces Round 1098 (Div. 2)",
+        "solved": [
+          "A",
+          "B",
+          "C1"
+        ],
+        "minutes": {
+          "A": 12,
+          "B": 57,
+          "C1": 130
+        }
+      },
+      {
+        "contestId": 2230,
+        "name": "Educational Codeforces Round 190 (Rated for Div. 2)",
+        "solved": [
+          "A",
+          "C"
+        ],
+        "minutes": {
+          "A": 25,
+          "C": 60
+        }
+      },
+      {
+        "contestId": 2231,
+        "name": "Codeforces Round 1099 (Div. 2)",
+        "solved": [
+          "A",
+          "B",
+          "C"
+        ],
+        "minutes": {
+          "A": 13,
+          "B": 50,
+          "C": 103
+        }
+      },
+      {
+        "contestId": 2229,
+        "name": "Spectral::Cup 2026 Round 2 (Codeforces Round 1100, Div. 1 + Div. 2)",
+        "solved": [
+          "A",
+          "B",
+          "C1"
+        ],
+        "minutes": {
+          "A": 9,
+          "B": 15,
+          "C1": 41
+        }
+      },
+      {
+        "contestId": 2234,
+        "name": "Codeforces Round 1102 (Div. 2)",
+        "solved": [
+          "A",
+          "B",
+          "C"
+        ],
+        "minutes": {
+          "A": 26,
+          "B": 40,
+          "C": 91
+        }
+      },
+      {
+        "contestId": 2233,
+        "name": "Educational Codeforces Round 191 (Rated for Div. 2)",
+        "solved": [
+          "A",
+          "B"
+        ],
+        "minutes": {
+          "A": 15,
+          "B": 43
+        }
+      },
+      {
+        "contestId": 2236,
+        "name": "Codeforces Round 1103 (Div. 3)",
+        "solved": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "minutes": {
+          "A": 13,
+          "B": 50,
+          "C": 48,
+          "D": 143
+        }
+      },
+      {
+        "contestId": 2237,
+        "name": "Order Capital Round 2 (Codeforces Round 1104, Div. 1 + Div. 2)",
+        "solved": [
+          "A",
+          "B",
+          "C"
+        ],
+        "minutes": {
+          "A": 15,
+          "B": 99,
+          "C": 116
+        }
+      },
+      {
+        "contestId": 2275,
+        "name": "Codeforces Round 1125 (Div. 3)",
+        "solved": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "minutes": {
+          "A": 6,
+          "B": 22,
+          "C": 45,
+          "D": 111
+        }
+      }
+    ],
+    "median_minutes_overall": {
+      "A": 15,
+      "B": 50,
+      "C": 89,
+      "D": 111,
+      "E": 93
+    },
+    "median_minutes_recent": {
+      "A": 15,
+      "B": 43,
+      "C": 91,
+      "D": 143,
+      "E": null
+    },
+    "median_minutes_earlier": {
+      "A": 20,
+      "B": 51,
+      "C": 89,
+      "D": 91,
+      "E": 93
+    }
+  },
+  "contests": [
+    {
+      "contestId": 2162,
+      "name": "Codeforces Round 1059 (Div. 3)",
+      "rank": 14544,
+      "old": 0,
+      "new": 402,
+      "delta": 402,
+      "attempted": [
+        "A",
+        "B",
+        "C"
+      ],
+      "solved": [
+        "A",
+        "B",
+        "C"
+      ],
+      "max_solved": "C"
+    },
+    {
+      "contestId": 2167,
+      "name": "Codeforces Round 1062 (Div. 4)",
+      "rank": 2199,
+      "old": 402,
+      "new": 797,
+      "delta": 395,
+      "attempted": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "G"
+      ],
+      "solved": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "G"
+      ],
+      "max_solved": "G"
+    },
+    {
+      "contestId": 2164,
+      "name": "Codeforces Global Round 30 (Div. 1 + Div. 2)",
+      "rank": 4328,
+      "old": 797,
+      "new": 1057,
+      "delta": 260,
+      "attempted": [
+        "A",
+        "B",
+        "C"
+      ],
+      "solved": [
+        "A",
+        "C"
+      ],
+      "max_solved": "C"
+    },
+    {
+      "contestId": 2163,
+      "name": "Codeforces Round 1063 (Div. 2)",
+      "rank": 6871,
+      "old": 1057,
+      "new": 1151,
+      "delta": 94,
+      "attempted": [
+        "A",
+        "B"
+      ],
+      "solved": [
+        "A",
+        "B"
+      ],
+      "max_solved": "B"
+    },
+    {
+      "contestId": 2169,
+      "name": "Educational Codeforces Round 184 (Rated for Div. 2)",
+      "rank": 10093,
+      "old": 1151,
+      "new": 1135,
+      "delta": -16,
+      "attempted": [
+        "A",
+        "B",
+        "C"
+      ],
+      "solved": [
+        "A",
+        "B",
+        "C"
+      ],
+      "max_solved": "C"
+    },
+    {
+      "contestId": 2171,
+      "name": "Codeforces Round 1065 (Div. 3)",
+      "rank": 7506,
+      "old": 1135,
+      "new": 1164,
+      "delta": 29,
+      "attempted": [
+        "A",
+        "B",
+        "C1",
+        "C2",
+        "D"
+      ],
+      "solved": [
+        "A",
+        "B",
+        "C1",
+        "C2",
+        "D"
+      ],
+      "max_solved": "D"
+    },
+    {
+      "contestId": 2170,
+      "name": "Educational Codeforces Round 185 (Rated for Div. 2)",
+      "rank": 6790,
+      "old": 1164,
+      "new": 1158,
+      "delta": -6,
+      "attempted": [
+        "A",
+        "B",
+        "C"
+      ],
+      "solved": [
+        "A",
+        "B",
+        "C"
+      ],
+      "max_solved": "C"
+    },
+    {
+      "contestId": 2173,
+      "name": "Codeforces Round 1068 (Div. 2)",
+      "rank": 6106,
+      "old": 1158,
+      "new": 1179,
+      "delta": 21,
+      "attempted": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "solved": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "max_solved": "D"
+    },
+    {
+      "contestId": 2179,
+      "name": "Codeforces Round 1071 (Div. 3)",
+      "rank": 10285,
+      "old": 1179,
+      "new": 1160,
+      "delta": -19,
+      "attempted": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "solved": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "max_solved": "E"
+    },
+    {
+      "contestId": 2182,
+      "name": "Educational Codeforces Round 186 (Rated for Div. 2)",
+      "rank": 8224,
+      "old": 1160,
+      "new": 1149,
+      "delta": -11,
+      "attempted": [
+        "A",
+        "B",
+        "C"
+      ],
+      "solved": [
+        "A",
+        "B",
+        "C"
+      ],
+      "max_solved": "C"
+    },
+    {
+      "contestId": 2183,
+      "name": "Hello 2026",
+      "rank": 4305,
+      "old": 1149,
+      "new": 1253,
+      "delta": 104,
+      "attempted": [
+        "A",
+        "B",
+        "C"
+      ],
+      "solved": [
+        "A",
+        "B",
+        "C"
+      ],
+      "max_solved": "C"
+    },
+    {
+      "contestId": 2203,
+      "name": "Educational Codeforces Round 187 (Rated for Div. 2)",
+      "rank": 3667,
+      "old": 1253,
+      "new": 1290,
+      "delta": 37,
+      "attempted": [
+        "A",
+        "B",
+        "C"
+      ],
+      "solved": [
+        "A",
+        "B",
+        "C"
+      ],
+      "max_solved": "C"
+    },
+    {
+      "contestId": 2205,
+      "name": "Codeforces Round 1083 (Div. 2)",
+      "rank": 3500,
+      "old": 1290,
+      "new": 1308,
+      "delta": 18,
+      "attempted": [
+        "A",
+        "B",
+        "C"
+      ],
+      "solved": [
+        "A",
+        "B",
+        "C"
+      ],
+      "max_solved": "C"
+    },
+    {
+      "contestId": 2211,
+      "name": "Nebius Round 2 (Codeforces Round 1088, Div. 1 + Div. 2)",
+      "rank": 1888,
+      "old": 1308,
+      "new": 1427,
+      "delta": 119,
+      "attempted": [
+        "A",
+        "B",
+        "C1",
+        "D"
+      ],
+      "solved": [
+        "A",
+        "B",
+        "C1",
+        "D"
+      ],
+      "max_solved": "D"
+    },
+    {
+      "contestId": 2210,
+      "name": "Codeforces Round 1089 (Div. 2)",
+      "rank": 6214,
+      "old": 1427,
+      "new": 1381,
+      "delta": -46,
+      "attempted": [
+        "A",
+        "B",
+        "C1",
+        "C2",
+        "D"
+      ],
+      "solved": [
+        "A",
+        "B",
+        "C1",
+        "C2",
+        "D"
+      ],
+      "max_solved": "D"
+    },
+    {
+      "contestId": 2220,
+      "name": "Codeforces Round 1093 (Div. 2)",
+      "rank": 1514,
+      "old": 1381,
+      "new": 1451,
+      "delta": 70,
+      "attempted": [
+        "A",
+        "B",
+        "C",
+        "D1"
+      ],
+      "solved": [
+        "A",
+        "B",
+        "C"
+      ],
+      "max_solved": "C"
+    },
+    {
+      "contestId": 2225,
+      "name": "Educational Codeforces Round 189 (Rated for Div. 2)",
+      "rank": 3196,
+      "old": 1451,
+      "new": 1448,
+      "delta": -3,
+      "attempted": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "solved": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "max_solved": "D"
+    },
+    {
+      "contestId": 2228,
+      "name": "Codeforces Round 1098 (Div. 2)",
+      "rank": 3743,
+      "old": 1448,
+      "new": 1449,
+      "delta": 1,
+      "attempted": [
+        "A",
+        "B",
+        "C1"
+      ],
+      "solved": [
+        "A",
+        "B",
+        "C1"
+      ],
+      "max_solved": "C1"
+    },
+    {
+      "contestId": 2230,
+      "name": "Educational Codeforces Round 190 (Rated for Div. 2)",
+      "rank": 7022,
+      "old": 1449,
+      "new": 1371,
+      "delta": -78,
+      "attempted": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "solved": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "max_solved": "D"
+    },
+    {
+      "contestId": 2231,
+      "name": "Codeforces Round 1099 (Div. 2)",
+      "rank": 3358,
+      "old": 1371,
+      "new": 1401,
+      "delta": 30,
+      "attempted": [
+        "A",
+        "B",
+        "C"
+      ],
+      "solved": [
+        "A",
+        "B",
+        "C"
+      ],
+      "max_solved": "C"
+    },
+    {
+      "contestId": 2229,
+      "name": "Spectral::Cup 2026 Round 2 (Codeforces Round 1100, Div. 1 + Div. 2)",
+      "rank": 5506,
+      "old": 1401,
+      "new": 1357,
+      "delta": -44,
+      "attempted": [
+        "A",
+        "B",
+        "C1",
+        "C2"
+      ],
+      "solved": [
+        "A",
+        "B",
+        "C1",
+        "C2"
+      ],
+      "max_solved": "C2"
+    },
+    {
+      "contestId": 2234,
+      "name": "Codeforces Round 1102 (Div. 2)",
+      "rank": 6508,
+      "old": 1357,
+      "new": 1327,
+      "delta": -30,
+      "attempted": [
+        "A",
+        "B",
+        "C"
+      ],
+      "solved": [
+        "A",
+        "B",
+        "C"
+      ],
+      "max_solved": "C"
+    },
+    {
+      "contestId": 2233,
+      "name": "Educational Codeforces Round 191 (Rated for Div. 2)",
+      "rank": 7255,
+      "old": 1327,
+      "new": 1290,
+      "delta": -37,
+      "attempted": [
+        "A",
+        "B",
+        "C"
+      ],
+      "solved": [
+        "A",
+        "B",
+        "C"
+      ],
+      "max_solved": "C"
+    },
+    {
+      "contestId": 2236,
+      "name": "Codeforces Round 1103 (Div. 3)",
+      "rank": 5809,
+      "old": 1290,
+      "new": 1281,
+      "delta": -9,
+      "attempted": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "solved": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "max_solved": "D"
+    },
+    {
+      "contestId": 2237,
+      "name": "Order Capital Round 2 (Codeforces Round 1104, Div. 1 + Div. 2)",
+      "rank": 7700,
+      "old": 1281,
+      "new": 1246,
+      "delta": -35,
+      "attempted": [
+        "A",
+        "B",
+        "C"
+      ],
+      "solved": [
+        "A",
+        "B",
+        "C"
+      ],
+      "max_solved": "C"
+    },
+    {
+      "contestId": 2275,
+      "name": "Codeforces Round 1125 (Div. 3)",
+      "rank": 2772,
+      "old": 1246,
+      "new": 1291,
+      "delta": 45,
+      "attempted": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "solved": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "max_solved": "D"
+    }
+  ],
+  "comparison": {
+    "recent_contests": 8,
+    "earlier_contests": 18,
+    "recent_avg_delta": -19.8,
+    "earlier_avg_delta": 80.5,
+    "recent_avg_rank": 5741,
+    "earlier_avg_rank": 5832,
+    "recent_avg_solved": 3.5,
+    "earlier_avg_solved": 3.6
+  },
+  "trend": {
+    "recent_solved_median_rating": 1000,
+    "earlier_solved_median_rating": 1100,
+    "recent_sample": 25,
+    "earlier_sample": 65
+  }
+}

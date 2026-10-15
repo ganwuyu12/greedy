@@ -11,6 +11,10 @@ __pycache__/
 data/records.json
 data/cf_state.json
 
+# ---- 从 Codeforces 拉取的原始数据（可由 coach.py 重建，不入库）----
+data/cf_cache/
+data/cf_raw/
+
 # ---- 构建产物（可由脚本重建，不入库）----
 data/index/
 data/wiki_index/
