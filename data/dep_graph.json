@@ -1,0 +1,3130 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-10-15T10:50:33+08:00",
+  "source": {
+    "dir": "data/oi_wiki_clean",
+    "license": "CC BY-SA 4.0"
+  },
+  "note": "references = 正文引用关系（宽）；prerequisites = 人工确认的强依赖（严，初期为空）",
+  "stats": {
+    "file_count": 418,
+    "total_links": 3876,
+    "internal_links": 1280,
+    "files_with_references": 265,
+    "coverage": 0.634,
+    "edge_count": 956,
+    "unresolved_count": 15,
+    "unresolved_excluded_dir": 15
+  },
+  "edges": {
+    "basic/amortized-analysis.md": [
+      "basic/complexity.md"
+    ],
+    "basic/binary-lifting.md": [
+      "basic/complexity.md",
+      "ds/sparse-table.md",
+      "graph/lca.md",
+      "topic/rmq.md"
+    ],
+    "basic/binary.md": [
+      "basic/stl-sort.md",
+      "lang/csl/container.md",
+      "lang/csl/iterator.md",
+      "lang/op.md",
+      "lang/optimizations.md",
+      "misc/frac-programming.md"
+    ],
+    "basic/complexity.md": [
+      "basic/amortized-analysis.md",
+      "graph/concept.md",
+      "graph/dfs.md",
+      "misc/cc-basic.md"
+    ],
+    "basic/construction.md": [
+      "math/number-theory/inverse.md"
+    ],
+    "basic/counting-sort.md": [
+      "basic/prefix-sum.md",
+      "basic/radix-sort.md"
+    ],
+    "basic/divide-and-conquer.md": [
+      "basic/merge-sort.md",
+      "dp/basic.md",
+      "dp/memo.md",
+      "search/opt.md"
+    ],
+    "basic/enumerate.md": [
+      "basic/bucket-sort.md",
+      "misc/main-element.md"
+    ],
+    "basic/heap-sort.md": [
+      "ds/binary-heap.md"
+    ],
+    "basic/merge-sort.md": [
+      "ds/fenwick.md",
+      "math/permutation.md"
+    ],
+    "basic/prefix-sum.md": [
+      "ds/fenwick.md",
+      "graph/lca.md",
+      "math/combinatorics/inclusion-exclusion-principle.md"
+    ],
+    "basic/quick-sort.md": [
+      "basic/divide-and-conquer.md",
+      "basic/heap-sort.md"
+    ],
+    "basic/radix-sort.md": [
+      "basic/bucket-sort.md",
+      "basic/counting-sort.md"
+    ],
+    "basic/shell-sort.md": [
+      "basic/insertion-sort.md"
+    ],
+    "basic/sort-intro.md": [
+      "basic/complexity.md",
+      "basic/counting-sort.md"
+    ],
+    "basic/stl-sort.md": [
+      "basic/quick-sort.md",
+      "ds/kdt.md",
+      "math/order-theory.md"
+    ],
+    "basic/tournament-sort.md": [
+      "basic/heap-sort.md",
+      "basic/selection-sort.md"
+    ],
+    "basic/use-of-sort.md": [
+      "basic/binary.md"
+    ],
+    "contest/common-mistakes.md": [
+      "contest/problemsetting.md",
+      "lang/op.md"
+    ],
+    "contest/common-tricks.md": [
+      "lang/optimizations.md"
+    ],
+    "contest/dictionary.md": [
+      "ds/decompose.md"
+    ],
+    "contest/interaction.md": [
+      "contest/problems.md"
+    ],
+    "contest/oi.md": [
+      "contest/icpc.md"
+    ],
+    "contest/problems.md": [
+      "contest/interaction.md"
+    ],
+    "contest/problemsetting.md": [
+      "contest/io.md",
+      "graph/prufer.md",
+      "math/combinatorics/fibonacci.md",
+      "misc/random.md"
+    ],
+    "contest/roadmap.md": [
+      "basic/binary-lifting.md",
+      "basic/binary.md",
+      "basic/bubble-sort.md",
+      "basic/bucket-sort.md",
+      "basic/construction.md",
+      "basic/counting-sort.md",
+      "basic/divide-and-conquer.md",
+      "basic/enumerate.md",
+      "basic/heap-sort.md",
+      "basic/insertion-sort.md",
+      "basic/merge-sort.md",
+      "basic/quick-sort.md",
+      "basic/radix-sort.md",
+      "basic/selection-sort.md",
+      "basic/simulate.md",
+      "basic/sort-intro.md",
+      "basic/stl-sort.md",
+      "dp/basic.md",
+      "dp/index.md",
+      "dp/interval.md",
+      "dp/knapsack/basic.md",
+      "dp/memo.md",
+      "ds/linked-list.md",
+      "ds/queue.md",
+      "ds/stack.md",
+      "graph/concept.md",
+      "graph/save.md",
+      "graph/tree-basic.md",
+      "lang/array.md",
+      "lang/basic.md",
+      "lang/branch.md",
+      "lang/func.md",
+      "lang/helloworld.md",
+      "lang/loop.md",
+      "lang/op.md",
+      "lang/struct.md",
+      "lang/var.md",
+      "math/bignum.md",
+      "math/bit.md",
+      "math/combinatorics/combination.md",
+      "math/combinatorics/drawer-principle.md",
+      "math/combinatorics/inclusion-exclusion-principle.md",
+      "math/number-theory/basic.md",
+      "math/number-theory/euler-totient.md",
+      "math/number-theory/gcd.md",
+      "math/number-theory/pollard-rho.md",
+      "math/number-theory/prime.md",
+      "math/number-theory/sieve.md",
+      "math/numeral-sys/base.md",
+      "search/bfs.md",
+      "search/dfs.md",
+      "search/opt.md",
+      "string/basic.md",
+      "string/lib-func.md"
+    ],
+    "dp/basic.md": [
+      "dp/dag.md",
+      "graph/dag.md",
+      "string/basic.md"
+    ],
+    "dp/dag.md": [
+      "dp/memo.md",
+      "graph/dag.md"
+    ],
+    "dp/dp-of-dp.md": [
+      "dp/dag.md",
+      "dp/state.md",
+      "misc/fsm.md"
+    ],
+    "dp/dynamic.md": [
+      "graph/hld.md",
+      "math/linear-algebra/matrix.md"
+    ],
+    "dp/knapsack/advanced.md": [
+      "dp/tree.md"
+    ],
+    "dp/knapsack/basic.md": [
+      "dp/index.md",
+      "dp/opt/monotonic-queue-stack.md"
+    ],
+    "dp/memo.md": [
+      "search/dfs.md"
+    ],
+    "dp/number.md": [
+      "dp/memo.md"
+    ],
+    "dp/opt/dp-opt.md": [
+      "basic/binary-lifting.md",
+      "basic/prefix-sum.md",
+      "dp/dp-of-dp.md",
+      "dp/opt/monotonic-queue-stack.md",
+      "dp/opt/quadrangle.md",
+      "dp/opt/slope-trick.md",
+      "dp/opt/slope.md",
+      "dp/opt/state.md",
+      "dp/opt/wqs-binary-search.md",
+      "ds/fenwick.md",
+      "ds/seg.md",
+      "math/algebra/basic.md",
+      "math/binary-exponentiation.md",
+      "math/numerical/interp.md",
+      "math/poly/fft.md",
+      "misc/cdq-divide.md",
+      "misc/fsm.md"
+    ],
+    "dp/opt/monotonic-queue-stack.md": [
+      "dp/knapsack/basic.md",
+      "ds/monotonic-queue.md",
+      "ds/monotonic-stack.md"
+    ],
+    "dp/opt/quadrangle.md": [
+      "dp/opt/wqs-binary-search.md",
+      "misc/mo-algo.md"
+    ],
+    "dp/opt/slope-trick.md": [
+      "basic/greedy.md",
+      "ds/binary-heap.md",
+      "ds/bst.md",
+      "ds/heap.md",
+      "geometry/convex-hull.md",
+      "graph/dsu-on-tree.md"
+    ],
+    "dp/opt/slope.md": [
+      "misc/cdq-divide.md"
+    ],
+    "dp/opt/wqs-binary-search.md": [
+      "basic/binary.md",
+      "basic/greedy.md",
+      "dp/opt/quadrangle.md",
+      "dp/opt/slope-trick.md",
+      "graph/flow/min-cost.md",
+      "graph/mst.md",
+      "math/linear-programming.md",
+      "math/matroid.md"
+    ],
+    "dp/plug.md": [
+      "contest/resources.md",
+      "dp/state.md"
+    ],
+    "dp/probability.md": [
+      "dp/state.md",
+      "math/numerical/gauss.md",
+      "math/probability/exp-var.md"
+    ],
+    "dp/state.md": [
+      "math/binary-set.md",
+      "math/bit.md"
+    ],
+    "dp/tree.md": [
+      "dp/knapsack/basic.md"
+    ],
+    "ds/balanced-in-seg.md": [
+      "ds/splay.md",
+      "misc/cdq-divide.md",
+      "misc/parallel-binsearch.md"
+    ],
+    "ds/bst.md": [
+      "ds/avl.md",
+      "ds/sbt.md",
+      "ds/splay.md"
+    ],
+    "ds/cat-tree.md": [
+      "math/linear-algebra/basis.md"
+    ],
+    "ds/decompose.md": [
+      "misc/mo-algo.md"
+    ],
+    "ds/dividing.md": [
+      "ds/persistent-seg.md"
+    ],
+    "ds/dsu.md": [
+      "ds/dsu-complexity.md",
+      "ds/persistent-seg.md",
+      "graph/lca.md",
+      "graph/mst.md",
+      "topic/dsu-app.md"
+    ],
+    "ds/fenwick.md": [
+      "basic/merge-sort.md",
+      "basic/prefix-sum.md",
+      "math/permutation.md",
+      "misc/discrete.md"
+    ],
+    "ds/global-bst.md": [
+      "graph/hld.md"
+    ],
+    "ds/heap.md": [
+      "lang/csl/container-adapter.md"
+    ],
+    "ds/kdt.md": [
+      "geometry/distance.md"
+    ],
+    "ds/kinetic-tournament-tree.md": [
+      "ds/seg.md"
+    ],
+    "ds/lct.md": [
+      "ds/splay.md",
+      "graph/hld.md"
+    ],
+    "ds/leftist-tree.md": [
+      "ds/pairing-heap.md"
+    ],
+    "ds/llrbt.md": [
+      "ds/rbtree.md"
+    ],
+    "ds/persistent-balanced.md": [
+      "ds/treap.md",
+      "ds/wblt.md"
+    ],
+    "ds/persistent-heap.md": [
+      "ds/leftist-tree.md"
+    ],
+    "ds/persistent-seg.md": [
+      "ds/persistent.md"
+    ],
+    "ds/persistent-trie.md": [
+      "string/trie.md"
+    ],
+    "ds/queue.md": [
+      "ds/heap.md",
+      "ds/stack.md"
+    ],
+    "ds/rbtree.md": [
+      "ds/bst.md",
+      "lang/pb-ds/tree.md"
+    ],
+    "ds/seg-in-bit.md": [
+      "ds/balanced-in-seg.md",
+      "ds/persistent-seg.md"
+    ],
+    "ds/seg.md": [
+      "ds/balanced-in-seg.md",
+      "ds/bst.md",
+      "ds/cat-tree.md",
+      "ds/li-chao-tree.md",
+      "ds/persistent-seg.md",
+      "ds/seg-beats.md",
+      "ds/seg-in-balanced.md",
+      "ds/seg-in-bit.md",
+      "ds/seg-in-seg.md",
+      "geometry/scanning.md",
+      "math/algebra/basic.md",
+      "math/algebra/group-theory.md",
+      "misc/discrete.md"
+    ],
+    "ds/sparse-table.md": [
+      "basic/binary-lifting.md",
+      "basic/complexity.md",
+      "topic/rmq.md"
+    ],
+    "ds/splay.md": [
+      "ds/treap.md"
+    ],
+    "ds/treap.md": [
+      "ds/bst.md",
+      "ds/cartesian-tree.md",
+      "ds/heap.md"
+    ],
+    "ds/tree-decompose.md": [
+      "misc/mo-algo-on-tree.md"
+    ],
+    "ds/wblt.md": [
+      "ds/sgt.md",
+      "ds/treap.md"
+    ],
+    "geometry/2d.md": [
+      "math/coordinate.md",
+      "math/linear-algebra/vector.md"
+    ],
+    "geometry/3d.md": [
+      "geometry/2d.md"
+    ],
+    "geometry/convex-hull.md": [
+      "geometry/pick.md"
+    ],
+    "geometry/nearest-points.md": [
+      "ds/hash.md",
+      "misc/random.md"
+    ],
+    "geometry/random-incremental.md": [
+      "geometry/smallest-enclosing-circle.md"
+    ],
+    "geometry/scanning.md": [
+      "misc/discrete.md"
+    ],
+    "geometry/smallest-enclosing-circle.md": [
+      "geometry/2d.md",
+      "geometry/half-plane.md",
+      "geometry/random-incremental.md",
+      "math/linear-programming.md"
+    ],
+    "graph/2-sat.md": [
+      "graph/scc.md"
+    ],
+    "graph/bcc.md": [
+      "graph/concept.md",
+      "graph/cut.md",
+      "graph/scc.md"
+    ],
+    "graph/bfs.md": [
+      "graph/save.md",
+      "graph/shortest-path.md",
+      "lang/csl/container-adapter.md",
+      "lang/csl/sequence-container.md"
+    ],
+    "graph/bi-graph.md": [
+      "graph/bfs.md",
+      "graph/color.md",
+      "graph/dfs.md",
+      "graph/graph-matching/bigraph-match.md",
+      "graph/graph-matching/bigraph-weight-match.md",
+      "graph/graph-matching/graph-match.md",
+      "math/game-theory/impartial-game.md"
+    ],
+    "graph/block-forest.md": [
+      "graph/concept.md",
+      "graph/cut.md"
+    ],
+    "graph/concept.md": [
+      "basic/complexity.md",
+      "graph/bcc.md",
+      "graph/bi-graph.md",
+      "graph/cut.md",
+      "graph/scc.md",
+      "graph/tree-basic.md",
+      "math/combinatorics/drawer-principle.md",
+      "misc/cc-basic.md"
+    ],
+    "graph/connectivity.md": [
+      "graph/concept.md",
+      "graph/flow/min-cut.md",
+      "graph/stoer-wagner.md"
+    ],
+    "graph/cut.md": [
+      "graph/bcc.md",
+      "graph/concept.md"
+    ],
+    "graph/dag.md": [
+      "dp/dag.md",
+      "graph/shortest-path.md",
+      "graph/topo.md",
+      "search/dfs.md"
+    ],
+    "graph/dfs.md": [
+      "ds/queue.md",
+      "ds/stack.md",
+      "graph/save.md",
+      "graph/scc.md",
+      "search/dfs.md"
+    ],
+    "graph/dmst.md": [
+      "ds/dsu.md",
+      "ds/leftist-tree.md"
+    ],
+    "graph/flow/bound.md": [
+      "graph/flow/max-flow.md"
+    ],
+    "graph/flow/max-flow.md": [
+      "graph/flow.md"
+    ],
+    "graph/flow/min-cost.md": [
+      "graph/flow.md",
+      "graph/shortest-path.md",
+      "misc/cc-basic.md"
+    ],
+    "graph/flow/min-cut.md": [
+      "graph/flow/max-flow.md"
+    ],
+    "graph/graph-matching/bigraph-match.md": [
+      "graph/bfs.md",
+      "graph/bi-graph.md",
+      "graph/dfs.md",
+      "graph/flow/max-flow.md",
+      "graph/graph-matching/bigraph-weight-match.md",
+      "graph/graph-matching/graph-match.md",
+      "graph/scc.md",
+      "math/order-theory.md"
+    ],
+    "graph/graph-matching/bigraph-weight-match.md": [
+      "graph/flow/min-cost.md",
+      "graph/graph-matching/bigraph-match.md"
+    ],
+    "graph/graph-matching/general-match.md": [
+      "math/linear-algebra/determinant.md",
+      "math/linear-algebra/matrix.md",
+      "math/numerical/gauss.md"
+    ],
+    "graph/graph-matching/graph-match.md": [
+      "graph/bi-graph.md",
+      "graph/graph-matching/bigraph-match.md",
+      "graph/graph-matching/bigraph-weight-match.md",
+      "graph/graph-matching/general-match.md",
+      "graph/graph-matching/general-weight-match.md"
+    ],
+    "graph/graph-matching/stable-match.md": [
+      "math/order-theory.md"
+    ],
+    "graph/hld.md": [
+      "graph/lca.md"
+    ],
+    "graph/kth-path.md": [
+      "ds/persistent-heap.md",
+      "graph/concept.md",
+      "graph/shortest-path.md",
+      "search/astar.md"
+    ],
+    "graph/lca.md": [
+      "ds/dsu.md",
+      "ds/lct.md",
+      "topic/rmq.md"
+    ],
+    "graph/lgv.md": [
+      "graph/concept.md",
+      "math/linear-algebra/matrix.md",
+      "math/numerical/gauss.md"
+    ],
+    "graph/matrix-tree.md": [
+      "graph/euler.md"
+    ],
+    "graph/max-clique.md": [
+      "graph/concept.md"
+    ],
+    "graph/mdst.md": [
+      "graph/shortest-path.md",
+      "graph/tree-diameter.md"
+    ],
+    "graph/min-cycle.md": [
+      "graph/shortest-path.md"
+    ],
+    "graph/mod-shortest-path.md": [
+      "graph/diff-constraints.md"
+    ],
+    "graph/mst.md": [
+      "basic/greedy.md",
+      "ds/dsu.md",
+      "graph/concept.md",
+      "graph/save.md",
+      "graph/tree-basic.md"
+    ],
+    "graph/node.md": [
+      "graph/flow.md"
+    ],
+    "graph/planar.md": [
+      "graph/flow/min-cut.md",
+      "graph/shortest-path.md"
+    ],
+    "graph/rings-count.md": [
+      "math/order-theory.md"
+    ],
+    "graph/save.md": [
+      "basic/binary.md",
+      "graph/concept.md",
+      "graph/flow.md",
+      "graph/mst.md"
+    ],
+    "graph/scc.md": [
+      "graph/concept.md",
+      "graph/dfs.md"
+    ],
+    "graph/shortest-path.md": [
+      "ds/heap.md",
+      "graph/bfs.md",
+      "graph/concept.md",
+      "graph/min-cycle.md",
+      "graph/node.md"
+    ],
+    "graph/stoer-wagner.md": [
+      "graph/flow/min-cut.md",
+      "graph/shortest-path.md"
+    ],
+    "graph/topo.md": [
+      "graph/dag.md"
+    ],
+    "graph/tree-ahu.md": [
+      "graph/tree-basic.md",
+      "graph/tree-centroid.md",
+      "graph/tree-hash.md"
+    ],
+    "graph/tree-centroid.md": [
+      "graph/hld.md",
+      "graph/tree-divide.md"
+    ],
+    "graph/tree-diameter.md": [
+      "graph/tree-basic.md"
+    ],
+    "graph/tree-divide.md": [
+      "graph/tree-centroid.md"
+    ],
+    "lang/basic.md": [
+      "contest/io.md",
+      "lang/namespace.md",
+      "lang/pointer.md",
+      "lang/var.md"
+    ],
+    "lang/class.md": [
+      "basic/stl-sort.md",
+      "lang/struct.md"
+    ],
+    "lang/const.md": [
+      "contest/dictionary.md",
+      "lang/basic.md"
+    ],
+    "lang/cpp-other-langs.md": [
+      "lang/class.md",
+      "lang/const.md",
+      "lang/op.md",
+      "lang/reference.md",
+      "lang/var.md"
+    ],
+    "lang/csl/algorithm.md": [
+      "basic/stl-sort.md"
+    ],
+    "lang/csl/associative-container.md": [
+      "ds/bst.md",
+      "ds/rbtree.md",
+      "lang/op-overload.md"
+    ],
+    "lang/csl/bitset.md": [
+      "ds/tree-decompose.md",
+      "math/number-theory/mobius.md",
+      "math/number-theory/sieve.md",
+      "misc/mo-algo-with-bitset.md"
+    ],
+    "lang/csl/container-adapter.md": [
+      "ds/binary-heap.md",
+      "ds/heap.md",
+      "ds/queue.md",
+      "ds/stack.md"
+    ],
+    "lang/csl/container.md": [
+      "lang/csl/iterator.md"
+    ],
+    "lang/csl/index.md": [
+      "lang/csl/algorithm.md",
+      "lang/csl/container.md"
+    ],
+    "lang/csl/iterator.md": [
+      "lang/const.md",
+      "lang/csl/algorithm.md",
+      "lang/csl/container.md"
+    ],
+    "lang/csl/pair.md": [
+      "lang/csl/associative-container.md",
+      "lang/csl/iterator.md",
+      "lang/csl/unordered-container.md"
+    ],
+    "lang/csl/sequence-container.md": [
+      "ds/linked-list.md",
+      "ds/queue.md",
+      "lang/csl/bitset.md",
+      "lang/csl/iterator.md"
+    ],
+    "lang/csl/unordered-container.md": [
+      "ds/hash.md",
+      "lang/csl/associative-container.md"
+    ],
+    "lang/helloworld.md": [
+      "lang/cpp-other-langs.md"
+    ],
+    "lang/java-pro.md": [
+      "math/number-theory/prime.md"
+    ],
+    "lang/lambda.md": [
+      "lang/new.md",
+      "lang/reference.md"
+    ],
+    "lang/namespace.md": [
+      "lang/basic.md"
+    ],
+    "lang/new.md": [
+      "lang/const.md",
+      "lang/lambda.md"
+    ],
+    "lang/op.md": [
+      "lang/pointer.md",
+      "lang/reference.md",
+      "lang/var.md",
+      "math/bit.md"
+    ],
+    "lang/pas-cpp.md": [
+      "contest/common-mistakes.md",
+      "contest/common-tricks.md",
+      "contest/resources.md",
+      "lang/array.md",
+      "lang/basic.md",
+      "lang/csl/algorithm.md",
+      "lang/csl/container.md",
+      "lang/csl/sequence-container.md",
+      "lang/csl/string.md",
+      "lang/op.md",
+      "lang/pointer.md",
+      "lang/var.md"
+    ],
+    "lang/pointer.md": [
+      "lang/cpp-other-langs.md",
+      "lang/func.md",
+      "lang/reference.md"
+    ],
+    "lang/python.md": [
+      "lang/csl/associative-container.md",
+      "lang/csl/sequence-container.md",
+      "lang/new.md",
+      "math/binary-exponentiation.md"
+    ],
+    "lang/reference.md": [
+      "lang/value-category.md"
+    ],
+    "lang/struct.md": [
+      "lang/class.md"
+    ],
+    "lang/union.md": [
+      "lang/struct.md"
+    ],
+    "lang/var.md": [
+      "lang/cpp-other-langs.md",
+      "lang/pointer.md",
+      "math/bit.md"
+    ],
+    "math/algebra/basic.md": [
+      "ds/global-bst.md",
+      "ds/seg.md",
+      "math/algebra/field-theory.md",
+      "math/algebra/group-theory.md",
+      "math/algebra/ring-theory.md",
+      "math/combinatorics/polya.md",
+      "math/number-theory/basic.md",
+      "math/number-theory/bezouts.md",
+      "math/number-theory/inverse.md",
+      "math/number-theory/quadratic.md",
+      "math/permutation.md"
+    ],
+    "math/algebra/field-theory.md": [
+      "math/algebra/basic.md",
+      "math/algebra/group-theory.md",
+      "math/algebra/ring-theory.md",
+      "math/combinatorics/fibonacci.md",
+      "math/combinatorics/polya.md",
+      "math/linear-algebra/vector-space.md",
+      "math/number-theory/discrete-logarithm.md",
+      "math/number-theory/euler-totient.md",
+      "math/number-theory/factorial.md",
+      "math/number-theory/linear-equation.md",
+      "math/number-theory/mobius.md",
+      "math/number-theory/quad-residue.md",
+      "math/number-theory/quadratic.md",
+      "math/poly/elementary-func.md",
+      "math/poly/fft.md",
+      "math/poly/fundamental.md",
+      "math/poly/intro.md",
+      "math/poly/ntt.md"
+    ],
+    "math/algebra/group-theory.md": [
+      "math/algebra/basic.md",
+      "math/combinatorics/polya.md",
+      "math/number-theory/euler-totient.md",
+      "math/number-theory/fermat.md",
+      "math/permutation.md"
+    ],
+    "math/algebra/ring-theory.md": [
+      "math/algebra/basic.md",
+      "math/algebra/field-theory.md",
+      "math/algebra/group-theory.md",
+      "math/number-theory/basic.md",
+      "math/number-theory/bezouts.md",
+      "math/number-theory/crt.md",
+      "math/number-theory/euler-totient.md",
+      "math/number-theory/gcd.md",
+      "math/number-theory/pell-equation.md",
+      "math/number-theory/primitive-root.md",
+      "math/number-theory/quadratic.md",
+      "math/numerical/interp.md",
+      "math/order-theory.md",
+      "math/poly/intro.md",
+      "math/poly/lagrange-inversion.md",
+      "math/poly/multipoint-eval-interpolation.md"
+    ],
+    "math/algebra/schreier-sims.md": [
+      "math/algebra/basic.md",
+      "math/algebra/group-theory.md",
+      "math/linear-algebra/basis.md",
+      "math/numerical/gauss.md",
+      "math/permutation.md"
+    ],
+    "math/berlekamp-massey.md": [
+      "math/poly/linear-recurrence.md"
+    ],
+    "math/bignum.md": [
+      "contest/common-tricks.md",
+      "math/numeral-sys/base.md",
+      "math/poly/fft.md",
+      "math/poly/ntt.md"
+    ],
+    "math/binary-exponentiation.md": [
+      "ds/decompose.md",
+      "math/bignum.md",
+      "math/combinatorics/fibonacci.md",
+      "math/linear-algebra/matrix.md",
+      "math/linear-algebra/vector.md",
+      "math/number-theory/fermat.md",
+      "math/number-theory/mod-arithmetic.md",
+      "math/permutation.md"
+    ],
+    "math/binary-set.md": [
+      "math/bit.md"
+    ],
+    "math/bit.md": [
+      "dp/state.md",
+      "ds/fenwick.md",
+      "lang/csl/bitset.md",
+      "lang/op.md",
+      "lang/optimizations.md",
+      "lang/var.md",
+      "math/binary-set.md",
+      "math/boolean-algebra.md",
+      "math/numeral-sys/base.md"
+    ],
+    "math/boolean-algebra.md": [
+      "lang/op.md",
+      "math/algebra/basic.md",
+      "math/number-theory/basic.md",
+      "math/order-theory.md"
+    ],
+    "math/combinatorics/bell.md": [
+      "math/combinatorics/stirling.md",
+      "math/poly/elementary-func.md"
+    ],
+    "math/combinatorics/catalan.md": [
+      "math/poly/intro.md"
+    ],
+    "math/combinatorics/derangement.md": [
+      "math/combinatorics/inclusion-exclusion-principle.md"
+    ],
+    "math/combinatorics/fibonacci.md": [
+      "math/algebra/field-theory.md",
+      "math/algebra/group-theory.md",
+      "math/combinatorics/combination.md",
+      "math/linear-algebra/char-poly.md",
+      "math/number-theory/crt.md",
+      "math/number-theory/discrete-logarithm.md",
+      "math/number-theory/fermat.md",
+      "math/number-theory/lucas.md",
+      "math/number-theory/primitive-root.md",
+      "math/number-theory/quad-residue.md"
+    ],
+    "math/combinatorics/graph-enumeration.md": [
+      "graph/matrix-tree.md",
+      "graph/prufer.md",
+      "math/combinatorics/polya.md",
+      "math/poly/czt.md",
+      "math/poly/egf.md",
+      "math/poly/elementary-func.md",
+      "math/poly/intro.md",
+      "math/poly/symbolic-method.md"
+    ],
+    "math/combinatorics/inclusion-exclusion-principle.md": [
+      "math/order-theory.md"
+    ],
+    "math/combinatorics/polya.md": [
+      "dp/knapsack/basic.md",
+      "math/algebra/basic.md",
+      "math/algebra/group-theory.md",
+      "math/combinatorics/combination.md",
+      "math/combinatorics/graph-enumeration.md",
+      "math/number-theory/euler-totient.md",
+      "math/permutation.md",
+      "math/poly/symbolic-method.md"
+    ],
+    "math/combinatorics/stirling.md": [
+      "math/poly/shift.md"
+    ],
+    "math/complex.md": [
+      "math/linear-algebra/vector.md",
+      "math/number-theory/euler-totient.md",
+      "math/number-theory/residue.md"
+    ],
+    "math/game-theory/impartial-game.md": [
+      "dp/interval.md",
+      "graph/graph-matching/bigraph-match.md",
+      "graph/graph-matching/graph-match.md",
+      "graph/topo.md",
+      "math/algebra/basic.md",
+      "math/algebra/field-theory.md",
+      "math/bit.md",
+      "math/combinatorics/fibonacci.md",
+      "math/game-theory/intro.md",
+      "math/order-theory.md"
+    ],
+    "math/game-theory/intro.md": [
+      "math/game-theory/impartial-game.md",
+      "math/game-theory/partizan-game.md",
+      "math/game-theory/zero-sum-game.md"
+    ],
+    "math/game-theory/zero-sum-game.md": [
+      "math/game-theory/impartial-game.md",
+      "math/game-theory/intro.md",
+      "math/linear-programming.md",
+      "math/simplex.md",
+      "search/alpha-beta.md"
+    ],
+    "math/linear-algebra/basis.md": [
+      "ds/cat-tree.md",
+      "math/linear-algebra/linear-mapping.md",
+      "math/linear-algebra/vector-space.md",
+      "math/numerical/gauss.md"
+    ],
+    "math/linear-algebra/determinant.md": [
+      "math/linear-algebra/elementary-operations.md",
+      "math/numerical/gauss.md",
+      "math/permutation.md"
+    ],
+    "math/linear-algebra/matrix.md": [
+      "math/binary-exponentiation.md",
+      "math/combinatorics/fibonacci.md",
+      "math/numerical/gauss.md"
+    ],
+    "math/linear-algebra/vector-space.md": [
+      "math/algebra/basic.md",
+      "math/linear-algebra/basis.md"
+    ],
+    "math/linear-algebra/vector.md": [
+      "math/coordinate.md",
+      "math/linear-algebra/vector-space.md"
+    ],
+    "math/linear-programming.md": [
+      "geometry/convex-hull.md",
+      "graph/diff-constraints.md",
+      "graph/flow/max-flow.md",
+      "graph/flow/min-cost.md",
+      "graph/flow/min-cut.md",
+      "graph/graph-matching/bigraph-match.md",
+      "graph/graph-matching/bigraph-weight-match.md",
+      "graph/graph-matching/general-weight-match.md",
+      "graph/mst.md",
+      "graph/shortest-path.md",
+      "math/linear-algebra/matrix.md",
+      "math/order-theory.md",
+      "math/simplex.md"
+    ],
+    "math/matroid.md": [
+      "ds/dsu.md",
+      "graph/mst.md"
+    ],
+    "math/number-theory/basic.md": [
+      "math/algebra/group-theory.md",
+      "math/algebra/ring-theory.md",
+      "math/combinatorics/drawer-principle.md",
+      "math/game-theory/impartial-game.md",
+      "math/number-theory/bezouts.md",
+      "math/number-theory/euclidean.md",
+      "math/number-theory/euler-totient.md",
+      "math/number-theory/factorial.md",
+      "math/number-theory/gcd.md",
+      "math/number-theory/inverse.md",
+      "math/number-theory/mod-arithmetic.md",
+      "math/number-theory/prime.md",
+      "math/number-theory/quad-residue.md",
+      "math/number-theory/sqrt-decomposition.md",
+      "math/order-theory.md"
+    ],
+    "math/number-theory/bezouts.md": [
+      "math/number-theory/euclidean.md",
+      "math/number-theory/gcd.md"
+    ],
+    "math/number-theory/congruence-equation.md": [
+      "math/number-theory/crt.md",
+      "math/number-theory/factorial.md",
+      "math/number-theory/fermat.md",
+      "math/number-theory/linear-equation.md",
+      "math/number-theory/quad-residue.md",
+      "math/number-theory/residue.md"
+    ],
+    "math/number-theory/continued-fraction.md": [
+      "ds/bst.md",
+      "ds/cartesian-tree.md",
+      "geometry/pick.md",
+      "math/algebra/basic.md",
+      "math/bignum.md",
+      "math/binary-exponentiation.md",
+      "math/combinatorics/fibonacci.md",
+      "math/linear-algebra/product.md",
+      "math/number-theory/bezouts.md",
+      "math/number-theory/crt.md",
+      "math/number-theory/euclidean.md",
+      "math/number-theory/gcd.md",
+      "math/number-theory/pell-equation.md",
+      "math/number-theory/quadratic.md",
+      "math/number-theory/stern-brocot.md",
+      "string/basic.md"
+    ],
+    "math/number-theory/crt.md": [
+      "math/number-theory/bezouts.md",
+      "math/number-theory/fermat.md",
+      "math/number-theory/gcd.md",
+      "math/number-theory/inverse.md",
+      "math/number-theory/lucas.md"
+    ],
+    "math/number-theory/dirichlet.md": [
+      "math/algebra/basic.md",
+      "math/algebra/group-theory.md",
+      "math/algebra/ring-theory.md",
+      "math/number-theory/basic.md",
+      "math/number-theory/hyperbola.md",
+      "math/number-theory/mobius.md",
+      "math/number-theory/sieve.md"
+    ],
+    "math/number-theory/discrete-logarithm.md": [
+      "math/number-theory/prime.md",
+      "math/number-theory/primitive-root.md"
+    ],
+    "math/number-theory/euclidean.md": [
+      "math/algebra/basic.md",
+      "math/binary-exponentiation.md",
+      "math/number-theory/basic.md",
+      "math/number-theory/continued-fraction.md",
+      "math/number-theory/gcd.md",
+      "math/number-theory/pell-equation.md",
+      "math/number-theory/stern-brocot.md"
+    ],
+    "math/number-theory/euler-totient.md": [
+      "math/number-theory/basic.md",
+      "math/number-theory/fermat.md",
+      "math/number-theory/mobius.md",
+      "math/number-theory/pollard-rho.md",
+      "math/number-theory/sieve.md"
+    ],
+    "math/number-theory/factorial.md": [
+      "math/algebra/ring-theory.md",
+      "math/number-theory/congruence-equation.md",
+      "math/number-theory/crt.md",
+      "math/number-theory/euler-totient.md",
+      "math/number-theory/inverse.md",
+      "math/number-theory/lucas.md",
+      "math/number-theory/primitive-root.md",
+      "math/poly/shift.md"
+    ],
+    "math/number-theory/fermat.md": [
+      "math/algebra/ring-theory.md",
+      "math/binary-exponentiation.md",
+      "math/number-theory/basic.md",
+      "math/number-theory/euler-totient.md",
+      "math/number-theory/prime.md",
+      "math/number-theory/primitive-root.md"
+    ],
+    "math/number-theory/gcd.md": [
+      "math/bignum.md",
+      "math/bit.md",
+      "math/combinatorics/fibonacci.md",
+      "math/number-theory/basic.md"
+    ],
+    "math/number-theory/hyperbola.md": [
+      "basic/complexity.md",
+      "math/binary-exponentiation.md",
+      "math/number-theory/dirichlet.md",
+      "math/number-theory/euler-totient.md",
+      "math/number-theory/mobius.md",
+      "math/number-theory/sqrt-decomposition.md",
+      "math/poly/fft.md"
+    ],
+    "math/number-theory/inverse.md": [
+      "math/binary-exponentiation.md",
+      "math/number-theory/euler-totient.md",
+      "math/number-theory/fermat.md",
+      "math/number-theory/gcd.md",
+      "math/number-theory/linear-equation.md"
+    ],
+    "math/number-theory/linear-equation.md": [
+      "math/number-theory/bezouts.md",
+      "math/number-theory/gcd.md",
+      "math/number-theory/inverse.md"
+    ],
+    "math/number-theory/lucas.md": [
+      "math/combinatorics/combination.md",
+      "math/number-theory/crt.md",
+      "math/number-theory/factorial.md",
+      "math/number-theory/fermat.md",
+      "math/number-theory/inverse.md",
+      "math/number-theory/pollard-rho.md"
+    ],
+    "math/number-theory/mobius.md": [
+      "basic/prefix-sum.md",
+      "math/algebra/basic.md",
+      "math/combinatorics/combination.md",
+      "math/number-theory/basic.md",
+      "math/number-theory/dirichlet.md",
+      "math/number-theory/euler-totient.md",
+      "math/number-theory/fermat.md",
+      "math/number-theory/pollard-rho.md",
+      "math/number-theory/sieve.md",
+      "math/number-theory/sqrt-decomposition.md"
+    ],
+    "math/number-theory/mod-arithmetic.md": [
+      "math/binary-exponentiation.md",
+      "math/combinatorics/combination.md",
+      "math/number-theory/basic.md",
+      "math/number-theory/bezouts.md",
+      "math/number-theory/congruence-equation.md",
+      "math/number-theory/crt.md",
+      "math/number-theory/discrete-logarithm.md",
+      "math/number-theory/factorial.md",
+      "math/number-theory/inverse.md",
+      "math/number-theory/linear-equation.md",
+      "math/number-theory/lucas.md",
+      "math/number-theory/primitive-root.md",
+      "math/number-theory/quad-residue.md",
+      "math/number-theory/residue.md",
+      "math/poly/newton.md"
+    ],
+    "math/number-theory/pell-equation.md": [
+      "math/number-theory/continued-fraction.md",
+      "math/number-theory/quadratic.md"
+    ],
+    "math/number-theory/pollard-rho.md": [
+      "math/number-theory/basic.md",
+      "math/number-theory/prime.md",
+      "math/number-theory/sieve.md"
+    ],
+    "math/number-theory/prime-counting.md": [
+      "math/number-theory/min-25.md",
+      "math/number-theory/quad-residue.md",
+      "math/number-theory/sieve.md",
+      "math/number-theory/sqrt-decomposition.md"
+    ],
+    "math/number-theory/prime.md": [
+      "math/number-theory/basic.md",
+      "math/number-theory/congruence-equation.md",
+      "math/number-theory/crt.md",
+      "math/number-theory/euler-totient.md",
+      "math/number-theory/fermat.md",
+      "math/number-theory/primitive-root.md",
+      "math/number-theory/residue.md"
+    ],
+    "math/number-theory/primitive-root.md": [
+      "math/algebra/group-theory.md",
+      "math/algebra/ring-theory.md",
+      "math/number-theory/basic.md",
+      "math/number-theory/congruence-equation.md",
+      "math/number-theory/crt.md",
+      "math/number-theory/discrete-logarithm.md",
+      "math/number-theory/euler-totient.md",
+      "math/number-theory/fermat.md",
+      "math/number-theory/pollard-rho.md",
+      "math/number-theory/prime.md"
+    ],
+    "math/number-theory/quad-residue.md": [
+      "math/algebra/field-theory.md",
+      "math/algebra/ring-theory.md",
+      "math/number-theory/basic.md",
+      "math/number-theory/congruence-equation.md",
+      "math/number-theory/fermat.md",
+      "math/number-theory/gcd.md",
+      "math/number-theory/residue.md",
+      "math/poly/intro.md",
+      "math/poly/linear-recurrence.md"
+    ],
+    "math/number-theory/quadratic.md": [
+      "math/algebra/basic.md",
+      "math/algebra/field-theory.md",
+      "math/algebra/group-theory.md",
+      "math/algebra/ring-theory.md",
+      "math/number-theory/basic.md",
+      "math/number-theory/pell-equation.md",
+      "math/number-theory/quad-residue.md",
+      "math/order-theory.md"
+    ],
+    "math/number-theory/residue.md": [
+      "math/algebra/field-theory.md",
+      "math/algebra/group-theory.md",
+      "math/complex.md",
+      "math/number-theory/congruence-equation.md",
+      "math/number-theory/crt.md",
+      "math/number-theory/discrete-logarithm.md",
+      "math/number-theory/euler-totient.md",
+      "math/number-theory/fermat.md",
+      "math/number-theory/linear-equation.md",
+      "math/number-theory/pollard-rho.md",
+      "math/number-theory/primitive-root.md",
+      "math/number-theory/quad-residue.md",
+      "math/poly/fft.md",
+      "math/poly/ntt.md"
+    ],
+    "math/number-theory/sieve.md": [
+      "lang/csl/bitset.md",
+      "math/bit.md",
+      "math/number-theory/basic.md"
+    ],
+    "math/number-theory/sqrt-decomposition.md": [
+      "math/number-theory/basic.md",
+      "math/number-theory/hyperbola.md",
+      "math/number-theory/mobius.md"
+    ],
+    "math/number-theory/stern-brocot.md": [
+      "ds/binary-heap.md",
+      "ds/bst.md",
+      "ds/cartesian-tree.md",
+      "ds/seg.md",
+      "graph/bfs.md",
+      "math/linear-algebra/determinant.md",
+      "math/number-theory/bezouts.md",
+      "math/number-theory/continued-fraction.md",
+      "math/number-theory/euclidean.md",
+      "math/number-theory/euler-totient.md",
+      "math/number-theory/hyperbola.md",
+      "math/number-theory/linear-equation.md",
+      "math/number-theory/mobius.md",
+      "math/number-theory/sieve.md"
+    ],
+    "math/number-theory/zhou.md": [
+      "math/number-theory/basic.md"
+    ],
+    "math/numeral-sys/base.md": [
+      "math/bit.md",
+      "math/numeral-sys/balanced-ternary.md",
+      "math/numeral-sys/gray-code.md",
+      "math/permutation.md"
+    ],
+    "math/numeral-sys/intro.md": [
+      "math/numeral-sys/base.md"
+    ],
+    "math/numerical/interp.md": [
+      "math/poly/multipoint-eval-interpolation.md"
+    ],
+    "math/order-theory.md": [
+      "basic/stl-sort.md",
+      "dp/basic.md",
+      "graph/dag.md",
+      "graph/graph-matching/graph-match.md",
+      "graph/topo.md"
+    ],
+    "math/permutation.md": [
+      "basic/bubble-sort.md",
+      "basic/merge-sort.md",
+      "dp/number.md",
+      "ds/fenwick.md",
+      "ds/seg.md",
+      "math/binary-exponentiation.md",
+      "math/combinatorics/combination.md",
+      "math/combinatorics/partition.md",
+      "math/combinatorics/polya.md",
+      "math/combinatorics/stirling.md",
+      "math/linear-algebra/determinant.md",
+      "math/numeral-sys/base.md",
+      "math/order-theory.md",
+      "string/basic.md"
+    ],
+    "math/poly/comp-rev.md": [
+      "math/poly/elementary-func.md",
+      "math/poly/lagrange-inversion.md",
+      "math/poly/linear-recurrence.md"
+    ],
+    "math/poly/czt.md": [
+      "math/numerical/interp.md",
+      "math/poly/multipoint-eval-interpolation.md"
+    ],
+    "math/poly/elementary-func.md": [
+      "math/complex.md",
+      "math/poly/intro.md",
+      "math/poly/newton.md"
+    ],
+    "math/poly/fft.md": [
+      "math/complex.md"
+    ],
+    "math/poly/intro.md": [
+      "math/algebra/basic.md",
+      "math/number-theory/bezouts.md",
+      "math/number-theory/dirichlet.md",
+      "math/number-theory/gcd.md",
+      "math/poly/comp-rev.md",
+      "math/poly/elementary-func.md",
+      "math/poly/fft.md"
+    ],
+    "math/poly/newton.md": [
+      "math/algebra/ring-theory.md",
+      "math/poly/elementary-func.md"
+    ],
+    "math/poly/ntt.md": [
+      "math/algebra/basic.md",
+      "math/number-theory/primitive-root.md",
+      "math/poly/fft.md"
+    ],
+    "math/poly/ogf.md": [
+      "math/combinatorics/catalan.md"
+    ],
+    "math/poly/shift.md": [
+      "math/linear-algebra/jordan.md",
+      "math/numerical/interp.md"
+    ],
+    "math/probability/concentration-inequality.md": [
+      "misc/rand-technique.md"
+    ],
+    "math/simplex.md": [
+      "math/linear-algebra/elementary-operations.md",
+      "math/linear-programming.md"
+    ],
+    "math/young-tableau.md": [
+      "math/combinatorics/partition.md",
+      "math/order-theory.md"
+    ],
+    "misc/15-puzzle.md": [
+      "geometry/distance.md",
+      "search/astar.md",
+      "search/heuristic.md"
+    ],
+    "misc/cc-basic.md": [
+      "basic/complexity.md"
+    ],
+    "misc/cdq-divide.md": [
+      "basic/prefix-sum.md",
+      "dp/index.md",
+      "dp/opt/dp-opt.md",
+      "ds/fenwick.md",
+      "misc/discrete.md",
+      "misc/odt.md",
+      "misc/offline.md"
+    ],
+    "misc/discrete.md": [
+      "lang/csl/algorithm.md",
+      "lang/csl/sequence-container.md",
+      "math/order-theory.md",
+      "string/hash.md"
+    ],
+    "misc/expression.md": [
+      "ds/stack.md",
+      "graph/tree-basic.md"
+    ],
+    "misc/fsm.md": [
+      "dp/dp-of-dp.md",
+      "misc/cc-basic.md",
+      "string/ac-automaton.md",
+      "string/general-sam.md",
+      "string/kmp.md",
+      "string/pam.md",
+      "string/sam.md",
+      "string/seq-automaton.md",
+      "string/trie.md"
+    ],
+    "misc/garsia-wachs.md": [
+      "ds/finger-tree.md"
+    ],
+    "misc/hill-climbing.md": [
+      "misc/simulated-annealing.md"
+    ],
+    "misc/mo-algo-2dimen.md": [
+      "misc/mo-algo.md"
+    ],
+    "misc/mo-algo.md": [
+      "contest/common-mistakes.md"
+    ],
+    "misc/modifiable-mo-algo.md": [
+      "misc/mo-algo.md"
+    ],
+    "misc/offline.md": [
+      "basic/insertion-sort.md",
+      "basic/selection-sort.md",
+      "contest/problems.md",
+      "misc/cdq-divide.md",
+      "misc/mo-algo-intro.md",
+      "misc/parallel-binsearch.md"
+    ],
+    "misc/parallel-binsearch.md": [
+      "misc/cdq-divide.md"
+    ],
+    "misc/rand-technique.md": [
+      "geometry/random-incremental.md",
+      "math/probability/basic-conception.md",
+      "math/probability/concentration-inequality.md",
+      "misc/random.md",
+      "misc/simulated-annealing.md"
+    ],
+    "misc/random.md": [
+      "math/number-theory/primitive-root.md"
+    ],
+    "misc/simulated-annealing.md": [
+      "misc/hill-climbing.md"
+    ],
+    "misc/space-optimization.md": [
+      "dp/knapsack/basic.md",
+      "ds/dsu.md",
+      "ds/persistent-seg.md",
+      "graph/save.md",
+      "lang/csl/bitset.md"
+    ],
+    "search/astar.md": [
+      "graph/kth-path.md",
+      "graph/shortest-path.md",
+      "search/bfs.md"
+    ],
+    "search/backtracking.md": [
+      "search/bfs.md",
+      "search/dfs.md"
+    ],
+    "search/bfs.md": [
+      "graph/bfs.md"
+    ],
+    "search/bidirectional.md": [
+      "basic/binary.md",
+      "search/bfs.md",
+      "search/dfs.md"
+    ],
+    "search/dfs.md": [
+      "graph/dfs.md"
+    ],
+    "search/dlx.md": [
+      "search/astar.md"
+    ],
+    "search/idastar.md": [
+      "search/astar.md",
+      "search/iterative.md"
+    ],
+    "search/opt.md": [
+      "dp/memo.md"
+    ],
+    "string/ac-automaton.md": [
+      "string/kmp.md",
+      "string/trie.md"
+    ],
+    "string/basic.md": [
+      "lang/csl/string.md",
+      "math/order-theory.md"
+    ],
+    "string/bm.md": [
+      "string/kmp.md"
+    ],
+    "string/general-sam.md": [
+      "string/basic.md",
+      "string/sam.md",
+      "string/trie.md"
+    ],
+    "string/hash.md": [
+      "ds/hash.md",
+      "string/kmp.md",
+      "string/manacher.md"
+    ],
+    "string/kmp.md": [
+      "string/basic.md"
+    ],
+    "string/lib-func.md": [
+      "lang/csl/string.md"
+    ],
+    "string/main-lorentz.md": [
+      "basic/complexity.md",
+      "string/z-func.md"
+    ],
+    "string/manacher.md": [
+      "string/z-func.md"
+    ],
+    "string/match.md": [
+      "string/hash.md",
+      "string/kmp.md"
+    ],
+    "string/sa.md": [
+      "basic/counting-sort.md",
+      "basic/radix-sort.md",
+      "ds/monotonic-stack.md",
+      "misc/hoverline.md",
+      "string/basic.md",
+      "topic/rmq.md"
+    ],
+    "string/sam.md": [
+      "misc/fsm.md",
+      "string/ac-automaton.md",
+      "string/suffix-tree.md",
+      "string/trie.md"
+    ],
+    "string/seq-automaton.md": [
+      "misc/fsm.md"
+    ],
+    "string/trie.md": [
+      "ds/persistent-trie.md",
+      "graph/lca.md",
+      "string/ac-automaton.md"
+    ],
+    "string/z-func.md": [
+      "string/kmp.md"
+    ],
+    "topic/rmq.md": [
+      "ds/cartesian-tree.md",
+      "ds/monotonic-stack.md",
+      "ds/seg.md",
+      "ds/sparse-table.md",
+      "graph/lca.md"
+    ]
+  },
+  "referenced_by": {
+    "basic/amortized-analysis.md": [
+      "basic/complexity.md"
+    ],
+    "basic/binary-lifting.md": [
+      "contest/roadmap.md",
+      "dp/opt/dp-opt.md",
+      "ds/sparse-table.md"
+    ],
+    "basic/binary.md": [
+      "basic/use-of-sort.md",
+      "contest/roadmap.md",
+      "dp/opt/wqs-binary-search.md",
+      "graph/save.md",
+      "search/bidirectional.md"
+    ],
+    "basic/bubble-sort.md": [
+      "contest/roadmap.md",
+      "math/permutation.md"
+    ],
+    "basic/bucket-sort.md": [
+      "basic/enumerate.md",
+      "basic/radix-sort.md",
+      "contest/roadmap.md"
+    ],
+    "basic/complexity.md": [
+      "basic/amortized-analysis.md",
+      "basic/binary-lifting.md",
+      "basic/sort-intro.md",
+      "ds/sparse-table.md",
+      "graph/concept.md",
+      "math/number-theory/hyperbola.md",
+      "misc/cc-basic.md",
+      "string/main-lorentz.md"
+    ],
+    "basic/construction.md": [
+      "contest/roadmap.md"
+    ],
+    "basic/counting-sort.md": [
+      "basic/radix-sort.md",
+      "basic/sort-intro.md",
+      "contest/roadmap.md",
+      "string/sa.md"
+    ],
+    "basic/divide-and-conquer.md": [
+      "basic/quick-sort.md",
+      "contest/roadmap.md"
+    ],
+    "basic/enumerate.md": [
+      "contest/roadmap.md"
+    ],
+    "basic/greedy.md": [
+      "dp/opt/slope-trick.md",
+      "dp/opt/wqs-binary-search.md",
+      "graph/mst.md"
+    ],
+    "basic/heap-sort.md": [
+      "basic/quick-sort.md",
+      "basic/tournament-sort.md",
+      "contest/roadmap.md"
+    ],
+    "basic/insertion-sort.md": [
+      "basic/shell-sort.md",
+      "contest/roadmap.md",
+      "misc/offline.md"
+    ],
+    "basic/merge-sort.md": [
+      "basic/divide-and-conquer.md",
+      "contest/roadmap.md",
+      "ds/fenwick.md",
+      "math/permutation.md"
+    ],
+    "basic/prefix-sum.md": [
+      "basic/counting-sort.md",
+      "dp/opt/dp-opt.md",
+      "ds/fenwick.md",
+      "math/number-theory/mobius.md",
+      "misc/cdq-divide.md"
+    ],
+    "basic/quick-sort.md": [
+      "basic/stl-sort.md",
+      "contest/roadmap.md"
+    ],
+    "basic/radix-sort.md": [
+      "basic/counting-sort.md",
+      "contest/roadmap.md",
+      "string/sa.md"
+    ],
+    "basic/selection-sort.md": [
+      "basic/tournament-sort.md",
+      "contest/roadmap.md",
+      "misc/offline.md"
+    ],
+    "basic/simulate.md": [
+      "contest/roadmap.md"
+    ],
+    "basic/sort-intro.md": [
+      "contest/roadmap.md"
+    ],
+    "basic/stl-sort.md": [
+      "basic/binary.md",
+      "contest/roadmap.md",
+      "lang/class.md",
+      "lang/csl/algorithm.md",
+      "math/order-theory.md"
+    ],
+    "contest/common-mistakes.md": [
+      "lang/pas-cpp.md",
+      "misc/mo-algo.md"
+    ],
+    "contest/common-tricks.md": [
+      "lang/pas-cpp.md",
+      "math/bignum.md"
+    ],
+    "contest/dictionary.md": [
+      "lang/const.md"
+    ],
+    "contest/icpc.md": [
+      "contest/oi.md"
+    ],
+    "contest/interaction.md": [
+      "contest/problems.md"
+    ],
+    "contest/io.md": [
+      "contest/problemsetting.md",
+      "lang/basic.md"
+    ],
+    "contest/problems.md": [
+      "contest/interaction.md",
+      "misc/offline.md"
+    ],
+    "contest/problemsetting.md": [
+      "contest/common-mistakes.md"
+    ],
+    "contest/resources.md": [
+      "dp/plug.md",
+      "lang/pas-cpp.md"
+    ],
+    "dp/basic.md": [
+      "basic/divide-and-conquer.md",
+      "contest/roadmap.md",
+      "math/order-theory.md"
+    ],
+    "dp/dag.md": [
+      "dp/basic.md",
+      "dp/dp-of-dp.md",
+      "graph/dag.md"
+    ],
+    "dp/dp-of-dp.md": [
+      "dp/opt/dp-opt.md",
+      "misc/fsm.md"
+    ],
+    "dp/index.md": [
+      "contest/roadmap.md",
+      "dp/knapsack/basic.md",
+      "misc/cdq-divide.md"
+    ],
+    "dp/interval.md": [
+      "contest/roadmap.md",
+      "math/game-theory/impartial-game.md"
+    ],
+    "dp/knapsack/basic.md": [
+      "contest/roadmap.md",
+      "dp/opt/monotonic-queue-stack.md",
+      "dp/tree.md",
+      "math/combinatorics/polya.md",
+      "misc/space-optimization.md"
+    ],
+    "dp/memo.md": [
+      "basic/divide-and-conquer.md",
+      "contest/roadmap.md",
+      "dp/dag.md",
+      "dp/number.md",
+      "search/opt.md"
+    ],
+    "dp/number.md": [
+      "math/permutation.md"
+    ],
+    "dp/opt/dp-opt.md": [
+      "misc/cdq-divide.md"
+    ],
+    "dp/opt/monotonic-queue-stack.md": [
+      "dp/knapsack/basic.md",
+      "dp/opt/dp-opt.md"
+    ],
+    "dp/opt/quadrangle.md": [
+      "dp/opt/dp-opt.md",
+      "dp/opt/wqs-binary-search.md"
+    ],
+    "dp/opt/slope-trick.md": [
+      "dp/opt/dp-opt.md",
+      "dp/opt/wqs-binary-search.md"
+    ],
+    "dp/opt/slope.md": [
+      "dp/opt/dp-opt.md"
+    ],
+    "dp/opt/state.md": [
+      "dp/opt/dp-opt.md"
+    ],
+    "dp/opt/wqs-binary-search.md": [
+      "dp/opt/dp-opt.md",
+      "dp/opt/quadrangle.md"
+    ],
+    "dp/state.md": [
+      "dp/dp-of-dp.md",
+      "dp/plug.md",
+      "dp/probability.md",
+      "math/bit.md"
+    ],
+    "dp/tree.md": [
+      "dp/knapsack/advanced.md"
+    ],
+    "ds/avl.md": [
+      "ds/bst.md"
+    ],
+    "ds/balanced-in-seg.md": [
+      "ds/seg-in-bit.md",
+      "ds/seg.md"
+    ],
+    "ds/binary-heap.md": [
+      "basic/heap-sort.md",
+      "dp/opt/slope-trick.md",
+      "lang/csl/container-adapter.md",
+      "math/number-theory/stern-brocot.md"
+    ],
+    "ds/bst.md": [
+      "dp/opt/slope-trick.md",
+      "ds/rbtree.md",
+      "ds/seg.md",
+      "ds/treap.md",
+      "lang/csl/associative-container.md",
+      "math/number-theory/continued-fraction.md",
+      "math/number-theory/stern-brocot.md"
+    ],
+    "ds/cartesian-tree.md": [
+      "ds/treap.md",
+      "math/number-theory/continued-fraction.md",
+      "math/number-theory/stern-brocot.md",
+      "topic/rmq.md"
+    ],
+    "ds/cat-tree.md": [
+      "ds/seg.md",
+      "math/linear-algebra/basis.md"
+    ],
+    "ds/decompose.md": [
+      "contest/dictionary.md",
+      "math/binary-exponentiation.md"
+    ],
+    "ds/dsu-complexity.md": [
+      "ds/dsu.md"
+    ],
+    "ds/dsu.md": [
+      "graph/dmst.md",
+      "graph/lca.md",
+      "graph/mst.md",
+      "math/matroid.md",
+      "misc/space-optimization.md"
+    ],
+    "ds/fenwick.md": [
+      "basic/merge-sort.md",
+      "basic/prefix-sum.md",
+      "dp/opt/dp-opt.md",
+      "math/bit.md",
+      "math/permutation.md",
+      "misc/cdq-divide.md"
+    ],
+    "ds/finger-tree.md": [
+      "misc/garsia-wachs.md"
+    ],
+    "ds/global-bst.md": [
+      "math/algebra/basic.md"
+    ],
+    "ds/hash.md": [
+      "geometry/nearest-points.md",
+      "lang/csl/unordered-container.md",
+      "string/hash.md"
+    ],
+    "ds/heap.md": [
+      "dp/opt/slope-trick.md",
+      "ds/queue.md",
+      "ds/treap.md",
+      "graph/shortest-path.md",
+      "lang/csl/container-adapter.md"
+    ],
+    "ds/kdt.md": [
+      "basic/stl-sort.md"
+    ],
+    "ds/lct.md": [
+      "graph/lca.md"
+    ],
+    "ds/leftist-tree.md": [
+      "ds/persistent-heap.md",
+      "graph/dmst.md"
+    ],
+    "ds/li-chao-tree.md": [
+      "ds/seg.md"
+    ],
+    "ds/linked-list.md": [
+      "contest/roadmap.md",
+      "lang/csl/sequence-container.md"
+    ],
+    "ds/monotonic-queue.md": [
+      "dp/opt/monotonic-queue-stack.md"
+    ],
+    "ds/monotonic-stack.md": [
+      "dp/opt/monotonic-queue-stack.md",
+      "string/sa.md",
+      "topic/rmq.md"
+    ],
+    "ds/pairing-heap.md": [
+      "ds/leftist-tree.md"
+    ],
+    "ds/persistent-heap.md": [
+      "graph/kth-path.md"
+    ],
+    "ds/persistent-seg.md": [
+      "ds/dividing.md",
+      "ds/dsu.md",
+      "ds/seg-in-bit.md",
+      "ds/seg.md",
+      "misc/space-optimization.md"
+    ],
+    "ds/persistent-trie.md": [
+      "string/trie.md"
+    ],
+    "ds/persistent.md": [
+      "ds/persistent-seg.md"
+    ],
+    "ds/queue.md": [
+      "contest/roadmap.md",
+      "graph/dfs.md",
+      "lang/csl/container-adapter.md",
+      "lang/csl/sequence-container.md"
+    ],
+    "ds/rbtree.md": [
+      "ds/llrbt.md",
+      "lang/csl/associative-container.md"
+    ],
+    "ds/sbt.md": [
+      "ds/bst.md"
+    ],
+    "ds/seg-beats.md": [
+      "ds/seg.md"
+    ],
+    "ds/seg-in-balanced.md": [
+      "ds/seg.md"
+    ],
+    "ds/seg-in-bit.md": [
+      "ds/seg.md"
+    ],
+    "ds/seg-in-seg.md": [
+      "ds/seg.md"
+    ],
+    "ds/seg.md": [
+      "dp/opt/dp-opt.md",
+      "ds/kinetic-tournament-tree.md",
+      "math/algebra/basic.md",
+      "math/number-theory/stern-brocot.md",
+      "math/permutation.md",
+      "topic/rmq.md"
+    ],
+    "ds/sgt.md": [
+      "ds/wblt.md"
+    ],
+    "ds/sparse-table.md": [
+      "basic/binary-lifting.md",
+      "topic/rmq.md"
+    ],
+    "ds/splay.md": [
+      "ds/balanced-in-seg.md",
+      "ds/bst.md",
+      "ds/lct.md"
+    ],
+    "ds/stack.md": [
+      "contest/roadmap.md",
+      "ds/queue.md",
+      "graph/dfs.md",
+      "lang/csl/container-adapter.md",
+      "misc/expression.md"
+    ],
+    "ds/treap.md": [
+      "ds/persistent-balanced.md",
+      "ds/splay.md",
+      "ds/wblt.md"
+    ],
+    "ds/tree-decompose.md": [
+      "lang/csl/bitset.md"
+    ],
+    "ds/wblt.md": [
+      "ds/persistent-balanced.md"
+    ],
+    "geometry/2d.md": [
+      "geometry/3d.md",
+      "geometry/smallest-enclosing-circle.md"
+    ],
+    "geometry/convex-hull.md": [
+      "dp/opt/slope-trick.md",
+      "math/linear-programming.md"
+    ],
+    "geometry/distance.md": [
+      "ds/kdt.md",
+      "misc/15-puzzle.md"
+    ],
+    "geometry/half-plane.md": [
+      "geometry/smallest-enclosing-circle.md"
+    ],
+    "geometry/pick.md": [
+      "geometry/convex-hull.md",
+      "math/number-theory/continued-fraction.md"
+    ],
+    "geometry/random-incremental.md": [
+      "geometry/smallest-enclosing-circle.md",
+      "misc/rand-technique.md"
+    ],
+    "geometry/scanning.md": [
+      "ds/seg.md"
+    ],
+    "geometry/smallest-enclosing-circle.md": [
+      "geometry/random-incremental.md"
+    ],
+    "graph/bcc.md": [
+      "graph/concept.md",
+      "graph/cut.md"
+    ],
+    "graph/bfs.md": [
+      "graph/bi-graph.md",
+      "graph/graph-matching/bigraph-match.md",
+      "graph/shortest-path.md",
+      "math/number-theory/stern-brocot.md",
+      "search/bfs.md"
+    ],
+    "graph/bi-graph.md": [
+      "graph/concept.md",
+      "graph/graph-matching/bigraph-match.md",
+      "graph/graph-matching/graph-match.md"
+    ],
+    "graph/color.md": [
+      "graph/bi-graph.md"
+    ],
+    "graph/concept.md": [
+      "basic/complexity.md",
+      "contest/roadmap.md",
+      "graph/bcc.md",
+      "graph/block-forest.md",
+      "graph/connectivity.md",
+      "graph/cut.md",
+      "graph/kth-path.md",
+      "graph/lgv.md",
+      "graph/max-clique.md",
+      "graph/mst.md",
+      "graph/save.md",
+      "graph/scc.md",
+      "graph/shortest-path.md"
+    ],
+    "graph/cut.md": [
+      "graph/bcc.md",
+      "graph/block-forest.md",
+      "graph/concept.md"
+    ],
+    "graph/dag.md": [
+      "dp/basic.md",
+      "dp/dag.md",
+      "graph/topo.md",
+      "math/order-theory.md"
+    ],
+    "graph/dfs.md": [
+      "basic/complexity.md",
+      "graph/bi-graph.md",
+      "graph/graph-matching/bigraph-match.md",
+      "graph/scc.md",
+      "search/dfs.md"
+    ],
+    "graph/diff-constraints.md": [
+      "graph/mod-shortest-path.md",
+      "math/linear-programming.md"
+    ],
+    "graph/dsu-on-tree.md": [
+      "dp/opt/slope-trick.md"
+    ],
+    "graph/euler.md": [
+      "graph/matrix-tree.md"
+    ],
+    "graph/flow.md": [
+      "graph/flow/max-flow.md",
+      "graph/flow/min-cost.md",
+      "graph/node.md",
+      "graph/save.md"
+    ],
+    "graph/flow/max-flow.md": [
+      "graph/flow/bound.md",
+      "graph/flow/min-cut.md",
+      "graph/graph-matching/bigraph-match.md",
+      "math/linear-programming.md"
+    ],
+    "graph/flow/min-cost.md": [
+      "dp/opt/wqs-binary-search.md",
+      "graph/graph-matching/bigraph-weight-match.md",
+      "math/linear-programming.md"
+    ],
+    "graph/flow/min-cut.md": [
+      "graph/connectivity.md",
+      "graph/planar.md",
+      "graph/stoer-wagner.md",
+      "math/linear-programming.md"
+    ],
+    "graph/graph-matching/bigraph-match.md": [
+      "graph/bi-graph.md",
+      "graph/graph-matching/bigraph-weight-match.md",
+      "graph/graph-matching/graph-match.md",
+      "math/game-theory/impartial-game.md",
+      "math/linear-programming.md"
+    ],
+    "graph/graph-matching/bigraph-weight-match.md": [
+      "graph/bi-graph.md",
+      "graph/graph-matching/bigraph-match.md",
+      "graph/graph-matching/graph-match.md",
+      "math/linear-programming.md"
+    ],
+    "graph/graph-matching/general-match.md": [
+      "graph/graph-matching/graph-match.md"
+    ],
+    "graph/graph-matching/general-weight-match.md": [
+      "graph/graph-matching/graph-match.md",
+      "math/linear-programming.md"
+    ],
+    "graph/graph-matching/graph-match.md": [
+      "graph/bi-graph.md",
+      "graph/graph-matching/bigraph-match.md",
+      "math/game-theory/impartial-game.md",
+      "math/order-theory.md"
+    ],
+    "graph/hld.md": [
+      "dp/dynamic.md",
+      "ds/global-bst.md",
+      "ds/lct.md",
+      "graph/tree-centroid.md"
+    ],
+    "graph/kth-path.md": [
+      "search/astar.md"
+    ],
+    "graph/lca.md": [
+      "basic/binary-lifting.md",
+      "basic/prefix-sum.md",
+      "ds/dsu.md",
+      "graph/hld.md",
+      "string/trie.md",
+      "topic/rmq.md"
+    ],
+    "graph/matrix-tree.md": [
+      "math/combinatorics/graph-enumeration.md"
+    ],
+    "graph/min-cycle.md": [
+      "graph/shortest-path.md"
+    ],
+    "graph/mst.md": [
+      "dp/opt/wqs-binary-search.md",
+      "ds/dsu.md",
+      "graph/save.md",
+      "math/linear-programming.md",
+      "math/matroid.md"
+    ],
+    "graph/node.md": [
+      "graph/shortest-path.md"
+    ],
+    "graph/prufer.md": [
+      "contest/problemsetting.md",
+      "math/combinatorics/graph-enumeration.md"
+    ],
+    "graph/save.md": [
+      "contest/roadmap.md",
+      "graph/bfs.md",
+      "graph/dfs.md",
+      "graph/mst.md",
+      "misc/space-optimization.md"
+    ],
+    "graph/scc.md": [
+      "graph/2-sat.md",
+      "graph/bcc.md",
+      "graph/concept.md",
+      "graph/dfs.md",
+      "graph/graph-matching/bigraph-match.md"
+    ],
+    "graph/shortest-path.md": [
+      "graph/bfs.md",
+      "graph/dag.md",
+      "graph/flow/min-cost.md",
+      "graph/kth-path.md",
+      "graph/mdst.md",
+      "graph/min-cycle.md",
+      "graph/planar.md",
+      "graph/stoer-wagner.md",
+      "math/linear-programming.md",
+      "search/astar.md"
+    ],
+    "graph/stoer-wagner.md": [
+      "graph/connectivity.md"
+    ],
+    "graph/topo.md": [
+      "graph/dag.md",
+      "math/game-theory/impartial-game.md",
+      "math/order-theory.md"
+    ],
+    "graph/tree-basic.md": [
+      "contest/roadmap.md",
+      "graph/concept.md",
+      "graph/mst.md",
+      "graph/tree-ahu.md",
+      "graph/tree-diameter.md",
+      "misc/expression.md"
+    ],
+    "graph/tree-centroid.md": [
+      "graph/tree-ahu.md",
+      "graph/tree-divide.md"
+    ],
+    "graph/tree-diameter.md": [
+      "graph/mdst.md"
+    ],
+    "graph/tree-divide.md": [
+      "graph/tree-centroid.md"
+    ],
+    "graph/tree-hash.md": [
+      "graph/tree-ahu.md"
+    ],
+    "lang/array.md": [
+      "contest/roadmap.md",
+      "lang/pas-cpp.md"
+    ],
+    "lang/basic.md": [
+      "contest/roadmap.md",
+      "lang/const.md",
+      "lang/namespace.md",
+      "lang/pas-cpp.md"
+    ],
+    "lang/branch.md": [
+      "contest/roadmap.md"
+    ],
+    "lang/class.md": [
+      "lang/cpp-other-langs.md",
+      "lang/struct.md"
+    ],
+    "lang/const.md": [
+      "lang/cpp-other-langs.md",
+      "lang/csl/iterator.md",
+      "lang/new.md"
+    ],
+    "lang/cpp-other-langs.md": [
+      "lang/helloworld.md",
+      "lang/pointer.md",
+      "lang/var.md"
+    ],
+    "lang/csl/algorithm.md": [
+      "lang/csl/index.md",
+      "lang/csl/iterator.md",
+      "lang/pas-cpp.md",
+      "misc/discrete.md"
+    ],
+    "lang/csl/associative-container.md": [
+      "lang/csl/pair.md",
+      "lang/csl/unordered-container.md",
+      "lang/python.md"
+    ],
+    "lang/csl/bitset.md": [
+      "lang/csl/sequence-container.md",
+      "math/bit.md",
+      "math/number-theory/sieve.md",
+      "misc/space-optimization.md"
+    ],
+    "lang/csl/container-adapter.md": [
+      "ds/heap.md",
+      "graph/bfs.md"
+    ],
+    "lang/csl/container.md": [
+      "basic/binary.md",
+      "lang/csl/index.md",
+      "lang/csl/iterator.md",
+      "lang/pas-cpp.md"
+    ],
+    "lang/csl/iterator.md": [
+      "basic/binary.md",
+      "lang/csl/container.md",
+      "lang/csl/pair.md",
+      "lang/csl/sequence-container.md"
+    ],
+    "lang/csl/sequence-container.md": [
+      "graph/bfs.md",
+      "lang/pas-cpp.md",
+      "lang/python.md",
+      "misc/discrete.md"
+    ],
+    "lang/csl/string.md": [
+      "lang/pas-cpp.md",
+      "string/basic.md",
+      "string/lib-func.md"
+    ],
+    "lang/csl/unordered-container.md": [
+      "lang/csl/pair.md"
+    ],
+    "lang/func.md": [
+      "contest/roadmap.md",
+      "lang/pointer.md"
+    ],
+    "lang/helloworld.md": [
+      "contest/roadmap.md"
+    ],
+    "lang/lambda.md": [
+      "lang/new.md"
+    ],
+    "lang/loop.md": [
+      "contest/roadmap.md"
+    ],
+    "lang/namespace.md": [
+      "lang/basic.md"
+    ],
+    "lang/new.md": [
+      "lang/lambda.md",
+      "lang/python.md"
+    ],
+    "lang/op-overload.md": [
+      "lang/csl/associative-container.md"
+    ],
+    "lang/op.md": [
+      "basic/binary.md",
+      "contest/common-mistakes.md",
+      "contest/roadmap.md",
+      "lang/cpp-other-langs.md",
+      "lang/pas-cpp.md",
+      "math/bit.md",
+      "math/boolean-algebra.md"
+    ],
+    "lang/optimizations.md": [
+      "basic/binary.md",
+      "contest/common-tricks.md",
+      "math/bit.md"
+    ],
+    "lang/pb-ds/tree.md": [
+      "ds/rbtree.md"
+    ],
+    "lang/pointer.md": [
+      "lang/basic.md",
+      "lang/op.md",
+      "lang/pas-cpp.md",
+      "lang/var.md"
+    ],
+    "lang/reference.md": [
+      "lang/cpp-other-langs.md",
+      "lang/lambda.md",
+      "lang/op.md",
+      "lang/pointer.md"
+    ],
+    "lang/struct.md": [
+      "contest/roadmap.md",
+      "lang/class.md",
+      "lang/union.md"
+    ],
+    "lang/value-category.md": [
+      "lang/reference.md"
+    ],
+    "lang/var.md": [
+      "contest/roadmap.md",
+      "lang/basic.md",
+      "lang/cpp-other-langs.md",
+      "lang/op.md",
+      "lang/pas-cpp.md",
+      "math/bit.md"
+    ],
+    "math/algebra/basic.md": [
+      "dp/opt/dp-opt.md",
+      "ds/seg.md",
+      "math/algebra/field-theory.md",
+      "math/algebra/group-theory.md",
+      "math/algebra/ring-theory.md",
+      "math/algebra/schreier-sims.md",
+      "math/boolean-algebra.md",
+      "math/combinatorics/polya.md",
+      "math/game-theory/impartial-game.md",
+      "math/linear-algebra/vector-space.md",
+      "math/number-theory/continued-fraction.md",
+      "math/number-theory/dirichlet.md",
+      "math/number-theory/euclidean.md",
+      "math/number-theory/mobius.md",
+      "math/number-theory/quadratic.md",
+      "math/poly/intro.md",
+      "math/poly/ntt.md"
+    ],
+    "math/algebra/field-theory.md": [
+      "math/algebra/basic.md",
+      "math/algebra/ring-theory.md",
+      "math/combinatorics/fibonacci.md",
+      "math/game-theory/impartial-game.md",
+      "math/number-theory/quad-residue.md",
+      "math/number-theory/quadratic.md",
+      "math/number-theory/residue.md"
+    ],
+    "math/algebra/group-theory.md": [
+      "ds/seg.md",
+      "math/algebra/basic.md",
+      "math/algebra/field-theory.md",
+      "math/algebra/ring-theory.md",
+      "math/algebra/schreier-sims.md",
+      "math/combinatorics/fibonacci.md",
+      "math/combinatorics/polya.md",
+      "math/number-theory/basic.md",
+      "math/number-theory/dirichlet.md",
+      "math/number-theory/primitive-root.md",
+      "math/number-theory/quadratic.md",
+      "math/number-theory/residue.md"
+    ],
+    "math/algebra/ring-theory.md": [
+      "math/algebra/basic.md",
+      "math/algebra/field-theory.md",
+      "math/number-theory/basic.md",
+      "math/number-theory/dirichlet.md",
+      "math/number-theory/factorial.md",
+      "math/number-theory/fermat.md",
+      "math/number-theory/primitive-root.md",
+      "math/number-theory/quad-residue.md",
+      "math/number-theory/quadratic.md",
+      "math/poly/newton.md"
+    ],
+    "math/bignum.md": [
+      "contest/roadmap.md",
+      "math/binary-exponentiation.md",
+      "math/number-theory/continued-fraction.md",
+      "math/number-theory/gcd.md"
+    ],
+    "math/binary-exponentiation.md": [
+      "dp/opt/dp-opt.md",
+      "lang/python.md",
+      "math/linear-algebra/matrix.md",
+      "math/number-theory/continued-fraction.md",
+      "math/number-theory/euclidean.md",
+      "math/number-theory/fermat.md",
+      "math/number-theory/hyperbola.md",
+      "math/number-theory/inverse.md",
+      "math/number-theory/mod-arithmetic.md",
+      "math/permutation.md"
+    ],
+    "math/binary-set.md": [
+      "dp/state.md",
+      "math/bit.md"
+    ],
+    "math/bit.md": [
+      "contest/roadmap.md",
+      "dp/state.md",
+      "lang/op.md",
+      "lang/var.md",
+      "math/binary-set.md",
+      "math/game-theory/impartial-game.md",
+      "math/number-theory/gcd.md",
+      "math/number-theory/sieve.md",
+      "math/numeral-sys/base.md"
+    ],
+    "math/boolean-algebra.md": [
+      "math/bit.md"
+    ],
+    "math/combinatorics/catalan.md": [
+      "math/poly/ogf.md"
+    ],
+    "math/combinatorics/combination.md": [
+      "contest/roadmap.md",
+      "math/combinatorics/fibonacci.md",
+      "math/combinatorics/polya.md",
+      "math/number-theory/lucas.md",
+      "math/number-theory/mobius.md",
+      "math/number-theory/mod-arithmetic.md",
+      "math/permutation.md"
+    ],
+    "math/combinatorics/drawer-principle.md": [
+      "contest/roadmap.md",
+      "graph/concept.md",
+      "math/number-theory/basic.md"
+    ],
+    "math/combinatorics/fibonacci.md": [
+      "contest/problemsetting.md",
+      "math/algebra/field-theory.md",
+      "math/binary-exponentiation.md",
+      "math/game-theory/impartial-game.md",
+      "math/linear-algebra/matrix.md",
+      "math/number-theory/continued-fraction.md",
+      "math/number-theory/gcd.md"
+    ],
+    "math/combinatorics/graph-enumeration.md": [
+      "math/combinatorics/polya.md"
+    ],
+    "math/combinatorics/inclusion-exclusion-principle.md": [
+      "basic/prefix-sum.md",
+      "contest/roadmap.md",
+      "math/combinatorics/derangement.md"
+    ],
+    "math/combinatorics/partition.md": [
+      "math/permutation.md",
+      "math/young-tableau.md"
+    ],
+    "math/combinatorics/polya.md": [
+      "math/algebra/basic.md",
+      "math/algebra/field-theory.md",
+      "math/algebra/group-theory.md",
+      "math/combinatorics/graph-enumeration.md",
+      "math/permutation.md"
+    ],
+    "math/combinatorics/stirling.md": [
+      "math/combinatorics/bell.md",
+      "math/permutation.md"
+    ],
+    "math/complex.md": [
+      "math/number-theory/residue.md",
+      "math/poly/elementary-func.md",
+      "math/poly/fft.md"
+    ],
+    "math/coordinate.md": [
+      "geometry/2d.md",
+      "math/linear-algebra/vector.md"
+    ],
+    "math/game-theory/impartial-game.md": [
+      "graph/bi-graph.md",
+      "math/game-theory/intro.md",
+      "math/game-theory/zero-sum-game.md",
+      "math/number-theory/basic.md"
+    ],
+    "math/game-theory/intro.md": [
+      "math/game-theory/impartial-game.md",
+      "math/game-theory/zero-sum-game.md"
+    ],
+    "math/game-theory/partizan-game.md": [
+      "math/game-theory/intro.md"
+    ],
+    "math/game-theory/zero-sum-game.md": [
+      "math/game-theory/intro.md"
+    ],
+    "math/linear-algebra/basis.md": [
+      "ds/cat-tree.md",
+      "math/algebra/schreier-sims.md",
+      "math/linear-algebra/vector-space.md"
+    ],
+    "math/linear-algebra/char-poly.md": [
+      "math/combinatorics/fibonacci.md"
+    ],
+    "math/linear-algebra/determinant.md": [
+      "graph/graph-matching/general-match.md",
+      "math/number-theory/stern-brocot.md",
+      "math/permutation.md"
+    ],
+    "math/linear-algebra/elementary-operations.md": [
+      "math/linear-algebra/determinant.md",
+      "math/simplex.md"
+    ],
+    "math/linear-algebra/jordan.md": [
+      "math/poly/shift.md"
+    ],
+    "math/linear-algebra/linear-mapping.md": [
+      "math/linear-algebra/basis.md"
+    ],
+    "math/linear-algebra/matrix.md": [
+      "dp/dynamic.md",
+      "graph/graph-matching/general-match.md",
+      "graph/lgv.md",
+      "math/binary-exponentiation.md",
+      "math/linear-programming.md"
+    ],
+    "math/linear-algebra/product.md": [
+      "math/number-theory/continued-fraction.md"
+    ],
+    "math/linear-algebra/vector-space.md": [
+      "math/algebra/field-theory.md",
+      "math/linear-algebra/basis.md",
+      "math/linear-algebra/vector.md"
+    ],
+    "math/linear-algebra/vector.md": [
+      "geometry/2d.md",
+      "math/binary-exponentiation.md",
+      "math/complex.md"
+    ],
+    "math/linear-programming.md": [
+      "dp/opt/wqs-binary-search.md",
+      "geometry/smallest-enclosing-circle.md",
+      "math/game-theory/zero-sum-game.md",
+      "math/simplex.md"
+    ],
+    "math/matroid.md": [
+      "dp/opt/wqs-binary-search.md"
+    ],
+    "math/number-theory/basic.md": [
+      "contest/roadmap.md",
+      "math/algebra/basic.md",
+      "math/algebra/ring-theory.md",
+      "math/boolean-algebra.md",
+      "math/number-theory/dirichlet.md",
+      "math/number-theory/euclidean.md",
+      "math/number-theory/euler-totient.md",
+      "math/number-theory/fermat.md",
+      "math/number-theory/gcd.md",
+      "math/number-theory/mobius.md",
+      "math/number-theory/mod-arithmetic.md",
+      "math/number-theory/pollard-rho.md",
+      "math/number-theory/prime.md",
+      "math/number-theory/primitive-root.md",
+      "math/number-theory/quad-residue.md",
+      "math/number-theory/quadratic.md",
+      "math/number-theory/sieve.md",
+      "math/number-theory/sqrt-decomposition.md",
+      "math/number-theory/zhou.md"
+    ],
+    "math/number-theory/bezouts.md": [
+      "math/algebra/basic.md",
+      "math/algebra/ring-theory.md",
+      "math/number-theory/basic.md",
+      "math/number-theory/continued-fraction.md",
+      "math/number-theory/crt.md",
+      "math/number-theory/linear-equation.md",
+      "math/number-theory/mod-arithmetic.md",
+      "math/number-theory/stern-brocot.md",
+      "math/poly/intro.md"
+    ],
+    "math/number-theory/congruence-equation.md": [
+      "math/number-theory/factorial.md",
+      "math/number-theory/mod-arithmetic.md",
+      "math/number-theory/prime.md",
+      "math/number-theory/primitive-root.md",
+      "math/number-theory/quad-residue.md",
+      "math/number-theory/residue.md"
+    ],
+    "math/number-theory/continued-fraction.md": [
+      "math/number-theory/euclidean.md",
+      "math/number-theory/pell-equation.md",
+      "math/number-theory/stern-brocot.md"
+    ],
+    "math/number-theory/crt.md": [
+      "math/algebra/ring-theory.md",
+      "math/combinatorics/fibonacci.md",
+      "math/number-theory/congruence-equation.md",
+      "math/number-theory/continued-fraction.md",
+      "math/number-theory/factorial.md",
+      "math/number-theory/lucas.md",
+      "math/number-theory/mod-arithmetic.md",
+      "math/number-theory/prime.md",
+      "math/number-theory/primitive-root.md",
+      "math/number-theory/residue.md"
+    ],
+    "math/number-theory/dirichlet.md": [
+      "math/number-theory/hyperbola.md",
+      "math/number-theory/mobius.md",
+      "math/poly/intro.md"
+    ],
+    "math/number-theory/discrete-logarithm.md": [
+      "math/algebra/field-theory.md",
+      "math/combinatorics/fibonacci.md",
+      "math/number-theory/mod-arithmetic.md",
+      "math/number-theory/primitive-root.md",
+      "math/number-theory/residue.md"
+    ],
+    "math/number-theory/euclidean.md": [
+      "math/number-theory/basic.md",
+      "math/number-theory/bezouts.md",
+      "math/number-theory/continued-fraction.md",
+      "math/number-theory/stern-brocot.md"
+    ],
+    "math/number-theory/euler-totient.md": [
+      "contest/roadmap.md",
+      "math/algebra/field-theory.md",
+      "math/algebra/group-theory.md",
+      "math/algebra/ring-theory.md",
+      "math/combinatorics/polya.md",
+      "math/complex.md",
+      "math/number-theory/basic.md",
+      "math/number-theory/factorial.md",
+      "math/number-theory/fermat.md",
+      "math/number-theory/hyperbola.md",
+      "math/number-theory/inverse.md",
+      "math/number-theory/mobius.md",
+      "math/number-theory/prime.md",
+      "math/number-theory/primitive-root.md",
+      "math/number-theory/residue.md",
+      "math/number-theory/stern-brocot.md"
+    ],
+    "math/number-theory/factorial.md": [
+      "math/algebra/field-theory.md",
+      "math/number-theory/basic.md",
+      "math/number-theory/congruence-equation.md",
+      "math/number-theory/lucas.md",
+      "math/number-theory/mod-arithmetic.md"
+    ],
+    "math/number-theory/fermat.md": [
+      "math/algebra/group-theory.md",
+      "math/binary-exponentiation.md",
+      "math/combinatorics/fibonacci.md",
+      "math/number-theory/congruence-equation.md",
+      "math/number-theory/crt.md",
+      "math/number-theory/euler-totient.md",
+      "math/number-theory/inverse.md",
+      "math/number-theory/lucas.md",
+      "math/number-theory/mobius.md",
+      "math/number-theory/prime.md",
+      "math/number-theory/primitive-root.md",
+      "math/number-theory/quad-residue.md",
+      "math/number-theory/residue.md"
+    ],
+    "math/number-theory/gcd.md": [
+      "contest/roadmap.md",
+      "math/algebra/ring-theory.md",
+      "math/number-theory/basic.md",
+      "math/number-theory/bezouts.md",
+      "math/number-theory/continued-fraction.md",
+      "math/number-theory/crt.md",
+      "math/number-theory/euclidean.md",
+      "math/number-theory/inverse.md",
+      "math/number-theory/linear-equation.md",
+      "math/number-theory/quad-residue.md",
+      "math/poly/intro.md"
+    ],
+    "math/number-theory/hyperbola.md": [
+      "math/number-theory/dirichlet.md",
+      "math/number-theory/sqrt-decomposition.md",
+      "math/number-theory/stern-brocot.md"
+    ],
+    "math/number-theory/inverse.md": [
+      "basic/construction.md",
+      "math/algebra/basic.md",
+      "math/number-theory/basic.md",
+      "math/number-theory/crt.md",
+      "math/number-theory/factorial.md",
+      "math/number-theory/linear-equation.md",
+      "math/number-theory/lucas.md",
+      "math/number-theory/mod-arithmetic.md"
+    ],
+    "math/number-theory/linear-equation.md": [
+      "math/algebra/field-theory.md",
+      "math/number-theory/congruence-equation.md",
+      "math/number-theory/inverse.md",
+      "math/number-theory/mod-arithmetic.md",
+      "math/number-theory/residue.md",
+      "math/number-theory/stern-brocot.md"
+    ],
+    "math/number-theory/lucas.md": [
+      "math/combinatorics/fibonacci.md",
+      "math/number-theory/crt.md",
+      "math/number-theory/factorial.md",
+      "math/number-theory/mod-arithmetic.md"
+    ],
+    "math/number-theory/min-25.md": [
+      "math/number-theory/prime-counting.md"
+    ],
+    "math/number-theory/mobius.md": [
+      "lang/csl/bitset.md",
+      "math/algebra/field-theory.md",
+      "math/number-theory/dirichlet.md",
+      "math/number-theory/euler-totient.md",
+      "math/number-theory/hyperbola.md",
+      "math/number-theory/sqrt-decomposition.md",
+      "math/number-theory/stern-brocot.md"
+    ],
+    "math/number-theory/mod-arithmetic.md": [
+      "math/binary-exponentiation.md",
+      "math/number-theory/basic.md"
+    ],
+    "math/number-theory/pell-equation.md": [
+      "math/algebra/ring-theory.md",
+      "math/number-theory/continued-fraction.md",
+      "math/number-theory/euclidean.md",
+      "math/number-theory/quadratic.md"
+    ],
+    "math/number-theory/pollard-rho.md": [
+      "contest/roadmap.md",
+      "math/number-theory/euler-totient.md",
+      "math/number-theory/lucas.md",
+      "math/number-theory/mobius.md",
+      "math/number-theory/primitive-root.md",
+      "math/number-theory/residue.md"
+    ],
+    "math/number-theory/prime.md": [
+      "contest/roadmap.md",
+      "lang/java-pro.md",
+      "math/number-theory/basic.md",
+      "math/number-theory/discrete-logarithm.md",
+      "math/number-theory/fermat.md",
+      "math/number-theory/pollard-rho.md",
+      "math/number-theory/primitive-root.md"
+    ],
+    "math/number-theory/primitive-root.md": [
+      "math/algebra/ring-theory.md",
+      "math/combinatorics/fibonacci.md",
+      "math/number-theory/discrete-logarithm.md",
+      "math/number-theory/factorial.md",
+      "math/number-theory/fermat.md",
+      "math/number-theory/mod-arithmetic.md",
+      "math/number-theory/prime.md",
+      "math/number-theory/residue.md",
+      "math/poly/ntt.md",
+      "misc/random.md"
+    ],
+    "math/number-theory/quad-residue.md": [
+      "math/algebra/field-theory.md",
+      "math/combinatorics/fibonacci.md",
+      "math/number-theory/basic.md",
+      "math/number-theory/congruence-equation.md",
+      "math/number-theory/mod-arithmetic.md",
+      "math/number-theory/prime-counting.md",
+      "math/number-theory/quadratic.md",
+      "math/number-theory/residue.md"
+    ],
+    "math/number-theory/quadratic.md": [
+      "math/algebra/basic.md",
+      "math/algebra/field-theory.md",
+      "math/algebra/ring-theory.md",
+      "math/number-theory/continued-fraction.md",
+      "math/number-theory/pell-equation.md"
+    ],
+    "math/number-theory/residue.md": [
+      "math/complex.md",
+      "math/number-theory/congruence-equation.md",
+      "math/number-theory/mod-arithmetic.md",
+      "math/number-theory/prime.md",
+      "math/number-theory/quad-residue.md"
+    ],
+    "math/number-theory/sieve.md": [
+      "contest/roadmap.md",
+      "lang/csl/bitset.md",
+      "math/number-theory/dirichlet.md",
+      "math/number-theory/euler-totient.md",
+      "math/number-theory/mobius.md",
+      "math/number-theory/pollard-rho.md",
+      "math/number-theory/prime-counting.md",
+      "math/number-theory/stern-brocot.md"
+    ],
+    "math/number-theory/sqrt-decomposition.md": [
+      "math/number-theory/basic.md",
+      "math/number-theory/hyperbola.md",
+      "math/number-theory/mobius.md",
+      "math/number-theory/prime-counting.md"
+    ],
+    "math/number-theory/stern-brocot.md": [
+      "math/number-theory/continued-fraction.md",
+      "math/number-theory/euclidean.md"
+    ],
+    "math/numeral-sys/balanced-ternary.md": [
+      "math/numeral-sys/base.md"
+    ],
+    "math/numeral-sys/base.md": [
+      "contest/roadmap.md",
+      "math/bignum.md",
+      "math/bit.md",
+      "math/numeral-sys/intro.md",
+      "math/permutation.md"
+    ],
+    "math/numeral-sys/gray-code.md": [
+      "math/numeral-sys/base.md"
+    ],
+    "math/numerical/gauss.md": [
+      "dp/probability.md",
+      "graph/graph-matching/general-match.md",
+      "graph/lgv.md",
+      "math/algebra/schreier-sims.md",
+      "math/linear-algebra/basis.md",
+      "math/linear-algebra/determinant.md",
+      "math/linear-algebra/matrix.md"
+    ],
+    "math/numerical/interp.md": [
+      "dp/opt/dp-opt.md",
+      "math/algebra/ring-theory.md",
+      "math/poly/czt.md",
+      "math/poly/shift.md"
+    ],
+    "math/order-theory.md": [
+      "basic/stl-sort.md",
+      "graph/graph-matching/bigraph-match.md",
+      "graph/graph-matching/stable-match.md",
+      "graph/rings-count.md",
+      "math/algebra/ring-theory.md",
+      "math/boolean-algebra.md",
+      "math/combinatorics/inclusion-exclusion-principle.md",
+      "math/game-theory/impartial-game.md",
+      "math/linear-programming.md",
+      "math/number-theory/basic.md",
+      "math/number-theory/quadratic.md",
+      "math/permutation.md",
+      "math/young-tableau.md",
+      "misc/discrete.md",
+      "string/basic.md"
+    ],
+    "math/permutation.md": [
+      "basic/merge-sort.md",
+      "ds/fenwick.md",
+      "math/algebra/basic.md",
+      "math/algebra/group-theory.md",
+      "math/algebra/schreier-sims.md",
+      "math/binary-exponentiation.md",
+      "math/combinatorics/polya.md",
+      "math/linear-algebra/determinant.md",
+      "math/numeral-sys/base.md"
+    ],
+    "math/poly/comp-rev.md": [
+      "math/poly/intro.md"
+    ],
+    "math/poly/czt.md": [
+      "math/combinatorics/graph-enumeration.md"
+    ],
+    "math/poly/egf.md": [
+      "math/combinatorics/graph-enumeration.md"
+    ],
+    "math/poly/elementary-func.md": [
+      "math/algebra/field-theory.md",
+      "math/combinatorics/bell.md",
+      "math/combinatorics/graph-enumeration.md",
+      "math/poly/comp-rev.md",
+      "math/poly/intro.md",
+      "math/poly/newton.md"
+    ],
+    "math/poly/fft.md": [
+      "dp/opt/dp-opt.md",
+      "math/algebra/field-theory.md",
+      "math/bignum.md",
+      "math/number-theory/hyperbola.md",
+      "math/number-theory/residue.md",
+      "math/poly/intro.md",
+      "math/poly/ntt.md"
+    ],
+    "math/poly/fundamental.md": [
+      "math/algebra/field-theory.md"
+    ],
+    "math/poly/intro.md": [
+      "math/algebra/field-theory.md",
+      "math/algebra/ring-theory.md",
+      "math/combinatorics/catalan.md",
+      "math/combinatorics/graph-enumeration.md",
+      "math/number-theory/quad-residue.md",
+      "math/poly/elementary-func.md"
+    ],
+    "math/poly/lagrange-inversion.md": [
+      "math/algebra/ring-theory.md",
+      "math/poly/comp-rev.md"
+    ],
+    "math/poly/linear-recurrence.md": [
+      "math/berlekamp-massey.md",
+      "math/number-theory/quad-residue.md",
+      "math/poly/comp-rev.md"
+    ],
+    "math/poly/multipoint-eval-interpolation.md": [
+      "math/algebra/ring-theory.md",
+      "math/numerical/interp.md",
+      "math/poly/czt.md"
+    ],
+    "math/poly/newton.md": [
+      "math/number-theory/mod-arithmetic.md",
+      "math/poly/elementary-func.md"
+    ],
+    "math/poly/ntt.md": [
+      "math/algebra/field-theory.md",
+      "math/bignum.md",
+      "math/number-theory/residue.md"
+    ],
+    "math/poly/shift.md": [
+      "math/combinatorics/stirling.md",
+      "math/number-theory/factorial.md"
+    ],
+    "math/poly/symbolic-method.md": [
+      "math/combinatorics/graph-enumeration.md",
+      "math/combinatorics/polya.md"
+    ],
+    "math/probability/basic-conception.md": [
+      "misc/rand-technique.md"
+    ],
+    "math/probability/concentration-inequality.md": [
+      "misc/rand-technique.md"
+    ],
+    "math/probability/exp-var.md": [
+      "dp/probability.md"
+    ],
+    "math/simplex.md": [
+      "math/game-theory/zero-sum-game.md",
+      "math/linear-programming.md"
+    ],
+    "misc/cc-basic.md": [
+      "basic/complexity.md",
+      "graph/concept.md",
+      "graph/flow/min-cost.md",
+      "misc/fsm.md"
+    ],
+    "misc/cdq-divide.md": [
+      "dp/opt/dp-opt.md",
+      "dp/opt/slope.md",
+      "ds/balanced-in-seg.md",
+      "misc/offline.md",
+      "misc/parallel-binsearch.md"
+    ],
+    "misc/discrete.md": [
+      "ds/fenwick.md",
+      "ds/seg.md",
+      "geometry/scanning.md",
+      "misc/cdq-divide.md"
+    ],
+    "misc/frac-programming.md": [
+      "basic/binary.md"
+    ],
+    "misc/fsm.md": [
+      "dp/dp-of-dp.md",
+      "dp/opt/dp-opt.md",
+      "string/sam.md",
+      "string/seq-automaton.md"
+    ],
+    "misc/hill-climbing.md": [
+      "misc/simulated-annealing.md"
+    ],
+    "misc/hoverline.md": [
+      "string/sa.md"
+    ],
+    "misc/main-element.md": [
+      "basic/enumerate.md"
+    ],
+    "misc/mo-algo-intro.md": [
+      "misc/offline.md"
+    ],
+    "misc/mo-algo-on-tree.md": [
+      "ds/tree-decompose.md"
+    ],
+    "misc/mo-algo-with-bitset.md": [
+      "lang/csl/bitset.md"
+    ],
+    "misc/mo-algo.md": [
+      "dp/opt/quadrangle.md",
+      "ds/decompose.md",
+      "misc/mo-algo-2dimen.md",
+      "misc/modifiable-mo-algo.md"
+    ],
+    "misc/odt.md": [
+      "misc/cdq-divide.md"
+    ],
+    "misc/offline.md": [
+      "misc/cdq-divide.md"
+    ],
+    "misc/parallel-binsearch.md": [
+      "ds/balanced-in-seg.md",
+      "misc/offline.md"
+    ],
+    "misc/rand-technique.md": [
+      "math/probability/concentration-inequality.md"
+    ],
+    "misc/random.md": [
+      "contest/problemsetting.md",
+      "geometry/nearest-points.md",
+      "misc/rand-technique.md"
+    ],
+    "misc/simulated-annealing.md": [
+      "misc/hill-climbing.md",
+      "misc/rand-technique.md"
+    ],
+    "search/alpha-beta.md": [
+      "math/game-theory/zero-sum-game.md"
+    ],
+    "search/astar.md": [
+      "graph/kth-path.md",
+      "misc/15-puzzle.md",
+      "search/dlx.md",
+      "search/idastar.md"
+    ],
+    "search/bfs.md": [
+      "contest/roadmap.md",
+      "search/astar.md",
+      "search/backtracking.md",
+      "search/bidirectional.md"
+    ],
+    "search/dfs.md": [
+      "contest/roadmap.md",
+      "dp/memo.md",
+      "graph/dag.md",
+      "graph/dfs.md",
+      "search/backtracking.md",
+      "search/bidirectional.md"
+    ],
+    "search/heuristic.md": [
+      "misc/15-puzzle.md"
+    ],
+    "search/iterative.md": [
+      "search/idastar.md"
+    ],
+    "search/opt.md": [
+      "basic/divide-and-conquer.md",
+      "contest/roadmap.md"
+    ],
+    "string/ac-automaton.md": [
+      "misc/fsm.md",
+      "string/sam.md",
+      "string/trie.md"
+    ],
+    "string/basic.md": [
+      "contest/roadmap.md",
+      "dp/basic.md",
+      "math/number-theory/continued-fraction.md",
+      "math/permutation.md",
+      "string/general-sam.md",
+      "string/kmp.md",
+      "string/sa.md"
+    ],
+    "string/general-sam.md": [
+      "misc/fsm.md"
+    ],
+    "string/hash.md": [
+      "misc/discrete.md",
+      "string/match.md"
+    ],
+    "string/kmp.md": [
+      "misc/fsm.md",
+      "string/ac-automaton.md",
+      "string/bm.md",
+      "string/hash.md",
+      "string/match.md",
+      "string/z-func.md"
+    ],
+    "string/lib-func.md": [
+      "contest/roadmap.md"
+    ],
+    "string/manacher.md": [
+      "string/hash.md"
+    ],
+    "string/pam.md": [
+      "misc/fsm.md"
+    ],
+    "string/sam.md": [
+      "misc/fsm.md",
+      "string/general-sam.md"
+    ],
+    "string/seq-automaton.md": [
+      "misc/fsm.md"
+    ],
+    "string/suffix-tree.md": [
+      "string/sam.md"
+    ],
+    "string/trie.md": [
+      "ds/persistent-trie.md",
+      "misc/fsm.md",
+      "string/ac-automaton.md",
+      "string/general-sam.md",
+      "string/sam.md"
+    ],
+    "string/z-func.md": [
+      "string/main-lorentz.md",
+      "string/manacher.md"
+    ],
+    "topic/dsu-app.md": [
+      "ds/dsu.md"
+    ],
+    "topic/rmq.md": [
+      "basic/binary-lifting.md",
+      "ds/sparse-table.md",
+      "graph/lca.md",
+      "string/sa.md"
+    ]
+  },
+  "unresolved_sample": [
+    {
+      "from": "contest/common-tricks.md",
+      "name": "数据生成器",
+      "target": "tools/testlib/generator.md"
+    },
+    {
+      "from": "contest/problems.md",
+      "name": "Special Judge",
+      "target": "tools/special-judge.md"
+    },
+    {
+      "from": "contest/problemsetting.md",
+      "name": "LaTeX 入门",
+      "target": "tools/latex.md"
+    },
+    {
+      "from": "contest/problemsetting.md",
+      "name": "LaTeX 公式的格式要求",
+      "target": "intro/format.md"
+    },
+    {
+      "from": "contest/problemsetting.md",
+      "name": "testlib",
+      "target": "tools/testlib/generator.md"
+    },
+    {
+      "from": "contest/problemsetting.md",
+      "name": "SPJ 编写教程",
+      "target": "tools/special-judge.md"
+    },
+    {
+      "from": "contest/problemsetting.md",
+      "name": "Polygon 简介",
+      "target": "tools/polygon.md"
+    },
+    {
+      "from": "contest/problemsetting.md",
+      "name": "Polygon 简介",
+      "target": "tools/polygon.md"
+    },
+    {
+      "from": "lang/helloworld.md",
+      "name": "Dev-C++",
+      "target": "tools/editor/devcpp.md"
+    },
+    {
+      "from": "lang/java.md",
+      "name": "JDK",
+      "target": "tools/compiler.md"
+    },
+    {
+      "from": "lang/pas-cpp.md",
+      "name": "Dev-C++",
+      "target": "tools/editor/devcpp.md"
+    },
+    {
+      "from": "lang/pas-cpp.md",
+      "name": "Code::Blocks",
+      "target": "tools/editor/codeblocks.md"
+    },
+    {
+      "from": "lang/pas-cpp.md",
+      "name": "VS Code",
+      "target": "tools/editor/vscode.md"
+    },
+    {
+      "from": "lang/python.md",
+      "name": "Python 3",
+      "target": "tools/compiler.md"
+    },
+    {
+      "from": "math/algebra/basic.md",
+      "name": "OI Wiki 不是百科全书",
+      "target": "intro/what-oi-wiki-is-not.md"
+    }
+  ]
+}

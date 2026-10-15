@@ -31,8 +31,11 @@
               "verified": true,
               "exists": true,
               "order_in_section": 1,
-              "references": [],
-              "global_order": 1
+              "references": [
+                "lang/cpp-other-langs.md"
+              ],
+              "global_order": 1,
+              "prerequisites": []
             },
             {
               "id": "lang_basic",
@@ -43,8 +46,14 @@
               "verified": true,
               "exists": true,
               "order_in_section": 2,
-              "references": [],
-              "global_order": 2
+              "references": [
+                "lang/var.md",
+                "lang/namespace.md",
+                "contest/io.md",
+                "lang/pointer.md"
+              ],
+              "global_order": 2,
+              "prerequisites": []
             }
           ]
         },
@@ -63,8 +72,13 @@
               "verified": true,
               "exists": true,
               "order_in_section": 1,
-              "references": [],
-              "global_order": 3
+              "references": [
+                "lang/cpp-other-langs.md",
+                "lang/pointer.md",
+                "math/bit.md"
+              ],
+              "global_order": 3,
+              "prerequisites": []
             },
             {
               "id": "lang_op",
@@ -75,8 +89,14 @@
               "verified": true,
               "exists": true,
               "order_in_section": 2,
-              "references": [],
-              "global_order": 4
+              "references": [
+                "lang/var.md",
+                "math/bit.md",
+                "lang/reference.md",
+                "lang/pointer.md"
+              ],
+              "global_order": 4,
+              "prerequisites": []
             }
           ]
         },
@@ -154,8 +174,11 @@
               "verified": true,
               "exists": true,
               "order_in_section": 2,
-              "references": [],
-              "global_order": 8
+              "references": [
+                "lang/class.md"
+              ],
+              "global_order": 8,
+              "prerequisites": []
             }
           ]
         },
@@ -186,8 +209,14 @@
               "verified": true,
               "exists": true,
               "order_in_section": 2,
-              "references": [],
-              "global_order": 10
+              "references": [
+                "basic/merge-sort.md",
+                "search/opt.md",
+                "dp/memo.md",
+                "dp/basic.md"
+              ],
+              "global_order": 10,
+              "prerequisites": []
             }
           ]
         }
@@ -215,8 +244,12 @@
               "verified": true,
               "exists": true,
               "order_in_section": 1,
-              "references": [],
-              "global_order": 11
+              "references": [
+                "basic/bucket-sort.md",
+                "misc/main-element.md"
+              ],
+              "global_order": 11,
+              "prerequisites": []
             },
             {
               "id": "basic_simulate",
@@ -247,8 +280,14 @@
               "verified": true,
               "exists": true,
               "order_in_section": 1,
-              "references": [],
-              "global_order": 13
+              "references": [
+                "basic/merge-sort.md",
+                "search/opt.md",
+                "dp/memo.md",
+                "dp/basic.md"
+              ],
+              "global_order": 13,
+              "prerequisites": []
             }
           ]
         },
@@ -267,8 +306,12 @@
               "verified": true,
               "exists": true,
               "order_in_section": 1,
-              "references": [],
-              "global_order": 14
+              "references": [
+                "math/order-theory.md",
+                "lang/csl/string.md"
+              ],
+              "global_order": 14,
+              "prerequisites": []
             },
             {
               "id": "string_lib_func",
@@ -279,8 +322,11 @@
               "verified": true,
               "exists": true,
               "order_in_section": 2,
-              "references": [],
-              "global_order": 15
+              "references": [
+                "lang/csl/string.md"
+              ],
+              "global_order": 15,
+              "prerequisites": []
             }
           ]
         },
@@ -299,8 +345,12 @@
               "verified": true,
               "exists": true,
               "order_in_section": 1,
-              "references": [],
-              "global_order": 16
+              "references": [
+                "basic/complexity.md",
+                "basic/counting-sort.md"
+              ],
+              "global_order": 16,
+              "prerequisites": []
             },
             {
               "id": "basic_selection_sort",
@@ -347,8 +397,12 @@
               "verified": true,
               "exists": true,
               "order_in_section": 5,
-              "references": [],
-              "global_order": 20
+              "references": [
+                "basic/prefix-sum.md",
+                "basic/radix-sort.md"
+              ],
+              "global_order": 20,
+              "prerequisites": []
             },
             {
               "id": "basic_radix_sort",
@@ -359,8 +413,12 @@
               "verified": true,
               "exists": true,
               "order_in_section": 6,
-              "references": [],
-              "global_order": 21
+              "references": [
+                "basic/counting-sort.md",
+                "basic/bucket-sort.md"
+              ],
+              "global_order": 21,
+              "prerequisites": []
             },
             {
               "id": "basic_quick_sort",
@@ -371,8 +429,12 @@
               "verified": true,
               "exists": true,
               "order_in_section": 7,
-              "references": [],
-              "global_order": 22
+              "references": [
+                "basic/divide-and-conquer.md",
+                "basic/heap-sort.md"
+              ],
+              "global_order": 22,
+              "prerequisites": []
             },
             {
               "id": "basic_merge_sort",
@@ -383,8 +445,12 @@
               "verified": true,
               "exists": true,
               "order_in_section": 8,
-              "references": [],
-              "global_order": 23
+              "references": [
+                "math/permutation.md",
+                "ds/fenwick.md"
+              ],
+              "global_order": 23,
+              "prerequisites": []
             },
             {
               "id": "basic_heap_sort",
@@ -395,8 +461,11 @@
               "verified": true,
               "exists": true,
               "order_in_section": 9,
-              "references": [],
-              "global_order": 24
+              "references": [
+                "ds/binary-heap.md"
+              ],
+              "global_order": 24,
+              "prerequisites": []
             },
             {
               "id": "basic_bucket_sort",
@@ -419,8 +488,13 @@
               "verified": true,
               "exists": true,
               "order_in_section": 11,
-              "references": [],
-              "global_order": 26
+              "references": [
+                "basic/quick-sort.md",
+                "ds/kdt.md",
+                "math/order-theory.md"
+              ],
+              "global_order": 26,
+              "prerequisites": []
             }
           ]
         },
@@ -439,8 +513,16 @@
               "verified": true,
               "exists": true,
               "order_in_section": 1,
-              "references": [],
-              "global_order": 27
+              "references": [
+                "lang/optimizations.md",
+                "lang/op.md",
+                "basic/stl-sort.md",
+                "lang/csl/iterator.md",
+                "lang/csl/container.md",
+                "misc/frac-programming.md"
+              ],
+              "global_order": 27,
+              "prerequisites": []
             },
             {
               "id": "basic_binary_lifting",
@@ -451,8 +533,14 @@
               "verified": true,
               "exists": true,
               "order_in_section": 2,
-              "references": [],
-              "global_order": 28
+              "references": [
+                "graph/lca.md",
+                "topic/rmq.md",
+                "ds/sparse-table.md",
+                "basic/complexity.md"
+              ],
+              "global_order": 28,
+              "prerequisites": []
             }
           ]
         },
@@ -478,8 +566,11 @@
               "verified": true,
               "exists": true,
               "order_in_section": 1,
-              "references": [],
-              "global_order": 29
+              "references": [
+                "graph/dfs.md"
+              ],
+              "global_order": 29,
+              "prerequisites": []
             }
           ]
         },
@@ -498,8 +589,11 @@
               "verified": true,
               "exists": true,
               "order_in_section": 1,
-              "references": [],
-              "global_order": 30
+              "references": [
+                "graph/bfs.md"
+              ],
+              "global_order": 30,
+              "prerequisites": []
             }
           ]
         },
@@ -518,8 +612,11 @@
               "verified": true,
               "exists": true,
               "order_in_section": 1,
-              "references": [],
-              "global_order": 31
+              "references": [
+                "dp/memo.md"
+              ],
+              "global_order": 31,
+              "prerequisites": []
             }
           ]
         },
@@ -557,8 +654,12 @@
               "verified": true,
               "exists": true,
               "order_in_section": 2,
-              "references": [],
-              "global_order": 33
+              "references": [
+                "ds/stack.md",
+                "ds/heap.md"
+              ],
+              "global_order": 33,
+              "prerequisites": []
             },
             {
               "id": "ds_linked_list",
@@ -601,8 +702,18 @@
               "verified": true,
               "exists": true,
               "order_in_section": 2,
-              "references": [],
-              "global_order": 36
+              "references": [
+                "math/combinatorics/drawer-principle.md",
+                "graph/scc.md",
+                "graph/cut.md",
+                "graph/bcc.md",
+                "basic/complexity.md",
+                "graph/tree-basic.md",
+                "graph/bi-graph.md",
+                "misc/cc-basic.md"
+              ],
+              "global_order": 36,
+              "prerequisites": []
             },
             {
               "id": "graph_save",
@@ -613,8 +724,14 @@
               "verified": true,
               "exists": true,
               "order_in_section": 3,
-              "references": [],
-              "global_order": 37
+              "references": [
+                "graph/concept.md",
+                "graph/mst.md",
+                "basic/binary.md",
+                "graph/flow.md"
+              ],
+              "global_order": 37,
+              "prerequisites": []
             }
           ]
         },
@@ -653,8 +770,12 @@
               "verified": true,
               "exists": true,
               "order_in_section": 1,
-              "references": [],
-              "global_order": 39
+              "references": [
+                "dp/index.md",
+                "dp/opt/monotonic-queue-stack.md"
+              ],
+              "global_order": 39,
+              "prerequisites": []
             }
           ]
         },
@@ -673,8 +794,11 @@
               "verified": true,
               "exists": true,
               "order_in_section": 1,
-              "references": [],
-              "global_order": 40
+              "references": [
+                "math/number-theory/inverse.md"
+              ],
+              "global_order": 40,
+              "prerequisites": []
             },
             {
               "id": "dp_basic",
@@ -685,8 +809,13 @@
               "verified": true,
               "exists": true,
               "order_in_section": 2,
-              "references": [],
-              "global_order": 41
+              "references": [
+                "graph/dag.md",
+                "dp/dag.md",
+                "string/basic.md"
+              ],
+              "global_order": 41,
+              "prerequisites": []
             },
             {
               "id": "dp_memo",
@@ -697,8 +826,11 @@
               "verified": true,
               "exists": true,
               "order_in_section": 3,
-              "references": [],
-              "global_order": 42
+              "references": [
+                "search/dfs.md"
+              ],
+              "global_order": 42,
+              "prerequisites": []
             }
           ]
         },
@@ -744,8 +876,14 @@
               "verified": true,
               "exists": true,
               "order_in_section": 1,
-              "references": [],
-              "global_order": 44
+              "references": [
+                "math/numeral-sys/base.md",
+                "contest/common-tricks.md",
+                "math/poly/fft.md",
+                "math/poly/ntt.md"
+              ],
+              "global_order": 44,
+              "prerequisites": []
             }
           ]
         },
@@ -764,8 +902,14 @@
               "verified": true,
               "exists": true,
               "order_in_section": 1,
-              "references": [],
-              "global_order": 45
+              "references": [
+                "math/bit.md",
+                "math/numeral-sys/balanced-ternary.md",
+                "math/numeral-sys/gray-code.md",
+                "math/permutation.md"
+              ],
+              "global_order": 45,
+              "prerequisites": []
             }
           ]
         },
@@ -784,8 +928,19 @@
               "verified": true,
               "exists": true,
               "order_in_section": 1,
-              "references": [],
-              "global_order": 46
+              "references": [
+                "lang/var.md",
+                "math/numeral-sys/base.md",
+                "math/boolean-algebra.md",
+                "lang/op.md",
+                "lang/optimizations.md",
+                "math/binary-set.md",
+                "dp/state.md",
+                "lang/csl/bitset.md",
+                "ds/fenwick.md"
+              ],
+              "global_order": 46,
+              "prerequisites": []
             }
           ]
         },
@@ -804,8 +959,25 @@
               "verified": true,
               "exists": true,
               "order_in_section": 1,
-              "references": [],
-              "global_order": 47
+              "references": [
+                "math/number-theory/gcd.md",
+                "math/number-theory/bezouts.md",
+                "math/number-theory/prime.md",
+                "math/algebra/ring-theory.md",
+                "math/order-theory.md",
+                "math/number-theory/inverse.md",
+                "math/algebra/group-theory.md",
+                "math/combinatorics/drawer-principle.md",
+                "math/number-theory/euler-totient.md",
+                "math/number-theory/euclidean.md",
+                "math/number-theory/mod-arithmetic.md",
+                "math/number-theory/quad-residue.md",
+                "math/number-theory/sqrt-decomposition.md",
+                "math/number-theory/factorial.md",
+                "math/game-theory/impartial-game.md"
+              ],
+              "global_order": 47,
+              "prerequisites": []
             },
             {
               "id": "math_number_theory_prime",
@@ -816,8 +988,17 @@
               "verified": true,
               "exists": true,
               "order_in_section": 2,
-              "references": [],
-              "global_order": 48
+              "references": [
+                "math/number-theory/basic.md",
+                "math/number-theory/fermat.md",
+                "math/number-theory/primitive-root.md",
+                "math/number-theory/congruence-equation.md",
+                "math/number-theory/euler-totient.md",
+                "math/number-theory/crt.md",
+                "math/number-theory/residue.md"
+              ],
+              "global_order": 48,
+              "prerequisites": []
             },
             {
               "id": "math_number_theory_sieve",
@@ -828,8 +1009,13 @@
               "verified": true,
               "exists": true,
               "order_in_section": 3,
-              "references": [],
-              "global_order": 49
+              "references": [
+                "math/bit.md",
+                "lang/csl/bitset.md",
+                "math/number-theory/basic.md"
+              ],
+              "global_order": 49,
+              "prerequisites": []
             },
             {
               "id": "math_number_theory_gcd",
@@ -840,8 +1026,14 @@
               "verified": true,
               "exists": true,
               "order_in_section": 4,
-              "references": [],
-              "global_order": 50
+              "references": [
+                "math/number-theory/basic.md",
+                "math/combinatorics/fibonacci.md",
+                "math/bignum.md",
+                "math/bit.md"
+              ],
+              "global_order": 50,
+              "prerequisites": []
             },
             {
               "id": "math_number_theory_euler_totient",
@@ -852,8 +1044,15 @@
               "verified": true,
               "exists": true,
               "order_in_section": 5,
-              "references": [],
-              "global_order": 51
+              "references": [
+                "math/number-theory/basic.md",
+                "math/number-theory/mobius.md",
+                "math/number-theory/pollard-rho.md",
+                "math/number-theory/sieve.md",
+                "math/number-theory/fermat.md"
+              ],
+              "global_order": 51,
+              "prerequisites": []
             },
             {
               "id": "math_number_theory_pollard_rho",
@@ -864,8 +1063,13 @@
               "verified": true,
               "exists": true,
               "order_in_section": 6,
-              "references": [],
-              "global_order": 52
+              "references": [
+                "math/number-theory/basic.md",
+                "math/number-theory/sieve.md",
+                "math/number-theory/prime.md"
+              ],
+              "global_order": 52,
+              "prerequisites": []
             }
           ]
         },
@@ -908,8 +1112,11 @@
               "verified": true,
               "exists": true,
               "order_in_section": 3,
-              "references": [],
-              "global_order": 55
+              "references": [
+                "math/order-theory.md"
+              ],
+              "global_order": 55,
+              "prerequisites": []
             }
           ]
         }
@@ -924,6 +1131,8 @@
     "knowledge_links": 55,
     "skipped_links": 0,
     "missing_file_count": 0,
-    "duplicate_path_count": 1
+    "duplicate_path_count": 1,
+    "concepts_with_references": 39,
+    "reference_coverage": 0.709
   }
 }
