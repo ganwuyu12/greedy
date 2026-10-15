@@ -1,54 +1,195 @@
 {
-  "version": "0.1",
-  "source": "oi_wiki_roadmap",
+  "version": "2.0",
+  "generated_at": "2026-10-15T10:48:49+08:00",
+  "source": {
+    "id": "oi_wiki_roadmap",
+    "file": "contest/roadmap.md",
+    "url": "https://oi-wiki.org/contest/roadmap/",
+    "repo": "https://github.com/OI-wiki/OI-wiki",
+    "license": "CC BY-SA 4.0"
+  },
   "stages": [
     {
       "order": 1,
       "title": "C++ 语言基础",
       "level": "入门",
       "source": "oi_wiki_roadmap",
+      "verified": true,
       "sections": [
         {
           "order": "1.1",
           "title": "Hello, World!",
+          "parent": null,
           "note": "以一句 `Hello, World!`，开始算法竞赛之旅吧！ 同时了解一下 C++ 的源程序的大致框架是什么样子的．",
-          "concepts": []
+          "concepts": [
+            {
+              "id": "lang_helloworld",
+              "name": "Hello, World!",
+              "path": "lang/helloworld.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 1,
+              "references": [],
+              "global_order": 1
+            },
+            {
+              "id": "lang_basic",
+              "name": "C++ 语法基础",
+              "path": "lang/basic.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 2,
+              "references": [],
+              "global_order": 2
+            }
+          ]
         },
         {
           "order": "1.2",
           "title": "变量与运算",
+          "parent": null,
           "note": "计算机出现的最初目的就是计算．因此我们先学习如何完成一些简单的运算任务吧．",
-          "concepts": []
+          "concepts": [
+            {
+              "id": "lang_var",
+              "name": "变量",
+              "path": "lang/var.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 1,
+              "references": [],
+              "global_order": 3
+            },
+            {
+              "id": "lang_op",
+              "name": "运算",
+              "path": "lang/op.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 2,
+              "references": [],
+              "global_order": 4
+            }
+          ]
         },
         {
           "order": "1.3",
           "title": "流程控制",
+          "parent": null,
           "note": "",
           "concepts": []
         },
         {
           "order": "1.3.1",
           "title": "分支结构",
-          "note": "有的时候，我们需要在不同的条件下，选择执行不同的语句，这时候我们就需要借助分支语句． 分支语句包括下面几种：",
-          "concepts": []
+          "parent": "1.3",
+          "note": "有的时候，我们需要在不同的条件下，选择执行不同的语句，这时候我们就需要借助分支语句． 分支语句包括下面几种： -   if 语句 -   if-else 语句 -   if-elif-else 语句 -   switch 语句",
+          "concepts": [
+            {
+              "id": "lang_branch",
+              "name": "分支",
+              "path": "lang/branch.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 1,
+              "references": [],
+              "global_order": 5
+            }
+          ]
         },
         {
           "order": "1.3.2",
           "title": "循环结构",
-          "note": "将若干条语句重复执行多次，就需要用到循环语句． 循环语句包括下面几种：",
-          "concepts": []
+          "parent": "1.3",
+          "note": "将若干条语句重复执行多次，就需要用到循环语句． 循环语句包括下面几种： -   for 语句 -   while 语句 -   do-while 语句",
+          "concepts": [
+            {
+              "id": "lang_loop",
+              "name": "循环",
+              "path": "lang/loop.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 1,
+              "references": [],
+              "global_order": 6
+            }
+          ]
         },
         {
           "order": "1.4",
           "title": "数组与结构体",
+          "parent": null,
           "note": "数组用于存储大量相同类型的数据．而结构体则可以将若干变量捆绑起来．",
-          "concepts": []
+          "concepts": [
+            {
+              "id": "lang_array",
+              "name": "数组",
+              "path": "lang/array.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 1,
+              "references": [],
+              "global_order": 7
+            },
+            {
+              "id": "lang_struct",
+              "name": "结构体",
+              "path": "lang/struct.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 2,
+              "references": [],
+              "global_order": 8
+            }
+          ]
         },
         {
           "order": "1.5",
           "title": "函数与递归",
+          "parent": null,
           "note": "使用函数来让程序变得模块化，降低实现成本． 递归则是新手入门的一道坎，「自己调用自己」听起来并不是那么容易理解，不过仔细深究根本，就会发现「自己调用自己」和「自己调用别人」并没有本质差别．",
-          "concepts": []
+          "concepts": [
+            {
+              "id": "lang_func",
+              "name": "函数",
+              "path": "lang/func.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 1,
+              "references": [],
+              "global_order": 9
+            },
+            {
+              "id": "basic_divide_and_conquer",
+              "name": "递归 & 分治",
+              "path": "basic/divide-and-conquer.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 2,
+              "references": [],
+              "global_order": 10
+            }
+          ]
         }
       ]
     },
@@ -57,140 +198,732 @@
       "title": "CSP-J 入门级",
       "level": "入门",
       "source": "oi_wiki_roadmap",
+      "verified": true,
       "sections": [
         {
           "order": "2.1",
           "title": "枚举与模拟",
+          "parent": null,
           "note": "从现在开始，你已经会使用 C++ 语言完成一些简单的任务了，但是这远远不够． 为了做对一些简单的题目，你需要学会通过枚举或模拟脑海中的逻辑，来实现代码．这看起来并不是很高效，但有的时候很管用．",
-          "concepts": []
+          "concepts": [
+            {
+              "id": "basic_enumerate",
+              "name": "枚举",
+              "path": "basic/enumerate.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 1,
+              "references": [],
+              "global_order": 11
+            },
+            {
+              "id": "basic_simulate",
+              "name": "模拟",
+              "path": "basic/simulate.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 2,
+              "references": [],
+              "global_order": 12
+            }
+          ]
         },
         {
           "order": "2.2",
           "title": "递归与分治",
+          "parent": null,
           "note": "递归是指函数定义中不断调用自己的方法；而分治则是不断将这一个问题分解为若干子问题，求解后合并的操作．",
-          "concepts": []
+          "concepts": [
+            {
+              "id": "basic_divide_and_conquer",
+              "name": "递归 & 分治",
+              "path": "basic/divide-and-conquer.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 1,
+              "references": [],
+              "global_order": 13
+            }
+          ]
         },
         {
           "order": "2.3",
           "title": "字符串",
+          "parent": null,
           "note": "在做信息学题目时，经常会碰到的一个数据类型就是字符串，你需要学习一些用于操作字符串的 STL 函数．当然，模拟也是解决字符串问题的好方法．",
-          "concepts": []
+          "concepts": [
+            {
+              "id": "string_basic",
+              "name": "字符串基础",
+              "path": "string/basic.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 1,
+              "references": [],
+              "global_order": 14
+            },
+            {
+              "id": "string_lib_func",
+              "name": "STL 函数",
+              "path": "string/lib-func.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 2,
+              "references": [],
+              "global_order": 15
+            }
+          ]
         },
         {
           "order": "2.4",
           "title": "排序",
+          "parent": null,
           "note": "当你获得了一组数据时，如何将他们从无序变成有序也是个很重要的问题．在你没有思路的时候，不妨考虑一下将数组排个序吧．这也是接下来的很多算法的基础． 排序的方法有点多，但理解后记住它们并不难． NOI 大纲中入门级只要求学习选择、冒泡、插入排序，共三个排序算法，但是其余的难度也并不大，且初赛中可能涉及，故一并列出．",
-          "concepts": []
+          "concepts": [
+            {
+              "id": "basic_sort_intro",
+              "name": "排序简介",
+              "path": "basic/sort-intro.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 1,
+              "references": [],
+              "global_order": 16
+            },
+            {
+              "id": "basic_selection_sort",
+              "name": "选择排序",
+              "path": "basic/selection-sort.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 2,
+              "references": [],
+              "global_order": 17
+            },
+            {
+              "id": "basic_bubble_sort",
+              "name": "冒泡排序",
+              "path": "basic/bubble-sort.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 3,
+              "references": [],
+              "global_order": 18
+            },
+            {
+              "id": "basic_insertion_sort",
+              "name": "插入排序",
+              "path": "basic/insertion-sort.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 4,
+              "references": [],
+              "global_order": 19
+            },
+            {
+              "id": "basic_counting_sort",
+              "name": "计数排序",
+              "path": "basic/counting-sort.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 5,
+              "references": [],
+              "global_order": 20
+            },
+            {
+              "id": "basic_radix_sort",
+              "name": "基数排序",
+              "path": "basic/radix-sort.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 6,
+              "references": [],
+              "global_order": 21
+            },
+            {
+              "id": "basic_quick_sort",
+              "name": "快速排序",
+              "path": "basic/quick-sort.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 7,
+              "references": [],
+              "global_order": 22
+            },
+            {
+              "id": "basic_merge_sort",
+              "name": "归并排序",
+              "path": "basic/merge-sort.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 8,
+              "references": [],
+              "global_order": 23
+            },
+            {
+              "id": "basic_heap_sort",
+              "name": "堆排序",
+              "path": "basic/heap-sort.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 9,
+              "references": [],
+              "global_order": 24
+            },
+            {
+              "id": "basic_bucket_sort",
+              "name": "桶排序",
+              "path": "basic/bucket-sort.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 10,
+              "references": [],
+              "global_order": 25
+            },
+            {
+              "id": "basic_stl_sort",
+              "name": "排序相关 STL",
+              "path": "basic/stl-sort.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 11,
+              "references": [],
+              "global_order": 26
+            }
+          ]
         },
         {
           "order": "2.5",
           "title": "二分与倍增",
+          "parent": null,
           "note": "二分查找，本质上是运用分治的思想，不断减少查找范围的大小，直至找到答案．但是需要注意，这个查找方式必须应用在有序的数据结构中． 而倍增则不同，它是不断翻倍，以把线性范畴内的处理转化为对数级，大大优化时间复杂度．（这个知识点需要一点数学基础，暂时跳过也问题不大）",
-          "concepts": []
+          "concepts": [
+            {
+              "id": "basic_binary",
+              "name": "二分",
+              "path": "basic/binary.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 1,
+              "references": [],
+              "global_order": 27
+            },
+            {
+              "id": "basic_binary_lifting",
+              "name": "倍增",
+              "path": "basic/binary-lifting.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 2,
+              "references": [],
+              "global_order": 28
+            }
+          ]
         },
         {
           "order": "2.6",
           "title": "搜索",
+          "parent": null,
           "note": "在入门组，搜索的题目常常会在迷宫类题目中出现，一般会有地图类的数据；此外，搜索也十分常用于高效地枚举构造合法解的情况，亦可用于骗分．",
           "concepts": []
         },
         {
           "order": "2.6.1",
           "title": "深度优先搜索（DFS）",
+          "parent": "2.6",
           "note": "深度优先搜索指利用递归函数方便地实现暴力枚举的算法，与图论中的 DFS 算法有一定相似之处，但并不完全相同．",
-          "concepts": []
+          "concepts": [
+            {
+              "id": "search_dfs",
+              "name": "DFS（搜索）",
+              "path": "search/dfs.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 1,
+              "references": [],
+              "global_order": 29
+            }
+          ]
         },
         {
           "order": "2.6.2",
           "title": "广度优先搜索（BFS）",
+          "parent": "2.6",
           "note": "将每一个状态设计为图中的一个点，可以展开地毯式搜索．",
-          "concepts": []
+          "concepts": [
+            {
+              "id": "search_bfs",
+              "name": "BFS（搜索）",
+              "path": "search/bfs.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 1,
+              "references": [],
+              "global_order": 30
+            }
+          ]
         },
         {
           "order": "2.6.3",
           "title": "搜索优化",
+          "parent": "2.6",
           "note": "很多题目都可以用 DFS 来解决，而这个算法的复杂度显然是无法通过的．因此，需要一些优化使它跑得更快．这样的优化能够减少不可能成功的尝试，称为「剪枝」．BFS 相关的优化就要更加灵活了，但是基本思路和这里是一样的．",
-          "concepts": []
+          "concepts": [
+            {
+              "id": "search_opt",
+              "name": "DFS 剪枝优化",
+              "path": "search/opt.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 1,
+              "references": [],
+              "global_order": 31
+            }
+          ]
         },
         {
           "order": "2.7",
           "title": "数据结构入门",
+          "parent": null,
           "note": "",
           "concepts": []
         },
         {
           "order": "2.7.1",
           "title": "线性数据结构",
+          "parent": "2.7",
           "note": "数组，链表，队列，栈，都是线性结构．巧用这些结构可以做出不少方便的事情．",
-          "concepts": []
+          "concepts": [
+            {
+              "id": "ds_stack",
+              "name": "栈",
+              "path": "ds/stack.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 1,
+              "references": [],
+              "global_order": 32
+            },
+            {
+              "id": "ds_queue",
+              "name": "队列",
+              "path": "ds/queue.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 2,
+              "references": [],
+              "global_order": 33
+            },
+            {
+              "id": "ds_linked_list",
+              "name": "链表",
+              "path": "ds/linked-list.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 3,
+              "references": [],
+              "global_order": 34
+            }
+          ]
         },
         {
           "order": "2.7.2",
           "title": "复杂数据结构",
+          "parent": "2.7",
           "note": "",
-          "concepts": []
+          "concepts": [
+            {
+              "id": "graph_tree_basic",
+              "name": "树及二叉树",
+              "path": "graph/tree-basic.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 1,
+              "references": [],
+              "global_order": 35
+            },
+            {
+              "id": "graph_concept",
+              "name": "图的概念",
+              "path": "graph/concept.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 2,
+              "references": [],
+              "global_order": 36
+            },
+            {
+              "id": "graph_save",
+              "name": "图的存储",
+              "path": "graph/save.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 3,
+              "references": [],
+              "global_order": 37
+            }
+          ]
         },
         {
           "order": "2.8",
           "title": "动态规划入门",
+          "parent": null,
           "note": "动态规划（Dynamic Programming, DP）是一种通过把原问题分解为相对简单的子问题的方式求解复杂问题的方法． 由于动态规划并不是某种具体的算法，而是一种解决特定问题的方法，因此它会出现在各式各样的数据结构中，与之相关的题目种类也更为繁杂．",
-          "concepts": []
+          "concepts": [
+            {
+              "id": "dp_index",
+              "name": "动态规划简介",
+              "path": "dp/index.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 1,
+              "references": [],
+              "global_order": 38
+            }
+          ]
         },
         {
           "order": "2.8.1",
           "title": "背包问题",
+          "parent": "2.8",
           "note": "即给出一个有限制容量的背包，选择放入若干有容量和价值的物品，求解如何放置能使得价值总和最大．这是阻挡很多 OIer 的第一道坎，从这里开始，算法就有些难以理解．",
-          "concepts": []
+          "concepts": [
+            {
+              "id": "dp_knapsack_basic",
+              "name": "背包 DP",
+              "path": "dp/knapsack/basic.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 1,
+              "references": [],
+              "global_order": 39
+            }
+          ]
         },
         {
           "order": "2.8.2",
           "title": "线性动态规划",
+          "parent": "2.8",
           "note": "在动态规划中，最难的部分之一就是设计状态，需要用到构造相关技巧．当你写出了状态和状态转移方程之后，完成一道动态规划的题目就不难了． 记忆化搜索是一种通过记录已经遍历过的状态的信息，从而避免对同一状态重复遍历的搜索实现方式．有的题目也可以使用记忆化搜索来降低思维难度． 因为记忆化搜索确保了每个状态只访问一次，它也是一种常见的动态规划实现方式．",
-          "concepts": []
+          "concepts": [
+            {
+              "id": "basic_construction",
+              "name": "构造",
+              "path": "basic/construction.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 1,
+              "references": [],
+              "global_order": 40
+            },
+            {
+              "id": "dp_basic",
+              "name": "动态规划基础",
+              "path": "dp/basic.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 2,
+              "references": [],
+              "global_order": 41
+            },
+            {
+              "id": "dp_memo",
+              "name": "记忆化搜索",
+              "path": "dp/memo.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 3,
+              "references": [],
+              "global_order": 42
+            }
+          ]
         },
         {
           "order": "2.8.3",
           "title": "复杂动态规划",
+          "parent": "2.8",
           "note": "区间类动态规划是线性动态规划的扩展，它在分阶段地划分问题时，与阶段中元素出现的顺序和由前一阶段的哪些元素合并而来有很大的关系．",
-          "concepts": []
+          "concepts": [
+            {
+              "id": "dp_interval",
+              "name": "区间 DP",
+              "path": "dp/interval.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 1,
+              "references": [],
+              "global_order": 43
+            }
+          ]
         },
         {
           "order": "2.9",
           "title": "数学",
+          "parent": null,
           "note": "",
           "concepts": []
         },
         {
           "order": "2.9.1",
           "title": "高精度算法",
+          "parent": "2.9",
           "note": "就算是 long long（或 int64）还不够怎么办？用高精度算法．本质上就是模拟了四则运算．",
-          "concepts": []
+          "concepts": [
+            {
+              "id": "math_bignum",
+              "name": "高精度计算",
+              "path": "math/bignum.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 1,
+              "references": [],
+              "global_order": 44
+            }
+          ]
         },
         {
           "order": "2.9.2",
           "title": "进制转换",
+          "parent": "2.9",
           "note": "在计算机中，除了二进制，比较常用的还有八进制和十六进制．有的时候学会运用正确的进制对解题也有很大帮助．",
-          "concepts": []
+          "concepts": [
+            {
+              "id": "math_numeral_sys_base",
+              "name": "进位制",
+              "path": "math/numeral-sys/base.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 1,
+              "references": [],
+              "global_order": 45
+            }
+          ]
         },
         {
           "order": "2.9.3",
           "title": "位操作",
+          "parent": "2.9",
           "note": "位操作就是基于整数的二进制表示进行的运算．由于计算机内部就是以二进制来存储数据，位操作是相当快的． 基本的位操作共 6 种，分别为按位与、按位或、按位异或、按位取反、左移和右移．",
-          "concepts": []
+          "concepts": [
+            {
+              "id": "math_bit",
+              "name": "位操作",
+              "path": "math/bit.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 1,
+              "references": [],
+              "global_order": 46
+            }
+          ]
         },
         {
           "order": "2.9.4",
           "title": "数论",
+          "parent": "2.9",
           "note": "",
-          "concepts": []
+          "concepts": [
+            {
+              "id": "math_number_theory_basic",
+              "name": "数论基础",
+              "path": "math/number-theory/basic.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 1,
+              "references": [],
+              "global_order": 47
+            },
+            {
+              "id": "math_number_theory_prime",
+              "name": "素数",
+              "path": "math/number-theory/prime.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 2,
+              "references": [],
+              "global_order": 48
+            },
+            {
+              "id": "math_number_theory_sieve",
+              "name": "筛法",
+              "path": "math/number-theory/sieve.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 3,
+              "references": [],
+              "global_order": 49
+            },
+            {
+              "id": "math_number_theory_gcd",
+              "name": "最大公因数",
+              "path": "math/number-theory/gcd.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 4,
+              "references": [],
+              "global_order": 50
+            },
+            {
+              "id": "math_number_theory_euler_totient",
+              "name": "欧拉函数",
+              "path": "math/number-theory/euler-totient.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 5,
+              "references": [],
+              "global_order": 51
+            },
+            {
+              "id": "math_number_theory_pollard_rho",
+              "name": "分解质因数",
+              "path": "math/number-theory/pollard-rho.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 6,
+              "references": [],
+              "global_order": 52
+            }
+          ]
         },
         {
           "order": "2.9.5",
           "title": "组合计数",
+          "parent": "2.9",
           "note": "至此，你就学习完了入门组范畴内的所有算法，但是想要掌握它们，你需要继续进行足够数量的刷题，以巩固你所学到的知识点．",
-          "concepts": []
+          "concepts": [
+            {
+              "id": "math_combinatorics_combination",
+              "name": "排列组合",
+              "path": "math/combinatorics/combination.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 1,
+              "references": [],
+              "global_order": 53
+            },
+            {
+              "id": "math_combinatorics_drawer_principle",
+              "name": "抽屉原理",
+              "path": "math/combinatorics/drawer-principle.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 2,
+              "references": [],
+              "global_order": 54
+            },
+            {
+              "id": "math_combinatorics_inclusion_exclusion_principle",
+              "name": "容斥原理",
+              "path": "math/combinatorics/inclusion-exclusion-principle.md",
+              "level": "入门",
+              "source": "oi_wiki_roadmap",
+              "verified": true,
+              "exists": true,
+              "order_in_section": 3,
+              "references": [],
+              "global_order": 55
+            }
+          ]
         }
       ]
     }
-  ]
+  ],
+  "stats": {
+    "stage_count": 2,
+    "section_count": 29,
+    "concept_count": 55,
+    "total_links": 55,
+    "knowledge_links": 55,
+    "skipped_links": 0,
+    "missing_file_count": 0,
+    "duplicate_path_count": 1
+  }
 }
