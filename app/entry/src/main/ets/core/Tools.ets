@@ -12,9 +12,11 @@
  */
 
 import { http } from '@kit.NetworkKit';
+import { resourceManager } from '@kit.LocalizationKit';
 import { ToolDef, ToolRegistry } from './Agent';
 import { CFClient, PracticeLog, PracticeDay, ProgressStats, Submission, UserInfo } from './CFClient';
 import { AppConfig, AppStorageUtil } from './Config';
+import { WikiIndex } from './WikiIndex';
 
 /**
  * 陪伴数据服务
@@ -175,7 +177,9 @@ const TIERS: number[] = [800, 1000, 1200, 1400, 1600, 1800, 2000, 2200];
 /**
  * 注册全部工具
  */
-export function buildRegistry(svc: CompanionService, notes: NoteStore): ToolRegistry {
+export function buildRegistry(svc: CompanionService, notes: NoteStore,
+                              wiki: WikiIndex,
+                              wikiMgr: resourceManager.ResourceManager): ToolRegistry {
   const reg = new ToolRegistry();
 
   // ---------------- 成长类 ----------------
@@ -301,9 +305,9 @@ export function buildRegistry(svc: CompanionService, notes: NoteStore): ToolRegi
 
   const wikiTool: ToolDef = {
     name: 'search_wiki',
-    description: '检索算法知识库（OI Wiki），回答算法概念、原理、复杂度等问题时使用',
+    description: '检索算法知识库（OI Wiki，418 个词条），回答算法概念、原理、复杂度等问题时使用',
     params: [
-      { name: 'query', type: 'string', description: '检索关键词，如「线段树」「数位DP」',
+      { name: 'query', type: 'string', description: '检索关键词，如「线段树」「数位DP」「KMP」',
         required: true }
     ],
     run: async (args: Map<string, Object>): Promise<string> => {
@@ -312,12 +316,16 @@ export function buildRegistry(svc: CompanionService, notes: NoteStore): ToolRegi
       if (query.length === 0) {
         return JSON.stringify({ error: '缺少 query 参数' });
       }
-      // 知识库检索由 Python 侧服务提供（索引约 42 MB，不适合打进 App）
-      const base = AppConfig.WIKI_ENDPOINT;
-      if (base.length === 0) {
-        return '知识库检索未配置：请在 core/Config.ets 里设置 WIKI_ENDPOINT。';
+      if (!wiki.isLoaded()) {
+        try {
+          await wiki.load(wikiMgr);
+        } catch (e) {
+          const msg = e instanceof Error ? e.message : String(e);
+          return JSON.stringify({ error: `知识索引读取失败：${msg}` });
+        }
       }
-      return await httpGetText(`${base}?q=${encodeURIComponent(query)}`);
+      const hits = wiki.search(query, 3);
+      return WikiIndex.format(hits);
     }
   };
   reg.register(wikiTool);

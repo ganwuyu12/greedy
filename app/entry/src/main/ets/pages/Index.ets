@@ -14,9 +14,11 @@
 import { Agent, AgentConfig, ChatMessage, PlainHistoryItem, ToolRegistry } from '../core/Agent';
 import { AppConfig, AppStorageUtil } from '../core/Config';
 import { buildRegistry, CompanionService, NoteStore } from '../core/Tools';
+import { WikiIndex } from '../core/WikiIndex';
 import { prompt as personaPrompt } from '../core/Persona';
 import { Session, SessionStore } from '../core/SessionStore';
 import { common } from '@kit.AbilityKit';
+import { resourceManager } from '@kit.LocalizationKit';
 
 /** 聊天列表里的一条 */
 interface Bubble {
@@ -60,6 +62,8 @@ struct Index {
   private companion: CompanionService | null = null;
   private notes: NoteStore = new NoteStore();
   private sessions: SessionStore = new SessionStore();
+  private wiki: WikiIndex = new WikiIndex();
+  private wikiMgr: resourceManager.ResourceManager | null = null;
   private scroller: Scroller = new Scroller();
 
   aboutToAppear(): void {
@@ -84,7 +88,25 @@ struct Index {
     this.handleDraft = handle;
 
     this.companion = new CompanionService(handle);
-    this.registry = buildRegistry(this.companion, this.notes);
+    // resourceManager 用于读 rawfile 里的知识索引
+    if (this.wikiMgr === null) {
+      try {
+        const ctx = getContext(this) as common.UIAbilityContext;
+        this.wikiMgr = ctx.resourceManager;
+      } catch (e) {
+        this.wikiMgr = null;
+      }
+    }
+    // 预加载知识索引（137 KB，启动时读比首次提问时读体验好）
+    if (this.wikiMgr !== null) {
+      try {
+        await this.wiki.load(this.wikiMgr);
+      } catch (e) {
+        // 读不到不影响其他功能，提问时还会再试一次
+      }
+    }
+    this.registry = buildRegistry(this.companion, this.notes, this.wiki,
+      this.wikiMgr as resourceManager.ResourceManager);
 
     const cfg: AgentConfig = {
       apiKey,
