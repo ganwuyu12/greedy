@@ -1,204 +1,198 @@
 # 贪心 · 跨端应用（ArkTS）
 
-把「贪心」从 Python 命令行搬到手机上的客户端。目标平台：**鸿蒙 + Android**（ArkUI-X 一套代码）。
+把「贪心」从 Python 命令行搬到手机上。目标平台：**鸿蒙 + Android**（ArkUI-X 一套代码）。
 
 ---
 
-## ⚠️ 先读这段：状态与限制
+## ✅ 当前状态（已在真机验证）
 
 | 项目 | 状态 |
 |---|---|
-| **ArkTS 业务代码** | ✅ 已写完，逻辑与 Python 版一致 |
-| **UI 界面** | ✅ 已写完（聊天优先 + 成长记录侧栏） |
-| **工程配置文件** | ⚠️ **没写**——见下方理由 |
-| **能否编译验证** | ❌ **没有验证过**——本机未安装 ArkUI-X SDK |
-| **能否运行验证** | ❌ **没有验证过**——无模拟器镜像、无签名 |
+| ArkTS 业务代码 | ✅ 完成（约 1900 行） |
+| UI 界面 | ✅ 完成（聊天 + 成长记录 + 设置面板） |
+| **HAP 编译** | ✅ **已验证**（261 KB，零 ArkTS 错误） |
+| **鸿蒙模拟器运行** | ✅ **已验证**（Mate 90 Pro 镜像） |
+| **工具调用** | ✅ **已验证**（`get_progress` / `get_recent_log` 成功返回真实数据） |
+| **多轮对话** | ✅ **已验证** |
+| Android 端 | ⚠️ 代码就绪，需装 Android SDK 才能打包 |
+| 搜索知识库 | ❌ **未通**（`WIKI_ENDPOINT` 为空） |
+| 语音链路（ASR→模型→TTS） | ❌ 未做 |
+| 会话持久化 | ❌ 未做 |
 
-### 为什么配置文件不由我提供
+### 实测效果
 
-`build-profile.json5` / `oh-package.json5` / `hvigorfile.ts` / `module.json5` 这几个文件
-**强依赖 DevEco Studio 的版本和 ArkUI-X 插件**，字段名和结构随版本变化。
+问「我最近怎么样」，返回：
 
-我如果凭印象写，你很可能卡在「工程结构异常」这类编译错误上，而且
-**很难判断是配置错了还是代码错了**。
+```
+累计 148 道，活跃 65 天，从 2025-10-12 走到现在。
+最高难度 2300。当前 rating 1291，历史最高 1451。
 
-**正确做法**：用 DevEco Studio 的官方模板生成骨架（结构 100% 正确），
-再把我写的 `core/` 和 `pages/` 覆盖进去。见下面的步骤。
+148 道了。挺能熬的嘛，笨蛋。上次那个 1451 掉下来了是吧？
+哼，rating 起起落落而已，你又不是没见过——别告诉我你在意这个。
+
+调用了：✓ get_progress  ✓ get_recent_log
+```
+
+**数据全部来自 Codeforces 真实接口**，工具调用痕迹显示在气泡下方。
 
 ---
 
-## 一、搭骨架（必须用 DevEco Studio）
-
-### 前置：装 ArkUI-X SDK
-
-1. 打开 DevEco Studio
-2. `File` → `Settings` → **ArkUI-X**
-3. 选择 SDK 下载路径，下载需要的版本
-4. 把 ArkUI-X 的 toolchains/bin 加进系统 `Path` 环境变量，例如：
-   ```
-   D:\CodeAPP\DevEcoStudio\ArkUI-X-SDK\17\arkui-x\toolchains\bin
-   ```
-5. 验证：
-   ```bash
-   ace check -v
-   ```
-
-> 参考：[ArkUI-X 跨平台框架入门详解](https://cloud.tencent.com.cn/developer/article/2544591)、
-> [ArkUI-X 应用工程结构说明](https://blog.csdn.net/weixin_40526189/article/details/149480764)
-
-### 创建工程
-
-1. `File` → `New` → `Create Project`
-2. 选 **Application** → **ArkUI-X** → **Empty Ability**
-3. 工程名填 `greedy`，模块名保持 `entry`
-4. 生成后先**编译一次**，确认模板本身能跑通
-
-### 生成后的目录长这样
+## 一、环境（本机已验证可用）
 
 ```
-greedy/
-├── .arkui-x/
-│   ├── android/                    ← Android 平台工程
-│   ├── ios/                        ← iOS 平台工程（选做）
-│   └── arkui-x-config.json5        ← 标记哪些模块跨平台
-├── AppScope/
-├── entry/
-│   └── src/main/
-│       ├── ets/
-│       │   ├── core/               ← 【放我写的业务代码】
-│       │   ├── pages/              ← 【放我写的界面】
-│       │   └── entryability/
-│       ├── resources/
-│       └── module.json5
-├── hvigor/
-├── build-profile.json5
-├── hvigorfile.ts
-└── oh-package.json5
+ArkUI-X SDK 26.0.0.28    E:\DevEcoSDK
+ace 工具                  E:\DevEcoSDK\26.0.0\arkui-x\toolchains\bin\ace.cmd
+hdc                      E:\deveco studio\sdk\default\openharmony\toolchains\hdc.exe
+模拟器镜像                已部署（Mate 90 Pro / Mate X7 / MatePad Pro / MateBook Pro）
 ```
 
-### 确认跨平台标记
+配置 ace（已做过，换机器需要重做）：
 
-`entry/src/main/module.json5` 里的模块名（应为 `entry`），要出现在
-`.arkui-x/arkui-x-config.json5` 的 `modules` 数组中：
-
-```json
-{
-  "crossplatform": true,
-  "modules": ["entry"]
-}
+```powershell
+$ace = "E:\DevEcoSDK\26.0.0\arkui-x\toolchains\bin\ace.cmd"
+& $ace config `
+  --arkui-x-sdk "E:\DevEcoSDK" `
+  --harmonyos-sdk "E:\deveco studio\sdk" `
+  --deveco-studio-path "E:\deveco studio" `
+  --java-sdk "E:\deveco studio\jbr" `
+  --ohpm-dir "E:\deveco studio\tools\ohpm" `
+  --nodejs-dir "C:\Program Files\nodejs"
 ```
+
+验证：`& $ace check -v` 应显示 `[√] HarmonyOS toolchains`。
 
 ---
 
-## 二、放入业务代码
+## 二、构建与部署（不依赖 DevEco 的 Run 按钮）
 
-把本目录下的文件复制到工程里：
+DevEco 的模块索引有时识别不到手工加入的文件（运行配置里模块显示 `[none]`）。
+**命令行可以完全绕开它**：
 
-| 本仓库文件 | 目标位置 |
-|---|---|
-| `app/entry/src/main/ets/core/Config.ets` | `entry/src/main/ets/core/Config.ets` |
-| `app/entry/src/main/ets/core/Persona.ets` | `entry/src/main/ets/core/Persona.ets` |
-| `app/entry/src/main/ets/core/CFClient.ets` | `entry/src/main/ets/core/CFClient.ets` |
-| `app/entry/src/main/ets/core/Agent.ets` | `entry/src/main/ets/core/Agent.ets` |
-| `app/entry/src/main/ets/core/Tools.ets` | `entry/src/main/ets/core/Tools.ets` |
-| `app/entry/src/main/ets/pages/Index.ets` | `entry/src/main/ets/pages/Index.ets`（覆盖模板同名文件） |
+```powershell
+$ace = "E:\DevEcoSDK\26.0.0\arkui-x\toolchains\bin\ace.cmd"
+$hdc = "E:\deveco studio\sdk\default\openharmony\toolchains\hdc.exe"
 
-### 申请权限
+# 1. 编译（产物：entry/build/default/outputs/default/entry-default-unsigned.hap）
+& $ace build hap --debug
 
-`entry/src/main/module.json5` 的 `requestPermissions` 里加上：
+# 2. 安装到模拟器（模拟器不校验签名，unsigned HAP 可直接装）
+& $hdc install -r "entry\build\default\outputs\default\entry-default-unsigned.hap"
 
-```json5
-{
-  "name": "ohos.permission.INTERNET"
-}
+# 3. 启动
+& $hdc shell aa start -a EntryAbility -b com.example.greedy_app
+
+# 4. 截图（可选）
+& $hdc shell snapshot_display -f /data/local/tmp/shot.jpeg
+& $hdc file recv /data/local/tmp/shot.jpeg .\shot.jpeg
 ```
 
-没有这个权限，网络请求会直接失败。
+> ⚠️ `ace build hap` 最后会报一个 iOS 的 ENOENT 错误（它想把三端产物都准备齐）。
+> **这个错误可以忽略**——HAP 在此之前已经打包完成（看 `:entry:default@PackageHap Finished`）。
+
+> **签名**：模拟器不需要。真机需要 HarmonyOS 开发者证书，
+> 在 DevEco 的 `Project Structure` → `Signing Configs` → 勾「自动生成签名」，
+> 但要先连上设备才能生成 profile。
 
 ---
 
-## 三、运行
+## 三、首次使用
 
-### 鸿蒙端
+应用启动后**自动弹出设置面板**，填两项：
 
-1. `Build` → `Build Hap(s)/APP(s)` → `Build APP(s)`
-2. 用模拟器或真机运行
+1. **API 密钥**（DeepSeek）——只存本机 `preferences`，不进源码
+2. **Codeforces 用户名**——默认 `ganwuyu`
 
-### Android 端
-
-1. 用 ACE 工具或 Android Studio 把 `.arkui-x/android` 工程打成 APK
-2. 安装到 Android 手机
-
-### 首次使用要配密钥
-
-应用启动后如果提示「还没配密钥」，需要：
-- 在 `entry/src/main/ets/pages/Index.ets` 里，或者后续加一个设置页，
-  把 DeepSeek 的 API Key 写进 `AppStorageUtil`：
-  ```typescript
-  await AppStorageUtil.setString(AppConfig.KEY_API_KEY, 'sk-xxxx');
-  ```
-- **不要把密钥硬编码进源码后提交**——`.gitignore` 已经排除 `.env`，
-  但 ArkTS 里没有 .env 机制，建议走设置页写入本地存储
+保存后立即生效，不用重启。
 
 ---
 
-## 四、已实现的代码结构
+## 四、工程结构
 
 ```
-core/
-├── Config.ets     配置与本地键值存储封装
-├── Persona.ets    「贪心」的人格设定（伙伴定位，不是教练）
-├── CFClient.ets   Codeforces 数据层（限流 + 重试 + 缓存）
-├── Agent.ets      Agent 主循环（工具注册 + 执行 + 回灌 + 终止）
-└── Tools.ets      工具集 + 笔记存储（长期记忆）
-pages/
-└── Index.ets      主界面（聊天 + 成长记录侧栏）
+entry/src/main/ets/
+├── core/
+│   ├── Config.ets      配置与本地键值存储封装
+│   ├── Persona.ets     「贪心」人格（伙伴定位，不是教练）
+│   ├── CFClient.ets    Codeforces 数据层 + 练习日志归档
+│   ├── Agent.ets       Agent 主循环
+│   └── Tools.ets       工具集 + 笔记存储（长期记忆）
+└── pages/
+    └── Index.ets       主界面
+.arkui-x/
+├── arkui-x-config.json5    {"crossplatform": true, "modules": ["entry"]}
+└── android/                Android 工程脚手架
 ```
 
-### Agent 主循环实现了这七件事
+### Agent 主循环实现的七件事
 
 | # | 能力 | 位置 |
 |---|---|---|
 | 1 | 工具注册（自动生成 function-calling schema） | `ToolRegistry.toSchema()` |
 | 2 | 主循环（模型要工具 → 执行 → 结果回灌） | `Agent.run()` |
 | 3 | 状态管理（assistant / tool 消息拼接） | `Agent.run()` 内 `messages` |
-| 4 | 循环终止（最大轮数 + **连续**重复调用检测） | `repeatCount` 逻辑 |
+| 4 | 循环终止（最大轮数 + **连续**重复调用检测） | `repeatCount` |
 | 5 | 失败回灌（工具报错结构化返回给模型） | `ToolRegistry.execute()` |
-| 6 | Token 预算 | `Agent.run()` 内累计判断 |
-| 7 | 追踪日志（每步留痕，UI 上可见） | `TraceStep` + 气泡下方小字 |
+| 6 | Token 预算 | `Agent.run()` |
+| 7 | 追踪日志（UI 上可见） | `TraceStep` |
 
-### 已注册的工具（8 个）
+### 8 个工具
 
 | 工具 | 作用 |
 |---|---|
 | `get_progress` | 成长记录（累计、活跃天数、最近一次） |
 | `get_milestones` | 里程碑（首次解出各难度的日期） |
 | `get_recent_log` | 最近几天的练习详情 |
-| `search_wiki` | 检索算法知识库 |
+| `search_wiki` | 检索算法知识库（⚠️ 未通） |
 | `save_note` | 记下想法 |
 | `list_notes` | 查看记过的笔记 |
 | `get_date` | 取今天日期 |
 
-工具定位遵循「陪伴而非教练」：**有记录、有检索，没有水平评判和训练指令。**
+**工具定位遵循「陪伴而非教练」**：有记录、有检索，没有水平评判、没有训练指令。
 
 ---
 
-## 五、已知风险（我没能验证的地方）
+## 五、踩过的坑（都是真实编译/运行暴露的）
 
-按可能出问题的概率排序：
+### 1. ArkTS 禁止匿名对象字面量
 
-| # | 风险 | 表现 | 处理 |
-|---|---|---|---|
-| 1 | **ArkTS 语法严格性** | 编译报错（ArkTS 禁止 `any`、部分动态特性） | 代码里已尽量用显式类型；报错处按提示收紧 |
-| 2 | `http` 请求的 `extraData` 传参 | 请求体格式不对 | 检查 `Agent.callModel()` 里的 payload 序列化 |
-| 3 | `@Builder` 里用 `this` | 上下文丢失 | 已避免在 Builder 内改状态 |
-| 4 | `ForEach` 的键生成 | 列表不刷新 | 键里带了 `loading` 状态 |
-| 5 | `preferences` 初始化时机 | 读写静默失败 | 已在 `aboutToAppear` 里 await 初始化 |
-| 6 | ArkUI-X 的部分 API 不支持 | 鸿蒙能跑、Android 报错 | 优先用基础组件（Column/Row/Text/List/Button） |
+```
+arkts-no-untyped-obj-literals
+```
 
-**第 6 条要特别留意**：ArkUI-X 对 ArkUI 的 API 支持是**子集**。
-我刻意只用了最基础的组件，就是为了降低这个风险。
-如果 Android 端报某个 API 不支持，优先换实现方式，不要硬扛。
+必须为每个结构声明显式 `interface`。`Agent.ets` 里定义了 13 个接口。
+另外 `Map` 不能直接进对象字面量，`properties` 要用 `Record`。
+
+### 2. 对话历史必须保留成对结构（**只在第二轮暴露**）
+
+第一轮消息是当轮新建的、结构完整；第二轮带上历史时，如果把
+assistant 的 `tool_calls` 丢掉，`tool` 结果消息就变成孤儿，接口报：
+
+```
+Messages with role 'tool' must be a response to a preceding
+message with 'tool_calls'
+```
+
+**修法**：历史直接以 wire 格式保存（`WireMessage[]`），保留
+`assistant(tool_calls)` ↔ `tool(tool_call_id)` 的成对关系。
+
+### 3. `user.status` 不带难度
+
+```
+problem.rating → null     （只有 problem.tags 有值）
+```
+
+所以**难度数据必须来自题库表**（`problemset.problems`，约 2 MB / 5000+ 题）。
+但成长记录不需要它——改成两步加载：
+
+- 第一步：拉提交记录（约 2 秒）→ 成长记录立即可用
+- 第二步：后台补全题库表（不 `await`），需要难度的工具调 `ensureMeta()` 等它
+
+### 4. 异常不能静默吞掉
+
+之前 `doLoad()` 把异常吃掉，`stats` 保持 `null`，工具就返回
+「还没有成长记录」——**真实故障（超时）完全看不到**，排查时被误导。
+
+修法：记住失败原因并**抛出**，让模型看到真实错误。
 
 ---
 
@@ -206,13 +200,8 @@ pages/
 
 | 优先 | 任务 | 说明 |
 |---|---|---|
-| 🔴 | 搭骨架 + 放入代码 + 跑通鸿蒙端 | 这是当前唯一的目标 |
-| 🟡 | 加设置页（填 API Key、改 handle） | 现在密钥要写代码里，不方便 |
-| 🟡 | 流式输出 | 课程加分项，且体验提升明显 |
-| 🟡 | 会话历史持久化 + 回看 | 课程硬性要求（第 5 条） |
-| 🟢 | 语音链路（ASR → Agent → TTS） | 鸿蒙必做（第 6 条），工作量较大 |
-| 🟢 | Android 端适配 | 先鸿蒙跑通再谈 |
-
-**建议的顺序**：跑通鸿蒙端 → 加设置页 → 会话持久化 → 流式 → 语音。
-
-**不要一上来就纠结两端都能跑**——先让鸿蒙端转起来。
+| 🔴 | **会话持久化 + 回看** | 课程硬性要求 |
+| 🔴 | **搜索知识库打通** | `WIKI_ENDPOINT` 为空；索引 42 MB 不适合打进 App，需本地服务或换方案 |
+| 🟡 | 鸿蒙语音链路（ASR→模型→TTS） | 课程硬性要求，工作量最大，放最后 |
+| 🟡 | Android 端打包 | 需装 Android SDK |
+| 🟢 | 流式输出 | 体验加分项 |
