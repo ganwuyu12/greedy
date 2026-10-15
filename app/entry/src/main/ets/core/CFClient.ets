@@ -19,7 +19,7 @@ import { common } from '@kit.AbilityKit';
 const API_BASE = 'https://codeforces.com/api';
 const MIN_INTERVAL_MS = 2000;      // 官方限制：每 2 秒最多 1 次
 const MAX_TRIES = 3;
-const TIMEOUT_MS = 20000;
+const TIMEOUT_MS = 60000;      // 题库表在移动网络上可能要 10-30 秒
 
 /** 提交记录 */
 export interface Submission {
@@ -203,8 +203,13 @@ export class CFClient {
    *
    * CF 的 user.status 只给 contestId + index，不给题目名和标签。
    * 要按标签统计、要显示题名，必须去题库表里查。
+   *
+   * ⚠️ 性能：题库全量约 2 MB / 5000+ 题，在移动网络上很慢。
+   *    所以 withMeta 默认 false——只在**确实需要标签**时才拉。
+   *    成长记录（做了多少题、哪天做的、什么难度）不需要题库表，
+   *    而 user.status 自带 problem.name / rating，够用了。
    */
-  async submissions(maxPages: number = 2): Promise<Submission[]> {
+  async submissions(maxPages: number = 2, withMeta: boolean = false): Promise<Submission[]> {
     const pageSize = 1000;
     const all: RawSubmission[] = [];
 
@@ -224,14 +229,18 @@ export class CFClient {
       }
     }
 
-    const problemset = await this.get<ProblemsetResult>('problemset.problems', '');
-    const metaMap = new Map<string, RawProblemEntry>();
-    for (let i = 0; i < problemset.problems.length; i++) {
-      const p = problemset.problems[i];
-      if (p.contestId === undefined || p.index === undefined) {
-        continue;
+    // 题库表只有在需要标签时才拉（省掉一次大请求）
+    let metaMap: Map<string, RawProblemEntry> | null = null;
+    if (withMeta) {
+      const problemset = await this.get<ProblemsetResult>('problemset.problems', '');
+      metaMap = new Map<string, RawProblemEntry>();
+      for (let i = 0; i < problemset.problems.length; i++) {
+        const p = problemset.problems[i];
+        if (p.contestId === undefined || p.index === undefined) {
+          continue;
+        }
+        metaMap.set(`${p.contestId}${p.index}`, p);
       }
-      metaMap.set(`${p.contestId}${p.index}`, p);
     }
 
     const out: Submission[] = [];
@@ -239,17 +248,26 @@ export class CFClient {
       const s = all[i];
       const cid = s.problem.contestId ?? 0;
       const idx = s.problem.index ?? '';
-      const key = `${cid}${idx}`;
-      const meta = metaMap.get(key);
+      let name = s.problem.name ?? '';
+      let rating = s.problem.rating ?? 0;
+      let tags = s.problem.tags ?? [];
+      if (metaMap !== null) {
+        const meta = metaMap.get(`${cid}${idx}`);
+        if (meta !== undefined) {
+          name = meta.name ?? name;
+          rating = meta.rating ?? rating;
+          tags = meta.tags ?? tags;
+        }
+      }
       out.push({
         id: s.id,
         creationTimeSeconds: s.creationTimeSeconds,
         verdict: s.verdict ?? 'UNKNOWN',
         contestId: cid,
         index: idx,
-        problemName: meta?.name ?? s.problem.name ?? '',
-        problemRating: meta?.rating ?? s.problem.rating ?? 0,
-        problemTags: meta?.tags ?? s.problem.tags ?? []
+        problemName: name,
+        problemRating: rating,
+        problemTags: tags
       });
     }
     return out;

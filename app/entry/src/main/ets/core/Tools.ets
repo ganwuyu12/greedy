@@ -29,30 +29,102 @@ export class CompanionService {
   private stats: ProgressStats | null = null;
   private info: UserInfo | null = null;
   private loaded: boolean = false;
+  private loadError: string = '';
+  private loading: Promise<void> | null = null;
+  private metaLoading: Promise<void> | null = null;
+  private metaLoaded: boolean = false;
 
   constructor(handle: string) {
     this.client = new CFClient(handle);
   }
 
-  /** 拉一次数据并算好统计（避免每次问都重新拉） */
-  async ensureLoaded(maxPages: number = 2): Promise<void> {
+  /**
+   * 拉一次数据并算好统计（避免每次问都重新拉）
+   *
+   * 三个要点：
+   *   1. 不拉题库表——成长记录不需要标签，省掉一次 2 MB 的大请求
+   *      （之前每次都拉，在移动网络上直接超时）
+   *   2. 并发去重——同一轮对话里多个工具都调它，只该拉一次
+   *   3. 失败要**记住原因并抛出**，不能静默吞掉
+   *      之前吞掉异常，工具返回「还没成长记录」，把真实故障掩盖了，
+   *      排查时完全看不到超时信息
+   */
+  async ensureLoaded(): Promise<void> {
     if (this.loaded) {
       return;
     }
-    this.submissions = await this.client.submissions(maxPages);
-    this.days = PracticeLog.build(this.submissions);
-    this.stats = PracticeLog.stats(this.days);
+    if (this.loading !== null) {
+      return await this.loading;
+    }
+    this.loading = this.doLoad();
+    try {
+      await this.loading;
+    } finally {
+      this.loading = null;
+    }
+    if (this.loadError.length > 0) {
+      throw new Error(this.loadError);
+    }
+  }
+
+  private async doLoad(): Promise<void> {
+    this.loadError = '';
+    try {
+      // 第一步：只拉提交记录（快，约 2 秒）——成长记录所需的信息够了
+      this.submissions = await this.client.submissions(1, false);
+      this.days = PracticeLog.build(this.submissions);
+      this.stats = PracticeLog.stats(this.days);
+      this.loaded = true;
+    } catch (e) {
+      this.loadError = e instanceof Error ? e.message : String(e);
+      return;
+    }
+    // 用户信息拿不到不影响成长记录，单独兜住
     try {
       this.info = await this.client.userInfo();
     } catch (e) {
-      this.info = null;      // 用户信息拿不到不影响其他功能
+      this.info = null;
     }
-    this.loaded = true;
+    // 第二步：后台补难度与标签（要拉全量题库，约 2 MB，慢）
+    // 不 await——成长记录不该为它等待
+    this.metaLoading = this.loadMeta();
+  }
+
+  /**
+   * 补全难度与标签
+   *
+   * 为什么必须补：user.status 里 problem.rating 是 null，
+   * 只有题库表才有难度。缺了它「里程碑」和难度分布就没有数据。
+   */
+  private async loadMeta(): Promise<void> {
+    if (this.metaLoaded) {
+      return;
+    }
+    try {
+      const full = await this.client.submissions(1, true);
+      if (full.length > 0) {
+        this.submissions = full;
+        this.days = PracticeLog.build(this.submissions);
+        this.stats = PracticeLog.stats(this.days);
+      }
+      this.metaLoaded = true;
+    } catch (e) {
+      // 补全失败不影响已有数据，只是没有难度
+      this.metaLoaded = false;
+    }
+  }
+
+  /** 等难度数据补全（需要难度的工具调它） */
+  async ensureMeta(): Promise<void> {
+    if (this.metaLoading !== null) {
+      await this.metaLoading;
+    }
   }
 
   /** 强制重新拉取（用户下拉刷新时用） */
   invalidate(): void {
     this.loaded = false;
+    this.loadError = '';
   }
 
   getStats(): ProgressStats | null {
@@ -157,6 +229,7 @@ export function buildRegistry(svc: CompanionService, notes: NoteStore): ToolRegi
     params: [],
     run: async (_args: Map<string, Object>): Promise<string> => {
       await svc.ensureLoaded();
+      await svc.ensureMeta();       // 里程碑要难度数据，等它补全
       const subs = svc.getSubmissions();
       const solved = subs.filter((s: Submission) => s.verdict === 'OK');
       solved.sort((a: Submission, b: Submission) =>
