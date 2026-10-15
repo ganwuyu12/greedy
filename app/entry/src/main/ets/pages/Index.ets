@@ -45,6 +45,11 @@ struct Index {
   @State showProgress: boolean = false;
   @State progressText: string = '';
   @State milestonesText: string = '';
+  @State showSettings: boolean = false;
+  @State keyDraft: string = '';
+  @State handleDraft: string = '';
+  @State settingsHint: string = '';
+  @State hasKey: boolean = false;
 
   private seq: number = 0;
   private agent: Agent | null = null;
@@ -71,6 +76,8 @@ struct Index {
     if (handle.length === 0) {
       handle = AppConfig.DEFAULT_HANDLE;
     }
+    this.hasKey = apiKey.length > 0;
+    this.handleDraft = handle;
 
     this.companion = new CompanionService(handle);
     this.registry = buildRegistry(this.companion, this.notes);
@@ -88,10 +95,30 @@ struct Index {
 
     if (apiKey.length === 0) {
       this.pushBubble('assistant',
-        '哼，你还没配密钥呢……去设置里填一下，不然本小姐没法说话。', '');
+        '哼，你还没配密钥呢……点右上角「设置」填一下，不然本小姐没法说话。', '');
+      this.showSettings = true;      // 第一次启动直接把设置打开，省得找不到
     } else {
       this.pushBubble('assistant', '来了？说吧，今天又卡在哪了。', '');
     }
+  }
+
+  /** 保存设置：写进本地存储并重建 Agent */
+  private async saveSettings(): Promise<void> {
+    const key = this.keyDraft.trim();
+    const handle = this.handleDraft.trim();
+    if (key.length === 0) {
+      this.settingsHint = '密钥不能为空';
+      return;
+    }
+    await AppStorageUtil.setString(AppConfig.KEY_API_KEY, key);
+    await AppStorageUtil.setString(AppConfig.KEY_HANDLE,
+      handle.length > 0 ? handle : AppConfig.DEFAULT_HANDLE);
+    this.settingsHint = '已保存';
+    this.hasKey = true;
+    this.showSettings = false;
+    // 重新建一次 Agent，让新密钥生效（不用重启应用）
+    this.bubbles = [];
+    await this.initAgent();
   }
 
   private pushBubble(role: string, text: string, trace: string): number {
@@ -247,6 +274,53 @@ struct Index {
   }
 
   @Builder
+  settingsPanel() {
+    Column() {
+      Row() {
+        Text('设置').fontSize(16).fontWeight(FontWeight.Medium)
+        Blank()
+        Text('关闭').fontSize(13).fontColor('#8A8A8A')
+          .onClick(() => { this.showSettings = false; })
+      }
+      .width('100%')
+
+      Text('API 密钥（DeepSeek）').fontSize(13).fontColor('#666666')
+        .margin({ top: 14 }).width('100%')
+      TextInput({ text: this.keyDraft, placeholder: 'sk-...' })
+        .height(42).fontSize(14).type(InputType.Password)
+        .backgroundColor('#F4F5F7').borderRadius(8)
+        .margin({ top: 6 })
+        .onChange((v: string) => { this.keyDraft = v; })
+
+      Text('Codeforces 用户名').fontSize(13).fontColor('#666666')
+        .margin({ top: 12 }).width('100%')
+      TextInput({ text: this.handleDraft, placeholder: 'ganwuyu' })
+        .height(42).fontSize(14)
+        .backgroundColor('#F4F5F7').borderRadius(8)
+        .margin({ top: 6 })
+        .onChange((v: string) => { this.handleDraft = v; })
+
+      Row() {
+        Button('保存').fontSize(14).height(38)
+          .backgroundColor('#2E6BE6').layoutWeight(1)
+          .onClick(() => { this.saveSettings(); })
+        if (this.settingsHint.length > 0) {
+          Text(this.settingsHint).fontSize(12).fontColor('#2E6BE6')
+            .margin({ left: 12 })
+        }
+      }
+      .width('100%').margin({ top: 16 })
+
+      Text('密钥只存在本机，不会上传。')
+        .fontSize(11).fontColor('#AAAAAA').margin({ top: 10 }).width('100%')
+    }
+    .width('100%')
+    .padding(16)
+    .backgroundColor('#FFFFFF')
+    .border({ width: { bottom: 1 }, color: '#EEEEEE' })
+  }
+
+  @Builder
   emptyState() {
     Column() {
       Text('贪心')
@@ -326,10 +400,19 @@ struct Index {
               this.loadProgress();
             }
           })
+
+        Button('设置')
+          .fontSize(13).height(32).margin({ left: 8 })
+          .backgroundColor('#F4F5F7').fontColor('#666666')
+          .onClick(() => { this.showSettings = !this.showSettings; })
       }
       .width('100%')
       .padding({ left: 16, right: 16, top: 10, bottom: 10 })
       .backgroundColor('#FFFFFF')
+
+      if (this.showSettings) {
+        this.settingsPanel()
+      }
 
       if (this.showProgress) {
         this.progressPanel()
