@@ -1,0 +1,4578 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-10-15T10:51:24+08:00",
+  "note": "entry 层来自 contest/roadmap.md 解析，verified=true，有明确学习顺序；advanced 层为目录归类，verified=false，仅表示「属于哪个主题」，不表示学习顺序",
+  "stats": {
+    "total_concepts": 418,
+    "covered_by_roadmap": 54,
+    "uncovered": 364,
+    "coverage": 0.129,
+    "advanced_grouped": 364
+  },
+  "entry": {
+    "source": "oi_wiki_roadmap",
+    "verified": true,
+    "stages": [
+      {
+        "order": 1,
+        "title": "C++ 语言基础",
+        "level": "入门",
+        "source": "oi_wiki_roadmap",
+        "verified": true,
+        "sections": [
+          {
+            "order": "1.1",
+            "title": "Hello, World!",
+            "parent": null,
+            "note": "以一句 `Hello, World!`，开始算法竞赛之旅吧！ 同时了解一下 C++ 的源程序的大致框架是什么样子的．",
+            "concepts": [
+              {
+                "id": "lang_helloworld",
+                "name": "Hello, World!",
+                "path": "lang/helloworld.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 1,
+                "references": [
+                  "lang/cpp-other-langs.md"
+                ],
+                "global_order": 1,
+                "prerequisites": []
+              },
+              {
+                "id": "lang_basic",
+                "name": "C++ 语法基础",
+                "path": "lang/basic.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 2,
+                "references": [
+                  "lang/var.md",
+                  "lang/namespace.md",
+                  "contest/io.md",
+                  "lang/pointer.md"
+                ],
+                "global_order": 2,
+                "prerequisites": []
+              }
+            ]
+          },
+          {
+            "order": "1.2",
+            "title": "变量与运算",
+            "parent": null,
+            "note": "计算机出现的最初目的就是计算．因此我们先学习如何完成一些简单的运算任务吧．",
+            "concepts": [
+              {
+                "id": "lang_var",
+                "name": "变量",
+                "path": "lang/var.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 1,
+                "references": [
+                  "lang/cpp-other-langs.md",
+                  "lang/pointer.md",
+                  "math/bit.md"
+                ],
+                "global_order": 3,
+                "prerequisites": []
+              },
+              {
+                "id": "lang_op",
+                "name": "运算",
+                "path": "lang/op.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 2,
+                "references": [
+                  "lang/var.md",
+                  "math/bit.md",
+                  "lang/reference.md",
+                  "lang/pointer.md"
+                ],
+                "global_order": 4,
+                "prerequisites": []
+              }
+            ]
+          },
+          {
+            "order": "1.3",
+            "title": "流程控制",
+            "parent": null,
+            "note": "",
+            "concepts": []
+          },
+          {
+            "order": "1.3.1",
+            "title": "分支结构",
+            "parent": "1.3",
+            "note": "有的时候，我们需要在不同的条件下，选择执行不同的语句，这时候我们就需要借助分支语句． 分支语句包括下面几种： -   if 语句 -   if-else 语句 -   if-elif-else 语句 -   switch 语句",
+            "concepts": [
+              {
+                "id": "lang_branch",
+                "name": "分支",
+                "path": "lang/branch.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 1,
+                "references": [],
+                "global_order": 5
+              }
+            ]
+          },
+          {
+            "order": "1.3.2",
+            "title": "循环结构",
+            "parent": "1.3",
+            "note": "将若干条语句重复执行多次，就需要用到循环语句． 循环语句包括下面几种： -   for 语句 -   while 语句 -   do-while 语句",
+            "concepts": [
+              {
+                "id": "lang_loop",
+                "name": "循环",
+                "path": "lang/loop.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 1,
+                "references": [],
+                "global_order": 6
+              }
+            ]
+          },
+          {
+            "order": "1.4",
+            "title": "数组与结构体",
+            "parent": null,
+            "note": "数组用于存储大量相同类型的数据．而结构体则可以将若干变量捆绑起来．",
+            "concepts": [
+              {
+                "id": "lang_array",
+                "name": "数组",
+                "path": "lang/array.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 1,
+                "references": [],
+                "global_order": 7
+              },
+              {
+                "id": "lang_struct",
+                "name": "结构体",
+                "path": "lang/struct.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 2,
+                "references": [
+                  "lang/class.md"
+                ],
+                "global_order": 8,
+                "prerequisites": []
+              }
+            ]
+          },
+          {
+            "order": "1.5",
+            "title": "函数与递归",
+            "parent": null,
+            "note": "使用函数来让程序变得模块化，降低实现成本． 递归则是新手入门的一道坎，「自己调用自己」听起来并不是那么容易理解，不过仔细深究根本，就会发现「自己调用自己」和「自己调用别人」并没有本质差别．",
+            "concepts": [
+              {
+                "id": "lang_func",
+                "name": "函数",
+                "path": "lang/func.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 1,
+                "references": [],
+                "global_order": 9
+              },
+              {
+                "id": "basic_divide_and_conquer",
+                "name": "递归 & 分治",
+                "path": "basic/divide-and-conquer.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 2,
+                "references": [
+                  "basic/merge-sort.md",
+                  "search/opt.md",
+                  "dp/memo.md",
+                  "dp/basic.md"
+                ],
+                "global_order": 10,
+                "prerequisites": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "order": 2,
+        "title": "CSP-J 入门级",
+        "level": "入门",
+        "source": "oi_wiki_roadmap",
+        "verified": true,
+        "sections": [
+          {
+            "order": "2.1",
+            "title": "枚举与模拟",
+            "parent": null,
+            "note": "从现在开始，你已经会使用 C++ 语言完成一些简单的任务了，但是这远远不够． 为了做对一些简单的题目，你需要学会通过枚举或模拟脑海中的逻辑，来实现代码．这看起来并不是很高效，但有的时候很管用．",
+            "concepts": [
+              {
+                "id": "basic_enumerate",
+                "name": "枚举",
+                "path": "basic/enumerate.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 1,
+                "references": [
+                  "basic/bucket-sort.md",
+                  "misc/main-element.md"
+                ],
+                "global_order": 11,
+                "prerequisites": []
+              },
+              {
+                "id": "basic_simulate",
+                "name": "模拟",
+                "path": "basic/simulate.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 2,
+                "references": [],
+                "global_order": 12
+              }
+            ]
+          },
+          {
+            "order": "2.2",
+            "title": "递归与分治",
+            "parent": null,
+            "note": "递归是指函数定义中不断调用自己的方法；而分治则是不断将这一个问题分解为若干子问题，求解后合并的操作．",
+            "concepts": [
+              {
+                "id": "basic_divide_and_conquer",
+                "name": "递归 & 分治",
+                "path": "basic/divide-and-conquer.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 1,
+                "references": [
+                  "basic/merge-sort.md",
+                  "search/opt.md",
+                  "dp/memo.md",
+                  "dp/basic.md"
+                ],
+                "global_order": 13,
+                "prerequisites": []
+              }
+            ]
+          },
+          {
+            "order": "2.3",
+            "title": "字符串",
+            "parent": null,
+            "note": "在做信息学题目时，经常会碰到的一个数据类型就是字符串，你需要学习一些用于操作字符串的 STL 函数．当然，模拟也是解决字符串问题的好方法．",
+            "concepts": [
+              {
+                "id": "string_basic",
+                "name": "字符串基础",
+                "path": "string/basic.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 1,
+                "references": [
+                  "math/order-theory.md",
+                  "lang/csl/string.md"
+                ],
+                "global_order": 14,
+                "prerequisites": []
+              },
+              {
+                "id": "string_lib_func",
+                "name": "STL 函数",
+                "path": "string/lib-func.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 2,
+                "references": [
+                  "lang/csl/string.md"
+                ],
+                "global_order": 15,
+                "prerequisites": []
+              }
+            ]
+          },
+          {
+            "order": "2.4",
+            "title": "排序",
+            "parent": null,
+            "note": "当你获得了一组数据时，如何将他们从无序变成有序也是个很重要的问题．在你没有思路的时候，不妨考虑一下将数组排个序吧．这也是接下来的很多算法的基础． 排序的方法有点多，但理解后记住它们并不难． NOI 大纲中入门级只要求学习选择、冒泡、插入排序，共三个排序算法，但是其余的难度也并不大，且初赛中可能涉及，故一并列出．",
+            "concepts": [
+              {
+                "id": "basic_sort_intro",
+                "name": "排序简介",
+                "path": "basic/sort-intro.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 1,
+                "references": [
+                  "basic/complexity.md",
+                  "basic/counting-sort.md"
+                ],
+                "global_order": 16,
+                "prerequisites": []
+              },
+              {
+                "id": "basic_selection_sort",
+                "name": "选择排序",
+                "path": "basic/selection-sort.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 2,
+                "references": [],
+                "global_order": 17
+              },
+              {
+                "id": "basic_bubble_sort",
+                "name": "冒泡排序",
+                "path": "basic/bubble-sort.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 3,
+                "references": [],
+                "global_order": 18
+              },
+              {
+                "id": "basic_insertion_sort",
+                "name": "插入排序",
+                "path": "basic/insertion-sort.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 4,
+                "references": [],
+                "global_order": 19
+              },
+              {
+                "id": "basic_counting_sort",
+                "name": "计数排序",
+                "path": "basic/counting-sort.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 5,
+                "references": [
+                  "basic/prefix-sum.md",
+                  "basic/radix-sort.md"
+                ],
+                "global_order": 20,
+                "prerequisites": []
+              },
+              {
+                "id": "basic_radix_sort",
+                "name": "基数排序",
+                "path": "basic/radix-sort.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 6,
+                "references": [
+                  "basic/counting-sort.md",
+                  "basic/bucket-sort.md"
+                ],
+                "global_order": 21,
+                "prerequisites": []
+              },
+              {
+                "id": "basic_quick_sort",
+                "name": "快速排序",
+                "path": "basic/quick-sort.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 7,
+                "references": [
+                  "basic/divide-and-conquer.md",
+                  "basic/heap-sort.md"
+                ],
+                "global_order": 22,
+                "prerequisites": []
+              },
+              {
+                "id": "basic_merge_sort",
+                "name": "归并排序",
+                "path": "basic/merge-sort.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 8,
+                "references": [
+                  "math/permutation.md",
+                  "ds/fenwick.md"
+                ],
+                "global_order": 23,
+                "prerequisites": []
+              },
+              {
+                "id": "basic_heap_sort",
+                "name": "堆排序",
+                "path": "basic/heap-sort.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 9,
+                "references": [
+                  "ds/binary-heap.md"
+                ],
+                "global_order": 24,
+                "prerequisites": []
+              },
+              {
+                "id": "basic_bucket_sort",
+                "name": "桶排序",
+                "path": "basic/bucket-sort.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 10,
+                "references": [],
+                "global_order": 25
+              },
+              {
+                "id": "basic_stl_sort",
+                "name": "排序相关 STL",
+                "path": "basic/stl-sort.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 11,
+                "references": [
+                  "basic/quick-sort.md",
+                  "ds/kdt.md",
+                  "math/order-theory.md"
+                ],
+                "global_order": 26,
+                "prerequisites": []
+              }
+            ]
+          },
+          {
+            "order": "2.5",
+            "title": "二分与倍增",
+            "parent": null,
+            "note": "二分查找，本质上是运用分治的思想，不断减少查找范围的大小，直至找到答案．但是需要注意，这个查找方式必须应用在有序的数据结构中． 而倍增则不同，它是不断翻倍，以把线性范畴内的处理转化为对数级，大大优化时间复杂度．（这个知识点需要一点数学基础，暂时跳过也问题不大）",
+            "concepts": [
+              {
+                "id": "basic_binary",
+                "name": "二分",
+                "path": "basic/binary.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 1,
+                "references": [
+                  "lang/optimizations.md",
+                  "lang/op.md",
+                  "basic/stl-sort.md",
+                  "lang/csl/iterator.md",
+                  "lang/csl/container.md",
+                  "misc/frac-programming.md"
+                ],
+                "global_order": 27,
+                "prerequisites": []
+              },
+              {
+                "id": "basic_binary_lifting",
+                "name": "倍增",
+                "path": "basic/binary-lifting.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 2,
+                "references": [
+                  "graph/lca.md",
+                  "topic/rmq.md",
+                  "ds/sparse-table.md",
+                  "basic/complexity.md"
+                ],
+                "global_order": 28,
+                "prerequisites": []
+              }
+            ]
+          },
+          {
+            "order": "2.6",
+            "title": "搜索",
+            "parent": null,
+            "note": "在入门组，搜索的题目常常会在迷宫类题目中出现，一般会有地图类的数据；此外，搜索也十分常用于高效地枚举构造合法解的情况，亦可用于骗分．",
+            "concepts": []
+          },
+          {
+            "order": "2.6.1",
+            "title": "深度优先搜索（DFS）",
+            "parent": "2.6",
+            "note": "深度优先搜索指利用递归函数方便地实现暴力枚举的算法，与图论中的 DFS 算法有一定相似之处，但并不完全相同．",
+            "concepts": [
+              {
+                "id": "search_dfs",
+                "name": "DFS（搜索）",
+                "path": "search/dfs.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 1,
+                "references": [
+                  "graph/dfs.md"
+                ],
+                "global_order": 29,
+                "prerequisites": []
+              }
+            ]
+          },
+          {
+            "order": "2.6.2",
+            "title": "广度优先搜索（BFS）",
+            "parent": "2.6",
+            "note": "将每一个状态设计为图中的一个点，可以展开地毯式搜索．",
+            "concepts": [
+              {
+                "id": "search_bfs",
+                "name": "BFS（搜索）",
+                "path": "search/bfs.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 1,
+                "references": [
+                  "graph/bfs.md"
+                ],
+                "global_order": 30,
+                "prerequisites": []
+              }
+            ]
+          },
+          {
+            "order": "2.6.3",
+            "title": "搜索优化",
+            "parent": "2.6",
+            "note": "很多题目都可以用 DFS 来解决，而这个算法的复杂度显然是无法通过的．因此，需要一些优化使它跑得更快．这样的优化能够减少不可能成功的尝试，称为「剪枝」．BFS 相关的优化就要更加灵活了，但是基本思路和这里是一样的．",
+            "concepts": [
+              {
+                "id": "search_opt",
+                "name": "DFS 剪枝优化",
+                "path": "search/opt.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 1,
+                "references": [
+                  "dp/memo.md"
+                ],
+                "global_order": 31,
+                "prerequisites": []
+              }
+            ]
+          },
+          {
+            "order": "2.7",
+            "title": "数据结构入门",
+            "parent": null,
+            "note": "",
+            "concepts": []
+          },
+          {
+            "order": "2.7.1",
+            "title": "线性数据结构",
+            "parent": "2.7",
+            "note": "数组，链表，队列，栈，都是线性结构．巧用这些结构可以做出不少方便的事情．",
+            "concepts": [
+              {
+                "id": "ds_stack",
+                "name": "栈",
+                "path": "ds/stack.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 1,
+                "references": [],
+                "global_order": 32
+              },
+              {
+                "id": "ds_queue",
+                "name": "队列",
+                "path": "ds/queue.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 2,
+                "references": [
+                  "ds/stack.md",
+                  "ds/heap.md"
+                ],
+                "global_order": 33,
+                "prerequisites": []
+              },
+              {
+                "id": "ds_linked_list",
+                "name": "链表",
+                "path": "ds/linked-list.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 3,
+                "references": [],
+                "global_order": 34
+              }
+            ]
+          },
+          {
+            "order": "2.7.2",
+            "title": "复杂数据结构",
+            "parent": "2.7",
+            "note": "",
+            "concepts": [
+              {
+                "id": "graph_tree_basic",
+                "name": "树及二叉树",
+                "path": "graph/tree-basic.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 1,
+                "references": [],
+                "global_order": 35
+              },
+              {
+                "id": "graph_concept",
+                "name": "图的概念",
+                "path": "graph/concept.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 2,
+                "references": [
+                  "math/combinatorics/drawer-principle.md",
+                  "graph/scc.md",
+                  "graph/cut.md",
+                  "graph/bcc.md",
+                  "basic/complexity.md",
+                  "graph/tree-basic.md",
+                  "graph/bi-graph.md",
+                  "misc/cc-basic.md"
+                ],
+                "global_order": 36,
+                "prerequisites": []
+              },
+              {
+                "id": "graph_save",
+                "name": "图的存储",
+                "path": "graph/save.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 3,
+                "references": [
+                  "graph/concept.md",
+                  "graph/mst.md",
+                  "basic/binary.md",
+                  "graph/flow.md"
+                ],
+                "global_order": 37,
+                "prerequisites": []
+              }
+            ]
+          },
+          {
+            "order": "2.8",
+            "title": "动态规划入门",
+            "parent": null,
+            "note": "动态规划（Dynamic Programming, DP）是一种通过把原问题分解为相对简单的子问题的方式求解复杂问题的方法． 由于动态规划并不是某种具体的算法，而是一种解决特定问题的方法，因此它会出现在各式各样的数据结构中，与之相关的题目种类也更为繁杂．",
+            "concepts": [
+              {
+                "id": "dp_index",
+                "name": "动态规划简介",
+                "path": "dp/index.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 1,
+                "references": [],
+                "global_order": 38
+              }
+            ]
+          },
+          {
+            "order": "2.8.1",
+            "title": "背包问题",
+            "parent": "2.8",
+            "note": "即给出一个有限制容量的背包，选择放入若干有容量和价值的物品，求解如何放置能使得价值总和最大．这是阻挡很多 OIer 的第一道坎，从这里开始，算法就有些难以理解．",
+            "concepts": [
+              {
+                "id": "dp_knapsack_basic",
+                "name": "背包 DP",
+                "path": "dp/knapsack/basic.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 1,
+                "references": [
+                  "dp/index.md",
+                  "dp/opt/monotonic-queue-stack.md"
+                ],
+                "global_order": 39,
+                "prerequisites": []
+              }
+            ]
+          },
+          {
+            "order": "2.8.2",
+            "title": "线性动态规划",
+            "parent": "2.8",
+            "note": "在动态规划中，最难的部分之一就是设计状态，需要用到构造相关技巧．当你写出了状态和状态转移方程之后，完成一道动态规划的题目就不难了． 记忆化搜索是一种通过记录已经遍历过的状态的信息，从而避免对同一状态重复遍历的搜索实现方式．有的题目也可以使用记忆化搜索来降低思维难度． 因为记忆化搜索确保了每个状态只访问一次，它也是一种常见的动态规划实现方式．",
+            "concepts": [
+              {
+                "id": "basic_construction",
+                "name": "构造",
+                "path": "basic/construction.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 1,
+                "references": [
+                  "math/number-theory/inverse.md"
+                ],
+                "global_order": 40,
+                "prerequisites": []
+              },
+              {
+                "id": "dp_basic",
+                "name": "动态规划基础",
+                "path": "dp/basic.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 2,
+                "references": [
+                  "graph/dag.md",
+                  "dp/dag.md",
+                  "string/basic.md"
+                ],
+                "global_order": 41,
+                "prerequisites": []
+              },
+              {
+                "id": "dp_memo",
+                "name": "记忆化搜索",
+                "path": "dp/memo.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 3,
+                "references": [
+                  "search/dfs.md"
+                ],
+                "global_order": 42,
+                "prerequisites": []
+              }
+            ]
+          },
+          {
+            "order": "2.8.3",
+            "title": "复杂动态规划",
+            "parent": "2.8",
+            "note": "区间类动态规划是线性动态规划的扩展，它在分阶段地划分问题时，与阶段中元素出现的顺序和由前一阶段的哪些元素合并而来有很大的关系．",
+            "concepts": [
+              {
+                "id": "dp_interval",
+                "name": "区间 DP",
+                "path": "dp/interval.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 1,
+                "references": [],
+                "global_order": 43
+              }
+            ]
+          },
+          {
+            "order": "2.9",
+            "title": "数学",
+            "parent": null,
+            "note": "",
+            "concepts": []
+          },
+          {
+            "order": "2.9.1",
+            "title": "高精度算法",
+            "parent": "2.9",
+            "note": "就算是 long long（或 int64）还不够怎么办？用高精度算法．本质上就是模拟了四则运算．",
+            "concepts": [
+              {
+                "id": "math_bignum",
+                "name": "高精度计算",
+                "path": "math/bignum.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 1,
+                "references": [
+                  "math/numeral-sys/base.md",
+                  "contest/common-tricks.md",
+                  "math/poly/fft.md",
+                  "math/poly/ntt.md"
+                ],
+                "global_order": 44,
+                "prerequisites": []
+              }
+            ]
+          },
+          {
+            "order": "2.9.2",
+            "title": "进制转换",
+            "parent": "2.9",
+            "note": "在计算机中，除了二进制，比较常用的还有八进制和十六进制．有的时候学会运用正确的进制对解题也有很大帮助．",
+            "concepts": [
+              {
+                "id": "math_numeral_sys_base",
+                "name": "进位制",
+                "path": "math/numeral-sys/base.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 1,
+                "references": [
+                  "math/bit.md",
+                  "math/numeral-sys/balanced-ternary.md",
+                  "math/numeral-sys/gray-code.md",
+                  "math/permutation.md"
+                ],
+                "global_order": 45,
+                "prerequisites": []
+              }
+            ]
+          },
+          {
+            "order": "2.9.3",
+            "title": "位操作",
+            "parent": "2.9",
+            "note": "位操作就是基于整数的二进制表示进行的运算．由于计算机内部就是以二进制来存储数据，位操作是相当快的． 基本的位操作共 6 种，分别为按位与、按位或、按位异或、按位取反、左移和右移．",
+            "concepts": [
+              {
+                "id": "math_bit",
+                "name": "位操作",
+                "path": "math/bit.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 1,
+                "references": [
+                  "lang/var.md",
+                  "math/numeral-sys/base.md",
+                  "math/boolean-algebra.md",
+                  "lang/op.md",
+                  "lang/optimizations.md",
+                  "math/binary-set.md",
+                  "dp/state.md",
+                  "lang/csl/bitset.md",
+                  "ds/fenwick.md"
+                ],
+                "global_order": 46,
+                "prerequisites": []
+              }
+            ]
+          },
+          {
+            "order": "2.9.4",
+            "title": "数论",
+            "parent": "2.9",
+            "note": "",
+            "concepts": [
+              {
+                "id": "math_number_theory_basic",
+                "name": "数论基础",
+                "path": "math/number-theory/basic.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 1,
+                "references": [
+                  "math/number-theory/gcd.md",
+                  "math/number-theory/bezouts.md",
+                  "math/number-theory/prime.md",
+                  "math/algebra/ring-theory.md",
+                  "math/order-theory.md",
+                  "math/number-theory/inverse.md",
+                  "math/algebra/group-theory.md",
+                  "math/combinatorics/drawer-principle.md",
+                  "math/number-theory/euler-totient.md",
+                  "math/number-theory/euclidean.md",
+                  "math/number-theory/mod-arithmetic.md",
+                  "math/number-theory/quad-residue.md",
+                  "math/number-theory/sqrt-decomposition.md",
+                  "math/number-theory/factorial.md",
+                  "math/game-theory/impartial-game.md"
+                ],
+                "global_order": 47,
+                "prerequisites": []
+              },
+              {
+                "id": "math_number_theory_prime",
+                "name": "素数",
+                "path": "math/number-theory/prime.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 2,
+                "references": [
+                  "math/number-theory/basic.md",
+                  "math/number-theory/fermat.md",
+                  "math/number-theory/primitive-root.md",
+                  "math/number-theory/congruence-equation.md",
+                  "math/number-theory/euler-totient.md",
+                  "math/number-theory/crt.md",
+                  "math/number-theory/residue.md"
+                ],
+                "global_order": 48,
+                "prerequisites": []
+              },
+              {
+                "id": "math_number_theory_sieve",
+                "name": "筛法",
+                "path": "math/number-theory/sieve.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 3,
+                "references": [
+                  "math/bit.md",
+                  "lang/csl/bitset.md",
+                  "math/number-theory/basic.md"
+                ],
+                "global_order": 49,
+                "prerequisites": []
+              },
+              {
+                "id": "math_number_theory_gcd",
+                "name": "最大公因数",
+                "path": "math/number-theory/gcd.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 4,
+                "references": [
+                  "math/number-theory/basic.md",
+                  "math/combinatorics/fibonacci.md",
+                  "math/bignum.md",
+                  "math/bit.md"
+                ],
+                "global_order": 50,
+                "prerequisites": []
+              },
+              {
+                "id": "math_number_theory_euler_totient",
+                "name": "欧拉函数",
+                "path": "math/number-theory/euler-totient.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 5,
+                "references": [
+                  "math/number-theory/basic.md",
+                  "math/number-theory/mobius.md",
+                  "math/number-theory/pollard-rho.md",
+                  "math/number-theory/sieve.md",
+                  "math/number-theory/fermat.md"
+                ],
+                "global_order": 51,
+                "prerequisites": []
+              },
+              {
+                "id": "math_number_theory_pollard_rho",
+                "name": "分解质因数",
+                "path": "math/number-theory/pollard-rho.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 6,
+                "references": [
+                  "math/number-theory/basic.md",
+                  "math/number-theory/sieve.md",
+                  "math/number-theory/prime.md"
+                ],
+                "global_order": 52,
+                "prerequisites": []
+              }
+            ]
+          },
+          {
+            "order": "2.9.5",
+            "title": "组合计数",
+            "parent": "2.9",
+            "note": "至此，你就学习完了入门组范畴内的所有算法，但是想要掌握它们，你需要继续进行足够数量的刷题，以巩固你所学到的知识点．",
+            "concepts": [
+              {
+                "id": "math_combinatorics_combination",
+                "name": "排列组合",
+                "path": "math/combinatorics/combination.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 1,
+                "references": [],
+                "global_order": 53
+              },
+              {
+                "id": "math_combinatorics_drawer_principle",
+                "name": "抽屉原理",
+                "path": "math/combinatorics/drawer-principle.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 2,
+                "references": [],
+                "global_order": 54
+              },
+              {
+                "id": "math_combinatorics_inclusion_exclusion_principle",
+                "name": "容斥原理",
+                "path": "math/combinatorics/inclusion-exclusion-principle.md",
+                "level": "入门",
+                "source": "oi_wiki_roadmap",
+                "verified": true,
+                "exists": true,
+                "order_in_section": 3,
+                "references": [
+                  "math/order-theory.md"
+                ],
+                "global_order": 55,
+                "prerequisites": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "advanced": {
+    "source": "directory_grouping",
+    "verified": false,
+    "tiers": [
+      {
+        "tier": 1,
+        "title": "语言基础",
+        "source": "directory_grouping",
+        "verified": false,
+        "note": "本层顺序为按目录归类，非学习顺序，需人工确认",
+        "groups": [
+          {
+            "topic": "语言基础",
+            "dir": "lang",
+            "count": 32,
+            "concepts": [
+              {
+                "id": "lang_class",
+                "name": "class",
+                "path": "lang/class.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 1
+              },
+              {
+                "id": "lang_const",
+                "name": "const",
+                "path": "lang/const.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 2
+              },
+              {
+                "id": "lang_cpp_other_langs",
+                "name": "cpp-other-langs",
+                "path": "lang/cpp-other-langs.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 3
+              },
+              {
+                "id": "lang_csl_algorithm",
+                "name": "algorithm",
+                "path": "lang/csl/algorithm.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 4
+              },
+              {
+                "id": "lang_csl_associative_container",
+                "name": "associative-container",
+                "path": "lang/csl/associative-container.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 5
+              },
+              {
+                "id": "lang_csl_bitset",
+                "name": "bitset",
+                "path": "lang/csl/bitset.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 6
+              },
+              {
+                "id": "lang_csl_container_adapter",
+                "name": "container-adapter",
+                "path": "lang/csl/container-adapter.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 7
+              },
+              {
+                "id": "lang_csl_container",
+                "name": "container",
+                "path": "lang/csl/container.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 8
+              },
+              {
+                "id": "lang_csl_index",
+                "name": "index",
+                "path": "lang/csl/index.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 9
+              },
+              {
+                "id": "lang_csl_iterator",
+                "name": "iterator",
+                "path": "lang/csl/iterator.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 10
+              },
+              {
+                "id": "lang_csl_pair",
+                "name": "pair",
+                "path": "lang/csl/pair.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 11
+              },
+              {
+                "id": "lang_csl_sequence_container",
+                "name": "sequence-container",
+                "path": "lang/csl/sequence-container.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 12
+              },
+              {
+                "id": "lang_csl_string",
+                "name": "string",
+                "path": "lang/csl/string.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 13
+              },
+              {
+                "id": "lang_csl_unordered_container",
+                "name": "unordered-container",
+                "path": "lang/csl/unordered-container.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 14
+              },
+              {
+                "id": "lang_file_op",
+                "name": "file-op",
+                "path": "lang/file-op.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 15
+              },
+              {
+                "id": "lang_index",
+                "name": "index",
+                "path": "lang/index.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 16
+              },
+              {
+                "id": "lang_java_pro",
+                "name": "java-pro",
+                "path": "lang/java-pro.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 17
+              },
+              {
+                "id": "lang_java",
+                "name": "java",
+                "path": "lang/java.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 18
+              },
+              {
+                "id": "lang_lambda",
+                "name": "lambda",
+                "path": "lang/lambda.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 19
+              },
+              {
+                "id": "lang_namespace",
+                "name": "namespace",
+                "path": "lang/namespace.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 20
+              },
+              {
+                "id": "lang_new",
+                "name": "new",
+                "path": "lang/new.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 21
+              },
+              {
+                "id": "lang_op_overload",
+                "name": "op-overload",
+                "path": "lang/op-overload.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 22
+              },
+              {
+                "id": "lang_optimizations",
+                "name": "optimizations",
+                "path": "lang/optimizations.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 23
+              },
+              {
+                "id": "lang_pas_cpp",
+                "name": "pas-cpp",
+                "path": "lang/pas-cpp.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 24
+              },
+              {
+                "id": "lang_pb_ds_index",
+                "name": "index",
+                "path": "lang/pb-ds/index.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 25
+              },
+              {
+                "id": "lang_pb_ds_pq",
+                "name": "pq",
+                "path": "lang/pb-ds/pq.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 26
+              },
+              {
+                "id": "lang_pb_ds_tree",
+                "name": "tree",
+                "path": "lang/pb-ds/tree.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 27
+              },
+              {
+                "id": "lang_pointer",
+                "name": "pointer",
+                "path": "lang/pointer.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 28
+              },
+              {
+                "id": "lang_python",
+                "name": "python",
+                "path": "lang/python.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 29
+              },
+              {
+                "id": "lang_reference",
+                "name": "reference",
+                "path": "lang/reference.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 30
+              },
+              {
+                "id": "lang_union",
+                "name": "union",
+                "path": "lang/union.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 31
+              },
+              {
+                "id": "lang_value_category",
+                "name": "value-category",
+                "path": "lang/value-category.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 32
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tier": 2,
+        "title": "基础算法",
+        "source": "directory_grouping",
+        "verified": false,
+        "note": "本层顺序为按目录归类，非学习顺序，需人工确认",
+        "groups": [
+          {
+            "topic": "基础算法",
+            "dir": "basic",
+            "count": 9,
+            "concepts": [
+              {
+                "id": "basic_amortized_analysis",
+                "name": "amortized-analysis",
+                "path": "basic/amortized-analysis.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 1
+              },
+              {
+                "id": "basic_complexity",
+                "name": "complexity",
+                "path": "basic/complexity.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 2
+              },
+              {
+                "id": "basic_greedy",
+                "name": "greedy",
+                "path": "basic/greedy.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 3
+              },
+              {
+                "id": "basic_index",
+                "name": "index",
+                "path": "basic/index.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 4
+              },
+              {
+                "id": "basic_prefix_sum",
+                "name": "prefix-sum",
+                "path": "basic/prefix-sum.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 5
+              },
+              {
+                "id": "basic_shell_sort",
+                "name": "shell-sort",
+                "path": "basic/shell-sort.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 6
+              },
+              {
+                "id": "basic_tim_sort",
+                "name": "tim-sort",
+                "path": "basic/tim-sort.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 7
+              },
+              {
+                "id": "basic_tournament_sort",
+                "name": "tournament-sort",
+                "path": "basic/tournament-sort.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 8
+              },
+              {
+                "id": "basic_use_of_sort",
+                "name": "use-of-sort",
+                "path": "basic/use-of-sort.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 9
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tier": 3,
+        "title": "搜索",
+        "source": "directory_grouping",
+        "verified": false,
+        "note": "本层顺序为按目录归类，非学习顺序，需人工确认",
+        "groups": [
+          {
+            "topic": "搜索",
+            "dir": "search",
+            "count": 9,
+            "concepts": [
+              {
+                "id": "search_alpha_beta",
+                "name": "alpha-beta",
+                "path": "search/alpha-beta.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 1
+              },
+              {
+                "id": "search_astar",
+                "name": "astar",
+                "path": "search/astar.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 2
+              },
+              {
+                "id": "search_backtracking",
+                "name": "backtracking",
+                "path": "search/backtracking.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 3
+              },
+              {
+                "id": "search_bidirectional",
+                "name": "bidirectional",
+                "path": "search/bidirectional.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 4
+              },
+              {
+                "id": "search_dlx",
+                "name": "dlx",
+                "path": "search/dlx.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 5
+              },
+              {
+                "id": "search_heuristic",
+                "name": "heuristic",
+                "path": "search/heuristic.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 6
+              },
+              {
+                "id": "search_idastar",
+                "name": "idastar",
+                "path": "search/idastar.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 7
+              },
+              {
+                "id": "search_index",
+                "name": "index",
+                "path": "search/index.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 8
+              },
+              {
+                "id": "search_iterative",
+                "name": "iterative",
+                "path": "search/iterative.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 9
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tier": 4,
+        "title": "核心专题（DP / 数据结构）",
+        "source": "directory_grouping",
+        "verified": false,
+        "note": "本层顺序为按目录归类，非学习顺序，需人工确认",
+        "groups": [
+          {
+            "topic": "动态规划",
+            "dir": "dp",
+            "count": 17,
+            "concepts": [
+              {
+                "id": "dp_count",
+                "name": "count",
+                "path": "dp/count.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 1
+              },
+              {
+                "id": "dp_dag",
+                "name": "dag",
+                "path": "dp/dag.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 2
+              },
+              {
+                "id": "dp_dp_of_dp",
+                "name": "dp-of-dp",
+                "path": "dp/dp-of-dp.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 3
+              },
+              {
+                "id": "dp_dynamic",
+                "name": "dynamic",
+                "path": "dp/dynamic.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 4
+              },
+              {
+                "id": "dp_knapsack_advanced",
+                "name": "advanced",
+                "path": "dp/knapsack/advanced.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 5
+              },
+              {
+                "id": "dp_number",
+                "name": "number",
+                "path": "dp/number.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 6
+              },
+              {
+                "id": "dp_opt_dp_opt",
+                "name": "dp-opt",
+                "path": "dp/opt/dp-opt.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 7
+              },
+              {
+                "id": "dp_opt_monotonic_queue_stack",
+                "name": "monotonic-queue-stack",
+                "path": "dp/opt/monotonic-queue-stack.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 8
+              },
+              {
+                "id": "dp_opt_quadrangle",
+                "name": "quadrangle",
+                "path": "dp/opt/quadrangle.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 9
+              },
+              {
+                "id": "dp_opt_slope_trick",
+                "name": "slope-trick",
+                "path": "dp/opt/slope-trick.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 10
+              },
+              {
+                "id": "dp_opt_slope",
+                "name": "slope",
+                "path": "dp/opt/slope.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 11
+              },
+              {
+                "id": "dp_opt_state",
+                "name": "state",
+                "path": "dp/opt/state.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 12
+              },
+              {
+                "id": "dp_opt_wqs_binary_search",
+                "name": "wqs-binary-search",
+                "path": "dp/opt/wqs-binary-search.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 13
+              },
+              {
+                "id": "dp_plug",
+                "name": "plug",
+                "path": "dp/plug.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 14
+              },
+              {
+                "id": "dp_probability",
+                "name": "probability",
+                "path": "dp/probability.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 15
+              },
+              {
+                "id": "dp_state",
+                "name": "state",
+                "path": "dp/state.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 16
+              },
+              {
+                "id": "dp_tree",
+                "name": "tree",
+                "path": "dp/tree.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 17
+              }
+            ]
+          },
+          {
+            "topic": "数据结构",
+            "dir": "ds",
+            "count": 56,
+            "concepts": [
+              {
+                "id": "ds_aa_tree",
+                "name": "aa-tree",
+                "path": "ds/aa-tree.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 1
+              },
+              {
+                "id": "ds_avl",
+                "name": "avl",
+                "path": "ds/avl.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 2
+              },
+              {
+                "id": "ds_balanced_in_seg",
+                "name": "balanced-in-seg",
+                "path": "ds/balanced-in-seg.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 3
+              },
+              {
+                "id": "ds_binary_heap",
+                "name": "binary-heap",
+                "path": "ds/binary-heap.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 4
+              },
+              {
+                "id": "ds_bit_in_block_array",
+                "name": "bit-in-block-array",
+                "path": "ds/bit-in-block-array.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 5
+              },
+              {
+                "id": "ds_block_array",
+                "name": "block-array",
+                "path": "ds/block-array.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 6
+              },
+              {
+                "id": "ds_block_list",
+                "name": "block-list",
+                "path": "ds/block-list.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 7
+              },
+              {
+                "id": "ds_bst",
+                "name": "bst",
+                "path": "ds/bst.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 8
+              },
+              {
+                "id": "ds_cartesian_tree",
+                "name": "cartesian-tree",
+                "path": "ds/cartesian-tree.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 9
+              },
+              {
+                "id": "ds_cat_tree",
+                "name": "cat-tree",
+                "path": "ds/cat-tree.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 10
+              },
+              {
+                "id": "ds_decompose",
+                "name": "decompose",
+                "path": "ds/decompose.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 11
+              },
+              {
+                "id": "ds_divide_combine",
+                "name": "divide-combine",
+                "path": "ds/divide-combine.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 12
+              },
+              {
+                "id": "ds_dividing",
+                "name": "dividing",
+                "path": "ds/dividing.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 13
+              },
+              {
+                "id": "ds_dsu_complexity",
+                "name": "dsu-complexity",
+                "path": "ds/dsu-complexity.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 14
+              },
+              {
+                "id": "ds_dsu",
+                "name": "dsu",
+                "path": "ds/dsu.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 15
+              },
+              {
+                "id": "ds_ett",
+                "name": "ett",
+                "path": "ds/ett.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 16
+              },
+              {
+                "id": "ds_fenwick",
+                "name": "fenwick",
+                "path": "ds/fenwick.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 17
+              },
+              {
+                "id": "ds_finger_tree",
+                "name": "finger-tree",
+                "path": "ds/finger-tree.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 18
+              },
+              {
+                "id": "ds_global_bst",
+                "name": "global-bst",
+                "path": "ds/global-bst.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 19
+              },
+              {
+                "id": "ds_hash",
+                "name": "hash",
+                "path": "ds/hash.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 20
+              },
+              {
+                "id": "ds_heap",
+                "name": "heap",
+                "path": "ds/heap.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 21
+              },
+              {
+                "id": "ds_huffman_tree",
+                "name": "huffman-tree",
+                "path": "ds/huffman-tree.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 22
+              },
+              {
+                "id": "ds_index",
+                "name": "index",
+                "path": "ds/index.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 23
+              },
+              {
+                "id": "ds_kdt",
+                "name": "kdt",
+                "path": "ds/kdt.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 24
+              },
+              {
+                "id": "ds_kinetic_tournament_tree",
+                "name": "kinetic-tournament-tree",
+                "path": "ds/kinetic-tournament-tree.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 25
+              },
+              {
+                "id": "ds_lct",
+                "name": "lct",
+                "path": "ds/lct.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 26
+              },
+              {
+                "id": "ds_leftist_tree",
+                "name": "leftist-tree",
+                "path": "ds/leftist-tree.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 27
+              },
+              {
+                "id": "ds_li_chao_tree",
+                "name": "li-chao-tree",
+                "path": "ds/li-chao-tree.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 28
+              },
+              {
+                "id": "ds_llrbt",
+                "name": "llrbt",
+                "path": "ds/llrbt.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 29
+              },
+              {
+                "id": "ds_monotonic_queue",
+                "name": "monotonic-queue",
+                "path": "ds/monotonic-queue.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 30
+              },
+              {
+                "id": "ds_monotonic_stack",
+                "name": "monotonic-stack",
+                "path": "ds/monotonic-stack.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 31
+              },
+              {
+                "id": "ds_pairing_heap",
+                "name": "pairing-heap",
+                "path": "ds/pairing-heap.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 32
+              },
+              {
+                "id": "ds_persistent_balanced",
+                "name": "persistent-balanced",
+                "path": "ds/persistent-balanced.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 33
+              },
+              {
+                "id": "ds_persistent_block_array",
+                "name": "persistent-block-array",
+                "path": "ds/persistent-block-array.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 34
+              },
+              {
+                "id": "ds_persistent_heap",
+                "name": "persistent-heap",
+                "path": "ds/persistent-heap.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 35
+              },
+              {
+                "id": "ds_persistent_seg",
+                "name": "persistent-seg",
+                "path": "ds/persistent-seg.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 36
+              },
+              {
+                "id": "ds_persistent_trie",
+                "name": "persistent-trie",
+                "path": "ds/persistent-trie.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 37
+              },
+              {
+                "id": "ds_persistent",
+                "name": "persistent",
+                "path": "ds/persistent.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 38
+              },
+              {
+                "id": "ds_pq_tree",
+                "name": "pq-tree",
+                "path": "ds/pq-tree.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 39
+              },
+              {
+                "id": "ds_rbtree",
+                "name": "rbtree",
+                "path": "ds/rbtree.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 40
+              },
+              {
+                "id": "ds_sbt",
+                "name": "sbt",
+                "path": "ds/sbt.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 41
+              },
+              {
+                "id": "ds_seg_beats",
+                "name": "seg-beats",
+                "path": "ds/seg-beats.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 42
+              },
+              {
+                "id": "ds_seg_in_balanced",
+                "name": "seg-in-balanced",
+                "path": "ds/seg-in-balanced.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 43
+              },
+              {
+                "id": "ds_seg_in_bit",
+                "name": "seg-in-bit",
+                "path": "ds/seg-in-bit.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 44
+              },
+              {
+                "id": "ds_seg_in_seg",
+                "name": "seg-in-seg",
+                "path": "ds/seg-in-seg.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 45
+              },
+              {
+                "id": "ds_seg_merge_split",
+                "name": "seg-merge-split",
+                "path": "ds/seg-merge-split.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 46
+              },
+              {
+                "id": "ds_seg",
+                "name": "seg",
+                "path": "ds/seg.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 47
+              },
+              {
+                "id": "ds_sgt",
+                "name": "sgt",
+                "path": "ds/sgt.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 48
+              },
+              {
+                "id": "ds_skiplist",
+                "name": "skiplist",
+                "path": "ds/skiplist.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 49
+              },
+              {
+                "id": "ds_sparse_table",
+                "name": "sparse-table",
+                "path": "ds/sparse-table.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 50
+              },
+              {
+                "id": "ds_splay",
+                "name": "splay",
+                "path": "ds/splay.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 51
+              },
+              {
+                "id": "ds_sqrt_tree",
+                "name": "sqrt-tree",
+                "path": "ds/sqrt-tree.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 52
+              },
+              {
+                "id": "ds_top_tree",
+                "name": "top-tree",
+                "path": "ds/top-tree.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 53
+              },
+              {
+                "id": "ds_treap",
+                "name": "treap",
+                "path": "ds/treap.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 54
+              },
+              {
+                "id": "ds_tree_decompose",
+                "name": "tree-decompose",
+                "path": "ds/tree-decompose.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 55
+              },
+              {
+                "id": "ds_wblt",
+                "name": "wblt",
+                "path": "ds/wblt.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 56
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tier": 5,
+        "title": "图论与字符串",
+        "source": "directory_grouping",
+        "verified": false,
+        "note": "本层顺序为按目录归类，非学习顺序，需人工确认",
+        "groups": [
+          {
+            "topic": "图论",
+            "dir": "graph",
+            "count": 58,
+            "concepts": [
+              {
+                "id": "graph_2_sat",
+                "name": "2-sat",
+                "path": "graph/2-sat.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 1
+              },
+              {
+                "id": "graph_bcc",
+                "name": "bcc",
+                "path": "graph/bcc.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 2
+              },
+              {
+                "id": "graph_bfs",
+                "name": "bfs",
+                "path": "graph/bfs.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 3
+              },
+              {
+                "id": "graph_bi_graph",
+                "name": "bi-graph",
+                "path": "graph/bi-graph.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 4
+              },
+              {
+                "id": "graph_block_forest",
+                "name": "block-forest",
+                "path": "graph/block-forest.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 5
+              },
+              {
+                "id": "graph_chord",
+                "name": "chord",
+                "path": "graph/chord.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 6
+              },
+              {
+                "id": "graph_color",
+                "name": "color",
+                "path": "graph/color.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 7
+              },
+              {
+                "id": "graph_connectivity",
+                "name": "connectivity",
+                "path": "graph/connectivity.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 8
+              },
+              {
+                "id": "graph_cut",
+                "name": "cut",
+                "path": "graph/cut.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 9
+              },
+              {
+                "id": "graph_dag",
+                "name": "dag",
+                "path": "graph/dag.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 10
+              },
+              {
+                "id": "graph_dfs",
+                "name": "dfs",
+                "path": "graph/dfs.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 11
+              },
+              {
+                "id": "graph_diff_constraints",
+                "name": "diff-constraints",
+                "path": "graph/diff-constraints.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 12
+              },
+              {
+                "id": "graph_dmst",
+                "name": "dmst",
+                "path": "graph/dmst.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 13
+              },
+              {
+                "id": "graph_dominator_tree",
+                "name": "dominator-tree",
+                "path": "graph/dominator-tree.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 14
+              },
+              {
+                "id": "graph_dsu_on_tree",
+                "name": "dsu-on-tree",
+                "path": "graph/dsu-on-tree.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 15
+              },
+              {
+                "id": "graph_dynamic_tree_divide",
+                "name": "dynamic-tree-divide",
+                "path": "graph/dynamic-tree-divide.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 16
+              },
+              {
+                "id": "graph_euler",
+                "name": "euler",
+                "path": "graph/euler.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 17
+              },
+              {
+                "id": "graph_flow",
+                "name": "flow",
+                "path": "graph/flow.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 18
+              },
+              {
+                "id": "graph_flow_bound",
+                "name": "bound",
+                "path": "graph/flow/bound.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 19
+              },
+              {
+                "id": "graph_flow_max_flow",
+                "name": "max-flow",
+                "path": "graph/flow/max-flow.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 20
+              },
+              {
+                "id": "graph_flow_min_cost",
+                "name": "min-cost",
+                "path": "graph/flow/min-cost.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 21
+              },
+              {
+                "id": "graph_flow_min_cut",
+                "name": "min-cut",
+                "path": "graph/flow/min-cut.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 22
+              },
+              {
+                "id": "graph_graph_matching_bigraph_match",
+                "name": "bigraph-match",
+                "path": "graph/graph-matching/bigraph-match.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 23
+              },
+              {
+                "id": "graph_graph_matching_bigraph_weight_match",
+                "name": "bigraph-weight-match",
+                "path": "graph/graph-matching/bigraph-weight-match.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 24
+              },
+              {
+                "id": "graph_graph_matching_general_match",
+                "name": "general-match",
+                "path": "graph/graph-matching/general-match.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 25
+              },
+              {
+                "id": "graph_graph_matching_general_weight_match",
+                "name": "general-weight-match",
+                "path": "graph/graph-matching/general-weight-match.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 26
+              },
+              {
+                "id": "graph_graph_matching_graph_match",
+                "name": "graph-match",
+                "path": "graph/graph-matching/graph-match.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 27
+              },
+              {
+                "id": "graph_graph_matching_stable_match",
+                "name": "stable-match",
+                "path": "graph/graph-matching/stable-match.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 28
+              },
+              {
+                "id": "graph_graph_random_walk",
+                "name": "graph-random-walk",
+                "path": "graph/graph-random-walk.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 29
+              },
+              {
+                "id": "graph_hamilton",
+                "name": "hamilton",
+                "path": "graph/hamilton.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 30
+              },
+              {
+                "id": "graph_hld",
+                "name": "hld",
+                "path": "graph/hld.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 31
+              },
+              {
+                "id": "graph_index",
+                "name": "index",
+                "path": "graph/index.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 32
+              },
+              {
+                "id": "graph_kth_path",
+                "name": "kth-path",
+                "path": "graph/kth-path.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 33
+              },
+              {
+                "id": "graph_lca",
+                "name": "lca",
+                "path": "graph/lca.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 34
+              },
+              {
+                "id": "graph_lgv",
+                "name": "lgv",
+                "path": "graph/lgv.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 35
+              },
+              {
+                "id": "graph_matrix_tree",
+                "name": "matrix-tree",
+                "path": "graph/matrix-tree.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 36
+              },
+              {
+                "id": "graph_max_clique",
+                "name": "max-clique",
+                "path": "graph/max-clique.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 37
+              },
+              {
+                "id": "graph_mdst",
+                "name": "mdst",
+                "path": "graph/mdst.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 38
+              },
+              {
+                "id": "graph_min_cycle",
+                "name": "min-cycle",
+                "path": "graph/min-cycle.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 39
+              },
+              {
+                "id": "graph_mod_shortest_path",
+                "name": "mod-shortest-path",
+                "path": "graph/mod-shortest-path.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 40
+              },
+              {
+                "id": "graph_mst",
+                "name": "mst",
+                "path": "graph/mst.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 41
+              },
+              {
+                "id": "graph_node",
+                "name": "node",
+                "path": "graph/node.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 42
+              },
+              {
+                "id": "graph_planar",
+                "name": "planar",
+                "path": "graph/planar.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 43
+              },
+              {
+                "id": "graph_prufer",
+                "name": "prufer",
+                "path": "graph/prufer.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 44
+              },
+              {
+                "id": "graph_rings_count",
+                "name": "rings-count",
+                "path": "graph/rings-count.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 45
+              },
+              {
+                "id": "graph_scc",
+                "name": "scc",
+                "path": "graph/scc.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 46
+              },
+              {
+                "id": "graph_shortest_path",
+                "name": "shortest-path",
+                "path": "graph/shortest-path.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 47
+              },
+              {
+                "id": "graph_steiner_tree",
+                "name": "steiner-tree",
+                "path": "graph/steiner-tree.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 48
+              },
+              {
+                "id": "graph_stoer_wagner",
+                "name": "stoer-wagner",
+                "path": "graph/stoer-wagner.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 49
+              },
+              {
+                "id": "graph_topo",
+                "name": "topo",
+                "path": "graph/topo.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 50
+              },
+              {
+                "id": "graph_tree_ahu",
+                "name": "tree-ahu",
+                "path": "graph/tree-ahu.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 51
+              },
+              {
+                "id": "graph_tree_center",
+                "name": "tree-center",
+                "path": "graph/tree-center.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 52
+              },
+              {
+                "id": "graph_tree_centroid",
+                "name": "tree-centroid",
+                "path": "graph/tree-centroid.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 53
+              },
+              {
+                "id": "graph_tree_diameter",
+                "name": "tree-diameter",
+                "path": "graph/tree-diameter.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 54
+              },
+              {
+                "id": "graph_tree_divide",
+                "name": "tree-divide",
+                "path": "graph/tree-divide.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 55
+              },
+              {
+                "id": "graph_tree_hash",
+                "name": "tree-hash",
+                "path": "graph/tree-hash.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 56
+              },
+              {
+                "id": "graph_tree_random_walk",
+                "name": "tree-random-walk",
+                "path": "graph/tree-random-walk.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 57
+              },
+              {
+                "id": "graph_virtual_tree",
+                "name": "virtual-tree",
+                "path": "graph/virtual-tree.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 58
+              }
+            ]
+          },
+          {
+            "topic": "字符串",
+            "dir": "string",
+            "count": 20,
+            "concepts": [
+              {
+                "id": "string_ac_automaton",
+                "name": "ac-automaton",
+                "path": "string/ac-automaton.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 1
+              },
+              {
+                "id": "string_bm",
+                "name": "bm",
+                "path": "string/bm.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 2
+              },
+              {
+                "id": "string_general_sam",
+                "name": "general-sam",
+                "path": "string/general-sam.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 3
+              },
+              {
+                "id": "string_hash",
+                "name": "hash",
+                "path": "string/hash.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 4
+              },
+              {
+                "id": "string_index",
+                "name": "index",
+                "path": "string/index.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 5
+              },
+              {
+                "id": "string_kmp",
+                "name": "kmp",
+                "path": "string/kmp.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 6
+              },
+              {
+                "id": "string_lyndon",
+                "name": "lyndon",
+                "path": "string/lyndon.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 7
+              },
+              {
+                "id": "string_main_lorentz",
+                "name": "main-lorentz",
+                "path": "string/main-lorentz.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 8
+              },
+              {
+                "id": "string_manacher",
+                "name": "manacher",
+                "path": "string/manacher.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 9
+              },
+              {
+                "id": "string_match",
+                "name": "match",
+                "path": "string/match.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 10
+              },
+              {
+                "id": "string_minimal_string",
+                "name": "minimal-string",
+                "path": "string/minimal-string.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 11
+              },
+              {
+                "id": "string_pam",
+                "name": "pam",
+                "path": "string/pam.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 12
+              },
+              {
+                "id": "string_sa_optimal_inplace",
+                "name": "sa-optimal-inplace",
+                "path": "string/sa-optimal-inplace.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 13
+              },
+              {
+                "id": "string_sa",
+                "name": "sa",
+                "path": "string/sa.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 14
+              },
+              {
+                "id": "string_sam",
+                "name": "sam",
+                "path": "string/sam.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 15
+              },
+              {
+                "id": "string_seq_automaton",
+                "name": "seq-automaton",
+                "path": "string/seq-automaton.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 16
+              },
+              {
+                "id": "string_suffix_bst",
+                "name": "suffix-bst",
+                "path": "string/suffix-bst.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 17
+              },
+              {
+                "id": "string_suffix_tree",
+                "name": "suffix-tree",
+                "path": "string/suffix-tree.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 18
+              },
+              {
+                "id": "string_trie",
+                "name": "trie",
+                "path": "string/trie.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 19
+              },
+              {
+                "id": "string_z_func",
+                "name": "z-func",
+                "path": "string/z-func.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 20
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tier": 6,
+        "title": "数学",
+        "source": "directory_grouping",
+        "verified": false,
+        "note": "本层顺序为按目录归类，非学习顺序，需人工确认",
+        "groups": [
+          {
+            "topic": "数学",
+            "dir": "math",
+            "count": 101,
+            "concepts": [
+              {
+                "id": "math_algebra_basic",
+                "name": "basic",
+                "path": "math/algebra/basic.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 1
+              },
+              {
+                "id": "math_algebra_field_theory",
+                "name": "field-theory",
+                "path": "math/algebra/field-theory.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 2
+              },
+              {
+                "id": "math_algebra_group_theory",
+                "name": "group-theory",
+                "path": "math/algebra/group-theory.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 3
+              },
+              {
+                "id": "math_algebra_ring_theory",
+                "name": "ring-theory",
+                "path": "math/algebra/ring-theory.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 4
+              },
+              {
+                "id": "math_algebra_schreier_sims",
+                "name": "schreier-sims",
+                "path": "math/algebra/schreier-sims.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 5
+              },
+              {
+                "id": "math_berlekamp_massey",
+                "name": "berlekamp-massey",
+                "path": "math/berlekamp-massey.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 6
+              },
+              {
+                "id": "math_binary_exponentiation",
+                "name": "binary-exponentiation",
+                "path": "math/binary-exponentiation.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 7
+              },
+              {
+                "id": "math_binary_set",
+                "name": "binary-set",
+                "path": "math/binary-set.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 8
+              },
+              {
+                "id": "math_boolean_algebra",
+                "name": "boolean-algebra",
+                "path": "math/boolean-algebra.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 9
+              },
+              {
+                "id": "math_combinatorics_bell",
+                "name": "bell",
+                "path": "math/combinatorics/bell.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 10
+              },
+              {
+                "id": "math_combinatorics_bernoulli",
+                "name": "bernoulli",
+                "path": "math/combinatorics/bernoulli.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 11
+              },
+              {
+                "id": "math_combinatorics_catalan",
+                "name": "catalan",
+                "path": "math/combinatorics/catalan.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 12
+              },
+              {
+                "id": "math_combinatorics_derangement",
+                "name": "derangement",
+                "path": "math/combinatorics/derangement.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 13
+              },
+              {
+                "id": "math_combinatorics_entringer",
+                "name": "entringer",
+                "path": "math/combinatorics/entringer.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 14
+              },
+              {
+                "id": "math_combinatorics_eulerian",
+                "name": "eulerian",
+                "path": "math/combinatorics/eulerian.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 15
+              },
+              {
+                "id": "math_combinatorics_fibonacci",
+                "name": "fibonacci",
+                "path": "math/combinatorics/fibonacci.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 16
+              },
+              {
+                "id": "math_combinatorics_graph_enumeration",
+                "name": "graph-enumeration",
+                "path": "math/combinatorics/graph-enumeration.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 17
+              },
+              {
+                "id": "math_combinatorics_partition",
+                "name": "partition",
+                "path": "math/combinatorics/partition.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 18
+              },
+              {
+                "id": "math_combinatorics_polya",
+                "name": "polya",
+                "path": "math/combinatorics/polya.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 19
+              },
+              {
+                "id": "math_combinatorics_stirling",
+                "name": "stirling",
+                "path": "math/combinatorics/stirling.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 20
+              },
+              {
+                "id": "math_combinatorics_vandermonde_convolution",
+                "name": "vandermonde-convolution",
+                "path": "math/combinatorics/vandermonde-convolution.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 21
+              },
+              {
+                "id": "math_complex",
+                "name": "complex",
+                "path": "math/complex.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 22
+              },
+              {
+                "id": "math_coordinate",
+                "name": "coordinate",
+                "path": "math/coordinate.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 23
+              },
+              {
+                "id": "math_game_theory_impartial_game",
+                "name": "impartial-game",
+                "path": "math/game-theory/impartial-game.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 24
+              },
+              {
+                "id": "math_game_theory_intro",
+                "name": "intro",
+                "path": "math/game-theory/intro.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 25
+              },
+              {
+                "id": "math_game_theory_partizan_game",
+                "name": "partizan-game",
+                "path": "math/game-theory/partizan-game.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 26
+              },
+              {
+                "id": "math_game_theory_zero_sum_game",
+                "name": "zero-sum-game",
+                "path": "math/game-theory/zero-sum-game.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 27
+              },
+              {
+                "id": "math_index",
+                "name": "index",
+                "path": "math/index.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 28
+              },
+              {
+                "id": "math_linear_algebra_basis",
+                "name": "basis",
+                "path": "math/linear-algebra/basis.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 29
+              },
+              {
+                "id": "math_linear_algebra_char_poly",
+                "name": "char-poly",
+                "path": "math/linear-algebra/char-poly.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 30
+              },
+              {
+                "id": "math_linear_algebra_determinant",
+                "name": "determinant",
+                "path": "math/linear-algebra/determinant.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 31
+              },
+              {
+                "id": "math_linear_algebra_diagonalization",
+                "name": "diagonalization",
+                "path": "math/linear-algebra/diagonalization.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 32
+              },
+              {
+                "id": "math_linear_algebra_elementary_operations",
+                "name": "elementary-operations",
+                "path": "math/linear-algebra/elementary-operations.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 33
+              },
+              {
+                "id": "math_linear_algebra_index",
+                "name": "index",
+                "path": "math/linear-algebra/index.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 34
+              },
+              {
+                "id": "math_linear_algebra_jordan",
+                "name": "jordan",
+                "path": "math/linear-algebra/jordan.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 35
+              },
+              {
+                "id": "math_linear_algebra_linear_mapping",
+                "name": "linear-mapping",
+                "path": "math/linear-algebra/linear-mapping.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 36
+              },
+              {
+                "id": "math_linear_algebra_matrix",
+                "name": "matrix",
+                "path": "math/linear-algebra/matrix.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 37
+              },
+              {
+                "id": "math_linear_algebra_product",
+                "name": "product",
+                "path": "math/linear-algebra/product.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 38
+              },
+              {
+                "id": "math_linear_algebra_vector_space",
+                "name": "vector-space",
+                "path": "math/linear-algebra/vector-space.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 39
+              },
+              {
+                "id": "math_linear_algebra_vector",
+                "name": "vector",
+                "path": "math/linear-algebra/vector.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 40
+              },
+              {
+                "id": "math_linear_programming",
+                "name": "linear-programming",
+                "path": "math/linear-programming.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 41
+              },
+              {
+                "id": "math_matroid",
+                "name": "matroid",
+                "path": "math/matroid.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 42
+              },
+              {
+                "id": "math_number_theory_bezouts",
+                "name": "bezouts",
+                "path": "math/number-theory/bezouts.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 43
+              },
+              {
+                "id": "math_number_theory_congruence_equation",
+                "name": "congruence-equation",
+                "path": "math/number-theory/congruence-equation.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 44
+              },
+              {
+                "id": "math_number_theory_continued_fraction",
+                "name": "continued-fraction",
+                "path": "math/number-theory/continued-fraction.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 45
+              },
+              {
+                "id": "math_number_theory_crt",
+                "name": "crt",
+                "path": "math/number-theory/crt.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 46
+              },
+              {
+                "id": "math_number_theory_dirichlet",
+                "name": "dirichlet",
+                "path": "math/number-theory/dirichlet.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 47
+              },
+              {
+                "id": "math_number_theory_discrete_logarithm",
+                "name": "discrete-logarithm",
+                "path": "math/number-theory/discrete-logarithm.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 48
+              },
+              {
+                "id": "math_number_theory_euclidean",
+                "name": "euclidean",
+                "path": "math/number-theory/euclidean.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 49
+              },
+              {
+                "id": "math_number_theory_factorial",
+                "name": "factorial",
+                "path": "math/number-theory/factorial.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 50
+              },
+              {
+                "id": "math_number_theory_fermat",
+                "name": "fermat",
+                "path": "math/number-theory/fermat.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 51
+              },
+              {
+                "id": "math_number_theory_hyperbola",
+                "name": "hyperbola",
+                "path": "math/number-theory/hyperbola.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 52
+              },
+              {
+                "id": "math_number_theory_inverse",
+                "name": "inverse",
+                "path": "math/number-theory/inverse.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 53
+              },
+              {
+                "id": "math_number_theory_lift_the_exponent",
+                "name": "lift-the-exponent",
+                "path": "math/number-theory/lift-the-exponent.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 54
+              },
+              {
+                "id": "math_number_theory_linear_equation",
+                "name": "linear-equation",
+                "path": "math/number-theory/linear-equation.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 55
+              },
+              {
+                "id": "math_number_theory_lucas",
+                "name": "lucas",
+                "path": "math/number-theory/lucas.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 56
+              },
+              {
+                "id": "math_number_theory_min_25",
+                "name": "min-25",
+                "path": "math/number-theory/min-25.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 57
+              },
+              {
+                "id": "math_number_theory_mobius",
+                "name": "mobius",
+                "path": "math/number-theory/mobius.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 58
+              },
+              {
+                "id": "math_number_theory_mod_arithmetic",
+                "name": "mod-arithmetic",
+                "path": "math/number-theory/mod-arithmetic.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 59
+              },
+              {
+                "id": "math_number_theory_pell_equation",
+                "name": "pell-equation",
+                "path": "math/number-theory/pell-equation.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 60
+              },
+              {
+                "id": "math_number_theory_powerful_number",
+                "name": "powerful-number",
+                "path": "math/number-theory/powerful-number.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 61
+              },
+              {
+                "id": "math_number_theory_prime_counting",
+                "name": "prime-counting",
+                "path": "math/number-theory/prime-counting.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 62
+              },
+              {
+                "id": "math_number_theory_primitive_root",
+                "name": "primitive-root",
+                "path": "math/number-theory/primitive-root.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 63
+              },
+              {
+                "id": "math_number_theory_quad_residue",
+                "name": "quad-residue",
+                "path": "math/number-theory/quad-residue.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 64
+              },
+              {
+                "id": "math_number_theory_quadratic",
+                "name": "quadratic",
+                "path": "math/number-theory/quadratic.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 65
+              },
+              {
+                "id": "math_number_theory_residue",
+                "name": "residue",
+                "path": "math/number-theory/residue.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 66
+              },
+              {
+                "id": "math_number_theory_sqrt_decomposition",
+                "name": "sqrt-decomposition",
+                "path": "math/number-theory/sqrt-decomposition.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 67
+              },
+              {
+                "id": "math_number_theory_stern_brocot",
+                "name": "stern-brocot",
+                "path": "math/number-theory/stern-brocot.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 68
+              },
+              {
+                "id": "math_number_theory_zhou",
+                "name": "zhou",
+                "path": "math/number-theory/zhou.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 69
+              },
+              {
+                "id": "math_numeral_sys_balanced_ternary",
+                "name": "balanced-ternary",
+                "path": "math/numeral-sys/balanced-ternary.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 70
+              },
+              {
+                "id": "math_numeral_sys_gray_code",
+                "name": "gray-code",
+                "path": "math/numeral-sys/gray-code.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 71
+              },
+              {
+                "id": "math_numeral_sys_intro",
+                "name": "intro",
+                "path": "math/numeral-sys/intro.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 72
+              },
+              {
+                "id": "math_numerical_gauss",
+                "name": "gauss",
+                "path": "math/numerical/gauss.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 73
+              },
+              {
+                "id": "math_numerical_integral",
+                "name": "integral",
+                "path": "math/numerical/integral.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 74
+              },
+              {
+                "id": "math_numerical_interp",
+                "name": "interp",
+                "path": "math/numerical/interp.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 75
+              },
+              {
+                "id": "math_numerical_newton",
+                "name": "newton",
+                "path": "math/numerical/newton.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 76
+              },
+              {
+                "id": "math_order_theory",
+                "name": "order-theory",
+                "path": "math/order-theory.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 77
+              },
+              {
+                "id": "math_permutation",
+                "name": "permutation",
+                "path": "math/permutation.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 78
+              },
+              {
+                "id": "math_poly_comp_rev",
+                "name": "comp-rev",
+                "path": "math/poly/comp-rev.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 79
+              },
+              {
+                "id": "math_poly_czt",
+                "name": "czt",
+                "path": "math/poly/czt.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 80
+              },
+              {
+                "id": "math_poly_egf",
+                "name": "egf",
+                "path": "math/poly/egf.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 81
+              },
+              {
+                "id": "math_poly_elementary_func",
+                "name": "elementary-func",
+                "path": "math/poly/elementary-func.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 82
+              },
+              {
+                "id": "math_poly_fft",
+                "name": "fft",
+                "path": "math/poly/fft.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 83
+              },
+              {
+                "id": "math_poly_fundamental",
+                "name": "fundamental",
+                "path": "math/poly/fundamental.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 84
+              },
+              {
+                "id": "math_poly_fwt",
+                "name": "fwt",
+                "path": "math/poly/fwt.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 85
+              },
+              {
+                "id": "math_poly_intro",
+                "name": "intro",
+                "path": "math/poly/intro.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 86
+              },
+              {
+                "id": "math_poly_lagrange_inversion",
+                "name": "lagrange-inversion",
+                "path": "math/poly/lagrange-inversion.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 87
+              },
+              {
+                "id": "math_poly_linear_recurrence",
+                "name": "linear-recurrence",
+                "path": "math/poly/linear-recurrence.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 88
+              },
+              {
+                "id": "math_poly_multipoint_eval_interpolation",
+                "name": "multipoint-eval-interpolation",
+                "path": "math/poly/multipoint-eval-interpolation.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 89
+              },
+              {
+                "id": "math_poly_newton",
+                "name": "newton",
+                "path": "math/poly/newton.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 90
+              },
+              {
+                "id": "math_poly_ntt",
+                "name": "ntt",
+                "path": "math/poly/ntt.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 91
+              },
+              {
+                "id": "math_poly_ogf",
+                "name": "ogf",
+                "path": "math/poly/ogf.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 92
+              },
+              {
+                "id": "math_poly_shift",
+                "name": "shift",
+                "path": "math/poly/shift.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 93
+              },
+              {
+                "id": "math_poly_symbolic_method",
+                "name": "symbolic-method",
+                "path": "math/poly/symbolic-method.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 94
+              },
+              {
+                "id": "math_probability_basic_conception",
+                "name": "basic-conception",
+                "path": "math/probability/basic-conception.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 95
+              },
+              {
+                "id": "math_probability_concentration_inequality",
+                "name": "concentration-inequality",
+                "path": "math/probability/concentration-inequality.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 96
+              },
+              {
+                "id": "math_probability_conditional_probability",
+                "name": "conditional-probability",
+                "path": "math/probability/conditional-probability.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 97
+              },
+              {
+                "id": "math_probability_exp_var",
+                "name": "exp-var",
+                "path": "math/probability/exp-var.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 98
+              },
+              {
+                "id": "math_probability_random_variable",
+                "name": "random-variable",
+                "path": "math/probability/random-variable.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 99
+              },
+              {
+                "id": "math_simplex",
+                "name": "simplex",
+                "path": "math/simplex.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 100
+              },
+              {
+                "id": "math_young_tableau",
+                "name": "young-tableau",
+                "path": "math/young-tableau.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 101
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tier": 7,
+        "title": "计算几何",
+        "source": "directory_grouping",
+        "verified": false,
+        "note": "本层顺序为按目录归类，非学习顺序，需人工确认",
+        "groups": [
+          {
+            "topic": "计算几何",
+            "dir": "geometry",
+            "count": 14,
+            "concepts": [
+              {
+                "id": "geometry_2d",
+                "name": "2d",
+                "path": "geometry/2d.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 1
+              },
+              {
+                "id": "geometry_3d",
+                "name": "3d",
+                "path": "geometry/3d.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 2
+              },
+              {
+                "id": "geometry_convex_hull",
+                "name": "convex-hull",
+                "path": "geometry/convex-hull.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 3
+              },
+              {
+                "id": "geometry_distance",
+                "name": "distance",
+                "path": "geometry/distance.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 4
+              },
+              {
+                "id": "geometry_half_plane",
+                "name": "half-plane",
+                "path": "geometry/half-plane.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 5
+              },
+              {
+                "id": "geometry_index",
+                "name": "index",
+                "path": "geometry/index.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 6
+              },
+              {
+                "id": "geometry_inverse",
+                "name": "inverse",
+                "path": "geometry/inverse.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 7
+              },
+              {
+                "id": "geometry_nearest_points",
+                "name": "nearest-points",
+                "path": "geometry/nearest-points.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 8
+              },
+              {
+                "id": "geometry_pick",
+                "name": "pick",
+                "path": "geometry/pick.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 9
+              },
+              {
+                "id": "geometry_random_incremental",
+                "name": "random-incremental",
+                "path": "geometry/random-incremental.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 10
+              },
+              {
+                "id": "geometry_rotating_calipers",
+                "name": "rotating-calipers",
+                "path": "geometry/rotating-calipers.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 11
+              },
+              {
+                "id": "geometry_scanning",
+                "name": "scanning",
+                "path": "geometry/scanning.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 12
+              },
+              {
+                "id": "geometry_smallest_enclosing_circle",
+                "name": "smallest-enclosing-circle",
+                "path": "geometry/smallest-enclosing-circle.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 13
+              },
+              {
+                "id": "geometry_triangulation",
+                "name": "triangulation",
+                "path": "geometry/triangulation.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 14
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tier": 8,
+        "title": "杂项技巧",
+        "source": "directory_grouping",
+        "verified": false,
+        "note": "本层顺序为按目录归类，非学习顺序，需人工确认",
+        "groups": [
+          {
+            "topic": "杂项技巧",
+            "dir": "misc",
+            "count": 32,
+            "concepts": [
+              {
+                "id": "misc_15_puzzle",
+                "name": "15-puzzle",
+                "path": "misc/15-puzzle.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 1
+              },
+              {
+                "id": "misc_cc_basic",
+                "name": "cc-basic",
+                "path": "misc/cc-basic.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 2
+              },
+              {
+                "id": "misc_cdq_divide",
+                "name": "cdq-divide",
+                "path": "misc/cdq-divide.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 3
+              },
+              {
+                "id": "misc_discrete",
+                "name": "discrete",
+                "path": "misc/discrete.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 4
+              },
+              {
+                "id": "misc_endianness",
+                "name": "endianness",
+                "path": "misc/endianness.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 5
+              },
+              {
+                "id": "misc_expression",
+                "name": "expression",
+                "path": "misc/expression.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 6
+              },
+              {
+                "id": "misc_frac_programming",
+                "name": "frac-programming",
+                "path": "misc/frac-programming.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 7
+              },
+              {
+                "id": "misc_fsm",
+                "name": "fsm",
+                "path": "misc/fsm.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 8
+              },
+              {
+                "id": "misc_garsia_wachs",
+                "name": "garsia-wachs",
+                "path": "misc/garsia-wachs.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 9
+              },
+              {
+                "id": "misc_hill_climbing",
+                "name": "hill-climbing",
+                "path": "misc/hill-climbing.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 10
+              },
+              {
+                "id": "misc_hoverline",
+                "name": "hoverline",
+                "path": "misc/hoverline.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 11
+              },
+              {
+                "id": "misc_index",
+                "name": "index",
+                "path": "misc/index.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 12
+              },
+              {
+                "id": "misc_job_order",
+                "name": "job-order",
+                "path": "misc/job-order.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 13
+              },
+              {
+                "id": "misc_josephus",
+                "name": "josephus",
+                "path": "misc/josephus.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 14
+              },
+              {
+                "id": "misc_kahan_summation",
+                "name": "kahan-summation",
+                "path": "misc/kahan-summation.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 15
+              },
+              {
+                "id": "misc_main_element",
+                "name": "main-element",
+                "path": "misc/main-element.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 16
+              },
+              {
+                "id": "misc_mo_algo_2dimen",
+                "name": "mo-algo-2dimen",
+                "path": "misc/mo-algo-2dimen.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 17
+              },
+              {
+                "id": "misc_mo_algo_intro",
+                "name": "mo-algo-intro",
+                "path": "misc/mo-algo-intro.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 18
+              },
+              {
+                "id": "misc_mo_algo_on_tree",
+                "name": "mo-algo-on-tree",
+                "path": "misc/mo-algo-on-tree.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 19
+              },
+              {
+                "id": "misc_mo_algo_secondary_offline",
+                "name": "mo-algo-secondary-offline",
+                "path": "misc/mo-algo-secondary-offline.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 20
+              },
+              {
+                "id": "misc_mo_algo_with_bitset",
+                "name": "mo-algo-with-bitset",
+                "path": "misc/mo-algo-with-bitset.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 21
+              },
+              {
+                "id": "misc_mo_algo",
+                "name": "mo-algo",
+                "path": "misc/mo-algo.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 22
+              },
+              {
+                "id": "misc_modifiable_mo_algo",
+                "name": "modifiable-mo-algo",
+                "path": "misc/modifiable-mo-algo.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 23
+              },
+              {
+                "id": "misc_odt",
+                "name": "odt",
+                "path": "misc/odt.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 24
+              },
+              {
+                "id": "misc_offline",
+                "name": "offline",
+                "path": "misc/offline.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 25
+              },
+              {
+                "id": "misc_parallel_binsearch",
+                "name": "parallel-binsearch",
+                "path": "misc/parallel-binsearch.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 26
+              },
+              {
+                "id": "misc_rand_technique",
+                "name": "rand-technique",
+                "path": "misc/rand-technique.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 27
+              },
+              {
+                "id": "misc_random",
+                "name": "random",
+                "path": "misc/random.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 28
+              },
+              {
+                "id": "misc_rollback_mo_algo",
+                "name": "rollback-mo-algo",
+                "path": "misc/rollback-mo-algo.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 29
+              },
+              {
+                "id": "misc_simulated_annealing",
+                "name": "simulated-annealing",
+                "path": "misc/simulated-annealing.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 30
+              },
+              {
+                "id": "misc_space_optimization",
+                "name": "space-optimization",
+                "path": "misc/space-optimization.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 31
+              },
+              {
+                "id": "misc_two_pointer",
+                "name": "two-pointer",
+                "path": "misc/two-pointer.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 32
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tier": 9,
+        "title": "专题与竞赛",
+        "source": "directory_grouping",
+        "verified": false,
+        "note": "本层顺序为按目录归类，非学习顺序，需人工确认",
+        "groups": [
+          {
+            "topic": "竞赛相关",
+            "dir": "contest",
+            "count": 12,
+            "concepts": [
+              {
+                "id": "contest_common_mistakes",
+                "name": "common-mistakes",
+                "path": "contest/common-mistakes.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 1
+              },
+              {
+                "id": "contest_common_tricks",
+                "name": "common-tricks",
+                "path": "contest/common-tricks.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 2
+              },
+              {
+                "id": "contest_dictionary",
+                "name": "dictionary",
+                "path": "contest/dictionary.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 3
+              },
+              {
+                "id": "contest_icpc",
+                "name": "icpc",
+                "path": "contest/icpc.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 4
+              },
+              {
+                "id": "contest_index",
+                "name": "index",
+                "path": "contest/index.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 5
+              },
+              {
+                "id": "contest_interaction",
+                "name": "interaction",
+                "path": "contest/interaction.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 6
+              },
+              {
+                "id": "contest_io",
+                "name": "io",
+                "path": "contest/io.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 7
+              },
+              {
+                "id": "contest_oi",
+                "name": "oi",
+                "path": "contest/oi.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 8
+              },
+              {
+                "id": "contest_problems",
+                "name": "problems",
+                "path": "contest/problems.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 9
+              },
+              {
+                "id": "contest_problemsetting",
+                "name": "problemsetting",
+                "path": "contest/problemsetting.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 10
+              },
+              {
+                "id": "contest_resources",
+                "name": "resources",
+                "path": "contest/resources.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 11
+              },
+              {
+                "id": "contest_roadmap",
+                "name": "roadmap",
+                "path": "contest/roadmap.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 12
+              }
+            ]
+          },
+          {
+            "topic": "专题",
+            "dir": "topic",
+            "count": 4,
+            "concepts": [
+              {
+                "id": "topic_bracket",
+                "name": "bracket",
+                "path": "topic/bracket.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 1
+              },
+              {
+                "id": "topic_dsu_app",
+                "name": "dsu-app",
+                "path": "topic/dsu-app.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 2
+              },
+              {
+                "id": "topic_rmq",
+                "name": "rmq",
+                "path": "topic/rmq.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 3
+              },
+              {
+                "id": "topic_segment_tree_offline",
+                "name": "segment-tree-offline",
+                "path": "topic/segment-tree-offline.md",
+                "level": "进阶",
+                "source": "directory_grouping",
+                "verified": false,
+                "order_in_dir": 4
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
