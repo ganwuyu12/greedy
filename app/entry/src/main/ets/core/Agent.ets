@@ -266,7 +266,16 @@ export interface AgentConfig {
 export class Agent {
   private registry: ToolRegistry;
   private config: AgentConfig;
-  private history: ChatMessage[] = [];
+  /**
+   * 对话历史（wire 格式：字段名与接口约定一致）
+   *
+   * 为什么直接存 wire 格式、而不是内部结构：
+   * 接口对消息序列有**结构约束**——role='tool' 的消息必须紧跟一条
+   * 带 tool_calls 的 assistant 消息。如果历史里把 tool_calls 丢掉，
+   * 下一轮再发就会变成「孤儿 tool 消息」被拒绝（400）。
+   * 所以历史里必须保留成对的完整结构，不能只留文本。
+   */
+  private wireHistory: WireMessage[] = [];
 
   constructor(registry: ToolRegistry, config: AgentConfig) {
     this.registry = registry;
@@ -274,13 +283,12 @@ export class Agent {
   }
 
   clearHistory(): void {
-    this.history = [];
+    this.wireHistory = [];
   }
 
-  /** 取最近若干条历史，用于 UI 展示 */
-  recentHistory(n: number): ChatMessage[] {
-    const start = Math.max(0, this.history.length - n);
-    return this.history.slice(start);
+  /** 历史条数（UI 可用来判断是否有对话） */
+  historyLength(): number {
+    return this.wireHistory.length;
   }
 
   /**
@@ -294,11 +302,12 @@ export class Agent {
     let completionTokens = 0;
     let stopReason = '';
 
-    // 第 3 件事：消息序列。system + 历史 + 本轮输入
-    const messages: ChatMessage[] = [];
+    // 第 3 件事：消息序列。
+    // messages 是本轮的工作副本；wireHistory 跨轮保留，且保留成对结构
+    const messages: WireMessage[] = [];
     messages.push({ role: 'system', content: this.config.systemPrompt });
-    for (let i = 0; i < this.history.length; i++) {
-      messages.push(this.history[i]);
+    for (let i = 0; i < this.wireHistory.length; i++) {
+      messages.push(this.wireHistory[i]);
     }
     messages.push({ role: 'user', content: userInput });
 
@@ -327,16 +336,22 @@ export class Agent {
         break;
       }
 
-      // assistant 这一轮（含 tool_calls）入列
-      const names: string[] = [];
+      // 构造本轮 assistant 消息（必须带 tool_calls，供后面的 tool 消息配对）
+      const wireCalls: WireToolCall[] = [];
       for (let i = 0; i < reply.toolCalls.length; i++) {
-        names.push(reply.toolCalls[i].name);
+        const c = reply.toolCalls[i];
+        wireCalls.push({
+          id: c.id,
+          type: 'function',
+          function: { name: c.name, arguments: JSON.stringify(this.argsToObj(c.args)) }
+        });
       }
-      messages.push({
+      const assistantMsg: WireMessage = {
         role: 'assistant',
         content: reply.content,
-        toolName: names.join(',')
-      });
+        tool_calls: wireCalls
+      };
+      messages.push(assistantMsg);
 
       for (let i = 0; i < reply.toolCalls.length; i++) {
         const call = reply.toolCalls[i];
@@ -371,12 +386,11 @@ export class Agent {
           resultPreview: result.text.substring(0, 200)
         });
 
-        // 结果回灌（成功和失败都回灌）
+        // 结果回灌（成功和失败都回灌），必须带 tool_call_id 与上面配对
         messages.push({
           role: 'tool',
           content: result.text,
-          toolCallId: call.id,
-          toolName: call.name
+          tool_call_id: call.id
         });
       }
     }
@@ -386,11 +400,24 @@ export class Agent {
       answer = '（达到最大轮数，未能给出最终答案）';
     }
 
-    // 历史只保留最终一轮，避免无限增长
-    this.history.push({ role: 'user', content: userInput });
-    this.history.push({ role: 'assistant', content: answer });
+    // 跨轮历史：把本轮的完整消息序列（含成对的 tool_calls / tool 结果）
+    // 全部保留，最后一轮 assistant 的文本答案补上。
+    // 这样下一轮发送时结构依然合法。
+    for (let i = 1; i < messages.length; i++) {
+      this.wireHistory.push(messages[i]);
+    }
+    this.wireHistory.push({ role: 'assistant', content: answer });
 
     return { answer, steps, promptTokens, completionTokens, stopReason };
+  }
+
+  /** 把参数 Map 转成普通对象（用于拼 function.arguments） */
+  private argsToObj(args: Map<string, Object>): Record<string, Object> {
+    const out: Record<string, Object> = {};
+    args.forEach((v: Object, k: string) => {
+      out[k] = v;
+    });
+    return out;
   }
 
   /** 把参数拼成稳定的字符串（用于重复检测与日志） */
@@ -408,23 +435,10 @@ export class Agent {
   }
 
   /** 调一次大模型 */
-  private async callModel(messages: ChatMessage[]): Promise<LLMReply> {
-    const wire: WireMessage[] = [];
-    for (let i = 0; i < messages.length; i++) {
-      const m = messages[i];
-      if (m.role === 'tool') {
-        wire.push({ role: 'tool', content: m.content, tool_call_id: m.toolCallId });
-      } else if (m.role === 'assistant') {
-        // 历史里的 assistant 消息不含 tool_calls（已完成），只带文本
-        wire.push({ role: 'assistant', content: m.content });
-      } else {
-        wire.push({ role: m.role, content: m.content });
-      }
-    }
-
+  private async callModel(messages: WireMessage[]): Promise<LLMReply> {
     const payload: ChatPayload = {
       model: this.config.model,
-      messages: wire,
+      messages: messages,
       tools: this.registry.toSchema(),
       tool_choice: 'auto'
     };
