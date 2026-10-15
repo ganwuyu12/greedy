@@ -11,10 +11,11 @@
  *   3. 空态有引导（给几个可以点的例子），不是一片空白
  */
 
-import { Agent, AgentConfig, ChatMessage, ToolRegistry } from '../core/Agent';
+import { Agent, AgentConfig, ChatMessage, PlainHistoryItem, ToolRegistry } from '../core/Agent';
 import { AppConfig, AppStorageUtil } from '../core/Config';
 import { buildRegistry, CompanionService, NoteStore } from '../core/Tools';
 import { prompt as personaPrompt } from '../core/Persona';
+import { Session, SessionStore } from '../core/SessionStore';
 import { common } from '@kit.AbilityKit';
 
 /** 聊天列表里的一条 */
@@ -50,12 +51,15 @@ struct Index {
   @State handleDraft: string = '';
   @State settingsHint: string = '';
   @State hasKey: boolean = false;
+  @State showSessions: boolean = false;
+  @State sessionList: Session[] = [];
 
   private seq: number = 0;
   private agent: Agent | null = null;
   private registry: ToolRegistry | null = null;
   private companion: CompanionService | null = null;
   private notes: NoteStore = new NoteStore();
+  private sessions: SessionStore = new SessionStore();
   private scroller: Scroller = new Scroller();
 
   aboutToAppear(): void {
@@ -93,13 +97,84 @@ struct Index {
     };
     this.agent = new Agent(this.registry, cfg);
 
+    // 恢复上次的对话
+    await this.sessions.load();
+    const cur = this.sessions.current();
+    this.restoreBubbles(cur);
+
     if (apiKey.length === 0) {
-      this.pushBubble('assistant',
-        '哼，你还没配密钥呢……点右上角「设置」填一下，不然本小姐没法说话。', '');
+      if (this.bubbles.length === 0) {
+        this.pushBubbleNow('assistant',
+          '哼，你还没配密钥呢……点右上角「设置」填一下，不然本小姐没法说话。', '');
+      }
       this.showSettings = true;      // 第一次启动直接把设置打开，省得找不到
-    } else {
-      this.pushBubble('assistant', '来了？说吧，今天又卡在哪了。', '');
+    } else if (this.bubbles.length === 0) {
+      // 没有历史才说开场白；有历史就直接接着聊
+      await this.sessions.append('assistant', '来了？说吧，今天又卡在哪了。', '');
+      this.pushBubbleNow('assistant', '来了？说吧，今天又卡在哪了。', '');
     }
+    this.scrollToBottom();
+  }
+
+  /** 把存储的会话还原成气泡列表，并把纯文本历史灌进 Agent */
+  private restoreBubbles(s: Session): void {
+    const list: Bubble[] = [];
+    const plain: PlainHistoryItem[] = [];
+    for (let i = 0; i < s.messages.length; i++) {
+      const m = s.messages[i];
+      list.push({
+        id: ++this.seq,
+        role: m.role,
+        text: m.text,
+        loading: false,
+        trace: m.trace
+      });
+      plain.push({ role: m.role, text: m.text });
+    }
+    this.bubbles = list;
+    if (this.agent !== null) {
+      this.agent.loadPlainHistory(plain);
+    }
+  }
+
+  /** 只往界面加气泡，不写存储（用于恢复与开场白） */
+  private pushBubbleNow(role: string, text: string, trace: string): void {
+    const list = this.bubbles.slice();
+    list.push({ id: ++this.seq, role, text, loading: false, trace });
+    this.bubbles = list;
+  }
+
+  /** 切换会话 */
+  private async openSession(id: string): Promise<void> {
+    const s = await this.sessions.switchTo(id);
+    if (s === null) {
+      return;
+    }
+    this.restoreBubbles(s);
+    this.showSessions = false;
+    this.scrollToBottom();
+  }
+
+  /** 新建会话 */
+  private async newSession(): Promise<void> {
+    this.sessions.createSession();
+    this.bubbles = [];
+    if (this.agent !== null) {
+      this.agent.clearHistory();
+    }
+    this.showSessions = false;
+  }
+
+  private async removeSession(id: string): Promise<void> {
+    await this.sessions.remove(id);
+    this.sessionList = this.sessions.list();
+    // 删掉的正是当前会话时，界面要跟着切
+    const cur = this.sessions.current();
+    this.restoreBubbles(cur);
+  }
+
+  private refreshSessionList(): void {
+    this.sessionList = this.sessions.list();
   }
 
   /** 保存设置：写进本地存储并重建 Agent */
@@ -116,9 +191,20 @@ struct Index {
     this.settingsHint = '已保存';
     this.hasKey = true;
     this.showSettings = false;
-    // 重新建一次 Agent，让新密钥生效（不用重启应用）
-    this.bubbles = [];
+    // 重建 Agent 让新密钥生效，但**保留当前对话**
+    const plain: PlainHistoryItem[] = [];
+    for (let i = 0; i < this.bubbles.length; i++) {
+      const b = this.bubbles[i];
+      if (b.role === 'user' || b.role === 'assistant') {
+        plain.push({ role: b.role, text: b.text });
+      }
+    }
+    const keep = this.bubbles;
     await this.initAgent();
+    this.bubbles = keep;
+    if (this.agent !== null) {
+      this.agent.loadPlainHistory(plain);
+    }
   }
 
   private pushBubble(role: string, text: string, trace: string): number {
@@ -155,6 +241,8 @@ struct Index {
     this.pushBubble('user', content, '');
     this.inputText = '';
     this.sending = true;
+    // 用户消息先落盘——即使后面请求失败，问过的问题也不会丢
+    await this.sessions.append('user', content, '');
 
     // 先放一条「正在…」的气泡，让等待可见
     const pendingId = this.pushBubble('assistant', '', '');
@@ -174,10 +262,13 @@ struct Index {
 
       this.updateBubble(pendingId, run.answer, trace, false);
       this.statusText = '';
+      await this.sessions.append('assistant', run.answer, trace);
     } catch (e) {
       const msg = e instanceof Error ? e.message : String(e);
-      this.updateBubble(pendingId, `……出错了：${msg}`, '', false);
+      const errText = `……出错了：${msg}`;
+      this.updateBubble(pendingId, errText, '', false);
       this.statusText = '';
+      await this.sessions.append('assistant', errText, '');
     } finally {
       this.sending = false;
       this.scrollToBottom();
@@ -271,6 +362,61 @@ struct Index {
     }
     .width('100%')
     .padding({ left: 14, right: 14, top: 6, bottom: 6 })
+  }
+
+  @Builder
+  sessionsPanel() {
+    Column() {
+      Row() {
+        Text('对话记录').fontSize(16).fontWeight(FontWeight.Medium)
+        Blank()
+        Text('新建').fontSize(13).fontColor('#2E6BE6')
+          .padding({ left: 10, right: 10, top: 4, bottom: 4 })
+          .onClick(() => { this.newSession(); })
+        Text('关闭').fontSize(13).fontColor('#8A8A8A')
+          .margin({ left: 12 })
+          .onClick(() => { this.showSessions = false; })
+      }
+      .width('100%')
+
+      if (this.sessionList.length === 0) {
+        Text('还没有对话记录').fontSize(13).fontColor('#AAAAAA')
+          .margin({ top: 14 }).width('100%')
+      } else {
+        List({ space: 0 }) {
+          ForEach(this.sessionList, (s: Session) => {
+            ListItem() {
+              Row() {
+                Column() {
+                  Text(s.title)
+                    .fontSize(14)
+                    .fontColor(s.id === this.sessions.current().id ? '#2E6BE6' : '#1A1A1A')
+                    .maxLines(1)
+                    .textOverflow({ overflow: TextOverflow.Ellipsis })
+                  Text(`${s.updatedAt}  ·  ${s.messages.length} 条`)
+                    .fontSize(11).fontColor('#9A9A9A').margin({ top: 3 })
+                }
+                .alignItems(HorizontalAlign.Start)
+                .layoutWeight(1)
+
+                Text('删').fontSize(12).fontColor('#C0C0C0')
+                  .padding(6)
+                  .onClick(() => { this.removeSession(s.id); })
+              }
+              .width('100%')
+              .padding({ top: 10, bottom: 10 })
+              .onClick(() => { this.openSession(s.id); })
+            }
+          }, (s: Session) => s.id)
+        }
+        .height(210)
+        .margin({ top: 8 })
+      }
+    }
+    .width('100%')
+    .padding(16)
+    .backgroundColor('#FFFFFF')
+    .border({ width: { bottom: 1 }, color: '#EEEEEE' })
   }
 
   @Builder
@@ -391,24 +537,51 @@ struct Index {
 
         Blank()
 
+        Button('记录')
+          .fontSize(13).height(32).backgroundColor('#F4F5F7').fontColor('#666666')
+          .onClick(() => {
+            const next = !this.showSessions;
+            this.showSessions = next;
+            if (next) {
+              this.refreshSessionList();
+              this.showProgress = false;
+              this.showSettings = false;
+            }
+          })
+
         Button('成长')
-          .fontSize(13).height(32).backgroundColor('#F0F4FF').fontColor('#2E6BE6')
+          .fontSize(13).height(32).margin({ left: 8 })
+          .backgroundColor('#F0F4FF').fontColor('#2E6BE6')
           .onClick(() => {
             const next = !this.showProgress;
             this.showProgress = next;
-            if (next && this.progressText.length === 0) {
-              this.loadProgress();
+            if (next) {
+              this.showSessions = false;
+              this.showSettings = false;
+              if (this.progressText.length === 0) {
+                this.loadProgress();
+              }
             }
           })
 
         Button('设置')
           .fontSize(13).height(32).margin({ left: 8 })
           .backgroundColor('#F4F5F7').fontColor('#666666')
-          .onClick(() => { this.showSettings = !this.showSettings; })
+          .onClick(() => {
+            this.showSettings = !this.showSettings;
+            if (this.showSettings) {
+              this.showSessions = false;
+              this.showProgress = false;
+            }
+          })
       }
       .width('100%')
       .padding({ left: 16, right: 16, top: 10, bottom: 10 })
       .backgroundColor('#FFFFFF')
+
+      if (this.showSessions) {
+        this.sessionsPanel()
+      }
 
       if (this.showSettings) {
         this.settingsPanel()

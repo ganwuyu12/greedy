@@ -152,6 +152,12 @@ interface ToolErrorPayload {
   hint?: string;
 }
 
+/** 重放用的纯文本历史项 */
+export interface PlainHistoryItem {
+  role: string;
+  text: string;
+}
+
 /** 追踪记录（第 7 件事） */
 export interface TraceStep {
   round: number;
@@ -284,6 +290,25 @@ export class Agent {
 
   clearHistory(): void {
     this.wireHistory = [];
+  }
+
+  /**
+   * 用纯文本历史填充上下文（会话恢复时用）
+   *
+   * 为什么只放问答、不放工具中间消息：
+   * 工具结果体积大，而且 assistant(tool_calls) 与 tool(tool_call_id)
+   * 必须成对——跨会话恢复时一旦对不上，接口会直接拒绝。
+   * 重放时只需让模型知道「之前聊过什么」，不需要原样的工具轨迹。
+   */
+  loadPlainHistory(items: PlainHistoryItem[]): void {
+    this.wireHistory = [];
+    for (let i = 0; i < items.length; i++) {
+      const it = items[i];
+      if (it.role !== 'user' && it.role !== 'assistant') {
+        continue;
+      }
+      this.wireHistory.push({ role: it.role, content: it.text });
+    }
   }
 
   /** 历史条数（UI 可用来判断是否有对话） */
