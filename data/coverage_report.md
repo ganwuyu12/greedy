@@ -1,6 +1,6 @@
 # 路线覆盖率报告
 
-生成时间：2026-10-15T10:51:24+08:00
+生成时间：2026-10-15T11:09:25+08:00
 
 ## 一、覆盖率
 
@@ -33,29 +33,29 @@
 
 **语言基础**（32 个）
 
-- class → `lang/class.md`
+- 类（class） → `lang/class.md`
 - const → `lang/const.md`
 - cpp-other-langs → `lang/cpp-other-langs.md`
 - algorithm → `lang/csl/algorithm.md`
-- associative-container → `lang/csl/associative-container.md`
-- bitset → `lang/csl/bitset.md`
+- `set` → `lang/csl/associative-container.md`
+- `std::bitset` → `lang/csl/bitset.md`
 - container-adapter → `lang/csl/container-adapter.md`
-- container → `lang/csl/container.md`
-- index → `lang/csl/index.md`
+- 谓词就 → `lang/csl/container.md`
+- 首先需要介绍的 → `lang/csl/index.md`
 - iterator → `lang/csl/iterator.md`
-- pair → `lang/csl/pair.md`
-- sequence-container → `lang/csl/sequence-container.md`
-- string → `lang/csl/string.md`
+- `std::pair` → `lang/csl/pair.md`
+- `std::vector` → `lang/csl/sequence-container.md`
+- `std::string` → `lang/csl/string.md`
 - unordered-container → `lang/csl/unordered-container.md`
-- file-op → `lang/file-op.md`
+- 文件 → `lang/file-op.md`
 - index → `lang/index.md`
 - java-pro → `lang/java-pro.md`
-- java → `lang/java.md`
+- Java → `lang/java.md`
 - lambda → `lang/lambda.md`
-- namespace → `lang/namespace.md`
+- C++ 的 **命名空间** 机制 → `lang/namespace.md`
 - new → `lang/new.md`
-- op-overload → `lang/op-overload.md`
-- optimizations → `lang/optimizations.md`
+- 重载运算符 → `lang/op-overload.md`
+- OI 界的常用编程语言 → `lang/optimizations.md`
 - pas-cpp → `lang/pas-cpp.md`
 - index → `lang/pb-ds/index.md`
 - …（其余 7 个见 JSON）
@@ -65,12 +65,12 @@
 **基础算法**（9 个）
 
 - amortized-analysis → `basic/amortized-analysis.md`
-- complexity → `basic/complexity.md`
+- 时间复杂度和空间复杂度 → `basic/complexity.md`
 - greedy → `basic/greedy.md`
 - index → `basic/index.md`
-- prefix-sum → `basic/prefix-sum.md`
+- 前缀和与差分 → `basic/prefix-sum.md`
 - shell-sort → `basic/shell-sort.md`
-- tim-sort → `basic/tim-sort.md`
+- Tim 排序（Timsort） → `basic/tim-sort.md`
 - tournament-sort → `basic/tournament-sort.md`
 - use-of-sort → `basic/use-of-sort.md`
 
@@ -82,17 +82,17 @@
 - astar → `search/astar.md`
 - backtracking → `search/backtracking.md`
 - bidirectional → `search/bidirectional.md`
-- dlx → `search/dlx.md`
+- 精确覆盖问题 → `search/dlx.md`
 - heuristic → `search/heuristic.md`
 - idastar → `search/idastar.md`
 - index → `search/index.md`
-- iterative → `search/iterative.md`
+- 迭代加深 → `search/iterative.md`
 
 ### 第 4 层：核心专题（DP / 数据结构）
 
 **动态规划**（17 个）
 
-- count → `dp/count.md`
+- 计数问题一般 → `dp/count.md`
 - dag → `dp/dag.md`
 - dp-of-dp → `dp/dp-of-dp.md`
 - dynamic → `dp/dynamic.md`
@@ -100,41 +100,41 @@
 - number → `dp/number.md`
 - dp-opt → `dp/opt/dp-opt.md`
 - monotonic-queue-stack → `dp/opt/monotonic-queue-stack.md`
-- quadrangle → `dp/opt/quadrangle.md`
+- 四边形不等式优化利用的 → `dp/opt/quadrangle.md`
 - slope-trick → `dp/opt/slope-trick.md`
 - slope → `dp/opt/slope.md`
 - state → `dp/opt/state.md`
 - wqs-binary-search → `dp/opt/wqs-binary-search.md`
 - plug → `dp/plug.md`
-- probability → `dp/probability.md`
-- state → `dp/state.md`
+- 概率 DP → `dp/probability.md`
+- 状压 DP → `dp/state.md`
 - tree → `dp/tree.md`
 
 **数据结构**（56 个）
 
-- aa-tree → `ds/aa-tree.md`
+- AA 树 → `ds/aa-tree.md`
 - avl → `ds/avl.md`
 - balanced-in-seg → `ds/balanced-in-seg.md`
 - binary-heap → `ds/binary-heap.md`
-- bit-in-block-array → `ds/bit-in-block-array.md`
+- 分块套树状数组在特定条件下 → `ds/bit-in-block-array.md`
 - block-array → `ds/block-array.md`
 - block-list → `ds/block-list.md`
-- bst → `ds/bst.md`
-- cartesian-tree → `ds/cartesian-tree.md`
-- cat-tree → `ds/cat-tree.md`
+- 二叉搜索树 → `ds/bst.md`
+- 笛卡尔树 → `ds/cartesian-tree.md`
+- 线段树 → `ds/cat-tree.md`
 - decompose → `ds/decompose.md`
 - divide-combine → `ds/divide-combine.md`
-- dividing → `ds/dividing.md`
+- 划分树 → `ds/dividing.md`
 - dsu-complexity → `ds/dsu-complexity.md`
-- dsu → `ds/dsu.md`
+- 并查集 → `ds/dsu.md`
 - ett → `ds/ett.md`
-- fenwick → `ds/fenwick.md`
-- finger-tree → `ds/finger-tree.md`
+- 树状数组 → `ds/fenwick.md`
+- 此章 → `ds/finger-tree.md`
 - global-bst → `ds/global-bst.md`
 - hash → `ds/hash.md`
 - heap → `ds/heap.md`
 - huffman-tree → `ds/huffman-tree.md`
-- index → `ds/index.md`
+- 数据结构 → `ds/index.md`
 - kdt → `ds/kdt.md`
 - kinetic-tournament-tree → `ds/kinetic-tournament-tree.md`
 - …（其余 31 个见 JSON）
@@ -143,36 +143,36 @@
 
 **图论**（58 个）
 
-- 2-sat → `graph/2-sat.md`
+- SAT → `graph/2-sat.md`
 - bcc → `graph/bcc.md`
-- bfs → `graph/bfs.md`
+- BFS → `graph/bfs.md`
 - bi-graph → `graph/bi-graph.md`
 - block-forest → `graph/block-forest.md`
-- chord → `graph/chord.md`
-- color → `graph/color.md`
+- 弦图 → `graph/chord.md`
+- （讨论的 → `graph/color.md`
 - connectivity → `graph/connectivity.md`
 - cut → `graph/cut.md`
 - dag → `graph/dag.md`
-- dfs → `graph/dfs.md`
+- DFS → `graph/dfs.md`
 - diff-constraints → `graph/diff-constraints.md`
 - dmst → `graph/dmst.md`
 - dominator-tree → `graph/dominator-tree.md`
-- dsu-on-tree → `graph/dsu-on-tree.md`
+- 启发式算法 → `graph/dsu-on-tree.md`
 - dynamic-tree-divide → `graph/dynamic-tree-divide.md`
 - euler → `graph/euler.md`
-- flow → `graph/flow.md`
+- 网络流相关的基本知识 → `graph/flow.md`
 - bound → `graph/flow/bound.md`
-- max-flow → `graph/flow/max-flow.md`
+- 最大流问题相关的算法知识 → `graph/flow/max-flow.md`
 - min-cost → `graph/flow/min-cost.md`
 - min-cut → `graph/flow/min-cut.md`
 - bigraph-match → `graph/graph-matching/bigraph-match.md`
-- bigraph-weight-match → `graph/graph-matching/bigraph-weight-match.md`
+- 二分图的最大权匹配 → `graph/graph-matching/bigraph-weight-match.md`
 - general-match → `graph/graph-matching/general-match.md`
 - …（其余 33 个见 JSON）
 
 **字符串**（20 个）
 
-- ac-automaton → `string/ac-automaton.md`
+- AC（Aho–Corasick）自动机 → `string/ac-automaton.md`
 - bm → `string/bm.md`
 - general-sam → `string/general-sam.md`
 - hash → `string/hash.md`
@@ -182,14 +182,14 @@
 - main-lorentz → `string/main-lorentz.md`
 - manacher → `string/manacher.md`
 - match → `string/match.md`
-- minimal-string → `string/minimal-string.md`
+- 最小表示法 → `string/minimal-string.md`
 - pam → `string/pam.md`
 - sa-optimal-inplace → `string/sa-optimal-inplace.md`
 - sa → `string/sa.md`
 - sam → `string/sam.md`
 - seq-automaton → `string/seq-automaton.md`
 - suffix-bst → `string/suffix-bst.md`
-- suffix-tree → `string/suffix-tree.md`
+- 后缀树 → `string/suffix-tree.md`
 - trie → `string/trie.md`
 - z-func → `string/z-func.md`
 
@@ -202,22 +202,22 @@
 - group-theory → `math/algebra/group-theory.md`
 - ring-theory → `math/algebra/ring-theory.md`
 - schreier-sims → `math/algebra/schreier-sims.md`
-- berlekamp-massey → `math/berlekamp-massey.md`
-- binary-exponentiation → `math/binary-exponentiation.md`
+- Berlekamp–Massey 算法 → `math/berlekamp-massey.md`
+- 这个技巧 → `math/binary-exponentiation.md`
 - binary-set → `math/binary-set.md`
 - boolean-algebra → `math/boolean-algebra.md`
 - bell → `math/combinatorics/bell.md`
-- bernoulli → `math/combinatorics/bernoulli.md`
+- 伯努利数 $B_n$ → `math/combinatorics/bernoulli.md`
 - catalan → `math/combinatorics/catalan.md`
-- derangement → `math/combinatorics/derangement.md`
+- 错位排列（derangement） → `math/combinatorics/derangement.md`
 - entringer → `math/combinatorics/entringer.md`
-- eulerian → `math/combinatorics/eulerian.md`
+- 下文中的欧拉数特 → `math/combinatorics/eulerian.md`
 - fibonacci → `math/combinatorics/fibonacci.md`
 - graph-enumeration → `math/combinatorics/graph-enumeration.md`
 - partition → `math/combinatorics/partition.md`
 - polya → `math/combinatorics/polya.md`
 - stirling → `math/combinatorics/stirling.md`
-- vandermonde-convolution → `math/combinatorics/vandermonde-convolution.md`
+- 范德蒙德卷积 → `math/combinatorics/vandermonde-convolution.md`
 - complex → `math/complex.md`
 - coordinate → `math/coordinate.md`
 - impartial-game → `math/game-theory/impartial-game.md`
@@ -230,15 +230,15 @@
 
 - 2d → `geometry/2d.md`
 - 3d → `geometry/3d.md`
-- convex-hull → `geometry/convex-hull.md`
+- 凸多边形 → `geometry/convex-hull.md`
 - distance → `geometry/distance.md`
 - half-plane → `geometry/half-plane.md`
 - index → `geometry/index.md`
-- inverse → `geometry/inverse.md`
+- 反演变换适 → `geometry/inverse.md`
 - nearest-points → `geometry/nearest-points.md`
 - pick → `geometry/pick.md`
-- random-incremental → `geometry/random-incremental.md`
-- rotating-calipers → `geometry/rotating-calipers.md`
+- 随机增量算法 → `geometry/random-incremental.md`
+- 旋转卡壳 → `geometry/rotating-calipers.md`
 - scanning → `geometry/scanning.md`
 - smallest-enclosing-circle → `geometry/smallest-enclosing-circle.md`
 - triangulation → `geometry/triangulation.md`
@@ -249,25 +249,25 @@
 
 - 15-puzzle → `misc/15-puzzle.md`
 - cc-basic → `misc/cc-basic.md`
-- cdq-divide → `misc/cdq-divide.md`
-- discrete → `misc/discrete.md`
+- CDQ 分治 → `misc/cdq-divide.md`
+- 离散化 → `misc/discrete.md`
 - endianness → `misc/endianness.md`
-- expression → `misc/expression.md`
+- 表达式求值要解决的问题一般 → `misc/expression.md`
 - frac-programming → `misc/frac-programming.md`
 - fsm → `misc/fsm.md`
 - garsia-wachs → `misc/garsia-wachs.md`
-- hill-climbing → `misc/hill-climbing.md`
-- hoverline → `misc/hoverline.md`
-- index → `misc/index.md`
+- 爬山算法 → `misc/hill-climbing.md`
+- 悬线法的适用范围 → `misc/hoverline.md`
+- 这个板块主要介绍的 → `misc/index.md`
 - job-order → `misc/job-order.md`
 - josephus → `misc/josephus.md`
 - kahan-summation → `misc/kahan-summation.md`
 - main-element → `misc/main-element.md`
 - mo-algo-2dimen → `misc/mo-algo-2dimen.md`
-- mo-algo-intro → `misc/mo-algo-intro.md`
+- 莫队算法 → `misc/mo-algo-intro.md`
 - mo-algo-on-tree → `misc/mo-algo-on-tree.md`
 - mo-algo-secondary-offline → `misc/mo-algo-secondary-offline.md`
-- mo-algo-with-bitset → `misc/mo-algo-with-bitset.md`
+- bitset 常 → `misc/mo-algo-with-bitset.md`
 - mo-algo → `misc/mo-algo.md`
 - modifiable-mo-algo → `misc/modifiable-mo-algo.md`
 - odt → `misc/odt.md`
@@ -295,7 +295,7 @@
 
 - bracket → `topic/bracket.md`
 - dsu-app → `topic/dsu-app.md`
-- rmq → `topic/rmq.md`
+- RMQ → `topic/rmq.md`
 - segment-tree-offline → `topic/segment-tree-offline.md`
 
 ## 四、结论与下一步

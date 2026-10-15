@@ -106,6 +106,116 @@ def search_wiki(query: str) -> str:
     return "\n\n".join(f"[来源: {h.source}]\n{h.text}" for h in hits)
 
 
+# ---------------- 学习路线相关工具 ----------------
+
+@tool(description="查看学习路线的下一个知识点。用户问「我该学什么」「下一步学什么」时必须调用", params={})
+def get_next_topic() -> str:
+    from curriculum import next_topic
+    try:
+        data = next_topic(count=3)
+    except FileNotFoundError as e:
+        return f"路线数据未就绪：{e}"
+    if data.get("done"):
+        return data["message"]
+    lines = [f"学习进度：{data['progress']}（已学 {data['learned_count']}/{data['total']}）", ""]
+    for i, c in enumerate(data["next"], 1):
+        lines.append(f"{i}. 【{c['section']}】{c['name']}（第 {c['order']} 个）")
+        if c.get("why"):
+            lines.append(f"   为什么学它：{c['why']}")
+    return "\n".join(lines)
+
+
+@tool(description="检查某个知识点的前置内容是否学过。用户想跳过基础直接学某个知识点时调用", params={
+    "path": "知识点路径，如 ds/seg.md 或 graph/tree-basic.md",
+})
+def check_prerequisites(path: str) -> str:
+    from curriculum import check_prerequisites as _check
+    try:
+        data = _check(path)
+    except FileNotFoundError as e:
+        return f"路线数据未就绪：{e}"
+
+    if not data["in_roadmap"]:
+        lines = [f"「{data['name']}」不在入门路线中（属于进阶层，顺序尚未确认）。"]
+        refs = data.get("references_all", [])
+        if refs:
+            lines.append("")
+            lines.append(f"它会引用到 {len(refs)} 个其他知识点，其中包括：")
+            # 优先展示入门层里的（那些有明确学习位次）
+            in_rm = [r for r in refs if r["in_roadmap"]][:5]
+            others = [r for r in refs if not r["in_roadmap"]][:5]
+            for r in in_rm:
+                lines.append(f"  · {r['name']}（入门路线里有）")
+            for r in others:
+                lines.append(f"  · {r['name']}")
+        return "\n".join(lines)
+
+    lines = [f"「{data['name']}」（路线第 {data['order']} 个）"]
+    refs = data["references_in_roadmap"]
+    if not refs:
+        lines.append("没有需要在路线中提前掌握的内容。")
+        return "\n".join(lines)
+
+    lines.append("")
+    lines.append("它会用到的前置内容：")
+    for r in refs:
+        mark = "✅ 学过" if r["learned"] else "⬜ 还没学"
+        lines.append(f"  {mark}  {r['name']}（路线第 {r['order']} 个）")
+    lines.append("")
+    lines.append(data["hint"])
+    return "\n".join(lines)
+
+
+@tool(description="查看某个知识点的详细信息（所属章节、学习位次、是否学过）", params={
+    "path": "知识点路径，如 dp/knapsack/basic.md",
+})
+def get_topic_info(path: str) -> str:
+    from curriculum import get_topic
+    try:
+        data = get_topic(path)
+    except FileNotFoundError as e:
+        return f"路线数据未就绪：{e}"
+    if not data["found"]:
+        return data["message"]
+    status = "已学" if data["learned"] else "未学"
+    return (f"【{data['name']}】\n"
+            f"  所属：{data['stage']} → {data['section']}\n"
+            f"  学习位次：第 {data['order']} 个\n"
+            f"  状态：{status}\n"
+            f"  说明：{data['note'][:200]}")
+
+
+@tool(description="查看学习路线概览（有哪些阶段、各自多少个知识点）", params={
+    "stage": "阶段序号，不填则看总览",
+})
+def list_curriculum(stage: int = 0) -> str:
+    from curriculum import list_stage
+    try:
+        if stage:
+            data = list_stage(stage)
+        else:
+            data = list_stage()
+    except FileNotFoundError as e:
+        return f"路线数据未就绪：{e}"
+
+    if "error" in data:
+        return data["error"]
+    if "stages" in data:
+        lines = [f"学习路线共 {data['total_concepts']} 个知识点，已学 {data['learned']} 个", ""]
+        for s in data["stages"]:
+            lines.append(f"  阶段 {s['order']}：{s['title']}"
+                         f"（{s['section_count']} 节 / {s['concept_count']} 个知识点）")
+        return "\n".join(lines)
+
+    lines = [f"阶段 {data['order']}：{data['title']}", ""]
+    for sec in data["sections"]:
+        lines.append(f"  {sec['order']} {sec['title']}")
+        for c in sec["concepts"]:
+            mark = "✅" if c["learned"] else "⬜"
+            lines.append(f"    {mark} {c['name']}")
+    return "\n".join(lines)
+
+
 @tool(description="获取当前日期，格式 YYYY-MM-DD", params={})
 def get_date() -> str:
     return datetime.now().strftime("%Y-%m-%d")
@@ -271,6 +381,14 @@ def run_agent(user_input: str, history: list | None = None, max_turns: int = 8) 
                     result = get_records()
                 elif name == "search_wiki":
                     result = search_wiki(**args)
+                elif name == "get_next_topic":
+                    result = get_next_topic()
+                elif name == "check_prerequisites":
+                    result = check_prerequisites(**args)
+                elif name == "get_topic_info":
+                    result = get_topic_info(**args)
+                elif name == "list_curriculum":
+                    result = list_curriculum(**args)
                 else:
                     result = f"未知工具: {name}"
             except Exception as e:

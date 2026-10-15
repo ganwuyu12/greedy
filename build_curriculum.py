@@ -30,6 +30,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from collections import defaultdict
 from datetime import datetime, timezone
@@ -88,6 +89,84 @@ def load_covered() -> tuple[set[str], dict]:
     return covered, cur
 
 
+# 裸元数据行：author: xxx / updated: xxx（OI Wiki 部分文件没有 --- 包裹）
+RE_META_LINE = re.compile(r"^[a-z][a-z0-9_-]*\s*:")
+
+# 名称提取时要去掉的引导词：这些词出现在句首会让提取出的「名称」变成半句话
+NAME_STOPWORDS = (
+    "众所周知", "一般来说", "通常来说", "简单来说", "严格来说",
+    "需要注意的是", "需要指出的是", "值得一提的是", "实际上", "事实上",
+)
+
+
+def _clean_name(raw: str) -> str:
+    """去掉提取结果里的引导词与残留标点"""
+    s = raw.strip()
+    for w in NAME_STOPWORDS:
+        if s.startswith(w):
+            s = s[len(w):]
+    # 「主席树全称」这类：截断到「全称」之前
+    s = re.split(r"(全称|简称|又称|也叫|英文)", s)[0]
+    return s.strip(" 　·、,，。.：:")
+
+
+def extract_title_and_desc(path: Path) -> tuple[str, str]:
+    """从知识点文件里提取可读名称和一句描述
+
+    实测 OI Wiki 页面的结构（两个坑）：
+      1) **没有 H1 标题**——标题信息不在正文里
+      2) 部分文件没有 `---` 包裹的 front-matter，`author: xxx` 直接裸在开头
+         例：ds/seg.md 第一行就是 author: Ir1d, hsfzLZH1, …
+
+    所以要先跳过所有元数据行，再找第一句真正的正文。
+    名称提取优先用描述句里的关键词（「本页面将介绍归并排序…」→ 归并排序），
+    提不到就用文件名。
+    """
+    try:
+        text = path.read_text(encoding="utf-8", errors="ignore")
+    except OSError:
+        return path.stem, ""
+
+    lines = [l.strip() for l in text.split("\n")]
+    i = 0
+    # 跳过 --- 包裹的 front-matter
+    if lines and lines[0] == "---":
+        i = 1
+        while i < len(lines) and lines[i] != "---":
+            i += 1
+        i += 1
+    # 跳过裸元数据行与空行
+    while i < len(lines):
+        ln = lines[i]
+        if not ln or RE_META_LINE.match(ln) or ln.startswith(("#", "```", ":::", "???", "!!!")):
+            i += 1
+            continue
+        break
+
+    intro = ""
+    for line in lines[i:i + 40]:
+        if not line or line.startswith(("#", "-", "*", "|", "```", ":::", "???", "!")):
+            continue
+        if RE_META_LINE.match(line):
+            continue
+        if len(line) < 6:
+            continue
+        intro = line
+        break
+
+    # 从描述句里提取名称：「本页面将介绍归并排序及其…」→ 归并排序
+    name = ""
+    if intro:
+        m = re.search(r"本页面(?:将)?(?:介绍|讲解|说明|讨论|主要介绍)([^，。；．、]{2,20})", intro)
+        if m:
+            name = _clean_name(m.group(1))
+        if not name:
+            m = re.search(r"^([^，。；．、]{2,20}?)(?:是|指|用于|可以|通常)", intro)
+            if m:
+                name = _clean_name(m.group(1))
+    return (name or path.stem), intro[:120]
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description="处理进阶层，输出完整路线")
     ap.add_argument("--list-uncovered", action="store_true", help="只列出未覆盖清单")
@@ -123,22 +202,24 @@ def main() -> None:
         groups = []
         for d in sorted(dirs_in_tier):
             paths = sorted(by_dir[d])
+            concepts = []
+            for i, p in enumerate(paths):
+                name, desc = extract_title_and_desc(CLEAN_DIR / p)
+                concepts.append({
+                    "id": p[:-3].replace("/", "_").replace("-", "_"),
+                    "name": name,
+                    "desc": desc,
+                    "path": p,
+                    "level": "进阶",
+                    "source": "directory_grouping",
+                    "verified": False,      # ← 关键：未经人工确认
+                    "order_in_dir": i + 1,
+                })
             groups.append({
                 "topic": DIR_TOPIC.get(d, d),
                 "dir": d,
                 "count": len(paths),
-                "concepts": [
-                    {
-                        "id": p[:-3].replace("/", "_").replace("-", "_"),
-                        "name": Path(p).stem,
-                        "path": p,
-                        "level": "进阶",
-                        "source": "directory_grouping",
-                        "verified": False,      # ← 关键：未经人工确认
-                        "order_in_dir": i + 1,
-                    }
-                    for i, p in enumerate(paths)
-                ],
+                "concepts": concepts,
             })
         advanced_tiers.append({
             "tier": tier,
