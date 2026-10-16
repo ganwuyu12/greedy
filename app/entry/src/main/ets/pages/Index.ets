@@ -17,7 +17,9 @@ import { buildRegistry, CompanionService, NoteStore } from '../core/Tools';
 import { WikiIndex } from '../core/WikiIndex';
 import { prompt as personaPrompt } from '../core/Persona';
 import { Session, SessionStore } from '../core/SessionStore';
-import { common } from '@kit.AbilityKit';
+import { VoiceFactory, IVoiceService, AsrCallbacks, VoiceAvailability } from '../core/Voice';
+import { HarmonyVoiceService } from '../core/VoiceHarmony';
+import { common, abilityAccessCtrl, Permissions } from '@kit.AbilityKit';
 import { resourceManager } from '@kit.LocalizationKit';
 
 /** 聊天列表里的一条 */
@@ -55,6 +57,12 @@ struct Index {
   @State hasKey: boolean = false;
   @State showSessions: boolean = false;
   @State sessionList: Session[] = [];
+  @State voiceOk: boolean = false;         // 语音可用性
+  @State ttsOk: boolean = false;
+  @State listening: boolean = false;       // 正在识别
+  @State partialText: string = '';         // 识别中的实时文字
+  @State voiceHint: string = '';           // 语音相关提示
+  @State autoSpeak: boolean = true;        // 自动朗读回答
 
   private seq: number = 0;
   private agent: Agent | null = null;
@@ -64,6 +72,7 @@ struct Index {
   private sessions: SessionStore = new SessionStore();
   private wiki: WikiIndex = new WikiIndex();
   private wikiMgr: resourceManager.ResourceManager | null = null;
+  private voice: IVoiceService = new HarmonyVoiceService();
   private scroller: Scroller = new Scroller();
 
   aboutToAppear(): void {
@@ -136,6 +145,86 @@ struct Index {
       this.pushBubbleNow('assistant', '来了？说吧，今天又卡在哪了。', '');
     }
     this.scrollToBottom();
+
+    // 语音能力：只检测，不急着建引擎（建引擎较慢，等用户真要用再建）
+    const av = this.voice.availability();
+    this.voiceOk = av.asr;
+    this.ttsOk = av.tts;
+    this.voiceHint = av.reason;
+  }
+
+  // ------------------------------------------------------------ 语音
+
+  /** 申请麦克风权限 */
+  private async requestMic(): Promise<boolean> {
+    try {
+      const ctx = getContext(this) as common.UIAbilityContext;
+      const mgr = abilityAccessCtrl.createAtManager();
+      const perms: Permissions[] = ['ohos.permission.MICROPHONE'];
+      const result = await mgr.requestPermissionsFromUser(ctx, perms);
+      // 0 = 已授权
+      return result.authResults.length > 0 && result.authResults[0] === 0;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  /** 按下麦克风：开始识别 */
+  private async startVoice(): Promise<void> {
+    if (this.listening) {
+      return;
+    }
+    if (!this.voiceOk) {
+      this.voiceHint = '本设备不支持语音识别，可以用打字';
+      return;
+    }
+    const granted = await this.requestMic();
+    if (!granted) {
+      this.voiceHint = '没有麦克风权限，请在系统设置里允许';
+      return;
+    }
+    this.voice.stopSpeak();      // 说话时打断正在朗读的回答
+    this.listening = true;
+    this.partialText = '';
+    this.voiceHint = '正在听…';
+
+    const cb: AsrCallbacks = {
+      onPartial: (t: string) => {
+        this.partialText = t;
+      },
+      onFinal: (t: string) => {
+        this.listening = false;
+        this.partialText = '';
+        this.voiceHint = '';
+        if (t.trim().length > 0) {
+          this.send(t);
+        }
+      },
+      onError: (m: string) => {
+        this.listening = false;
+        this.partialText = '';
+        this.voiceHint = m;
+      }
+    };
+    await this.voice.startAsr(cb);
+  }
+
+  /** 松开麦克风：结束识别 */
+  private stopVoice(): void {
+    if (!this.listening) {
+      return;
+    }
+    this.voice.stopAsr();
+  }
+
+  /** 朗读一段回答 */
+  private speakAnswer(text: string): void {
+    if (!this.ttsOk || !this.autoSpeak) {
+      return;
+    }
+    this.voice.speak(text, undefined, (m: string) => {
+      this.voiceHint = m;
+    });
   }
 
   /** 把存储的会话还原成气泡列表，并把纯文本历史灌进 Agent */
@@ -285,6 +374,8 @@ struct Index {
       this.updateBubble(pendingId, run.answer, trace, false);
       this.statusText = '';
       await this.sessions.append('assistant', run.answer, trace);
+      // 回答完自动朗读（可在设置里关）
+      this.speakAnswer(run.answer);
     } catch (e) {
       const msg = e instanceof Error ? e.message : String(e);
       const errText = `……出错了：${msg}`;
@@ -630,6 +721,27 @@ struct Index {
         .onAppear(() => { this.scrollToBottom(); })
       }
 
+      // 语音提示条（说话中 / 出错时显示）
+      if (this.listening || this.voiceHint.length > 0) {
+        Row() {
+          if (this.listening) {
+            LoadingProgress().width(14).height(14).color('#E6483C')
+          }
+          Text(this.listening
+            ? (this.partialText.length > 0 ? this.partialText : '正在听…')
+            : this.voiceHint)
+            .fontSize(13)
+            .fontColor(this.listening ? '#E6483C' : '#999999')
+            .margin({ left: this.listening ? 8 : 0 })
+            .layoutWeight(1)
+            .maxLines(2)
+            .textOverflow({ overflow: TextOverflow.Ellipsis })
+        }
+        .width('100%')
+        .padding({ left: 18, right: 18, top: 6, bottom: 6 })
+        .backgroundColor('#FFF8F8')
+      }
+
       // 输入区
       Row() {
         TextInput({ text: this.inputText, placeholder: '说点什么…' })
@@ -642,6 +754,23 @@ struct Index {
           .enabled(!this.sending)
           .onChange((v: string) => { this.inputText = v; })
           .onSubmit(() => { this.send(this.inputText); })
+
+        // 按住说话（不支持语音的设备上不显示）
+        if (this.voiceOk) {
+          Button(this.listening ? '松' : '说')
+            .width(46).height(42).fontSize(14)
+            .margin({ left: 8 })
+            .backgroundColor(this.listening ? '#E6483C' : '#EEF2FF')
+            .fontColor(this.listening ? '#FFFFFF' : '#2E6BE6')
+            .enabled(!this.sending)
+            .onTouch((e: TouchEvent) => {
+              if (e.type === TouchType.Down) {
+                this.startVoice();
+              } else if (e.type === TouchType.Up || e.type === TouchType.Cancel) {
+                this.stopVoice();
+              }
+            })
+        }
 
         Button(this.sending ? '…' : '发')
           .width(56).height(42).fontSize(15)

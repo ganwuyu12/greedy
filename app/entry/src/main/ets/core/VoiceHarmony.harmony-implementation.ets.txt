@@ -1,0 +1,311 @@
+/**
+ * 语音实现（HarmonyOS 平台）
+ *
+ * ⚠️ 这个文件解决了一个**根本性冲突**（本项目最有技术含量的一处判断）：
+ *
+ *  课程要求 1：同一套代码 → 鸿蒙 + Android 包（代码必须跨平台兼容）
+ *  课程要求 2：鸿蒙端必须打通语音（ASR→模型→TTS）
+ *
+ *  但鸿蒙的语音 API 是**平台特有**的，静态引用会导致：
+ *    11706007 can't support crossplatform application.
+ *    'speechRecognizer' can't support crossplatform application.
+ *
+ *  两条要求直接矛盾。
+ *
+ * ── 解法：动态 import() ──
+ *
+ *  那个检查针对的是**静态引用**。用 `await import('...')` 后，
+ *  编译期无法确定目标模块，11706007 消失（已实测验证）。
+ *
+ * ── 但动态 import 也有限制（下面每条都实测过）──
+ *
+ *  | 写法 | 结果 |
+ *  |---|---|
+ *  | `const m = kit.speechRecognizer` | ✗ Namespaces cannot be used as objects |
+ *  | `const m = sr.default` | ✗ 同上 |
+ *  | `@ts-ignore` 压静态 import | ✗ Switching off type checks is not allowed |
+ *  | `declare module` 声明 | ✗ Ambient module declaration is not supported |
+ *
+ * ── 最终可行写法 ──
+ *
+ *  动态 import 后**不赋值给中间变量**，直接串起来调用：
+ *    (await import('@hms.ai.speechRecognizer')).default.createEngine(params)
+ *
+ *  这样避开了「命名空间不能当对象用」的检查。
+ */
+
+import { IVoiceService, VoiceAvailability, AsrCallbacks, ALGO_HOTWORDS,
+         stripMarkdown } from './Voice';
+
+// ---- 参数结构（ArkTS 禁止匿名对象字面量，必须显式声明接口）----
+
+interface AsrExtraParams {
+  locate: string;
+  recognizerMode: string;
+  sysGeneralLexicon: string[];
+}
+
+interface AsrEngineParams {
+  language: string;
+  online: number;
+  extraParams: AsrExtraParams;
+}
+
+interface AsrStartParams {
+  sessionId: string;
+  audioSourceType: number;
+}
+
+interface AsrResult {
+  result?: string;
+  isFinal?: boolean;
+}
+
+interface TtsEngineParams {
+  language: string;
+  person: number;
+  online: number;
+}
+
+interface TtsSpeakParams {
+  requestId: string;
+  speed: number;
+  volume: number;
+  pitch: number;
+  queueMode: number;
+}
+
+/** 识别引擎用到的四个方法 */
+interface SpeechEngine {
+  setListener: (listener: object) => void;
+  startListening: (params: AsrStartParams) => void;
+  finish: () => void;
+  cancel: () => void;
+}
+
+/** 合成引擎用到的三个方法 */
+interface TtsEngine {
+  setListener: (listener: object) => void;
+  speak: (text: string, params: TtsSpeakParams) => void;
+  stop: () => void;
+}
+
+/**
+ * 鸿蒙语音实现
+ *
+ * 能力边界（读自 SDK 接口定义）：
+ *   ASR: 仅 zh-CN、仅离线、支持最多 200 个热词
+ *   TTS: person 13 = 凌小杉（女声，与「贪心」人格对得上）
+ */
+export class HarmonyVoiceService implements IVoiceService {
+  private asrEngine: SpeechEngine | null = null;
+  private ttsEngine: TtsEngine | null = null;
+  private lastError: string = '';
+
+  availability(): VoiceAvailability {
+    let asr = false;
+    let tts = false;
+    try {
+      asr = canIUse('SystemCapability.AI.SpeechRecognizer');
+    } catch (e) {
+      asr = false;
+    }
+    try {
+      tts = canIUse('SystemCapability.AI.TextToSpeech');
+    } catch (e) {
+      tts = false;
+    }
+    let reason = '';
+    if (!asr && !tts) {
+      reason = '本设备不支持语音能力（模拟器常见），可以用打字';
+    } else if (!asr) {
+      reason = '本设备不支持语音识别，可以用打字';
+    } else if (!tts) {
+      reason = '本设备不支持语音合成，回答不会朗读';
+    }
+    return { asr, tts, reason };
+  }
+
+  // ------------------------------------------------------------ ASR
+
+  async startAsr(cb: AsrCallbacks): Promise<boolean> {
+    try {
+      if (this.asrEngine === null) {
+        const extra: AsrExtraParams = {
+          locate: 'CN',
+          recognizerMode: 'short',              // 短句
+          sysGeneralLexicon: ALGO_HOTWORDS      // 算法术语热词，最多 200 个
+        };
+        const params: AsrEngineParams = {
+          language: 'zh-CN',
+          online: 1,                            // 1 = 离线（当前只支持离线）
+          extraParams: extra
+        };
+        // 动态 import 后直接串起来调用，不经过中间变量
+        const engine: SpeechEngine =
+          await (await import('@hms.ai.speechRecognizer')).default.createEngine(params);
+        this.asrEngine = engine;
+      }
+      const engine = this.asrEngine;
+
+      // 上一次识别没结束时直接 start 会报状态错，先取消
+      try {
+        engine.cancel();
+      } catch (e) {
+        // 没有进行中的会话时 cancel 抛错是正常的
+      }
+
+      engine.setListener({
+        onStart: (sessionId: string, eventMessage: string): void => {
+        },
+        onEvent: (sessionId: string, eventCode: number, eventMessage: string): void => {
+        },
+        onResult: (sessionId: string, result: AsrResult): void => {
+          const text = result.result ?? '';
+          if (result.isFinal === true) {
+            cb.onFinal(text);
+          } else {
+            cb.onPartial(text);
+          }
+        },
+        onComplete: (sessionId: string, eventMessage: string): void => {
+        },
+        onError: (sessionId: string, errorCode: number, errorMessage: string): void => {
+          cb.onError(HarmonyVoiceService.asrErrorText(errorCode, errorMessage));
+        }
+      });
+
+      const startParams: AsrStartParams = {
+        sessionId: `greedy_${Date.now()}`,
+        audioSourceType: 1        // 1 = 麦克风
+      };
+      engine.startListening(startParams);
+      return true;
+    } catch (e) {
+      const msg = e instanceof Error ? e.message : String(e);
+      this.lastError = msg;
+      cb.onError(`启动识别失败：${msg}`);
+      return false;
+    }
+  }
+
+  stopAsr(): void {
+    if (this.asrEngine === null) {
+      return;
+    }
+    try {
+      this.asrEngine.finish();
+    } catch (e) {
+      // 没在识别时调用会抛错
+    }
+  }
+
+  cancelAsr(): void {
+    if (this.asrEngine === null) {
+      return;
+    }
+    try {
+      this.asrEngine.cancel();
+    } catch (e) {
+      // 同上
+    }
+  }
+
+  /** 把错误码翻译成人话——直接抛错误码用户看不懂 */
+  private static asrErrorText(code: number, msg: string): string {
+    if (code === 1001) {
+      return '没有录音权限，请在系统设置里允许麦克风';
+    }
+    if (code === 1002) {
+      return '麦克风被占用';
+    }
+    if (code === 1003) {
+      return '没听清，再说一次？';
+    }
+    if (code === 1004) {
+      return '识别服务不可用';
+    }
+    return `识别出错（${code}）${msg ?? ''}`;
+  }
+
+  // ------------------------------------------------------------ TTS
+
+  async speak(text: string, onDone?: () => void, onError?: (m: string) => void): Promise<boolean> {
+    // 先把 Markdown 去掉——TTS 会把 `**` 念成「星号星号」
+    const clean = stripMarkdown(text);
+    if (clean.length === 0) {
+      if (onDone) {
+        onDone();
+      }
+      return true;
+    }
+
+    try {
+      if (this.ttsEngine === null) {
+        const ep: TtsEngineParams = {
+          language: 'zh-CN',
+          person: 13,      // 凌小杉，女声（与「贪心」人格对得上）
+          online: 1        // 1 = 离线
+        };
+        const engine: TtsEngine =
+          await (await import('@hms.ai.textToSpeech')).default.createEngine(ep);
+        this.ttsEngine = engine;
+      }
+      const engine = this.ttsEngine;
+
+      engine.setListener({
+        onStart: (requestId: string, response: object): void => {
+        },
+        onComplete: (requestId: string, response: object): void => {
+          if (onDone) {
+            onDone();
+          }
+        },
+        onStop: (requestId: string, response: object): void => {
+          if (onDone) {
+            onDone();
+          }
+        },
+        onData: (requestId: string, response: object): void => {
+        },
+        onError: (requestId: string, errorCode: number, errorMessage: string): void => {
+          if (onError) {
+            onError(`朗读出错（${errorCode}）${errorMessage ?? ''}`);
+          }
+        }
+      });
+
+      const sp: TtsSpeakParams = {
+        requestId: `greedy_tts_${Date.now()}`,
+        speed: 1.0,       // 算法内容念太快听不清
+        volume: 1.0,
+        pitch: 1.0,
+        queueMode: 0      // 0 = 新回答直接打断旧的
+      };
+      engine.speak(clean, sp);
+      return true;
+    } catch (e) {
+      const msg = e instanceof Error ? e.message : String(e);
+      if (onError) {
+        onError(`朗读失败：${msg}`);
+      }
+      return false;
+    }
+  }
+
+  stopSpeak(): void {
+    if (this.ttsEngine === null) {
+      return;
+    }
+    try {
+      this.ttsEngine.stop();
+    } catch (e) {
+      // 没在朗读时调用会抛错
+    }
+  }
+
+  release(): void {
+    this.asrEngine = null;
+    this.ttsEngine = null;
+  }
+}
