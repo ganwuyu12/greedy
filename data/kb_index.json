@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-10-15T19:31:06+08:00",
+  "generated": "2026-10-16T17:40:29+08:00",
   "count": 418,
   "entries": [
     {
@@ -8,18 +8,24 @@
       "name": "amortized-analysis",
       "keys": [
         "amortized-analysis",
-        "amortized analysis"
+        "amortized analysis",
+        "basic/amortized-analysis"
       ],
-      "desc": "前置知识：时间复杂度"
+      "desc": "前置知识：时间复杂度",
+      "tier": 0
     },
     {
       "path": "basic/binary-lifting.md",
-      "name": "binary-lifting",
+      "name": "二分",
       "keys": [
+        "二分",
+        "二分查找",
+        "二分答案",
         "binary-lifting",
-        "binary lifting"
+        "basic/binary-lifting"
       ],
-      "desc": "本页面将简要介绍倍增法．"
+      "desc": "本页面将简要介绍倍增法．",
+      "tier": 1
     },
     {
       "path": "basic/binary.md",
@@ -28,9 +34,11 @@
         "二分",
         "二分查找",
         "二分答案",
-        "binary"
+        "binary",
+        "basic/binary"
       ],
-      "desc": "本页面将简要介绍二分查找、二分答案，以及由二分法衍生的三分法．"
+      "desc": "本页面将简要介绍二分查找、二分答案，以及由二分法衍生的三分法．",
+      "tier": 2
     },
     {
       "path": "basic/bubble-sort.md",
@@ -38,35 +46,41 @@
       "keys": [
         "冒泡排序",
         "bubble-sort",
-        "bubble sort"
+        "basic/bubble-sort"
       ],
-      "desc": "本页面将简要介绍冒泡排序．"
+      "desc": "本页面将简要介绍冒泡排序．",
+      "tier": 2
     },
     {
       "path": "basic/bucket-sort.md",
-      "name": "桶排序",
+      "name": "bucket-sort",
       "keys": [
-        "桶排序",
         "bucket-sort",
-        "bucket sort"
+        "bucket sort",
+        "basic/bucket-sort"
       ],
-      "desc": "本页面将简要介绍桶排序．"
+      "desc": "本页面将简要介绍桶排序．",
+      "tier": 0
     },
     {
       "path": "basic/complexity.md",
       "name": "complexity",
       "keys": [
-        "complexity"
+        "complexity",
+        "basic/complexity"
       ],
-      "desc": "时间复杂度和空间复杂度是衡量一个算法效率的重要标准．"
+      "desc": "时间复杂度和空间复杂度是衡量一个算法效率的重要标准．",
+      "tier": 0
     },
     {
       "path": "basic/construction.md",
       "name": "construction",
       "keys": [
-        "construction"
+        "construction",
+        "basic/construction"
       ],
-      "desc": "本页面将简要介绍构造题这类题型．"
+      "desc": "本页面将简要介绍构造题这类题型．",
+      "tier": 0
     },
     {
       "path": "basic/counting-sort.md",
@@ -74,9 +88,10 @@
       "keys": [
         "计数排序",
         "counting-sort",
-        "counting sort"
+        "basic/counting-sort"
       ],
-      "desc": "前置知识：前缀和"
+      "desc": "前置知识：前缀和",
+      "tier": 2
     },
     {
       "path": "basic/divide-and-conquer.md",
@@ -84,27 +99,32 @@
       "keys": [
         "分治",
         "divide-and-conquer",
-        "divide and conquer"
+        "basic/divide-and-conquer"
       ],
-      "desc": "本页面将介绍递归与分治算法的区别与结合运用．"
+      "desc": "本页面将介绍递归与分治算法的区别与结合运用．",
+      "tier": 2
     },
     {
       "path": "basic/enumerate.md",
       "name": "枚举",
       "keys": [
         "枚举",
-        "enumerate"
+        "enumerate",
+        "basic/enumerate"
       ],
-      "desc": "本页面将简要介绍枚举算法．"
+      "desc": "本页面将简要介绍枚举算法．",
+      "tier": 2
     },
     {
       "path": "basic/greedy.md",
       "name": "贪心",
       "keys": [
         "贪心",
-        "greedy"
+        "greedy",
+        "basic/greedy"
       ],
-      "desc": "本页面将简要介绍贪心算法．"
+      "desc": "本页面将简要介绍贪心算法．",
+      "tier": 2
     },
     {
       "path": "basic/heap-sort.md",
@@ -112,25 +132,30 @@
       "keys": [
         "堆排序",
         "heap-sort",
-        "heap sort"
+        "basic/heap-sort"
       ],
-      "desc": "本页面将简要介绍堆排序．"
+      "desc": "本页面将简要介绍堆排序．",
+      "tier": 2
     },
     {
       "path": "basic/index.md",
       "name": "index",
-      "keys": [],
-      "desc": "本章介绍一些基础算法．当一个计算任务足够通用，在各种问题中广泛出现时，解决该任务的算法就会被更多的算法所调用，拥有相当的重要性和基础性．同时，越通用的算法，通常越是简洁，越近似于思想而非程序．本章中介绍的算法具备足够的优美及趣味性，在之后的进阶内容中也常常会出现．"
+      "keys": [
+        "basic/index"
+      ],
+      "desc": "本章介绍一些基础算法．当一个计算任务足够通用，在各种问题中广泛出现时，解决该任务的算法就会被更多的算法所调用，拥有相当的重要性和基础性．同时，越通用的算法，通常越是简洁，越近似于思想而非程序．本章中介绍的算法具备足够的优美及趣味性，在之后的进阶内容中也常常会出现．",
+      "tier": 0
     },
     {
       "path": "basic/insertion-sort.md",
-      "name": "插入排序",
+      "name": "insertion-sort",
       "keys": [
-        "插入排序",
         "insertion-sort",
-        "insertion sort"
+        "insertion sort",
+        "basic/insertion-sort"
       ],
-      "desc": "本页面将简要介绍插入排序．"
+      "desc": "本页面将简要介绍插入排序．",
+      "tier": 0
     },
     {
       "path": "basic/merge-sort.md",
@@ -138,9 +163,10 @@
       "keys": [
         "归并排序",
         "merge-sort",
-        "merge sort"
+        "basic/merge-sort"
       ],
-      "desc": "本页面将介绍归并排序及其计算逆序对的应用．"
+      "desc": "本页面将介绍归并排序及其计算逆序对的应用．",
+      "tier": 2
     },
     {
       "path": "basic/prefix-sum.md",
@@ -149,18 +175,21 @@
         "前缀和",
         "差分",
         "prefix-sum",
-        "prefix sum"
+        "basic/prefix-sum"
       ],
-      "desc": "前缀和与差分是算法竞赛中常用的技巧，前者用于快速求区间和，后者用于高效进行区间修改．"
+      "desc": "前缀和与差分是算法竞赛中常用的技巧，前者用于快速求区间和，后者用于高效进行区间修改．",
+      "tier": 2
     },
     {
       "path": "basic/quick-sort.md",
       "name": "quick-sort",
       "keys": [
         "quick-sort",
-        "quick sort"
+        "quick sort",
+        "basic/quick-sort"
       ],
-      "desc": "本页面将简要介绍快速排序．"
+      "desc": "本页面将简要介绍快速排序．",
+      "tier": 0
     },
     {
       "path": "basic/radix-sort.md",
@@ -168,83 +197,97 @@
       "keys": [
         "基数排序",
         "radix-sort",
-        "radix sort"
+        "basic/radix-sort"
       ],
-      "desc": "本页面要介绍的不是 计数排序．"
+      "desc": "本页面要介绍的不是 计数排序．",
+      "tier": 2
     },
     {
       "path": "basic/selection-sort.md",
-      "name": "选择排序",
+      "name": "selection-sort",
       "keys": [
-        "选择排序",
         "selection-sort",
-        "selection sort"
+        "selection sort",
+        "basic/selection-sort"
       ],
-      "desc": "本页面将简要介绍选择排序．"
+      "desc": "本页面将简要介绍选择排序．",
+      "tier": 0
     },
     {
       "path": "basic/shell-sort.md",
       "name": "shell-sort",
       "keys": [
         "shell-sort",
-        "shell sort"
+        "shell sort",
+        "basic/shell-sort"
       ],
-      "desc": "本页面将简要介绍希尔排序．"
+      "desc": "本页面将简要介绍希尔排序．",
+      "tier": 0
     },
     {
       "path": "basic/simulate.md",
-      "name": "模拟",
+      "name": "simulate",
       "keys": [
-        "模拟",
-        "simulate"
+        "simulate",
+        "basic/simulate"
       ],
-      "desc": "本页面将简要介绍模拟算法．"
+      "desc": "本页面将简要介绍模拟算法．",
+      "tier": 0
     },
     {
       "path": "basic/sort-intro.md",
       "name": "sort-intro",
       "keys": [
         "sort-intro",
-        "sort intro"
+        "sort intro",
+        "basic/sort-intro"
       ],
-      "desc": "本页面将简要介绍排序算法．"
+      "desc": "本页面将简要介绍排序算法．",
+      "tier": 0
     },
     {
       "path": "basic/stl-sort.md",
-      "name": "STL排序",
+      "name": "stl-sort",
       "keys": [
-        "stl排序",
         "stl-sort",
-        "stl sort"
+        "stl sort",
+        "basic/stl-sort"
       ],
-      "desc": "本页面将简要介绍 C 和 C++ 标准库中实现的排序算法．"
+      "desc": "本页面将简要介绍 C 和 C++ 标准库中实现的排序算法．",
+      "tier": 0
     },
     {
       "path": "basic/tim-sort.md",
       "name": "tim-sort",
       "keys": [
         "tim-sort",
-        "tim sort"
+        "tim sort",
+        "basic/tim-sort"
       ],
-      "desc": "本页面将介绍 Tim 排序（Timsort），一种混合的、稳定的排序算法．"
+      "desc": "本页面将介绍 Tim 排序（Timsort），一种混合的、稳定的排序算法．",
+      "tier": 0
     },
     {
       "path": "basic/tournament-sort.md",
       "name": "tournament-sort",
       "keys": [
         "tournament-sort",
-        "tournament sort"
+        "tournament sort",
+        "basic/tournament-sort"
       ],
-      "desc": "本页面将简要介绍锦标赛排序．"
+      "desc": "本页面将简要介绍锦标赛排序．",
+      "tier": 0
     },
     {
       "path": "basic/use-of-sort.md",
       "name": "use-of-sort",
       "keys": [
         "use-of-sort",
-        "use of sort"
+        "use of sort",
+        "basic/use-of-sort"
       ],
-      "desc": "本页面将简要介绍排序的用法．"
+      "desc": "本页面将简要介绍排序的用法．",
+      "tier": 0
     },
     {
       "path": "contest/common-mistakes.md",
@@ -252,9 +295,10 @@
       "keys": [
         "common-mistakes",
         "common mistakes",
-        "contest"
+        "contest/common-mistakes"
       ],
-      "desc": "本页面主要列举一些竞赛中很多人经常会出现的错误．"
+      "desc": "本页面主要列举一些竞赛中很多人经常会出现的错误．",
+      "tier": 0
     },
     {
       "path": "contest/common-tricks.md",
@@ -262,124 +306,140 @@
       "keys": [
         "common-tricks",
         "common tricks",
-        "contest"
+        "contest/common-tricks"
       ],
-      "desc": "本页面主要列举一些竞赛中的小技巧．"
+      "desc": "本页面主要列举一些竞赛中的小技巧．",
+      "tier": 0
     },
     {
       "path": "contest/dictionary.md",
       "name": "dictionary",
       "keys": [
         "dictionary",
-        "contest"
+        "contest/dictionary"
       ],
-      "desc": "前置知识：分块．"
+      "desc": "前置知识：分块．",
+      "tier": 0
     },
     {
       "path": "contest/icpc.md",
       "name": "icpc",
       "keys": [
         "icpc",
-        "contest"
+        "contest/icpc"
       ],
-      "desc": "ICPC 主要分为区域赛（Regionals）和总决赛（World Finals）两部分．"
+      "desc": "ICPC 主要分为区域赛（Regionals）和总决赛（World Finals）两部分．",
+      "tier": 0
     },
     {
       "path": "contest/index.md",
       "name": "index",
       "keys": [
-        "contest"
+        "contest/index"
       ],
-      "desc": "本章主要介绍计算机编程比赛直接相关的知识，包括各种赛事、赛制、题型，以及赛场上常见的坑点与技巧．"
+      "desc": "本章主要介绍计算机编程比赛直接相关的知识，包括各种赛事、赛制、题型，以及赛场上常见的坑点与技巧．",
+      "tier": 0
     },
     {
       "path": "contest/interaction.md",
       "name": "interaction",
       "keys": [
         "interaction",
-        "contest"
+        "contest/interaction"
       ],
-      "desc": "上个世纪的 IOI 就已涉及交互题．虽然交互题近年来没有在省选以下的比赛中出现，不过 2019 年里 NOI 系列比赛中连续出现《P5208\\[WC2019]I 君的商店》、《P5473\\[NOI2019]I 君的探险》两道交互题，这可能代表着交互题重新回到 NOI 系列比赛中．"
+      "desc": "上个世纪的 IOI 就已涉及交互题．虽然交互题近年来没有在省选以下的比赛中出现，不过 2019 年里 NOI 系列比赛中连续出现《P5208\\[WC2019]I 君的商店》、《P5473\\[NOI2019]I 君的探险》两道交互题，这可能代表着交互题重新回到 NOI 系列比赛中．",
+      "tier": 0
     },
     {
       "path": "contest/io.md",
       "name": "io",
       "keys": [
         "io",
-        "contest"
+        "contest/io"
       ],
-      "desc": "本文将介绍如何优化基于流的 I/O 与 C 风格的 I/O．"
+      "desc": "本文将介绍如何优化基于流的 I/O 与 C 风格的 I/O．",
+      "tier": 0
     },
     {
       "path": "contest/oi.md",
       "name": "oi",
       "keys": [
         "oi",
-        "contest"
+        "contest/oi"
       ],
-      "desc": "OI 竞赛种类繁多，仅中国就包括："
+      "desc": "OI 竞赛种类繁多，仅中国就包括：",
+      "tier": 0
     },
     {
       "path": "contest/problems.md",
       "name": "problems",
       "keys": [
         "problems",
-        "contest"
+        "contest/problems"
       ],
-      "desc": "在算法竞赛中，有多种多样的问题类型．"
+      "desc": "在算法竞赛中，有多种多样的问题类型．",
+      "tier": 0
     },
     {
       "path": "contest/problemsetting.md",
       "name": "problemsetting",
       "keys": [
         "problemsetting",
-        "contest"
+        "contest/problemsetting"
       ],
-      "desc": "一方面，一个人自己出题，很难出出难度大于自身水平的题目，一定的 OI 水平有助于想到更加优质的 idea 并想出优秀的做法；另一方面，OI 水平在一定程度上代表着 OI 资历，见识过更多的题目的选手也会对「好题」拥有自己的见解．"
+      "desc": "一方面，一个人自己出题，很难出出难度大于自身水平的题目，一定的 OI 水平有助于想到更加优质的 idea 并想出优秀的做法；另一方面，OI 水平在一定程度上代表着 OI 资历，见识过更多的题目的选手也会对「好题」拥有自己的见解．",
+      "tier": 0
     },
     {
       "path": "contest/resources.md",
       "name": "resources",
       "keys": [
         "resources",
-        "contest"
+        "contest/resources"
       ],
-      "desc": "本页面主要列举了一些与算法竞赛有关的在线评测网站、题目合集、书籍、工具等资源．"
+      "desc": "本页面主要列举了一些与算法竞赛有关的在线评测网站、题目合集、书籍、工具等资源．",
+      "tier": 0
     },
     {
       "path": "contest/roadmap.md",
       "name": "roadmap",
       "keys": [
         "roadmap",
-        "contest"
+        "contest/roadmap"
       ],
-      "desc": "本文章正在编辑讨论中，欢迎补充更进一步的学习路线或在评论区提出你的想法！"
+      "desc": "本文章正在编辑讨论中，欢迎补充更进一步的学习路线或在评论区提出你的想法！",
+      "tier": 0
     },
     {
       "path": "dp/basic.md",
       "name": "basic",
       "keys": [
-        "dp"
+        "dp/basic"
       ],
-      "desc": "本页面主要介绍了动态规划的基本思想，以及动态规划中状态及状态转移方程的设计思路，帮助各位初学者对动态规划有一个初步的了解．"
+      "desc": "本页面主要介绍了动态规划的基本思想，以及动态规划中状态及状态转移方程的设计思路，帮助各位初学者对动态规划有一个初步的了解．",
+      "tier": 0
     },
     {
       "path": "dp/count.md",
-      "name": "count",
+      "name": "数位DP",
       "keys": [
+        "数位dp",
+        "数位动态规划",
         "count",
-        "dp"
+        "dp/count"
       ],
-      "desc": "计数问题一般指求一个集合 S 的大小，在 OI 中，S 的大小有时会达到 \\Theta(n^n) 甚至 \\Theta(2^{n!}) 的级别（当然，一般会对某一个固定的数取模），其中 n 是问题规模，所以我们不能逐一求出 S 的元素．"
+      "desc": "计数问题一般指求一个集合 S 的大小，在 OI 中，S 的大小有时会达到 \\Theta(n^n) 甚至 \\Theta(2^{n!}) 的级别（当然，一般会对某一个固定的数取模），其中 n 是问题规模，所以我们不能逐一求出 S 的元素．",
+      "tier": 2
     },
     {
       "path": "dp/dag.md",
       "name": "dag",
       "keys": [
         "dag",
-        "dp"
+        "dp/dag"
       ],
-      "desc": "DAG 即 有向无环图，一些实际问题中的二元关系都可使用 DAG 来建模，从而将这些问题转化为 DAG 上的最长（短）路问题．"
+      "desc": "DAG 即 有向无环图，一些实际问题中的二元关系都可使用 DAG 来建模，从而将这些问题转化为 DAG 上的最长（短）路问题．",
+      "tier": 0
     },
     {
       "path": "dp/dp-of-dp.md",
@@ -387,73 +447,85 @@
       "keys": [
         "dp-of-dp",
         "dp of dp",
-        "dp"
+        "dp/dp-of-dp"
       ],
-      "desc": "本文将介绍 DP 套 DP 的思想，并通过两道例题展示它如何应用到具体问题中．"
+      "desc": "本文将介绍 DP 套 DP 的思想，并通过两道例题展示它如何应用到具体问题中．",
+      "tier": 0
     },
     {
       "path": "dp/dynamic.md",
       "name": "dynamic",
       "keys": [
         "dynamic",
-        "dp"
+        "dp/dynamic"
       ],
-      "desc": "前置知识：矩阵，树链剖分．"
+      "desc": "前置知识：矩阵，树链剖分．",
+      "tier": 0
     },
     {
       "path": "dp/index.md",
       "name": "index",
       "keys": [
-        "dp"
+        "dp/index"
       ],
-      "desc": "本章将介绍动态规划（Dynamic Programming, DP）及其解决的问题、根据其设计的算法及优化．"
+      "desc": "本章将介绍动态规划（Dynamic Programming, DP）及其解决的问题、根据其设计的算法及优化．",
+      "tier": 0
     },
     {
       "path": "dp/interval.md",
       "name": "区间DP",
       "keys": [
         "区间dp",
-        "dp",
-        "interval"
+        "interval",
+        "dp/interval"
       ],
-      "desc": "区间类动态规划是线性动态规划的扩展，它在分阶段地划分问题时，与阶段中元素出现的顺序和由前一阶段的哪些元素合并而来有很大的关系．"
+      "desc": "区间类动态规划是线性动态规划的扩展，它在分阶段地划分问题时，与阶段中元素出现的顺序和由前一阶段的哪些元素合并而来有很大的关系．",
+      "tier": 2
     },
     {
       "path": "dp/knapsack/advanced.md",
-      "name": "advanced",
+      "name": "背包",
       "keys": [
+        "背包",
+        "背包问题",
         "advanced",
-        "dp",
-        "knapsack"
+        "dp/knapsack/advanced"
       ],
-      "desc": "这种背包，单个物品 i 没有固定的费用和价值，它的价值是随着分配给它的费用而定．在背包容量为 V 的背包问题中，当分配给物品 i 的费用为 vi 时，能得到的价值就是 hi\\left(vi\\right)．"
+      "desc": "这种背包，单个物品 i 没有固定的费用和价值，它的价值是随着分配给它的费用而定．在背包容量为 V 的背包问题中，当分配给物品 i 的费用为 vi 时，能得到的价值就是 hi\\left(vi\\right)．",
+      "tier": 1
     },
     {
       "path": "dp/knapsack/basic.md",
-      "name": "basic",
+      "name": "背包",
       "keys": [
-        "dp",
-        "knapsack"
+        "背包",
+        "背包问题",
+        "dp/knapsack/basic"
       ],
-      "desc": "前置知识：动态规划部分简介．"
+      "desc": "前置知识：动态规划部分简介．",
+      "tier": 1
     },
     {
       "path": "dp/memo.md",
       "name": "memo",
       "keys": [
         "memo",
-        "dp"
+        "dp/memo"
       ],
-      "desc": "记忆化搜索是一种通过记录已经遍历过的状态的信息，从而避免对同一状态重复遍历的搜索实现方式．"
+      "desc": "记忆化搜索是一种通过记录已经遍历过的状态的信息，从而避免对同一状态重复遍历的搜索实现方式．",
+      "tier": 0
     },
     {
       "path": "dp/number.md",
-      "name": "number",
+      "name": "数位DP",
       "keys": [
+        "数位dp",
+        "数位动态规划",
         "number",
-        "dp"
+        "dp/number"
       ],
-      "desc": "本页面将简要介绍数位 DP．"
+      "desc": "本页面将简要介绍数位 DP．",
+      "tier": 2
     },
     {
       "path": "dp/opt/dp-opt.md",
@@ -461,62 +533,65 @@
       "keys": [
         "dp-opt",
         "dp opt",
-        "dp",
-        "opt"
+        "dp/opt/dp-opt"
       ],
-      "desc": "本页面列举了一些常见的动态规划（dynamic programming，DP）优化方法．所谓 DP 优化，是指许多动态规划问题虽然容易列出朴素的状态转移方程，但直接计算往往效率低下，因此需要借助一些技巧来降低时间复杂度．"
+      "desc": "本页面列举了一些常见的动态规划（dynamic programming，DP）优化方法．所谓 DP 优化，是指许多动态规划问题虽然容易列出朴素的状态转移方程，但直接计算往往效率低下，因此需要借助一些技巧来降低时间复杂度．",
+      "tier": 0
     },
     {
       "path": "dp/opt/monotonic-queue-stack.md",
-      "name": "monotonic-queue-stack",
+      "name": "单调队列优化",
       "keys": [
+        "单调队列优化",
+        "单调队列",
         "monotonic-queue-stack",
-        "monotonic queue stack",
-        "dp",
-        "opt"
+        "dp/opt/monotonic-queue-stack"
       ],
-      "desc": "前置知识：单调队列、单调栈．"
+      "desc": "前置知识：单调队列、单调栈．",
+      "tier": 2
     },
     {
       "path": "dp/opt/quadrangle.md",
-      "name": "quadrangle",
+      "name": "四边形不等式",
       "keys": [
+        "四边形不等式",
         "quadrangle",
-        "dp",
-        "opt"
+        "dp/opt/quadrangle"
       ],
-      "desc": "四边形不等式优化利用的是状态转移方程中的决策单调性，也常称为 决策单调性优化 DP．"
+      "desc": "四边形不等式优化利用的是状态转移方程中的决策单调性，也常称为 决策单调性优化 DP．",
+      "tier": 2
     },
     {
       "path": "dp/opt/slope-trick.md",
-      "name": "slope-trick",
+      "name": "斜率优化",
       "keys": [
+        "斜率优化",
         "slope-trick",
-        "slope trick",
-        "dp",
-        "opt"
+        "dp/opt/slope-trick"
       ],
-      "desc": "对于一类二维 DP 问题，如果它的价值函数 f(i,x) 对于每个固定的 i 都是 x 的凸函数，那么将函数 f(i,\\cdot) 整体视为 i 处的状态，并维护它的差分（或斜率）"
+      "desc": "对于一类二维 DP 问题，如果它的价值函数 f(i,x) 对于每个固定的 i 都是 x 的凸函数，那么将函数 f(i,\\cdot) 整体视为 i 处的状态，并维护它的差分（或斜率）",
+      "tier": 1
     },
     {
       "path": "dp/opt/slope.md",
-      "name": "slope",
+      "name": "斜率优化",
       "keys": [
+        "斜率优化",
         "slope",
-        "dp",
-        "opt"
+        "dp/opt/slope"
       ],
-      "desc": "有 n 个玩具排成一排，第 i 个玩具价值为 ci．要求将这 n 个玩具分成若干段．对于一段 [l,r]，它的代价为 (r-l+\\sum{i=l}^r ci-L)^2．其中 L 是一个常量，求分段的最小代价．"
+      "desc": "有 n 个玩具排成一排，第 i 个玩具价值为 ci．要求将这 n 个玩具分成若干段．对于一段 [l,r]，它的代价为 (r-l+\\sum{i=l}^r ci-L)^2．其中 L 是一个常量，求分段的最小代价．",
+      "tier": 2
     },
     {
       "path": "dp/opt/state.md",
       "name": "state",
       "keys": [
         "state",
-        "dp",
-        "opt"
+        "dp/opt/state"
       ],
-      "desc": "优化 dp 时，不止可以从转移过程入手，加速转移．有时，也可以从状态定义入手，通过改变设计状态的方式实现复杂度上的优化．"
+      "desc": "优化 dp 时，不止可以从转移过程入手，加速转移．有时，也可以从状态定义入手，通过改变设计状态的方式实现复杂度上的优化．",
+      "tier": 0
     },
     {
       "path": "dp/opt/wqs-binary-search.md",
@@ -524,29 +599,32 @@
       "keys": [
         "wqs-binary-search",
         "wqs binary search",
-        "dp",
-        "opt"
+        "dp/opt/wqs-binary-search"
       ],
-      "desc": "本文介绍利用 WQS 二分优化动态规划问题的方法．在不同的文章中，它也常称作带权二分、凸优化 DP、凸完全单调性 DP、Lagrange 乘子法等，在国外也称作 Aliens Trick．它最早由王钦石在《浅析一类二分方法》一文中总结．"
+      "desc": "本文介绍利用 WQS 二分优化动态规划问题的方法．在不同的文章中，它也常称作带权二分、凸优化 DP、凸完全单调性 DP、Lagrange 乘子法等，在国外也称作 Aliens Trick．它最早由王钦石在《浅析一类二分方法》一文中总结．",
+      "tier": 0
     },
     {
       "path": "dp/plug.md",
       "name": "插头DP",
       "keys": [
         "插头dp",
-        "dp",
-        "plug"
+        "plug",
+        "dp/plug"
       ],
-      "desc": "有些 状压 DP 问题要求我们记录状态的连通性信息，这类问题一般被形象的称为插头 DP 或连通性状态压缩 DP．例如格点图的哈密顿路径计数，求棋盘的黑白染色方案满足相同颜色之间形成一个连通块的方案数，以及特定图的生成树计数等等．这些问题通常需要我们对状态的连通性进行编码，讨论状态转移过程中连通性的变化．"
+      "desc": "有些 状压 DP 问题要求我们记录状态的连通性信息，这类问题一般被形象的称为插头 DP 或连通性状态压缩 DP．例如格点图的哈密顿路径计数，求棋盘的黑白染色方案满足相同颜色之间形成一个连通块的方案数，以及特定图的生成树计数等等．这些问题通常需要我们对状态的连通性进行编码，讨论状态转移过程中连通性的变化．",
+      "tier": 2
     },
     {
       "path": "dp/probability.md",
-      "name": "probability",
+      "name": "期望",
       "keys": [
+        "期望",
         "probability",
-        "dp"
+        "dp/probability"
       ],
-      "desc": "概率 DP 用于解决概率问题与期望问题，建议先对 概率 & 期望 的内容有一定了解．一般情况下，解决概率问题需要顺序循环，而解决期望问题使用逆序循环．如果定义的状态转移方程存在后效性问题，还需要用到 高斯消元 来优化．概率 DP 也会结合其他知识进行考察，例如 状态压缩、树上进行 DP 转移等．"
+      "desc": "概率 DP 用于解决概率问题与期望问题，建议先对 概率 & 期望 的内容有一定了解．一般情况下，解决概率问题需要顺序循环，而解决期望问题使用逆序循环．如果定义的状态转移方程存在后效性问题，还需要用到 高斯消元 来优化．概率 DP 也会结合其他知识进行考察，例如 状态压缩、树上进行 DP 转移等．",
+      "tier": 2
     },
     {
       "path": "dp/state.md",
@@ -554,20 +632,22 @@
       "keys": [
         "状压dp",
         "状态压缩",
-        "dp",
-        "state"
+        "state",
+        "dp/state"
       ],
-      "desc": "状压 DP 是动态规划的一种，通过将状态集合转化为整数记录在 DP 状态中来实现状态转移的目的．"
+      "desc": "状压 DP 是动态规划的一种，通过将状态集合转化为整数记录在 DP 状态中来实现状态转移的目的．",
+      "tier": 2
     },
     {
       "path": "dp/tree.md",
       "name": "树形DP",
       "keys": [
         "树形dp",
-        "dp",
-        "tree"
+        "tree",
+        "dp/tree"
       ],
-      "desc": "树形 DP，即在树上进行的 DP．由于树固有的递归性质，树形 DP 一般都是递归进行的．"
+      "desc": "树形 DP，即在树上进行的 DP．由于树固有的递归性质，树形 DP 一般都是递归进行的．",
+      "tier": 2
     },
     {
       "path": "ds/aa-tree.md",
@@ -575,18 +655,20 @@
       "keys": [
         "aa-tree",
         "aa tree",
-        "ds"
+        "ds/aa-tree"
       ],
-      "desc": "AA 树是一种用于高效存储和检索有序数据的平衡树形结构，Arne Andersson 教授于 1993 年在他的论文 \"Balanced search trees made simple\" 中介绍，设计的目的是减少红黑树考虑的不同情况．AA 树可以在 O(\\log N) 的时间内做查找，插入和删除．下面是一个 AA 树"
+      "desc": "AA 树是一种用于高效存储和检索有序数据的平衡树形结构，Arne Andersson 教授于 1993 年在他的论文 \"Balanced search trees made simple\" 中介绍，设计的目的是减少红黑树考虑的不同情况．AA 树可以在 O(\\log N) 的时间内做查找，插入和删除．下面是一个 AA 树",
+      "tier": 0
     },
     {
       "path": "ds/avl.md",
       "name": "avl",
       "keys": [
         "avl",
-        "ds"
+        "ds/avl"
       ],
-      "desc": "AVL 树，是一种平衡的二叉搜索树．由于各种算法教材上对 AVL 的介绍十分冗长，造成了很多人对 AVL 树复杂、不实用的印象．但实际上，AVL 树的原理简单，实现也并不复杂．"
+      "desc": "AVL 树，是一种平衡的二叉搜索树．由于各种算法教材上对 AVL 的介绍十分冗长，造成了很多人对 AVL 树复杂、不实用的印象．但实际上，AVL 树的原理简单，实现也并不复杂．",
+      "tier": 0
     },
     {
       "path": "ds/balanced-in-seg.md",
@@ -594,9 +676,10 @@
       "keys": [
         "balanced-in-seg",
         "balanced in seg",
-        "ds"
+        "ds/balanced-in-seg"
       ],
-      "desc": "在算法竞赛中，我们有时需要维护多维度信息．在这种时候，我们经常需要树套树来记录信息．当需要维护前驱，后继，第 k 大，某个数的排名，或者插入删除的时候，我们通常需要使用平衡树来满足我们的需求，即线段树套平衡树．"
+      "desc": "在算法竞赛中，我们有时需要维护多维度信息．在这种时候，我们经常需要树套树来记录信息．当需要维护前驱，后继，第 k 大，某个数的排名，或者插入删除的时候，我们通常需要使用平衡树来满足我们的需求，即线段树套平衡树．",
+      "tier": 0
     },
     {
       "path": "ds/binary-heap.md",
@@ -604,9 +687,10 @@
       "keys": [
         "binary-heap",
         "binary heap",
-        "ds"
+        "ds/binary-heap"
       ],
-      "desc": "从二叉堆的结构说起，它是一棵二叉树，并且是完全二叉树，每个结点中存有一个元素（或者说，有个权值）．"
+      "desc": "从二叉堆的结构说起，它是一棵二叉树，并且是完全二叉树，每个结点中存有一个元素（或者说，有个权值）．",
+      "tier": 0
     },
     {
       "path": "ds/bit-in-block-array.md",
@@ -614,9 +698,10 @@
       "keys": [
         "bit-in-block-array",
         "bit in block array",
-        "ds"
+        "ds/bit-in-block-array"
       ],
-      "desc": "分块套树状数组在特定条件下可以用来做一些树套树可以做的事情，但是相比起树套树，分块套树状数组代码编写更加简短，更加容易实现．"
+      "desc": "分块套树状数组在特定条件下可以用来做一些树套树可以做的事情，但是相比起树套树，分块套树状数组代码编写更加简短，更加容易实现．",
+      "tier": 0
     },
     {
       "path": "ds/block-array.md",
@@ -624,20 +709,21 @@
       "keys": [
         "block-array",
         "block array",
-        "ds"
+        "ds/block-array"
       ],
-      "desc": "块状数组，即把一个数组分为几个块，块内信息整体保存，若查询时遇到两边不完整的块直接暴力查询．一般情况下，块的长度为 O(\\sqrt{n})．详细分析可以阅读 2017 年国家集训队论文中徐明宽的《非常规大小分块算法初探》．"
+      "desc": "块状数组，即把一个数组分为几个块，块内信息整体保存，若查询时遇到两边不完整的块直接暴力查询．一般情况下，块的长度为 O(\\sqrt{n})．详细分析可以阅读 2017 年国家集训队论文中徐明宽的《非常规大小分块算法初探》．",
+      "tier": 0
     },
     {
       "path": "ds/block-list.md",
       "name": "块状链表",
       "keys": [
         "块状链表",
-        "ds",
         "block-list",
-        "block list"
+        "ds/block-list"
       ],
-      "desc": "块状链表大概就长这样……"
+      "desc": "块状链表大概就长这样……",
+      "tier": 2
     },
     {
       "path": "ds/bst.md",
@@ -645,10 +731,10 @@
       "keys": [
         "二叉搜索树",
         "bst",
-        "二叉查找树",
-        "ds"
+        "ds/bst"
       ],
-      "desc": "二叉搜索树是一种二叉树的树形数据结构，其定义如下："
+      "desc": "二叉搜索树是一种二叉树的树形数据结构，其定义如下：",
+      "tier": 2
     },
     {
       "path": "ds/cartesian-tree.md",
@@ -656,9 +742,10 @@
       "keys": [
         "cartesian-tree",
         "cartesian tree",
-        "ds"
+        "ds/cartesian-tree"
       ],
-      "desc": "笛卡尔树是一种二叉树，每一个节点由一个键值二元组 (k,w) 构成．要求 k 满足二叉搜索树（BST）的性质，而 w 满足堆的性质．如果笛卡尔树的 k,w 键值确定，且 k 互不相同，w 也互不相同，那么这棵笛卡尔树的结构是唯一的．如下图："
+      "desc": "笛卡尔树是一种二叉树，每一个节点由一个键值二元组 (k,w) 构成．要求 k 满足二叉搜索树（BST）的性质，而 w 满足堆的性质．如果笛卡尔树的 k,w 键值确定，且 k 互不相同，w 也互不相同，那么这棵笛卡尔树的结构是唯一的．如下图：",
+      "tier": 0
     },
     {
       "path": "ds/cat-tree.md",
@@ -666,18 +753,20 @@
       "keys": [
         "cat-tree",
         "cat tree",
-        "ds"
+        "ds/cat-tree"
       ],
-      "desc": "众所周知线段树可以支持高速查询某一段区间的信息和，比如区间最大子段和，区间和，区间矩阵的连乘积等等．"
+      "desc": "众所周知线段树可以支持高速查询某一段区间的信息和，比如区间最大子段和，区间和，区间矩阵的连乘积等等．",
+      "tier": 0
     },
     {
       "path": "ds/decompose.md",
       "name": "decompose",
       "keys": [
         "decompose",
-        "ds"
+        "ds/decompose"
       ],
-      "desc": "其实，分块是一种思想，而不是一种数据结构．"
+      "desc": "其实，分块是一种思想，而不是一种数据结构．",
+      "tier": 0
     },
     {
       "path": "ds/divide-combine.md",
@@ -685,28 +774,32 @@
       "keys": [
         "divide-combine",
         "divide combine",
-        "ds"
+        "ds/divide-combine"
       ],
-      "desc": "我们由一个小清新的问题引入："
+      "desc": "我们由一个小清新的问题引入：",
+      "tier": 0
     },
     {
       "path": "ds/dividing.md",
       "name": "dividing",
       "keys": [
         "dividing",
-        "ds"
+        "ds/dividing"
       ],
-      "desc": "划分树是一种来解决区间第 K 大的一种数据结构，其常数、理解难度都要比主席树低很多．同时，划分树紧贴「第 K 大」，所以是一种基于排序的一种数据结构．"
+      "desc": "划分树是一种来解决区间第 K 大的一种数据结构，其常数、理解难度都要比主席树低很多．同时，划分树紧贴「第 K 大」，所以是一种基于排序的一种数据结构．",
+      "tier": 0
     },
     {
       "path": "ds/dsu-complexity.md",
-      "name": "dsu-complexity",
+      "name": "并查集",
       "keys": [
+        "并查集",
+        "union find",
         "dsu-complexity",
-        "dsu complexity",
-        "ds"
+        "ds/dsu-complexity"
       ],
-      "desc": "本部分内容转载并修改自 时间复杂度 - 势能分析浅谈，已取得原作者授权同意．"
+      "desc": "本部分内容转载并修改自 时间复杂度 - 势能分析浅谈，已取得原作者授权同意．",
+      "tier": 1
     },
     {
       "path": "ds/dsu.md",
@@ -714,20 +807,21 @@
       "keys": [
         "并查集",
         "union find",
-        "disjoint set",
-        "ds",
-        "dsu"
+        "dsu",
+        "ds/dsu"
       ],
-      "desc": "并查集是一种用于管理元素所属集合的数据结构，实现为一个森林，其中每棵树表示一个集合，树中的节点表示对应集合中的元素．"
+      "desc": "并查集是一种用于管理元素所属集合的数据结构，实现为一个森林，其中每棵树表示一个集合，树中的节点表示对应集合中的元素．",
+      "tier": 2
     },
     {
       "path": "ds/ett.md",
       "name": "ett",
       "keys": [
         "ett",
-        "ds"
+        "ds/ett"
       ],
-      "desc": "Euler Tour Tree（欧拉游览树，欧拉回路树，后文简称 ETT）是一种可以解决 动态树 问题的数据结构．ETT 将动态树的操作转换成了其 DFS 序列上的区间操作，再用其他数据结构来维护序列的区间操作，从而维护动态树的操作．例如，ETT 将动态树的加边操作转换成了多个序列拆分操作和序列合并操作，如果能维护序列"
+      "desc": "Euler Tour Tree（欧拉游览树，欧拉回路树，后文简称 ETT）是一种可以解决 动态树 问题的数据结构．ETT 将动态树的操作转换成了其 DFS 序列上的区间操作，再用其他数据结构来维护序列的区间操作，从而维护动态树的操作．例如，ETT 将动态树的加边操作转换成了多个序列拆分操作和序列合并操作，如果能维护序列",
+      "tier": 0
     },
     {
       "path": "ds/fenwick.md",
@@ -735,11 +829,11 @@
       "keys": [
         "树状数组",
         "bit",
-        "binary indexed tree",
-        "ds",
-        "fenwick"
+        "fenwick",
+        "ds/fenwick"
       ],
-      "desc": "树状数组是一种支持 单点修改 和 区间查询 的，代码量小的数据结构．"
+      "desc": "树状数组是一种支持 单点修改 和 区间查询 的，代码量小的数据结构．",
+      "tier": 2
     },
     {
       "path": "ds/finger-tree.md",
@@ -747,9 +841,10 @@
       "keys": [
         "finger-tree",
         "finger tree",
-        "ds"
+        "ds/finger-tree"
       ],
-      "desc": "此章是选读内容，在阅读前请确定你对函数式编程（Functional Programming）有一定了解．"
+      "desc": "此章是选读内容，在阅读前请确定你对函数式编程（Functional Programming）有一定了解．",
+      "tier": 0
     },
     {
       "path": "ds/global-bst.md",
@@ -757,30 +852,30 @@
       "keys": [
         "global-bst",
         "global bst",
-        "ds"
+        "ds/global-bst"
       ],
-      "desc": "前置知识：树链剖分"
+      "desc": "前置知识：树链剖分",
+      "tier": 0
     },
     {
       "path": "ds/hash.md",
       "name": "hash",
       "keys": [
         "hash",
-        "ds"
+        "ds/hash"
       ],
-      "desc": "哈希表又称散列表，一种以「key-value」形式存储数据的数据结构．所谓以「key-value」形式存储数据，是指任意的键值 key 都唯一对应到内存中的某个位置．只需要输入查找的键值，就可以快速地找到其对应的 value．可以把哈希表理解为一种高级的数组，这种数组的下标可以是很大的整数，浮点数，字符串甚至结构体．"
+      "desc": "哈希表又称散列表，一种以「key-value」形式存储数据的数据结构．所谓以「key-value」形式存储数据，是指任意的键值 key 都唯一对应到内存中的某个位置．只需要输入查找的键值，就可以快速地找到其对应的 value．可以把哈希表理解为一种高级的数组，这种数组的下标可以是很大的整数，浮点数，字符串甚至结构体．",
+      "tier": 0
     },
     {
       "path": "ds/heap.md",
-      "name": "堆",
+      "name": "heap",
       "keys": [
-        "堆",
-        "优先队列",
-        "priority queue",
-        "ds",
-        "heap"
+        "heap",
+        "ds/heap"
       ],
-      "desc": "堆是一棵树，其每个节点都有一个键值，且每个节点的键值都大于等于/小于等于其父亲的键值．"
+      "desc": "堆是一棵树，其每个节点都有一个键值，且每个节点的键值都大于等于/小于等于其父亲的键值．",
+      "tier": 0
     },
     {
       "path": "ds/huffman-tree.md",
@@ -788,26 +883,29 @@
       "keys": [
         "huffman-tree",
         "huffman tree",
-        "ds"
+        "ds/huffman-tree"
       ],
-      "desc": "设二叉树具有 n 个带权叶结点，从根结点到各叶结点的路径长度与相应叶节点权值的乘积之和称为 树的带权路径长度（Weighted Path Length of Tree，WPL）．"
+      "desc": "设二叉树具有 n 个带权叶结点，从根结点到各叶结点的路径长度与相应叶节点权值的乘积之和称为 树的带权路径长度（Weighted Path Length of Tree，WPL）．",
+      "tier": 0
     },
     {
       "path": "ds/index.md",
       "name": "index",
       "keys": [
-        "ds"
+        "ds/index"
       ],
-      "desc": "数据结构是在计算机中存储、组织数据的方式．小到变量、数组，大到线段树、平衡树，都是数据结构．"
+      "desc": "数据结构是在计算机中存储、组织数据的方式．小到变量、数组，大到线段树、平衡树，都是数据结构．",
+      "tier": 0
     },
     {
       "path": "ds/kdt.md",
       "name": "kdt",
       "keys": [
         "kdt",
-        "ds"
+        "ds/kdt"
       ],
-      "desc": "k-D Tree(KDT , k-Dimension Tree) 是一种可以 高效处理 k 维空间信息 的数据结构．"
+      "desc": "k-D Tree(KDT , k-Dimension Tree) 是一种可以 高效处理 k 维空间信息 的数据结构．",
+      "tier": 0
     },
     {
       "path": "ds/kinetic-tournament-tree.md",
@@ -815,18 +913,20 @@
       "keys": [
         "kinetic-tournament-tree",
         "kinetic tournament tree",
-        "ds"
+        "ds/kinetic-tournament-tree"
       ],
-      "desc": "前置知识：线段树"
+      "desc": "前置知识：线段树",
+      "tier": 0
     },
     {
       "path": "ds/lct.md",
       "name": "lct",
       "keys": [
         "lct",
-        "ds"
+        "ds/lct"
       ],
-      "desc": "Link/Cut Tree 是一种数据结构，我们用它来解决 动态树问题．"
+      "desc": "Link/Cut Tree 是一种数据结构，我们用它来解决 动态树问题．",
+      "tier": 0
     },
     {
       "path": "ds/leftist-tree.md",
@@ -834,11 +934,11 @@
       "keys": [
         "左偏树",
         "可并堆",
-        "ds",
         "leftist-tree",
-        "leftist tree"
+        "ds/leftist-tree"
       ],
-      "desc": "对于一棵二叉树，我们定义 外节点 为子节点数小于两个的节点，定义一个节点的 \\mathrm{dist} 为其到子树中最近的外节点所经过的边的数量．空节点的 \\mathrm{dist} 为 0．"
+      "desc": "对于一棵二叉树，我们定义 外节点 为子节点数小于两个的节点，定义一个节点的 \\mathrm{dist} 为其到子树中最近的外节点所经过的边的数量．空节点的 \\mathrm{dist} 为 0．",
+      "tier": 2
     },
     {
       "path": "ds/li-chao-tree.md",
@@ -846,51 +946,53 @@
       "keys": [
         "li-chao-tree",
         "li chao tree",
-        "ds"
+        "ds/li-chao-tree"
       ],
-      "desc": "要求在平面直角坐标系下维护两个操作（强制在线）："
+      "desc": "要求在平面直角坐标系下维护两个操作（强制在线）：",
+      "tier": 0
     },
     {
       "path": "ds/linked-list.md",
-      "name": "链表",
+      "name": "linked-list",
       "keys": [
-        "链表",
-        "ds",
         "linked-list",
-        "linked list"
+        "linked list",
+        "ds/linked-list"
       ],
-      "desc": "本页面将简要介绍链表．"
+      "desc": "本页面将简要介绍链表．",
+      "tier": 0
     },
     {
       "path": "ds/llrbt.md",
       "name": "llrbt",
       "keys": [
         "llrbt",
-        "ds"
+        "ds/llrbt"
       ],
-      "desc": "左偏红黑树是 红黑树 的一种变体，它的对红边（点）的位置做了一定限制，使得其插入与删除操作可以与 2-3 树 构成一一对应．"
+      "desc": "左偏红黑树是 红黑树 的一种变体，它的对红边（点）的位置做了一定限制，使得其插入与删除操作可以与 2-3 树 构成一一对应．",
+      "tier": 0
     },
     {
       "path": "ds/monotonic-queue.md",
       "name": "单调队列",
       "keys": [
         "单调队列",
-        "ds",
         "monotonic-queue",
-        "monotonic queue"
+        "ds/monotonic-queue"
       ],
-      "desc": "在学习单调队列前，让我们先来看一道例题．"
+      "desc": "在学习单调队列前，让我们先来看一道例题．",
+      "tier": 2
     },
     {
       "path": "ds/monotonic-stack.md",
       "name": "单调栈",
       "keys": [
         "单调栈",
-        "ds",
         "monotonic-stack",
-        "monotonic stack"
+        "ds/monotonic-stack"
       ],
-      "desc": "何为单调栈？顾名思义，单调栈即满足单调性的栈结构．与单调队列相比，其只在一端进行进出．"
+      "desc": "何为单调栈？顾名思义，单调栈即满足单调性的栈结构．与单调队列相比，其只在一端进行进出．",
+      "tier": 2
     },
     {
       "path": "ds/pairing-heap.md",
@@ -898,9 +1000,10 @@
       "keys": [
         "pairing-heap",
         "pairing heap",
-        "ds"
+        "ds/pairing-heap"
       ],
-      "desc": "配对堆是一个支持插入，查询/删除最小值，合并，修改元素等操作的数据结构，是一种可并堆．有速度快和结构简单的优势，但由于其为基于势能分析的均摊复杂度，无法可持久化．"
+      "desc": "配对堆是一个支持插入，查询/删除最小值，合并，修改元素等操作的数据结构，是一种可并堆．有速度快和结构简单的优势，但由于其为基于势能分析的均摊复杂度，无法可持久化．",
+      "tier": 0
     },
     {
       "path": "ds/persistent-balanced.md",
@@ -908,9 +1011,10 @@
       "keys": [
         "persistent-balanced",
         "persistent balanced",
-        "ds"
+        "ds/persistent-balanced"
       ],
-      "desc": "对于非旋转 Treap，可通过 Merge 和 Split 操作过程中复制路径上经过的节点（一般在 Split 操作中复制，确保不影响以前的版本）就可完成可持久化．"
+      "desc": "对于非旋转 Treap，可通过 Merge 和 Split 操作过程中复制路径上经过的节点（一般在 Split 操作中复制，确保不影响以前的版本）就可完成可持久化．",
+      "tier": 0
     },
     {
       "path": "ds/persistent-block-array.md",
@@ -918,9 +1022,10 @@
       "keys": [
         "persistent-block-array",
         "persistent block array",
-        "ds"
+        "ds/persistent-block-array"
       ],
-      "desc": ""
+      "desc": "",
+      "tier": 0
     },
     {
       "path": "ds/persistent-heap.md",
@@ -928,9 +1033,10 @@
       "keys": [
         "persistent-heap",
         "persistent heap",
-        "ds"
+        "ds/persistent-heap"
       ],
-      "desc": "可持久化可并堆一般用于求解 k 短路问题．"
+      "desc": "可持久化可并堆一般用于求解 k 短路问题．",
+      "tier": 0
     },
     {
       "path": "ds/persistent-seg.md",
@@ -938,11 +1044,11 @@
       "keys": [
         "主席树",
         "可持久化线段树",
-        "ds",
         "persistent-seg",
-        "persistent seg"
+        "ds/persistent-seg"
       ],
-      "desc": "主席树全称是可持久化权值线段树，参见 知乎讨论．"
+      "desc": "主席树全称是可持久化权值线段树，参见 知乎讨论．",
+      "tier": 2
     },
     {
       "path": "ds/persistent-trie.md",
@@ -950,18 +1056,20 @@
       "keys": [
         "persistent-trie",
         "persistent trie",
-        "ds"
+        "ds/persistent-trie"
       ],
-      "desc": "可持久化 Trie 的方式和可持久化线段树的方式是相似的，即每次只修改被添加或值被修改的节点，而保留没有被改动的节点，在上一个版本的基础上连边，使最后每个版本的 Trie 树的根遍历所能分离出的 Trie 树都是完整且包含全部信息的．"
+      "desc": "可持久化 Trie 的方式和可持久化线段树的方式是相似的，即每次只修改被添加或值被修改的节点，而保留没有被改动的节点，在上一个版本的基础上连边，使最后每个版本的 Trie 树的根遍历所能分离出的 Trie 树都是完整且包含全部信息的．",
+      "tier": 0
     },
     {
       "path": "ds/persistent.md",
       "name": "persistent",
       "keys": [
         "persistent",
-        "ds"
+        "ds/persistent"
       ],
-      "desc": "可持久化数据结构 (Persistent data structure) 总是可以保留每一个历史版本，并且支持操作的不可变特性 (immutable)．"
+      "desc": "可持久化数据结构 (Persistent data structure) 总是可以保留每一个历史版本，并且支持操作的不可变特性 (immutable)．",
+      "tier": 0
     },
     {
       "path": "ds/pq-tree.md",
@@ -969,87 +1077,100 @@
       "keys": [
         "pq-tree",
         "pq tree",
-        "ds"
+        "ds/pq-tree"
       ],
-      "desc": "PQ 树是一种基于树的数据结构，代表一组元素上的一系列排列，由 Kellogg S. Booth 和 George S. Lueker 于 1976 年发现命名，用来解决以下问题"
+      "desc": "PQ 树是一种基于树的数据结构，代表一组元素上的一系列排列，由 Kellogg S. Booth 和 George S. Lueker 于 1976 年发现命名，用来解决以下问题",
+      "tier": 0
     },
     {
       "path": "ds/queue.md",
-      "name": "队列",
+      "name": "queue",
       "keys": [
-        "队列",
-        "ds",
-        "queue"
+        "queue",
+        "ds/queue"
       ],
-      "desc": "本页面介绍和队列有关的数据结构及其应用．"
+      "desc": "本页面介绍和队列有关的数据结构及其应用．",
+      "tier": 0
     },
     {
       "path": "ds/rbtree.md",
       "name": "rbtree",
       "keys": [
         "rbtree",
-        "ds"
+        "ds/rbtree"
       ],
-      "desc": "红黑树是一种自平衡的二叉搜索树．每个节点额外存储了一个 color 字段 (\"RED\" or \"BLACK\")，用于确保树在插入和删除时保持平衡．"
+      "desc": "红黑树是一种自平衡的二叉搜索树．每个节点额外存储了一个 color 字段 (\"RED\" or \"BLACK\")，用于确保树在插入和删除时保持平衡．",
+      "tier": 0
     },
     {
       "path": "ds/sbt.md",
       "name": "sbt",
       "keys": [
         "sbt",
-        "ds"
+        "ds/sbt"
       ],
-      "desc": "Size Balanced Tree (SBT) 是由中国 OI 选手陈启峰在 2007 年提出的一种自平衡二叉搜索树 (Self-Balanced Binary Search Tree, SBBST), 通过检查子树的节点数量进行自身的平衡维护．相比于红黑树，AVL 等主流自平衡二叉搜索树而言，Size Balanc"
+      "desc": "Size Balanced Tree (SBT) 是由中国 OI 选手陈启峰在 2007 年提出的一种自平衡二叉搜索树 (Self-Balanced Binary Search Tree, SBBST), 通过检查子树的节点数量进行自身的平衡维护．相比于红黑树，AVL 等主流自平衡二叉搜索树而言，Size Balanc",
+      "tier": 0
     },
     {
       "path": "ds/seg-beats.md",
-      "name": "seg-beats",
+      "name": "线段树",
       "keys": [
+        "线段树",
+        "segment tree",
         "seg-beats",
-        "seg beats",
-        "ds"
+        "ds/seg-beats"
       ],
-      "desc": "本文讲解吉老师在 2016 年国家集训队论文 中提到的线段树处理历史区间最值的问题．"
+      "desc": "本文讲解吉老师在 2016 年国家集训队论文 中提到的线段树处理历史区间最值的问题．",
+      "tier": 1
     },
     {
       "path": "ds/seg-in-balanced.md",
-      "name": "seg-in-balanced",
+      "name": "线段树",
       "keys": [
+        "线段树",
+        "segment tree",
         "seg-in-balanced",
-        "seg in balanced",
-        "ds"
+        "ds/seg-in-balanced"
       ],
-      "desc": ""
+      "desc": "",
+      "tier": 1
     },
     {
       "path": "ds/seg-in-bit.md",
-      "name": "seg-in-bit",
+      "name": "线段树",
       "keys": [
+        "线段树",
+        "segment tree",
         "seg-in-bit",
-        "seg in bit",
-        "ds"
+        "ds/seg-in-bit"
       ],
-      "desc": "静态区间 k 小值（POJ 2104 K-th Number） 的问题可以用 权值线段树 在 O(n\\log n) 的时间复杂度内解决．"
+      "desc": "静态区间 k 小值（POJ 2104 K-th Number） 的问题可以用 权值线段树 在 O(n\\log n) 的时间复杂度内解决．",
+      "tier": 1
     },
     {
       "path": "ds/seg-in-seg.md",
-      "name": "seg-in-seg",
+      "name": "线段树",
       "keys": [
+        "线段树",
+        "segment tree",
         "seg-in-seg",
-        "seg in seg",
-        "ds"
+        "ds/seg-in-seg"
       ],
-      "desc": "在算法竞赛中，我们有时需要维护多维度信息．在这种时候，我们经常需要树套树来记录信息．"
+      "desc": "在算法竞赛中，我们有时需要维护多维度信息．在这种时候，我们经常需要树套树来记录信息．",
+      "tier": 1
     },
     {
       "path": "ds/seg-merge-split.md",
-      "name": "seg-merge-split",
+      "name": "线段树",
       "keys": [
+        "线段树",
+        "segment tree",
         "seg-merge-split",
-        "seg merge split",
-        "ds"
+        "ds/seg-merge-split"
       ],
-      "desc": "线段树的合并与分裂是线段树的常用技巧，常见于权值线段树维护可重集的场景．"
+      "desc": "线段树的合并与分裂是线段树的常用技巧，常见于权值线段树维护可重集的场景．",
+      "tier": 1
     },
     {
       "path": "ds/seg.md",
@@ -1057,28 +1178,31 @@
       "keys": [
         "线段树",
         "segment tree",
-        "ds",
-        "seg"
+        "seg",
+        "ds/seg"
       ],
-      "desc": "线段树是算法竞赛中常用的用来维护 区间信息 的数据结构．"
+      "desc": "线段树是算法竞赛中常用的用来维护 区间信息 的数据结构．",
+      "tier": 2
     },
     {
       "path": "ds/sgt.md",
       "name": "sgt",
       "keys": [
         "sgt",
-        "ds"
+        "ds/sgt"
       ],
-      "desc": "一般地，替罪羊树不支持区间操作，且无法完全持久化；但它具有实现简单、常数较小的优点．"
+      "desc": "一般地，替罪羊树不支持区间操作，且无法完全持久化；但它具有实现简单、常数较小的优点．",
+      "tier": 0
     },
     {
       "path": "ds/skiplist.md",
       "name": "skiplist",
       "keys": [
         "skiplist",
-        "ds"
+        "ds/skiplist"
       ],
-      "desc": "跳表 (Skip List) 是由 William Pugh 发明的一种查找数据结构，支持对数据的快速查找，插入和删除．"
+      "desc": "跳表 (Skip List) 是由 William Pugh 发明的一种查找数据结构，支持对数据的快速查找，插入和删除．",
+      "tier": 0
     },
     {
       "path": "ds/sparse-table.md",
@@ -1086,21 +1210,21 @@
       "keys": [
         "st表",
         "稀疏表",
-        "ds",
         "sparse-table",
-        "sparse table"
+        "ds/sparse-table"
       ],
-      "desc": "ST 表（Sparse Table，稀疏表）是用于解决 可重复贡献问题 的数据结构．"
+      "desc": "ST 表（Sparse Table，稀疏表）是用于解决 可重复贡献问题 的数据结构．",
+      "tier": 2
     },
     {
       "path": "ds/splay.md",
-      "name": "Splay",
+      "name": "splay",
       "keys": [
         "splay",
-        "伸展树",
-        "ds"
+        "ds/splay"
       ],
-      "desc": "本页面将简要介绍如何用 Splay 维护二叉查找树．"
+      "desc": "本页面将简要介绍如何用 Splay 维护二叉查找树．",
+      "tier": 0
     },
     {
       "path": "ds/sqrt-tree.md",
@@ -1108,19 +1232,20 @@
       "keys": [
         "sqrt-tree",
         "sqrt tree",
-        "ds"
+        "ds/sqrt-tree"
       ],
-      "desc": "给你一个长度为 n 的序列 {\\left\\langle ai\\right\\rangle}{i=1}^n，再给你一个满足结合律的运算 \\circ（比如 \\gcd,\\min,\\max,+,\\operatorname{and},\\operatorname{or},\\operatorname{xor} 均满足结合律），然后对于"
+      "desc": "给你一个长度为 n 的序列 {\\left\\langle ai\\right\\rangle}{i=1}^n，再给你一个满足结合律的运算 \\circ（比如 \\gcd,\\min,\\max,+,\\operatorname{and},\\operatorname{or},\\operatorname{xor} 均满足结合律），然后对于",
+      "tier": 0
     },
     {
       "path": "ds/stack.md",
-      "name": "栈",
+      "name": "stack",
       "keys": [
-        "栈",
-        "ds",
-        "stack"
+        "stack",
+        "ds/stack"
       ],
-      "desc": "栈是 OI 中常用的一种线性数据结构．请注意，本文主要讲的是栈这种数据结构，而非程序运行时的系统栈/栈空间．"
+      "desc": "栈是 OI 中常用的一种线性数据结构．请注意，本文主要讲的是栈这种数据结构，而非程序运行时的系统栈/栈空间．",
+      "tier": 0
     },
     {
       "path": "ds/top-tree.md",
@@ -1128,19 +1253,20 @@
       "keys": [
         "top-tree",
         "top tree",
-        "ds"
+        "ds/top-tree"
       ],
-      "desc": "Self-Adjusting Top Tree，是 2005 年 Tarjan 和 Werneck 在他们的论文 Self-Adjusting Top Trees 中提出的一种基于 Top Tree 理论的维护完全动态森林的数据结构，简称为 SATT．"
+      "desc": "Self-Adjusting Top Tree，是 2005 年 Tarjan 和 Werneck 在他们的论文 Self-Adjusting Top Trees 中提出的一种基于 Top Tree 理论的维护完全动态森林的数据结构，简称为 SATT．",
+      "tier": 0
     },
     {
       "path": "ds/treap.md",
-      "name": "Treap",
+      "name": "treap",
       "keys": [
         "treap",
-        "树堆",
-        "ds"
+        "ds/treap"
       ],
-      "desc": "前置知识：朴素二叉搜索树，堆基础．"
+      "desc": "前置知识：朴素二叉搜索树，堆基础．",
+      "tier": 0
     },
     {
       "path": "ds/tree-decompose.md",
@@ -1148,87 +1274,92 @@
       "keys": [
         "tree-decompose",
         "tree decompose",
-        "ds"
+        "ds/tree-decompose"
       ],
-      "desc": "可以参考 真 - 树上莫队．"
+      "desc": "可以参考 真 - 树上莫队．",
+      "tier": 0
     },
     {
       "path": "ds/wblt.md",
       "name": "wblt",
       "keys": [
         "wblt",
-        "ds"
+        "ds/wblt"
       ],
-      "desc": "Weight Balanced Leafy Tree 顾名思义是 Weight Balanced Tree 和 Leafy Tree 的结合．"
+      "desc": "Weight Balanced Leafy Tree 顾名思义是 Weight Balanced Tree 和 Leafy Tree 的结合．",
+      "tier": 0
     },
     {
       "path": "geometry/2d.md",
-      "name": "二维几何",
+      "name": "计算几何",
       "keys": [
-        "二维几何",
-        "计算几何基础",
-        "geometry",
-        "2d"
+        "计算几何",
+        "2d",
+        "geometry/2d"
       ],
-      "desc": "我们将需要解决的几何问题的范围限制在二维平面内，这样就涉及到二维计算几何的基本知识．在研究时，通常把图形放在平面直角坐标系或极坐标系下，这样解决问题就会方便很多．"
+      "desc": "我们将需要解决的几何问题的范围限制在二维平面内，这样就涉及到二维计算几何的基本知识．在研究时，通常把图形放在平面直角坐标系或极坐标系下，这样解决问题就会方便很多．",
+      "tier": 2
     },
     {
       "path": "geometry/3d.md",
       "name": "3d",
       "keys": [
         "3d",
-        "geometry"
+        "geometry/3d"
       ],
-      "desc": "三维几何的很多概念与 二维几何 是相通的，我们可以用与解决二维几何问题相同的方法来解决三维几何问题．"
+      "desc": "三维几何的很多概念与 二维几何 是相通的，我们可以用与解决二维几何问题相同的方法来解决三维几何问题．",
+      "tier": 0
     },
     {
       "path": "geometry/convex-hull.md",
       "name": "凸包",
       "keys": [
         "凸包",
-        "geometry",
         "convex-hull",
-        "convex hull"
+        "geometry/convex-hull"
       ],
-      "desc": "凸多边形是指所有内角大小都在 [0,\\pi] 范围内的 简单多边形．"
+      "desc": "凸多边形是指所有内角大小都在 [0,\\pi] 范围内的 简单多边形．",
+      "tier": 2
     },
     {
       "path": "geometry/distance.md",
       "name": "distance",
       "keys": [
         "distance",
-        "geometry"
+        "geometry/distance"
       ],
-      "desc": "欧氏距离，一般也称作欧几里得距离．在平面直角坐标系中，设点 A,B 的坐标分别为 A(x1,y1),B(x2,y2)，则两点间的欧氏距离为："
+      "desc": "欧氏距离，一般也称作欧几里得距离．在平面直角坐标系中，设点 A,B 的坐标分别为 A(x1,y1),B(x2,y2)，则两点间的欧氏距离为：",
+      "tier": 0
     },
     {
       "path": "geometry/half-plane.md",
       "name": "半平面交",
       "keys": [
         "半平面交",
-        "geometry",
         "half-plane",
-        "half plane"
+        "geometry/half-plane"
       ],
-      "desc": "一条直线和直线的一侧．半平面是一个点集，因此是一条直线和直线的一侧构成的点集．当包含直线时，称为闭半平面；当不包含直线时，称为开半平面．"
+      "desc": "一条直线和直线的一侧．半平面是一个点集，因此是一条直线和直线的一侧构成的点集．当包含直线时，称为闭半平面；当不包含直线时，称为开半平面．",
+      "tier": 2
     },
     {
       "path": "geometry/index.md",
       "name": "index",
       "keys": [
-        "geometry"
+        "geometry/index"
       ],
-      "desc": "利用计算机建立数学模型解决几何问题．"
+      "desc": "利用计算机建立数学模型解决几何问题．",
+      "tier": 0
     },
     {
       "path": "geometry/inverse.md",
-      "name": "反演",
+      "name": "inverse",
       "keys": [
-        "反演",
-        "geometry",
-        "inverse"
+        "inverse",
+        "geometry/inverse"
       ],
-      "desc": "反演变换适用于题目中存在多个圆/直线之间的相切关系的情况．利用反演变换的性质，在反演空间求解问题，可以大幅简化计算．"
+      "desc": "反演变换适用于题目中存在多个圆/直线之间的相切关系的情况．利用反演变换的性质，在反演空间求解问题，可以大幅简化计算．",
+      "tier": 0
     },
     {
       "path": "geometry/nearest-points.md",
@@ -1236,18 +1367,20 @@
       "keys": [
         "nearest-points",
         "nearest points",
-        "geometry"
+        "geometry/nearest-points"
       ],
-      "desc": "给定 n 个二维平面上的点，求一组欧几里得距离最近的点对．"
+      "desc": "给定 n 个二维平面上的点，求一组欧几里得距离最近的点对．",
+      "tier": 0
     },
     {
       "path": "geometry/pick.md",
       "name": "pick",
       "keys": [
         "pick",
-        "geometry"
+        "geometry/pick"
       ],
-      "desc": "Pick 定理：给定顶点均为整点的简单多边形，皮克定理说明了其面积 {\\displaystyle A} 和内部格点数目 {\\displaystyle i}、边上格点数目 {\\displaystyle b} 的关系：{\\displaystyle A=i+{\\frac {b}{2}}-1}．"
+      "desc": "Pick 定理：给定顶点均为整点的简单多边形，皮克定理说明了其面积 {\\displaystyle A} 和内部格点数目 {\\displaystyle i}、边上格点数目 {\\displaystyle b} 的关系：{\\displaystyle A=i+{\\frac {b}{2}}-1}．",
+      "tier": 0
     },
     {
       "path": "geometry/random-incremental.md",
@@ -1255,30 +1388,32 @@
       "keys": [
         "random-incremental",
         "random incremental",
-        "geometry"
+        "geometry/random-incremental"
       ],
-      "desc": "随机增量算法是计算几何的一个重要算法，它对理论知识要求不高，算法时间复杂度低，应用范围广大．"
+      "desc": "随机增量算法是计算几何的一个重要算法，它对理论知识要求不高，算法时间复杂度低，应用范围广大．",
+      "tier": 0
     },
     {
       "path": "geometry/rotating-calipers.md",
       "name": "旋转卡壳",
       "keys": [
         "旋转卡壳",
-        "geometry",
         "rotating-calipers",
-        "rotating calipers"
+        "geometry/rotating-calipers"
       ],
-      "desc": "本页面将主要介绍旋转卡壳．"
+      "desc": "本页面将主要介绍旋转卡壳．",
+      "tier": 2
     },
     {
       "path": "geometry/scanning.md",
       "name": "扫描线",
       "keys": [
         "扫描线",
-        "geometry",
-        "scanning"
+        "scanning",
+        "geometry/scanning"
       ],
-      "desc": "扫描线一般运用在图形上面，它和它的字面意思十分相似，就是一条线在整个图上扫来扫去，它一般被用来解决图形面积，周长，以及二维数点等问题．"
+      "desc": "扫描线一般运用在图形上面，它和它的字面意思十分相似，就是一条线在整个图上扫来扫去，它一般被用来解决图形面积，周长，以及二维数点等问题．",
+      "tier": 2
     },
     {
       "path": "geometry/smallest-enclosing-circle.md",
@@ -1286,47 +1421,50 @@
       "keys": [
         "smallest-enclosing-circle",
         "smallest enclosing circle",
-        "geometry"
+        "geometry/smallest-enclosing-circle"
       ],
-      "desc": "对平面上的 n~(n\\ge 1) 个点 P1,P2,\\cdots,Pn，找出一个半径最小的圆，使得所有点都不在圆外．这个圆称为这些点的 最小覆盖圆（Minimum Enclosing Circle，MEC）．"
+      "desc": "对平面上的 n~(n\\ge 1) 个点 P1,P2,\\cdots,Pn，找出一个半径最小的圆，使得所有点都不在圆外．这个圆称为这些点的 最小覆盖圆（Minimum Enclosing Circle，MEC）．",
+      "tier": 0
     },
     {
       "path": "geometry/triangulation.md",
       "name": "triangulation",
       "keys": [
         "triangulation",
-        "geometry"
+        "geometry/triangulation"
       ],
-      "desc": "在几何中，三角剖分是指将平面对象细分为三角形，并且通过扩展将高维几何对象细分为单纯形．"
+      "desc": "在几何中，三角剖分是指将平面对象细分为三角形，并且通过扩展将高维几何对象细分为单纯形．",
+      "tier": 0
     },
     {
       "path": "graph/2-sat.md",
       "name": "2-SAT",
       "keys": [
         "2-sat",
-        "2sat",
-        "graph",
-        "2 sat"
+        "graph/2-sat"
       ],
-      "desc": "SAT 是适定性（Satisfiability）问题的简称．一般形式为 k - 适定性问题，简称 k-SAT．而当 k>2 时该问题为 NP 完全的．所以我们只研究 k=2 的情况．"
+      "desc": "SAT 是适定性（Satisfiability）问题的简称．一般形式为 k - 适定性问题，简称 k-SAT．而当 k>2 时该问题为 NP 完全的．所以我们只研究 k=2 的情况．",
+      "tier": 2
     },
     {
       "path": "graph/bcc.md",
       "name": "bcc",
       "keys": [
         "bcc",
-        "graph"
+        "graph/bcc"
       ],
-      "desc": "在阅读下列内容之前，请务必了解 图论相关概念 部分．"
+      "desc": "在阅读下列内容之前，请务必了解 图论相关概念 部分．",
+      "tier": 0
     },
     {
       "path": "graph/bfs.md",
       "name": "bfs",
       "keys": [
         "bfs",
-        "graph"
+        "graph/bfs"
       ],
-      "desc": "BFS 全称是 Breadth First Search，中文名是宽度优先搜索，也叫广度优先搜索．"
+      "desc": "BFS 全称是 Breadth First Search，中文名是宽度优先搜索，也叫广度优先搜索．",
+      "tier": 0
     },
     {
       "path": "graph/bi-graph.md",
@@ -1334,9 +1472,10 @@
       "keys": [
         "bi-graph",
         "bi graph",
-        "graph"
+        "graph/bi-graph"
       ],
-      "desc": "二分图，又称二部图，是一类结构特殊的图．它的顶点集可以划分为两个互不相交的子集，使得图中的每条边都连接这两个集合之间的一对点，而不会连接同一集合内部的点．"
+      "desc": "二分图，又称二部图，是一类结构特殊的图．它的顶点集可以划分为两个互不相交的子集，使得图中的每条边都连接这两个集合之间的一对点，而不会连接同一集合内部的点．",
+      "tier": 0
     },
     {
       "path": "graph/block-forest.md",
@@ -1344,72 +1483,80 @@
       "keys": [
         "block-forest",
         "block forest",
-        "graph"
+        "graph/block-forest"
       ],
-      "desc": "在阅读下列内容之前，请务必了解 图论相关概念 部分．"
+      "desc": "在阅读下列内容之前，请务必了解 图论相关概念 部分．",
+      "tier": 0
     },
     {
       "path": "graph/chord.md",
       "name": "chord",
       "keys": [
         "chord",
-        "graph"
+        "graph/chord"
       ],
-      "desc": "弦图是一种特殊的图，很多在一般图上的 NP-Hard 问题在弦图上都有优秀的线性时间复杂度算法．"
+      "desc": "弦图是一种特殊的图，很多在一般图上的 NP-Hard 问题在弦图上都有优秀的线性时间复杂度算法．",
+      "tier": 0
     },
     {
       "path": "graph/color.md",
       "name": "color",
       "keys": [
         "color",
-        "graph"
+        "graph/color"
       ],
-      "desc": "（讨论的是无自环无向图）"
+      "desc": "（讨论的是无自环无向图）",
+      "tier": 0
     },
     {
       "path": "graph/concept.md",
       "name": "concept",
       "keys": [
         "concept",
-        "graph"
+        "graph/concept"
       ],
-      "desc": "本页面概述了图论中的一些概念，这些概念并不全是在 OI 中常见的，对于 OIer 来说，只需掌握本页面中的基础部分即可，如果在学习中碰到了不懂的概念，可以再来查阅．"
+      "desc": "本页面概述了图论中的一些概念，这些概念并不全是在 OI 中常见的，对于 OIer 来说，只需掌握本页面中的基础部分即可，如果在学习中碰到了不懂的概念，可以再来查阅．",
+      "tier": 0
     },
     {
       "path": "graph/connectivity.md",
       "name": "connectivity",
       "keys": [
         "connectivity",
-        "graph"
+        "graph/connectivity"
       ],
-      "desc": "以下内容的定义，请参见 图论相关概念："
+      "desc": "以下内容的定义，请参见 图论相关概念：",
+      "tier": 0
     },
     {
       "path": "graph/cut.md",
       "name": "cut",
       "keys": [
         "cut",
-        "graph"
+        "graph/cut"
       ],
-      "desc": "相关阅读：双连通分量"
+      "desc": "相关阅读：双连通分量",
+      "tier": 0
     },
     {
       "path": "graph/dag.md",
       "name": "dag",
       "keys": [
         "dag",
-        "graph"
+        "graph/dag"
       ],
-      "desc": "边有向，无环．"
+      "desc": "边有向，无环．",
+      "tier": 0
     },
     {
       "path": "graph/dfs.md",
       "name": "dfs",
       "keys": [
         "dfs",
-        "graph"
+        "graph/dfs"
       ],
-      "desc": "DFS 全称是 Depth First Search，中文名是深度优先搜索，是一种用于遍历或搜索树或图的算法．所谓深度优先，就是说每次都尝试向更深的节点走．"
+      "desc": "DFS 全称是 Depth First Search，中文名是深度优先搜索，是一种用于遍历或搜索树或图的算法．所谓深度优先，就是说每次都尝试向更深的节点走．",
+      "tier": 0
     },
     {
       "path": "graph/diff-constraints.md",
@@ -1417,18 +1564,20 @@
       "keys": [
         "diff-constraints",
         "diff constraints",
-        "graph"
+        "graph/diff-constraints"
       ],
-      "desc": "差分约束系统中的每个约束条件 xi-xj\\leq ck 都可以变形成 xi\\leq xj+ck，这与单源最短路中的三角形不等式 dist[y]\\leq dist[x]+z 非常相似．因此，我们可以把每个变量 xi 看做图中的一个结点，对于每个约束条件 xi-xj\\leq ck，从结点 j 向结点 i 连一条长度为 ck"
+      "desc": "差分约束系统中的每个约束条件 xi-xj\\leq ck 都可以变形成 xi\\leq xj+ck，这与单源最短路中的三角形不等式 dist[y]\\leq dist[x]+z 非常相似．因此，我们可以把每个变量 xi 看做图中的一个结点，对于每个约束条件 xi-xj\\leq ck，从结点 j 向结点 i 连一条长度为 ck",
+      "tier": 0
     },
     {
       "path": "graph/dmst.md",
       "name": "dmst",
       "keys": [
         "dmst",
-        "graph"
+        "graph/dmst"
       ],
-      "desc": "有向图上的最小生成树（Directed Minimum Spanning Tree）称为最小树形图．"
+      "desc": "有向图上的最小生成树（Directed Minimum Spanning Tree）称为最小树形图．",
+      "tier": 0
     },
     {
       "path": "graph/dominator-tree.md",
@@ -1436,9 +1585,10 @@
       "keys": [
         "dominator-tree",
         "dominator tree",
-        "graph"
+        "graph/dominator-tree"
       ],
-      "desc": "1959 年，「支配」这一概念由 Reese T. Prosser 在 一篇关于网络流的论文 中提出，但并未提出具体的求解算法；直到 1969 年，Edward S. Lowry 和 C. W. Medlock 才首次提出了 有效的求解算法．而目前使用最为广泛的 Lengauer–Tarjan 算法则由 Lengaue"
+      "desc": "1959 年，「支配」这一概念由 Reese T. Prosser 在 一篇关于网络流的论文 中提出，但并未提出具体的求解算法；直到 1969 年，Edward S. Lowry 和 C. W. Medlock 才首次提出了 有效的求解算法．而目前使用最为广泛的 Lengauer–Tarjan 算法则由 Lengaue",
+      "tier": 0
     },
     {
       "path": "graph/dsu-on-tree.md",
@@ -1446,9 +1596,10 @@
       "keys": [
         "dsu-on-tree",
         "dsu on tree",
-        "graph"
+        "graph/dsu-on-tree"
       ],
-      "desc": "启发式算法是什么呢？"
+      "desc": "启发式算法是什么呢？",
+      "tier": 0
     },
     {
       "path": "graph/dynamic-tree-divide.md",
@@ -1456,28 +1607,31 @@
       "keys": [
         "dynamic-tree-divide",
         "dynamic tree divide",
-        "graph"
+        "graph/dynamic-tree-divide"
       ],
-      "desc": "动态点分治用来解决 带点权/边权修改 的树上路径信息统计问题．"
+      "desc": "动态点分治用来解决 带点权/边权修改 的树上路径信息统计问题．",
+      "tier": 0
     },
     {
       "path": "graph/euler.md",
       "name": "euler",
       "keys": [
         "euler",
-        "graph"
+        "graph/euler"
       ],
-      "desc": "本页面将简要介绍欧拉图的概念、实现和应用．"
+      "desc": "本页面将简要介绍欧拉图的概念、实现和应用．",
+      "tier": 0
     },
     {
       "path": "graph/flow/bound.md",
-      "name": "bound",
+      "name": "网络流",
       "keys": [
+        "网络流",
         "bound",
-        "graph",
-        "flow"
+        "graph/flow/bound"
       ],
-      "desc": "在阅读这篇文章之前请先阅读 最大流 并确保自己熟练掌握最大流算法．"
+      "desc": "在阅读这篇文章之前请先阅读 最大流 并确保自己熟练掌握最大流算法．",
+      "tier": 1
     },
     {
       "path": "graph/flow/max-flow.md",
@@ -1485,117 +1639,111 @@
       "keys": [
         "最大流",
         "网络流",
-        "graph",
-        "flow",
         "max-flow",
-        "max flow"
+        "graph/flow/max-flow"
       ],
-      "desc": "本页面主要介绍最大流问题相关的算法知识．"
+      "desc": "本页面主要介绍最大流问题相关的算法知识．",
+      "tier": 2
     },
     {
       "path": "graph/flow/min-cost.md",
       "name": "最小费用流",
       "keys": [
         "最小费用流",
-        "费用流",
-        "graph",
-        "flow",
+        "网络流",
         "min-cost",
-        "min cost"
+        "graph/flow/min-cost"
       ],
-      "desc": "在看这篇文章前请先看 网络流简介 这篇 wiki 的定义部分．"
+      "desc": "在看这篇文章前请先看 网络流简介 这篇 wiki 的定义部分．",
+      "tier": 2
     },
     {
       "path": "graph/flow/min-cut.md",
-      "name": "min-cut",
+      "name": "网络流",
       "keys": [
+        "网络流",
         "min-cut",
-        "min cut",
-        "graph",
-        "flow"
+        "graph/flow/min-cut"
       ],
-      "desc": "对于一个网络流图 G=(V,E)，其割的定义为一种 点的划分方式：将所有的点划分为 S 和 T=V-S 两个集合，其中源点 s\\in S，汇点 t\\in T．"
+      "desc": "对于一个网络流图 G=(V,E)，其割的定义为一种 点的划分方式：将所有的点划分为 S 和 T=V-S 两个集合，其中源点 s\\in S，汇点 t\\in T．",
+      "tier": 1
     },
     {
       "path": "graph/flow.md",
-      "name": "flow",
+      "name": "网络流",
       "keys": [
+        "网络流",
         "flow",
-        "graph"
+        "graph/flow"
       ],
-      "desc": "本页面主要介绍网络流相关的基本知识．"
+      "desc": "本页面主要介绍网络流相关的基本知识．",
+      "tier": 2
     },
     {
       "path": "graph/graph-matching/bigraph-match.md",
-      "name": "bigraph-match",
+      "name": "匈牙利算法",
       "keys": [
+        "匈牙利算法",
         "bigraph-match",
-        "bigraph match",
-        "graph",
-        "graph-matching",
-        "graph matching"
+        "graph/graph-matching/bigraph-match"
       ],
-      "desc": "前置知识：二分图、图匹配"
+      "desc": "前置知识：二分图、图匹配",
+      "tier": 1
     },
     {
       "path": "graph/graph-matching/bigraph-weight-match.md",
-      "name": "bigraph-weight-match",
+      "name": "匈牙利算法",
       "keys": [
+        "匈牙利算法",
         "bigraph-weight-match",
-        "bigraph weight match",
-        "graph",
-        "graph-matching",
-        "graph matching"
+        "graph/graph-matching/bigraph-weight-match"
       ],
-      "desc": "二分图的最大权匹配是指二分图中边权和最大的匹配．"
+      "desc": "二分图的最大权匹配是指二分图中边权和最大的匹配．",
+      "tier": 1
     },
     {
       "path": "graph/graph-matching/general-match.md",
-      "name": "general-match",
+      "name": "匈牙利算法",
       "keys": [
+        "匈牙利算法",
         "general-match",
-        "general match",
-        "graph",
-        "graph-matching",
-        "graph matching"
+        "graph/graph-matching/general-match"
       ],
-      "desc": "开花算法（Blossom Algorithm，也被称做带花树）可以解决一般图最大匹配问题（maximum cardinality matchings）．此算法由 Jack Edmonds 在 1961 年提出．"
+      "desc": "开花算法（Blossom Algorithm，也被称做带花树）可以解决一般图最大匹配问题（maximum cardinality matchings）．此算法由 Jack Edmonds 在 1961 年提出．",
+      "tier": 1
     },
     {
       "path": "graph/graph-matching/general-weight-match.md",
-      "name": "general-weight-match",
+      "name": "匈牙利算法",
       "keys": [
+        "匈牙利算法",
         "general-weight-match",
-        "general weight match",
-        "graph",
-        "graph-matching",
-        "graph matching"
+        "graph/graph-matching/general-weight-match"
       ],
-      "desc": "本页从一般图最大权完美匹配到一般图最大权匹配（最大权匹配可以通过增加零边变成最大权完美匹配）．"
+      "desc": "本页从一般图最大权完美匹配到一般图最大权匹配（最大权匹配可以通过增加零边变成最大权完美匹配）．",
+      "tier": 1
     },
     {
       "path": "graph/graph-matching/graph-match.md",
-      "name": "graph-match",
+      "name": "匈牙利算法",
       "keys": [
+        "匈牙利算法",
         "graph-match",
-        "graph match",
-        "graph",
-        "graph-matching",
-        "graph matching"
+        "graph/graph-matching/graph-match"
       ],
-      "desc": "设 G=(V,E) 是一张无向图，其中，V 是顶点集，E 是边集．如果一组边 M\\subseteq E 不包含自环，且两两之间没有公共顶点，那么，边集 M 就称为图 G 的一个 匹配（matching）或 独立边集（independent edge set）．一条边 e\\in E，如果出现在匹配 M 中，就称为 匹配边"
+      "desc": "设 G=(V,E) 是一张无向图，其中，V 是顶点集，E 是边集．如果一组边 M\\subseteq E 不包含自环，且两两之间没有公共顶点，那么，边集 M 就称为图 G 的一个 匹配（matching）或 独立边集（independent edge set）．一条边 e\\in E，如果出现在匹配 M 中，就称为 匹配边",
+      "tier": 2
     },
     {
       "path": "graph/graph-matching/stable-match.md",
-      "name": "stable-match",
+      "name": "匈牙利算法",
       "keys": [
+        "匈牙利算法",
         "stable-match",
-        "stable match",
-        "graph",
-        "graph-matching",
-        "graph matching"
+        "graph/graph-matching/stable-match"
       ],
-      "desc": "算法竞赛中最常出现的稳定匹配问题是双边市场的一对一匹配，即稳定婚姻问题．本文将重点介绍稳定婚姻问题及其算法．"
+      "desc": "算法竞赛中最常出现的稳定匹配问题是双边市场的一对一匹配，即稳定婚姻问题．本文将重点介绍稳定婚姻问题及其算法．",
+      "tier": 1
     },
     {
       "path": "graph/graph-random-walk.md",
@@ -1603,35 +1751,39 @@
       "keys": [
         "graph-random-walk",
         "graph random walk",
-        "graph"
+        "graph/graph-random-walk"
       ],
-      "desc": "本页介绍图上随机游走问题．主要从网格图、稀疏图、一般图三个角度进行探究，介绍了解决这类问题的各种方法，并对比了它们在解决各种问题时的优缺点．"
+      "desc": "本页介绍图上随机游走问题．主要从网格图、稀疏图、一般图三个角度进行探究，介绍了解决这类问题的各种方法，并对比了它们在解决各种问题时的优缺点．",
+      "tier": 0
     },
     {
       "path": "graph/hamilton.md",
       "name": "hamilton",
       "keys": [
         "hamilton",
-        "graph"
+        "graph/hamilton"
       ],
-      "desc": "通过图中所有顶点一次且仅一次的通路称为哈密顿通路．"
+      "desc": "通过图中所有顶点一次且仅一次的通路称为哈密顿通路．",
+      "tier": 0
     },
     {
       "path": "graph/hld.md",
       "name": "hld",
       "keys": [
         "hld",
-        "graph"
+        "graph/hld"
       ],
-      "desc": "树链剖分用于将树分割成若干条链的形式，以维护树上路径的信息．"
+      "desc": "树链剖分用于将树分割成若干条链的形式，以维护树上路径的信息．",
+      "tier": 0
     },
     {
       "path": "graph/index.md",
       "name": "index",
       "keys": [
-        "graph"
+        "graph/index"
       ],
-      "desc": "图论 - 维基百科，自由的百科全书"
+      "desc": "图论 - 维基百科，自由的百科全书",
+      "tier": 0
     },
     {
       "path": "graph/kth-path.md",
@@ -1639,9 +1791,10 @@
       "keys": [
         "kth-path",
         "kth path",
-        "graph"
+        "graph/kth-path"
       ],
-      "desc": "前置知识：Dijkstra 算法、A\\ 算法、可持久化可并堆"
+      "desc": "前置知识：Dijkstra 算法、A\\ 算法、可持久化可并堆",
+      "tier": 0
     },
     {
       "path": "graph/lca.md",
@@ -1649,18 +1802,20 @@
       "keys": [
         "最近公共祖先",
         "lca",
-        "graph"
+        "graph/lca"
       ],
-      "desc": "最近公共祖先简称 LCA（Lowest Common Ancestor）．两个节点的最近公共祖先，就是这两个点的公共祖先里面，离根最远的那个．"
+      "desc": "最近公共祖先简称 LCA（Lowest Common Ancestor）．两个节点的最近公共祖先，就是这两个点的公共祖先里面，离根最远的那个．",
+      "tier": 2
     },
     {
       "path": "graph/lgv.md",
       "name": "lgv",
       "keys": [
         "lgv",
-        "graph"
+        "graph/lgv"
       ],
-      "desc": "Lindström–Gessel–Viennot lemma，即 LGV 引理，可以用来处理有向无环图上不相交路径计数等问题．"
+      "desc": "Lindström–Gessel–Viennot lemma，即 LGV 引理，可以用来处理有向无环图上不相交路径计数等问题．",
+      "tier": 0
     },
     {
       "path": "graph/matrix-tree.md",
@@ -1668,9 +1823,10 @@
       "keys": [
         "matrix-tree",
         "matrix tree",
-        "graph"
+        "graph/matrix-tree"
       ],
-      "desc": "矩阵树定理解决了一张图的生成树个数计数问题．"
+      "desc": "矩阵树定理解决了一张图的生成树个数计数问题．",
+      "tier": 0
     },
     {
       "path": "graph/max-clique.md",
@@ -1678,18 +1834,20 @@
       "keys": [
         "max-clique",
         "max clique",
-        "graph"
+        "graph/max-clique"
       ],
-      "desc": "前置知识：团"
+      "desc": "前置知识：团",
+      "tier": 0
     },
     {
       "path": "graph/mdst.md",
       "name": "mdst",
       "keys": [
         "mdst",
-        "graph"
+        "graph/mdst"
       ],
-      "desc": "在学习最小直径生成树（Minimum Diameter Spanning Tree）前建议先阅读 树的直径 的内容．"
+      "desc": "在学习最小直径生成树（Minimum Diameter Spanning Tree）前建议先阅读 树的直径 的内容．",
+      "tier": 0
     },
     {
       "path": "graph/min-cycle.md",
@@ -1697,9 +1855,10 @@
       "keys": [
         "min-cycle",
         "min cycle",
-        "graph"
+        "graph/min-cycle"
       ],
-      "desc": "给出一个图，问其中的由 n 个节点构成的边权和最小的环 (n\\ge 3) 是多大．"
+      "desc": "给出一个图，问其中的由 n 个节点构成的边权和最小的环 (n\\ge 3) 是多大．",
+      "tier": 0
     },
     {
       "path": "graph/mod-shortest-path.md",
@@ -1707,9 +1866,10 @@
       "keys": [
         "mod-shortest-path",
         "mod shortest path",
-        "graph"
+        "graph/mod-shortest-path"
       ],
-      "desc": "当出现形如「给定 n 个整数，求这 n 个整数能拼凑出多少的其他整数（n 个整数可以重复取）」，以及「给定 n 个整数，求这 n 个整数不能拼凑出的最小（最大）的整数」，或者「至少要拼几次才能拼出模 K 余 p 的数」的问题时可以使用同余最短路的方法．"
+      "desc": "当出现形如「给定 n 个整数，求这 n 个整数能拼凑出多少的其他整数（n 个整数可以重复取）」，以及「给定 n 个整数，求这 n 个整数不能拼凑出的最小（最大）的整数」，或者「至少要拼几次才能拼出模 K 余 p 的数」的问题时可以使用同余最短路的方法．",
+      "tier": 0
     },
     {
       "path": "graph/mst.md",
@@ -1718,37 +1878,40 @@
         "最小生成树",
         "mst",
         "kruskal",
-        "prim",
-        "graph"
+        "graph/mst"
       ],
-      "desc": "在阅读下列内容之前，请务必阅读 图论相关概念 与 树基础 部分，并了解以下定义："
+      "desc": "在阅读下列内容之前，请务必阅读 图论相关概念 与 树基础 部分，并了解以下定义：",
+      "tier": 2
     },
     {
       "path": "graph/node.md",
       "name": "node",
       "keys": [
         "node",
-        "graph"
+        "graph/node"
       ],
-      "desc": "拆点是一种图论建模思想，常用于 网络流，用来处理 点权或者点的流量限制 的问题，也常用于 分层图．"
+      "desc": "拆点是一种图论建模思想，常用于 网络流，用来处理 点权或者点的流量限制 的问题，也常用于 分层图．",
+      "tier": 0
     },
     {
       "path": "graph/planar.md",
       "name": "planar",
       "keys": [
         "planar",
-        "graph"
+        "graph/planar"
       ],
-      "desc": "本文介绍（可）平面图及其相关概念．"
+      "desc": "本文介绍（可）平面图及其相关概念．",
+      "tier": 0
     },
     {
       "path": "graph/prufer.md",
       "name": "prufer",
       "keys": [
         "prufer",
-        "graph"
+        "graph/prufer"
       ],
-      "desc": "本文翻译自 e-maxx Prüfer Code．另外解释一下，原文的结点是从 0 开始标号的，本文按照大多数人的习惯改成了从 1 标号．"
+      "desc": "本文翻译自 e-maxx Prüfer Code．另外解释一下，原文的结点是从 0 开始标号的，本文按照大多数人的习惯改成了从 1 标号．",
+      "tier": 0
     },
     {
       "path": "graph/rings-count.md",
@@ -1756,18 +1919,20 @@
       "keys": [
         "rings-count",
         "rings count",
-        "graph"
+        "graph/rings-count"
       ],
-      "desc": "给定一个简单图，求图中简单环的数目．简单环是指没有重复顶点或边的环．"
+      "desc": "给定一个简单图，求图中简单环的数目．简单环是指没有重复顶点或边的环．",
+      "tier": 0
     },
     {
       "path": "graph/save.md",
       "name": "save",
       "keys": [
         "save",
-        "graph"
+        "graph/save"
       ],
-      "desc": "在 OI 中，想要对图进行操作，就需要先学习图的存储方式．"
+      "desc": "在 OI 中，想要对图进行操作，就需要先学习图的存储方式．",
+      "tier": 0
     },
     {
       "path": "graph/scc.md",
@@ -1776,9 +1941,10 @@
         "强连通分量",
         "scc",
         "tarjan",
-        "graph"
+        "graph/scc"
       ],
-      "desc": "在阅读下列内容之前，请务必了解 图论相关概念 中的基础部分．"
+      "desc": "在阅读下列内容之前，请务必了解 图论相关概念 中的基础部分．",
+      "tier": 2
     },
     {
       "path": "graph/shortest-path.md",
@@ -1787,12 +1953,11 @@
         "最短路",
         "最短路径",
         "dijkstra",
-        "spfa",
-        "graph",
         "shortest-path",
-        "shortest path"
+        "graph/shortest-path"
       ],
-      "desc": "（还记得这些定义吗？在阅读下列内容之前，请务必了解 图论相关概念 中的基础部分．）"
+      "desc": "（还记得这些定义吗？在阅读下列内容之前，请务必了解 图论相关概念 中的基础部分．）",
+      "tier": 2
     },
     {
       "path": "graph/steiner-tree.md",
@@ -1800,9 +1965,10 @@
       "keys": [
         "steiner-tree",
         "steiner tree",
-        "graph"
+        "graph/steiner-tree"
       ],
-      "desc": "斯坦纳树问题是组合优化问题，与最小生成树相似，是最短网络的一种．最小生成树是在给定的点集和边中寻求最短网络使所有点连通．而最小斯坦纳树允许在给定点外增加额外的点，使生成的最短网络开销最小．"
+      "desc": "斯坦纳树问题是组合优化问题，与最小生成树相似，是最短网络的一种．最小生成树是在给定的点集和边中寻求最短网络使所有点连通．而最小斯坦纳树允许在给定点外增加额外的点，使生成的最短网络开销最小．",
+      "tier": 0
     },
     {
       "path": "graph/stoer-wagner.md",
@@ -1810,19 +1976,21 @@
       "keys": [
         "stoer-wagner",
         "stoer wagner",
-        "graph"
+        "graph/stoer-wagner"
       ],
-      "desc": "由于取消了 源汇点 的定义，我们需要对 割 的概念进行重定义．"
+      "desc": "由于取消了 源汇点 的定义，我们需要对 割 的概念进行重定义．",
+      "tier": 0
     },
     {
       "path": "graph/topo.md",
       "name": "拓扑排序",
       "keys": [
         "拓扑排序",
-        "graph",
-        "topo"
+        "topo",
+        "graph/topo"
       ],
-      "desc": "拓扑排序（Topological sorting）要解决的问题是如何给一个有向无环图的所有节点排序．"
+      "desc": "拓扑排序（Topological sorting）要解决的问题是如何给一个有向无环图的所有节点排序．",
+      "tier": 2
     },
     {
       "path": "graph/tree-ahu.md",
@@ -1830,9 +1998,10 @@
       "keys": [
         "tree-ahu",
         "tree ahu",
-        "graph"
+        "graph/tree-ahu"
       ],
-      "desc": "AHU 算法用于判断两棵有根树是否同构．"
+      "desc": "AHU 算法用于判断两棵有根树是否同构．",
+      "tier": 0
     },
     {
       "path": "graph/tree-basic.md",
@@ -1840,9 +2009,10 @@
       "keys": [
         "tree-basic",
         "tree basic",
-        "graph"
+        "graph/tree-basic"
       ],
-      "desc": "图论中的树和现实生活中的树长得一样，只不过我们习惯于处理问题的时候把树根放到上方来考虑．这种数据结构看起来像是一个倒挂的树，因此得名．"
+      "desc": "图论中的树和现实生活中的树长得一样，只不过我们习惯于处理问题的时候把树根放到上方来考虑．这种数据结构看起来像是一个倒挂的树，因此得名．",
+      "tier": 0
     },
     {
       "path": "graph/tree-center.md",
@@ -1850,9 +2020,10 @@
       "keys": [
         "tree-center",
         "tree center",
-        "graph"
+        "graph/tree-center"
       ],
-      "desc": "在树中，如果节点 x 作为根节点时，从 x 出发的最长链最短，那么称 x 为这棵树的中心．"
+      "desc": "在树中，如果节点 x 作为根节点时，从 x 出发的最长链最短，那么称 x 为这棵树的中心．",
+      "tier": 0
     },
     {
       "path": "graph/tree-centroid.md",
@@ -1860,20 +2031,21 @@
       "keys": [
         "tree-centroid",
         "tree centroid",
-        "graph"
+        "graph/tree-centroid"
       ],
-      "desc": "本文介绍树的重心的概念和基本性质．"
+      "desc": "本文介绍树的重心的概念和基本性质．",
+      "tier": 0
     },
     {
       "path": "graph/tree-diameter.md",
       "name": "树的直径",
       "keys": [
         "树的直径",
-        "graph",
         "tree-diameter",
-        "tree diameter"
+        "graph/tree-diameter"
       ],
-      "desc": "树上任意两节点之间最长的简单路径即为树的「直径」．"
+      "desc": "树上任意两节点之间最长的简单路径即为树的「直径」．",
+      "tier": 2
     },
     {
       "path": "graph/tree-divide.md",
@@ -1881,9 +2053,10 @@
       "keys": [
         "tree-divide",
         "tree divide",
-        "graph"
+        "graph/tree-divide"
       ],
-      "desc": "点分治适合处理大规模的树上路径信息问题．"
+      "desc": "点分治适合处理大规模的树上路径信息问题．",
+      "tier": 0
     },
     {
       "path": "graph/tree-hash.md",
@@ -1891,9 +2064,10 @@
       "keys": [
         "tree-hash",
         "tree hash",
-        "graph"
+        "graph/tree-hash"
       ],
-      "desc": "判断一些树是否同构的时，我们常常把这些树转成哈希值储存起来，以降低复杂度．"
+      "desc": "判断一些树是否同构的时，我们常常把这些树转成哈希值储存起来，以降低复杂度．",
+      "tier": 0
     },
     {
       "path": "graph/tree-random-walk.md",
@@ -1901,9 +2075,10 @@
       "keys": [
         "tree-random-walk",
         "tree random walk",
-        "graph"
+        "graph/tree-random-walk"
       ],
-      "desc": "给定一棵有根树，树的某个结点上有一个硬币，在某一时刻硬币会等概率地移动到邻接结点上，问硬币移动到邻接结点上的期望距离．"
+      "desc": "给定一棵有根树，树的某个结点上有一个硬币，在某一时刻硬币会等概率地移动到邻接结点上，问硬币移动到邻接结点上的期望距离．",
+      "tier": 0
     },
     {
       "path": "graph/virtual-tree.md",
@@ -1911,53 +2086,59 @@
       "keys": [
         "virtual-tree",
         "virtual tree",
-        "graph"
+        "graph/virtual-tree"
       ],
-      "desc": "在一场战争中，战场由 n 个岛屿和 n-1 个桥梁组成，保证每两个岛屿间有且仅有一条路径可达．现在，我军已经侦查到敌军的总部在编号为 1 的岛屿，而且他们已经没有足够多的能源维系战斗，我军胜利在望．已知在其他 k 个岛屿上有丰富能源，为了防止敌军获取能源，我军的任务是炸毁一些桥梁，使得敌军不能到达任何能源丰富的岛屿．由"
+      "desc": "在一场战争中，战场由 n 个岛屿和 n-1 个桥梁组成，保证每两个岛屿间有且仅有一条路径可达．现在，我军已经侦查到敌军的总部在编号为 1 的岛屿，而且他们已经没有足够多的能源维系战斗，我军胜利在望．已知在其他 k 个岛屿上有丰富能源，为了防止敌军获取能源，我军的任务是炸毁一些桥梁，使得敌军不能到达任何能源丰富的岛屿．由",
+      "tier": 0
     },
     {
       "path": "lang/array.md",
       "name": "array",
       "keys": [
         "array",
-        "lang"
+        "lang/array"
       ],
-      "desc": "数组是存放相同类型对象的容器，数组中存放的对象没有名字，而是要通过其所在的位置访问．数组的大小是固定的，不能随意改变数组的长度．"
+      "desc": "数组是存放相同类型对象的容器，数组中存放的对象没有名字，而是要通过其所在的位置访问．数组的大小是固定的，不能随意改变数组的长度．",
+      "tier": 0
     },
     {
       "path": "lang/basic.md",
       "name": "basic",
       "keys": [
-        "lang"
+        "lang/basic"
       ],
-      "desc": "如果你不想深究背后的原理，初学时可以直接将这个「框架」背下来："
+      "desc": "如果你不想深究背后的原理，初学时可以直接将这个「框架」背下来：",
+      "tier": 0
     },
     {
       "path": "lang/branch.md",
       "name": "branch",
       "keys": [
         "branch",
-        "lang"
+        "lang/branch"
       ],
-      "desc": "一个程序默认是按照代码的顺序执行下来的，有时我们需要选择性的执行某些语句，这时候就需要分支的功能来实现．选择合适的分支语句可以提高程序的效率．"
+      "desc": "一个程序默认是按照代码的顺序执行下来的，有时我们需要选择性的执行某些语句，这时候就需要分支的功能来实现．选择合适的分支语句可以提高程序的效率．",
+      "tier": 0
     },
     {
       "path": "lang/class.md",
       "name": "class",
       "keys": [
         "class",
-        "lang"
+        "lang/class"
       ],
-      "desc": "类（class）是结构体的拓展，不仅能够拥有成员元素，还拥有成员函数．"
+      "desc": "类（class）是结构体的拓展，不仅能够拥有成员元素，还拥有成员函数．",
+      "tier": 0
     },
     {
       "path": "lang/const.md",
       "name": "const",
       "keys": [
         "const",
-        "lang"
+        "lang/const"
       ],
-      "desc": "C++ 定义了一套完整的只读量定义方法，被 const 修饰的变量都是只读量，编译器会在编译期进行冲突检查，避免对只读量的修改，同时可能会执行一些优化．"
+      "desc": "C++ 定义了一套完整的只读量定义方法，被 const 修饰的变量都是只读量，编译器会在编译期进行冲突检查，避免对只读量的修改，同时可能会执行一些优化．",
+      "tier": 0
     },
     {
       "path": "lang/cpp-other-langs.md",
@@ -1965,19 +2146,20 @@
       "keys": [
         "cpp-other-langs",
         "cpp other langs",
-        "lang"
+        "lang/cpp-other-langs"
       ],
-      "desc": "本文介绍 C++ 与其他常用语言的区别，重点介绍 C 与 C++ 之间重要的或者容易忽略的区别．尽管 C++ 几乎是 C 的超集，C/C++ 代码混用一般也没什么问题，但是了解 C/C++ 间比较重要的区别可以避免碰到一些奇怪的 bug．如果你是以 C 为主力语言的 OIer，那么本文也能让你更顺利地上手 C++．C+"
+      "desc": "本文介绍 C++ 与其他常用语言的区别，重点介绍 C 与 C++ 之间重要的或者容易忽略的区别．尽管 C++ 几乎是 C 的超集，C/C++ 代码混用一般也没什么问题，但是了解 C/C++ 间比较重要的区别可以避免碰到一些奇怪的 bug．如果你是以 C 为主力语言的 OIer，那么本文也能让你更顺利地上手 C++．C+",
+      "tier": 0
     },
     {
       "path": "lang/csl/algorithm.md",
       "name": "algorithm",
       "keys": [
         "algorithm",
-        "lang",
-        "csl"
+        "lang/csl/algorithm"
       ],
-      "desc": "STL 提供了大约 100 个实现算法的模版函数，基本都包含在 <algorithm> 之中，还有一部分包含在 <numeric> 和 <functional>．完备的函数列表请 参见参考手册，排序相关的可以参考 排序内容的对应页面．"
+      "desc": "STL 提供了大约 100 个实现算法的模版函数，基本都包含在 <algorithm> 之中，还有一部分包含在 <numeric> 和 <functional>．完备的函数列表请 参见参考手册，排序相关的可以参考 排序内容的对应页面．",
+      "tier": 0
     },
     {
       "path": "lang/csl/associative-container.md",
@@ -1985,20 +2167,20 @@
       "keys": [
         "associative-container",
         "associative container",
-        "lang",
-        "csl"
+        "lang/csl/associative-container"
       ],
-      "desc": "set 是关联容器，含有键值类型对象的已排序集，搜索、移除和插入拥有对数复杂度．set 内部通常采用 红黑树 实现．平衡二叉树 的特性使得 set 非常适合处理需要同时兼顾查找、插入与删除的情况．"
+      "desc": "set 是关联容器，含有键值类型对象的已排序集，搜索、移除和插入拥有对数复杂度．set 内部通常采用 红黑树 实现．平衡二叉树 的特性使得 set 非常适合处理需要同时兼顾查找、插入与删除的情况．",
+      "tier": 0
     },
     {
       "path": "lang/csl/bitset.md",
       "name": "bitset",
       "keys": [
         "bitset",
-        "lang",
-        "csl"
+        "lang/csl/bitset"
       ],
-      "desc": "std::bitset 是标准库中的一个存储 0/1 的大小不可变容器．严格来讲，它并不属于 STL．"
+      "desc": "std::bitset 是标准库中的一个存储 0/1 的大小不可变容器．严格来讲，它并不属于 STL．",
+      "tier": 0
     },
     {
       "path": "lang/csl/container-adapter.md",
@@ -2006,49 +2188,49 @@
       "keys": [
         "container-adapter",
         "container adapter",
-        "lang",
-        "csl"
+        "lang/csl/container-adapter"
       ],
-      "desc": "STL 栈(std::stack) 是一种后进先出 (Last In, First Out) 的容器适配器，仅支持查询或删除最后一个加入的元素（栈顶元素），不支持随机访问，且为了保证数据的严格有序性，不支持迭代器．"
+      "desc": "STL 栈(std::stack) 是一种后进先出 (Last In, First Out) 的容器适配器，仅支持查询或删除最后一个加入的元素（栈顶元素），不支持随机访问，且为了保证数据的严格有序性，不支持迭代器．",
+      "tier": 0
     },
     {
       "path": "lang/csl/container.md",
       "name": "container",
       "keys": [
         "container",
-        "lang",
-        "csl"
+        "lang/csl/container"
       ],
-      "desc": "谓词就是返回值为真或者假的函数．STL 容器中经常会使用到谓词，用于模板参数．"
+      "desc": "谓词就是返回值为真或者假的函数．STL 容器中经常会使用到谓词，用于模板参数．",
+      "tier": 0
     },
     {
       "path": "lang/csl/index.md",
       "name": "index",
       "keys": [
-        "lang",
-        "csl"
+        "lang/csl/index"
       ],
-      "desc": "首先需要介绍的是 C++ 本身的版本．由于 C++ 本身只是一门语言，而不同的编译器对 C++ 的实现方法各不一致，因此需要标准化来约束编译器的实现，使得 C++ 代码在不同的编译器下表现一致．C++ 自 1985 年诞生以来，一共由国际标准化组织（ISO）发布了 7 个正式的 C++ 标准，依次为 C++98、C++"
+      "desc": "首先需要介绍的是 C++ 本身的版本．由于 C++ 本身只是一门语言，而不同的编译器对 C++ 的实现方法各不一致，因此需要标准化来约束编译器的实现，使得 C++ 代码在不同的编译器下表现一致．C++ 自 1985 年诞生以来，一共由国际标准化组织（ISO）发布了 7 个正式的 C++ 标准，依次为 C++98、C++",
+      "tier": 0
     },
     {
       "path": "lang/csl/iterator.md",
       "name": "iterator",
       "keys": [
         "iterator",
-        "lang",
-        "csl"
+        "lang/csl/iterator"
       ],
-      "desc": "在 STL 中，迭代器（Iterator）用来访问和检查 STL 容器中元素的对象，它的行为模式和指针类似，但是它封装了一些有效性检查，并且提供了统一的访问格式．类似的概念在其他很多高级语言中都存在，如 Python 的 iter 函数，C# 的 IEnumerator．"
+      "desc": "在 STL 中，迭代器（Iterator）用来访问和检查 STL 容器中元素的对象，它的行为模式和指针类似，但是它封装了一些有效性检查，并且提供了统一的访问格式．类似的概念在其他很多高级语言中都存在，如 Python 的 iter 函数，C# 的 IEnumerator．",
+      "tier": 0
     },
     {
       "path": "lang/csl/pair.md",
       "name": "pair",
       "keys": [
         "pair",
-        "lang",
-        "csl"
+        "lang/csl/pair"
       ],
-      "desc": "std::pair 是标准库中定义的一个类模板．用于将两个变量关联在一起，组成一个「对」，而且两个变量的数据类型可以是不同的．"
+      "desc": "std::pair 是标准库中定义的一个类模板．用于将两个变量关联在一起，组成一个「对」，而且两个变量的数据类型可以是不同的．",
+      "tier": 0
     },
     {
       "path": "lang/csl/sequence-container.md",
@@ -2056,20 +2238,20 @@
       "keys": [
         "sequence-container",
         "sequence container",
-        "lang",
-        "csl"
+        "lang/csl/sequence-container"
       ],
-      "desc": "std::vector 是 STL 提供的 内存连续的、可变长度 的数组（亦称列表）数据结构．能够提供线性复杂度的插入和删除，以及常数复杂度的随机访问．"
+      "desc": "std::vector 是 STL 提供的 内存连续的、可变长度 的数组（亦称列表）数据结构．能够提供线性复杂度的插入和删除，以及常数复杂度的随机访问．",
+      "tier": 0
     },
     {
       "path": "lang/csl/string.md",
       "name": "string",
       "keys": [
         "string",
-        "lang",
-        "csl"
+        "lang/csl/string"
       ],
-      "desc": "std::string 是在标准库 <string>（注意不是 C 语言中的 <string.h> 库）中提供的一个类，本质上是 std::basicstring<char> 的别称．"
+      "desc": "std::string 是在标准库 <string>（注意不是 C 语言中的 <string.h> 库）中提供的一个类，本质上是 std::basicstring<char> 的别称．",
+      "tier": 0
     },
     {
       "path": "lang/csl/unordered-container.md",
@@ -2077,10 +2259,10 @@
       "keys": [
         "unordered-container",
         "unordered container",
-        "lang",
-        "csl"
+        "lang/csl/unordered-container"
       ],
-      "desc": "自 C++11 标准起，四种基于 哈希 实现的无序关联式容器正式纳入了 C++ 的标准模板库中，分别是：unorderedset，unorderedmultiset，unorderedmap，unorderedmultimap．"
+      "desc": "自 C++11 标准起，四种基于 哈希 实现的无序关联式容器正式纳入了 C++ 的标准模板库中，分别是：unorderedset，unorderedmultiset，unorderedmap，unorderedmultimap．",
+      "tier": 0
     },
     {
       "path": "lang/file-op.md",
@@ -2088,35 +2270,39 @@
       "keys": [
         "file-op",
         "file op",
-        "lang"
+        "lang/file-op"
       ],
-      "desc": "文件是根据特定的目的而收集在一起的有关数据的集合．C/C++ 把每一个文件都看成是一个有序的字节流，每个文件都是以 文件结束标志（EOF）结束，如果要操作某个文件，程序应该首先打开该文件，每当一个文件被打开后（请记得关闭打开的文件），该文件就和一个流关联起来，这里的流实际上是一个字节序列．"
+      "desc": "文件是根据特定的目的而收集在一起的有关数据的集合．C/C++ 把每一个文件都看成是一个有序的字节流，每个文件都是以 文件结束标志（EOF）结束，如果要操作某个文件，程序应该首先打开该文件，每当一个文件被打开后（请记得关闭打开的文件），该文件就和一个流关联起来，这里的流实际上是一个字节序列．",
+      "tier": 0
     },
     {
       "path": "lang/func.md",
       "name": "func",
       "keys": [
         "func",
-        "lang"
+        "lang/func"
       ],
-      "desc": "编程中的函数（function）一般是若干语句的集合．我们也可以将其称作「子过程（subroutine）」．在编程中，如果有一些重复的过程，我们可以将其提取出来，形成一个函数．函数可以接收若干值，这叫做函数的参数．函数也可以返回某个值，这叫做函数的返回值．"
+      "desc": "编程中的函数（function）一般是若干语句的集合．我们也可以将其称作「子过程（subroutine）」．在编程中，如果有一些重复的过程，我们可以将其提取出来，形成一个函数．函数可以接收若干值，这叫做函数的参数．函数也可以返回某个值，这叫做函数的返回值．",
+      "tier": 0
     },
     {
       "path": "lang/helloworld.md",
       "name": "helloworld",
       "keys": [
         "helloworld",
-        "lang"
+        "lang/helloworld"
       ],
-      "desc": "disqus:"
+      "desc": "disqus:",
+      "tier": 0
     },
     {
       "path": "lang/index.md",
       "name": "index",
       "keys": [
-        "lang"
+        "lang/index"
       ],
-      "desc": "本章将会介绍编程相关的知识，包括 C++ 从入门到进阶教程和一些其它语言的简介．"
+      "desc": "本章将会介绍编程相关的知识，包括 C++ 从入门到进阶教程和一些其它语言的简介．",
+      "tier": 0
     },
     {
       "path": "lang/java-pro.md",
@@ -2124,54 +2310,60 @@
       "keys": [
         "java-pro",
         "java pro",
-        "lang"
+        "lang/java-pro"
       ],
-      "desc": "以下内容均基于 Java JDK 8 版本编写，不排除在更高版本中有部分改动的可能性．"
+      "desc": "以下内容均基于 Java JDK 8 版本编写，不排除在更高版本中有部分改动的可能性．",
+      "tier": 0
     },
     {
       "path": "lang/java.md",
       "name": "java",
       "keys": [
         "java",
-        "lang"
+        "lang/java"
       ],
-      "desc": "Java 是一种广泛使用的计算机编程语言，拥有 跨平台、面向对象、泛型编程 的特性，广泛应用于企业级 Web 应用开发和移动应用开发．"
+      "desc": "Java 是一种广泛使用的计算机编程语言，拥有 跨平台、面向对象、泛型编程 的特性，广泛应用于企业级 Web 应用开发和移动应用开发．",
+      "tier": 0
     },
     {
       "path": "lang/lambda.md",
       "name": "lambda",
       "keys": [
         "lambda",
-        "lang"
+        "lang/lambda"
       ],
-      "desc": "本文语法参照 C++11 标准，其他高版本的标准语法视情况提及并会特别标注．"
+      "desc": "本文语法参照 C++11 标准，其他高版本的标准语法视情况提及并会特别标注．",
+      "tier": 0
     },
     {
       "path": "lang/loop.md",
       "name": "loop",
       "keys": [
         "loop",
-        "lang"
+        "lang/loop"
       ],
-      "desc": "有时，我们需要做一件事很多遍，为了不写过多重复的代码，我们需要循环．"
+      "desc": "有时，我们需要做一件事很多遍，为了不写过多重复的代码，我们需要循环．",
+      "tier": 0
     },
     {
       "path": "lang/namespace.md",
       "name": "namespace",
       "keys": [
         "namespace",
-        "lang"
+        "lang/namespace"
       ],
-      "desc": "C++ 的 命名空间 机制可以用来解决复杂项目中名字冲突的问题．"
+      "desc": "C++ 的 命名空间 机制可以用来解决复杂项目中名字冲突的问题．",
+      "tier": 0
     },
     {
       "path": "lang/new.md",
       "name": "new",
       "keys": [
         "new",
-        "lang"
+        "lang/new"
       ],
-      "desc": "本文语法参照 C++11 标准．语义不同的将以 C++11 作为标准，C++14、C++17 等语法视情况提及并会特别标注．"
+      "desc": "本文语法参照 C++11 标准．语义不同的将以 C++11 作为标准，C++14、C++17 等语法视情况提及并会特别标注．",
+      "tier": 0
     },
     {
       "path": "lang/op-overload.md",
@@ -2179,27 +2371,30 @@
       "keys": [
         "op-overload",
         "op overload",
-        "lang"
+        "lang/op-overload"
       ],
-      "desc": "重载运算符是通过对运算符的重新定义，使得其支持特定数据类型的运算操作．重载运算符是重载函数的特殊情况．"
+      "desc": "重载运算符是通过对运算符的重新定义，使得其支持特定数据类型的运算操作．重载运算符是重载函数的特殊情况．",
+      "tier": 0
     },
     {
       "path": "lang/op.md",
       "name": "op",
       "keys": [
         "op",
-        "lang"
+        "lang/op"
       ],
-      "desc": "单目运算符（又称一元运算符）指被操作对象只有一个的运算符，而双目运算符（又称二元运算符）的被操作对象有两个．例如 1 + 2 中加号就是双目运算符，它有 1 和 2 两个被操作数．此外 C++ 中还有唯一的一个三目运算符 ?: ．"
+      "desc": "单目运算符（又称一元运算符）指被操作对象只有一个的运算符，而双目运算符（又称二元运算符）的被操作对象有两个．例如 1 + 2 中加号就是双目运算符，它有 1 和 2 两个被操作数．此外 C++ 中还有唯一的一个三目运算符 ?: ．",
+      "tier": 0
     },
     {
       "path": "lang/optimizations.md",
       "name": "optimizations",
       "keys": [
         "optimizations",
-        "lang"
+        "lang/optimizations"
       ],
-      "desc": "OI 界的常用编程语言是 C++．既然使用了这门语言，就注定要和编译器、语言标准打交道了．众所周知，C++ 非常混乱邪恶，本文旨在给出实用的编译器相关知识，足够竞赛使用．"
+      "desc": "OI 界的常用编程语言是 C++．既然使用了这门语言，就注定要和编译器、语言标准打交道了．众所周知，C++ 非常混乱邪恶，本文旨在给出实用的编译器相关知识，足够竞赛使用．",
+      "tier": 0
     },
     {
       "path": "lang/pas-cpp.md",
@@ -2207,86 +2402,89 @@
       "keys": [
         "pas-cpp",
         "pas cpp",
-        "lang"
+        "lang/pas-cpp"
       ],
-      "desc": "以下过程均在 Windows 系统中操作．"
+      "desc": "以下过程均在 Windows 系统中操作．",
+      "tier": 0
     },
     {
       "path": "lang/pb-ds/index.md",
       "name": "index",
       "keys": [
-        "lang",
-        "pb-ds",
-        "pb ds"
+        "lang/pb-ds/index"
       ],
-      "desc": "pb\\ds 库全称 Policy-Based Data Structures．"
+      "desc": "pb\\ds 库全称 Policy-Based Data Structures．",
+      "tier": 0
     },
     {
       "path": "lang/pb-ds/pq.md",
       "name": "pq",
       "keys": [
         "pq",
-        "lang",
-        "pb-ds",
-        "pb ds"
+        "lang/pb-ds/pq"
       ],
-      "desc": "附：官方文档地址——复杂度及常数测试"
+      "desc": "附：官方文档地址——复杂度及常数测试",
+      "tier": 0
     },
     {
       "path": "lang/pb-ds/tree.md",
       "name": "tree",
       "keys": [
         "tree",
-        "lang",
-        "pb-ds",
-        "pb ds"
+        "lang/pb-ds/tree"
       ],
-      "desc": "附：官方文档地址"
+      "desc": "附：官方文档地址",
+      "tier": 0
     },
     {
       "path": "lang/pointer.md",
       "name": "pointer",
       "keys": [
         "pointer",
-        "lang"
+        "lang/pointer"
       ],
-      "desc": "在程序中，我们的数据都有其存储的地址．在程序每次的实际运行过程中，变量在物理内存中的存储位置不尽相同．不过，我们仍能够在编程时，通过一定的语句，来取得数据在内存中的地址．"
+      "desc": "在程序中，我们的数据都有其存储的地址．在程序每次的实际运行过程中，变量在物理内存中的存储位置不尽相同．不过，我们仍能够在编程时，通过一定的语句，来取得数据在内存中的地址．",
+      "tier": 0
     },
     {
       "path": "lang/python.md",
       "name": "python",
       "keys": [
         "python",
-        "lang"
+        "lang/python"
       ],
-      "desc": "Python 是一门已在世界上广泛使用的解释型语言．它提供了高效的高级数据结构，还能简单有效地面向对象编程，也可以在算法竞赛．"
+      "desc": "Python 是一门已在世界上广泛使用的解释型语言．它提供了高效的高级数据结构，还能简单有效地面向对象编程，也可以在算法竞赛．",
+      "tier": 0
     },
     {
       "path": "lang/reference.md",
       "name": "reference",
       "keys": [
         "reference",
-        "lang"
+        "lang/reference"
       ],
-      "desc": "引用可以看成是 C++ 封装的非空指针，可以用来传递它所指向的对象，在声明时必须指向对象．"
+      "desc": "引用可以看成是 C++ 封装的非空指针，可以用来传递它所指向的对象，在声明时必须指向对象．",
+      "tier": 0
     },
     {
       "path": "lang/struct.md",
       "name": "struct",
       "keys": [
         "struct",
-        "lang"
+        "lang/struct"
       ],
-      "desc": "可以看做是自定义的数据类型．"
+      "desc": "可以看做是自定义的数据类型．",
+      "tier": 0
     },
     {
       "path": "lang/union.md",
       "name": "union",
       "keys": [
         "union",
-        "lang"
+        "lang/union"
       ],
-      "desc": "联合体在 2023 年正式被加入 NOI 大纲入门级中．"
+      "desc": "联合体在 2023 年正式被加入 NOI 大纲入门级中．",
+      "tier": 0
     },
     {
       "path": "lang/value-category.md",
@@ -2294,27 +2492,29 @@
       "keys": [
         "value-category",
         "value category",
-        "lang"
+        "lang/value-category"
       ],
-      "desc": "值类别是 C++ 中一个非常重要的概念，虽然在算法竞赛中可能用处不大，但了解它可以帮助我们发现并避免不必要的复制，从而提高代码的效率和性能．"
+      "desc": "值类别是 C++ 中一个非常重要的概念，虽然在算法竞赛中可能用处不大，但了解它可以帮助我们发现并避免不必要的复制，从而提高代码的效率和性能．",
+      "tier": 0
     },
     {
       "path": "lang/var.md",
       "name": "var",
       "keys": [
         "var",
-        "lang"
+        "lang/var"
       ],
-      "desc": "C++ 的类型系统由如下几部分组成："
+      "desc": "C++ 的类型系统由如下几部分组成：",
+      "tier": 0
     },
     {
       "path": "math/algebra/basic.md",
       "name": "basic",
       "keys": [
-        "math",
-        "algebra"
+        "math/algebra/basic"
       ],
-      "desc": "本章节将简要介绍抽象代数的相关知识．现阶段算法竞赛的主要内容并不直接考察抽象代数的知识，但是在算法的描述或是问题的题解中常常会牵涉一些抽象代数的基本概念，这使得掌握了基础抽象代数概念的读者能够更快速理解一些算法．因此，这部分内容并不是任何选手的必修知识，而仅供那些感兴趣或者可能从中受益的读者参考使用．同时，本章节将避免"
+      "desc": "本章节将简要介绍抽象代数的相关知识．现阶段算法竞赛的主要内容并不直接考察抽象代数的知识，但是在算法的描述或是问题的题解中常常会牵涉一些抽象代数的基本概念，这使得掌握了基础抽象代数概念的读者能够更快速理解一些算法．因此，这部分内容并不是任何选手的必修知识，而仅供那些感兴趣或者可能从中受益的读者参考使用．同时，本章节将避免",
+      "tier": 0
     },
     {
       "path": "math/algebra/field-theory.md",
@@ -2322,10 +2522,10 @@
       "keys": [
         "field-theory",
         "field theory",
-        "math",
-        "algebra"
+        "math/algebra/field-theory"
       ],
-      "desc": "前置知识：抽象代数基本概念、群论、环论"
+      "desc": "前置知识：抽象代数基本概念、群论、环论",
+      "tier": 0
     },
     {
       "path": "math/algebra/group-theory.md",
@@ -2333,10 +2533,10 @@
       "keys": [
         "group-theory",
         "group theory",
-        "math",
-        "algebra"
+        "math/algebra/group-theory"
       ],
-      "desc": "前置知识：抽象代数基本概念、置换与排列"
+      "desc": "前置知识：抽象代数基本概念、置换与排列",
+      "tier": 0
     },
     {
       "path": "math/algebra/ring-theory.md",
@@ -2344,10 +2544,10 @@
       "keys": [
         "ring-theory",
         "ring theory",
-        "math",
-        "algebra"
+        "math/algebra/ring-theory"
       ],
-      "desc": "前置知识：抽象代数基本概念、群论"
+      "desc": "前置知识：抽象代数基本概念、群论",
+      "tier": 0
     },
     {
       "path": "math/algebra/schreier-sims.md",
@@ -2355,10 +2555,10 @@
       "keys": [
         "schreier-sims",
         "schreier sims",
-        "math",
-        "algebra"
+        "math/algebra/schreier-sims"
       ],
-      "desc": "前置知识：抽象代数基本概念、群论、置换与排列"
+      "desc": "前置知识：抽象代数基本概念、群论、置换与排列",
+      "tier": 0
     },
     {
       "path": "math/berlekamp-massey.md",
@@ -2366,28 +2566,31 @@
       "keys": [
         "berlekamp-massey",
         "berlekamp massey",
-        "math"
+        "math/berlekamp-massey"
       ],
-      "desc": "Berlekamp–Massey 算法是一种用于求数列的最短递推式的算法．给定一个长为 n 的数列，如果它的最短递推式的阶数为 m，则 Berlekamp–Massey 算法能够在 O(nm) 时间内求出数列的每个前缀的最短递推式．最坏情况下 m = O(n)，因此算法的最坏复杂度为 O(n^2)．"
+      "desc": "Berlekamp–Massey 算法是一种用于求数列的最短递推式的算法．给定一个长为 n 的数列，如果它的最短递推式的阶数为 m，则 Berlekamp–Massey 算法能够在 O(nm) 时间内求出数列的每个前缀的最短递推式．最坏情况下 m = O(n)，因此算法的最坏复杂度为 O(n^2)．",
+      "tier": 0
     },
     {
       "path": "math/bignum.md",
       "name": "bignum",
       "keys": [
         "bignum",
-        "math"
+        "math/bignum"
       ],
-      "desc": "高精度计算（Arbitrary-Precision Arithmetic），也被称作大整数（bignum）计算，运用了一些算法结构来支持更大整数间的运算（数字大小超过语言内建整型）．"
+      "desc": "高精度计算（Arbitrary-Precision Arithmetic），也被称作大整数（bignum）计算，运用了一些算法结构来支持更大整数间的运算（数字大小超过语言内建整型）．",
+      "tier": 0
     },
     {
       "path": "math/binary-exponentiation.md",
-      "name": "binary-exponentiation",
+      "name": "快速幂",
       "keys": [
+        "快速幂",
         "binary-exponentiation",
-        "binary exponentiation",
-        "math"
+        "math/binary-exponentiation"
       ],
-      "desc": "这个技巧可以应用于任何 a 的乘法满足结合律的场景中，例如模意义下取幂、矩阵幂等，详见后文 应用 一节．"
+      "desc": "这个技巧可以应用于任何 a 的乘法满足结合律的场景中，例如模意义下取幂、矩阵幂等，详见后文 应用 一节．",
+      "tier": 2
     },
     {
       "path": "math/binary-set.md",
@@ -2395,18 +2598,20 @@
       "keys": [
         "binary-set",
         "binary set",
-        "math"
+        "math/binary-set"
       ],
-      "desc": "前置知识：位运算、整数与位序列．"
+      "desc": "前置知识：位运算、整数与位序列．",
+      "tier": 0
     },
     {
       "path": "math/bit.md",
       "name": "bit",
       "keys": [
         "bit",
-        "math"
+        "math/bit"
       ],
-      "desc": "位操作指的是对整数二进制表示的一元和二元操作，分为 位运算 和 移位 两类．位操作是 CPU 中最基础的一类运算，其速度往往是相当快的．"
+      "desc": "位操作指的是对整数二进制表示的一元和二元操作，分为 位运算 和 移位 两类．位操作是 CPU 中最基础的一类运算，其速度往往是相当快的．",
+      "tier": 0
     },
     {
       "path": "math/boolean-algebra.md",
@@ -2414,29 +2619,30 @@
       "keys": [
         "boolean-algebra",
         "boolean algebra",
-        "math"
+        "math/boolean-algebra"
       ],
-      "desc": "在数理逻辑中，布尔代数（boolean algebra）是代数的一个分支．初等代数中变量的值是数字，其研究的主要运算符有加法、乘法、乘方以及这三种运算的逆运算．而布尔代数中变量的值仅为 真 和 假 两种（通常记作 1 和 0），其研究的主要运算符有合取（与，\\land）、析取（或，\\lor）、否定（非，\\lnot）．就"
+      "desc": "在数理逻辑中，布尔代数（boolean algebra）是代数的一个分支．初等代数中变量的值是数字，其研究的主要运算符有加法、乘法、乘方以及这三种运算的逆运算．而布尔代数中变量的值仅为 真 和 假 两种（通常记作 1 和 0），其研究的主要运算符有合取（与，\\land）、析取（或，\\lor）、否定（非，\\lnot）．就",
+      "tier": 0
     },
     {
       "path": "math/combinatorics/bell.md",
       "name": "bell",
       "keys": [
         "bell",
-        "math",
-        "combinatorics"
+        "math/combinatorics/bell"
       ],
-      "desc": "贝尔数 Bn 以埃里克·坦普尔·贝尔命名，是组合数学中的一组整数数列，开首是（OEIS A000110）："
+      "desc": "贝尔数 Bn 以埃里克·坦普尔·贝尔命名，是组合数学中的一组整数数列，开首是（OEIS A000110）：",
+      "tier": 0
     },
     {
       "path": "math/combinatorics/bernoulli.md",
       "name": "bernoulli",
       "keys": [
         "bernoulli",
-        "math",
-        "combinatorics"
+        "math/combinatorics/bernoulli"
       ],
-      "desc": "伯努利数 Bn 是一个与数论有密切关联的有理数序列．前几项被发现的伯努利数分别为："
+      "desc": "伯努利数 Bn 是一个与数论有密切关联的有理数序列．前几项被发现的伯努利数分别为：",
+      "tier": 0
     },
     {
       "path": "math/combinatorics/catalan.md",
@@ -2444,31 +2650,31 @@
       "keys": [
         "卡特兰数",
         "catalan",
-        "math",
-        "combinatorics"
+        "math/combinatorics/catalan"
       ],
-      "desc": "Catalan 数经常出现在各类计数问题中．比利时数学家 Eugène Charles Catalan 在 1958 年研究括号序列计数问题时发现了这一数列，它也因此得名．清朝数学家明安图早在 18 世纪 30 年代就已经发现这一数列．"
+      "desc": "Catalan 数经常出现在各类计数问题中．比利时数学家 Eugène Charles Catalan 在 1958 年研究括号序列计数问题时发现了这一数列，它也因此得名．清朝数学家明安图早在 18 世纪 30 年代就已经发现这一数列．",
+      "tier": 2
     },
     {
       "path": "math/combinatorics/combination.md",
       "name": "组合数",
       "keys": [
         "组合数",
-        "math",
-        "combinatorics",
-        "combination"
+        "combination",
+        "math/combinatorics/combination"
       ],
-      "desc": "排列组合是组合数学中的基础．排列就是指从给定个数的元素中取出指定个数的元素进行排序；组合则是指从给定个数的元素中仅仅取出指定个数的元素，不考虑排序．排列组合的中心问题是研究给定要求的排列和组合可能出现的情况总数．排列组合与古典概率论关系密切．"
+      "desc": "排列组合是组合数学中的基础．排列就是指从给定个数的元素中取出指定个数的元素进行排序；组合则是指从给定个数的元素中仅仅取出指定个数的元素，不考虑排序．排列组合的中心问题是研究给定要求的排列和组合可能出现的情况总数．排列组合与古典概率论关系密切．",
+      "tier": 2
     },
     {
       "path": "math/combinatorics/derangement.md",
       "name": "derangement",
       "keys": [
         "derangement",
-        "math",
-        "combinatorics"
+        "math/combinatorics/derangement"
       ],
-      "desc": "错位排列（derangement）是没有任何元素出现在其有序位置的排列．即，对于 1\\sim n 的排列 P，如果满足 Pi\\neq i，则称 P 是 n 的错位排列．"
+      "desc": "错位排列（derangement）是没有任何元素出现在其有序位置的排列．即，对于 1\\sim n 的排列 P，如果满足 Pi\\neq i，则称 P 是 n 的错位排列．",
+      "tier": 0
     },
     {
       "path": "math/combinatorics/drawer-principle.md",
@@ -2476,42 +2682,41 @@
       "keys": [
         "抽屉原理",
         "鸽巢原理",
-        "math",
-        "combinatorics",
         "drawer-principle",
-        "drawer principle"
+        "math/combinatorics/drawer-principle"
       ],
-      "desc": "抽屉原理，亦称鸽巢原理（the pigeonhole principle）．"
+      "desc": "抽屉原理，亦称鸽巢原理（the pigeonhole principle）．",
+      "tier": 2
     },
     {
       "path": "math/combinatorics/entringer.md",
       "name": "entringer",
       "keys": [
         "entringer",
-        "math",
-        "combinatorics"
+        "math/combinatorics/entringer"
       ],
-      "desc": "恩特林格数（Entringer number，OEIS A008281）E(n,k) 是满足下述条件的 0 到 n 共 n+1 个数的置换数目："
+      "desc": "恩特林格数（Entringer number，OEIS A008281）E(n,k) 是满足下述条件的 0 到 n 共 n+1 个数的置换数目：",
+      "tier": 0
     },
     {
       "path": "math/combinatorics/eulerian.md",
       "name": "eulerian",
       "keys": [
         "eulerian",
-        "math",
-        "combinatorics"
+        "math/combinatorics/eulerian"
       ],
-      "desc": "下文中的欧拉数特指 Eulerian number．注意与 Euler number，以及 Euler's number（指与欧拉相关的数学常数例如 \\gamma 或 \\mathrm{e}）作区分．"
+      "desc": "下文中的欧拉数特指 Eulerian number．注意与 Euler number，以及 Euler's number（指与欧拉相关的数学常数例如 \\gamma 或 \\mathrm{e}）作区分．",
+      "tier": 0
     },
     {
       "path": "math/combinatorics/fibonacci.md",
       "name": "fibonacci",
       "keys": [
         "fibonacci",
-        "math",
-        "combinatorics"
+        "math/combinatorics/fibonacci"
       ],
-      "desc": "斐波那契数列（The Fibonacci sequence，OEIS A000045）的定义如下："
+      "desc": "斐波那契数列（The Fibonacci sequence，OEIS A000045）的定义如下：",
+      "tier": 0
     },
     {
       "path": "math/combinatorics/graph-enumeration.md",
@@ -2519,51 +2724,51 @@
       "keys": [
         "graph-enumeration",
         "graph enumeration",
-        "math",
-        "combinatorics"
+        "math/combinatorics/graph-enumeration"
       ],
-      "desc": "在组合数学中，图论计数（Graph Enumeration）是研究满足特定性质的图的计数问题的分支．生成函数、波利亚计数定理 与 符号化方法 和 OEIS 是解决这类问题时最重要的数学工具．图论计数可分为有标号和无标号两大类问题，大多数情况下[^1]有标号版本的问题都比其对应的无标号问题更加简单，因此我们将先考察有标号"
+      "desc": "在组合数学中，图论计数（Graph Enumeration）是研究满足特定性质的图的计数问题的分支．生成函数、波利亚计数定理 与 符号化方法 和 OEIS 是解决这类问题时最重要的数学工具．图论计数可分为有标号和无标号两大类问题，大多数情况下[^1]有标号版本的问题都比其对应的无标号问题更加简单，因此我们将先考察有标号",
+      "tier": 0
     },
     {
       "path": "math/combinatorics/inclusion-exclusion-principle.md",
-      "name": "inclusion-exclusion-principle",
+      "name": "容斥原理",
       "keys": [
+        "容斥原理",
         "inclusion-exclusion-principle",
-        "inclusion exclusion principle",
-        "math",
-        "combinatorics"
+        "math/combinatorics/inclusion-exclusion-principle"
       ],
-      "desc": "假设班里有 10 个学生喜欢数学，15 个学生喜欢语文，21 个学生喜欢编程，班里至少喜欢一门学科的有多少个学生呢？"
+      "desc": "假设班里有 10 个学生喜欢数学，15 个学生喜欢语文，21 个学生喜欢编程，班里至少喜欢一门学科的有多少个学生呢？",
+      "tier": 1
     },
     {
       "path": "math/combinatorics/partition.md",
       "name": "partition",
       "keys": [
         "partition",
-        "math",
-        "combinatorics"
+        "math/combinatorics/partition"
       ],
-      "desc": "分拆：将自然数 n 写成递降正整数和的表示．"
+      "desc": "分拆：将自然数 n 写成递降正整数和的表示．",
+      "tier": 0
     },
     {
       "path": "math/combinatorics/polya.md",
       "name": "polya",
       "keys": [
         "polya",
-        "math",
-        "combinatorics"
+        "math/combinatorics/polya"
       ],
-      "desc": "前置知识：置换和排列"
+      "desc": "前置知识：置换和排列",
+      "tier": 0
     },
     {
       "path": "math/combinatorics/stirling.md",
       "name": "stirling",
       "keys": [
         "stirling",
-        "math",
-        "combinatorics"
+        "math/combinatorics/stirling"
       ],
-      "desc": "虽然被称作「第二类」，第二类斯特林数却在斯特林的相关著作和具体数学中被首先描述，同时也比第一类斯特林数常用得多．"
+      "desc": "虽然被称作「第二类」，第二类斯特林数却在斯特林的相关著作和具体数学中被首先描述，同时也比第一类斯特林数常用得多．",
+      "tier": 0
     },
     {
       "path": "math/combinatorics/vandermonde-convolution.md",
@@ -2571,93 +2776,96 @@
       "keys": [
         "vandermonde-convolution",
         "vandermonde convolution",
-        "math",
-        "combinatorics"
+        "math/combinatorics/vandermonde-convolution"
       ],
-      "desc": "范德蒙德卷积是一种合并组合数的式子，主要应用于组合数学的公式推导．"
+      "desc": "范德蒙德卷积是一种合并组合数的式子，主要应用于组合数学的公式推导．",
+      "tier": 0
     },
     {
       "path": "math/complex.md",
       "name": "complex",
       "keys": [
         "complex",
-        "math"
+        "math/complex"
       ],
-      "desc": "如果您已经学习过复数相关知识，请跳过本页面．"
+      "desc": "如果您已经学习过复数相关知识，请跳过本页面．",
+      "tier": 0
     },
     {
       "path": "math/coordinate.md",
       "name": "coordinate",
       "keys": [
         "coordinate",
-        "math"
+        "math/coordinate"
       ],
-      "desc": "在小学或初中已经学习过角的 静态定义：具有公共端点的两条射线组成的图形叫做角．"
+      "desc": "在小学或初中已经学习过角的 静态定义：具有公共端点的两条射线组成的图形叫做角．",
+      "tier": 0
     },
     {
       "path": "math/game-theory/impartial-game.md",
-      "name": "impartial-game",
+      "name": "博弈论",
       "keys": [
+        "博弈论",
+        "sg函数",
         "impartial-game",
-        "impartial game",
-        "math",
-        "game-theory",
-        "game theory"
+        "math/game-theory/impartial-game"
       ],
-      "desc": "前置知识：博弈论简介"
+      "desc": "前置知识：博弈论简介",
+      "tier": 1
     },
     {
       "path": "math/game-theory/intro.md",
-      "name": "intro",
+      "name": "博弈论",
       "keys": [
-        "math",
-        "game-theory",
-        "game theory"
+        "博弈论",
+        "sg函数",
+        "math/game-theory/intro"
       ],
-      "desc": "通俗地讲，博弈论主要研究的是：在一个游戏中，进行游戏的多位玩家如何选择策略．"
+      "desc": "通俗地讲，博弈论主要研究的是：在一个游戏中，进行游戏的多位玩家如何选择策略．",
+      "tier": 1
     },
     {
       "path": "math/game-theory/partizan-game.md",
-      "name": "partizan-game",
+      "name": "博弈论",
       "keys": [
+        "博弈论",
+        "sg函数",
         "partizan-game",
-        "partizan game",
-        "math",
-        "game-theory",
-        "game theory"
+        "math/game-theory/partizan-game"
       ],
-      "desc": ""
+      "desc": "",
+      "tier": 1
     },
     {
       "path": "math/game-theory/zero-sum-game.md",
-      "name": "zero-sum-game",
+      "name": "博弈论",
       "keys": [
+        "博弈论",
+        "sg函数",
         "zero-sum-game",
-        "zero sum game",
-        "math",
-        "game-theory",
-        "game theory"
+        "math/game-theory/zero-sum-game"
       ],
-      "desc": "前置知识：博弈论简介"
+      "desc": "前置知识：博弈论简介",
+      "tier": 1
     },
     {
       "path": "math/index.md",
       "name": "index",
       "keys": [
-        "math"
+        "math/index"
       ],
-      "desc": "本章介绍 OI 中可能会用到的数学知识．计算机科学与数学紧密相关，而在算法竞赛中尤其强调以数论、排列组合、概率期望、多项式为代表离散、具体的数学：其注重程序实现和现实问题，可以出现在几乎任何类别的题目中．"
+      "desc": "本章介绍 OI 中可能会用到的数学知识．计算机科学与数学紧密相关，而在算法竞赛中尤其强调以数论、排列组合、概率期望、多项式为代表离散、具体的数学：其注重程序实现和现实问题，可以出现在几乎任何类别的题目中．",
+      "tier": 0
     },
     {
       "path": "math/linear-algebra/basis.md",
       "name": "basis",
       "keys": [
         "basis",
-        "math",
-        "linear-algebra",
-        "linear algebra"
+        "math/linear-algebra/basis"
       ],
-      "desc": "回想高中数学立体几何中基向量的概念，我们可以在三维欧氏空间中找到一组基向量 \\boldsymbol{i}，\\boldsymbol{j}，\\boldsymbol{k}，之后空间中任意一个向量都可以由这组基向量表示．换句话说，我们可以 通过有限的基向量来描述无限的三维空间，这足以体现基向量的重要性．"
+      "desc": "回想高中数学立体几何中基向量的概念，我们可以在三维欧氏空间中找到一组基向量 \\boldsymbol{i}，\\boldsymbol{j}，\\boldsymbol{k}，之后空间中任意一个向量都可以由这组基向量表示．换句话说，我们可以 通过有限的基向量来描述无限的三维空间，这足以体现基向量的重要性．",
+      "tier": 0
     },
     {
       "path": "math/linear-algebra/char-poly.md",
@@ -2665,33 +2873,30 @@
       "keys": [
         "char-poly",
         "char poly",
-        "math",
-        "linear-algebra",
-        "linear algebra"
+        "math/linear-algebra/char-poly"
       ],
-      "desc": "特征的这部分只研究方阵，即矩阵 A 对应的线性变换将 n 个向量映射到 n 个向量．"
+      "desc": "特征的这部分只研究方阵，即矩阵 A 对应的线性变换将 n 个向量映射到 n 个向量．",
+      "tier": 0
     },
     {
       "path": "math/linear-algebra/determinant.md",
       "name": "determinant",
       "keys": [
         "determinant",
-        "math",
-        "linear-algebra",
-        "linear algebra"
+        "math/linear-algebra/determinant"
       ],
-      "desc": "行列式，是方阵的一种运算．对于方阵 A，\\det A 表示方阵 A 的行列式．"
+      "desc": "行列式，是方阵的一种运算．对于方阵 A，\\det A 表示方阵 A 的行列式．",
+      "tier": 0
     },
     {
       "path": "math/linear-algebra/diagonalization.md",
       "name": "diagonalization",
       "keys": [
         "diagonalization",
-        "math",
-        "linear-algebra",
-        "linear algebra"
+        "math/linear-algebra/diagonalization"
       ],
-      "desc": "矩阵 A 的属于 \\lambda0 的全部特征向量，再添上零向量，构成一个线性空间，称为矩阵 A 的一个特征子空间，记为 E(\\lambda0)．它是齐次线性方程组："
+      "desc": "矩阵 A 的属于 \\lambda0 的全部特征向量，再添上零向量，构成一个线性空间，称为矩阵 A 的一个特征子空间，记为 E(\\lambda0)．它是齐次线性方程组：",
+      "tier": 0
     },
     {
       "path": "math/linear-algebra/elementary-operations.md",
@@ -2699,32 +2904,29 @@
       "keys": [
         "elementary-operations",
         "elementary operations",
-        "math",
-        "linear-algebra",
-        "linear algebra"
+        "math/linear-algebra/elementary-operations"
       ],
-      "desc": "以下三类方阵称为初等矩阵．"
+      "desc": "以下三类方阵称为初等矩阵．",
+      "tier": 0
     },
     {
       "path": "math/linear-algebra/index.md",
       "name": "index",
       "keys": [
-        "math",
-        "linear-algebra",
-        "linear algebra"
+        "math/linear-algebra/index"
       ],
-      "desc": "本篇与「线性代数」分类下的其他篇目关联不大．但笔者认为，讲讲线性代数的本质，追溯概念的根源与联系，让读者对于线性代数有一个初步但是成体系的认识，确实有其必要性．"
+      "desc": "本篇与「线性代数」分类下的其他篇目关联不大．但笔者认为，讲讲线性代数的本质，追溯概念的根源与联系，让读者对于线性代数有一个初步但是成体系的认识，确实有其必要性．",
+      "tier": 0
     },
     {
       "path": "math/linear-algebra/jordan.md",
       "name": "jordan",
       "keys": [
         "jordan",
-        "math",
-        "linear-algebra",
-        "linear algebra"
+        "math/linear-algebra/jordan"
       ],
-      "desc": "设 T 是 n 维空间 V 上的一个线性变换．如果 T 的最小多项式为："
+      "desc": "设 T 是 n 维空间 V 上的一个线性变换．如果 T 的最小多项式为：",
+      "tier": 0
     },
     {
       "path": "math/linear-algebra/linear-mapping.md",
@@ -2732,35 +2934,32 @@
       "keys": [
         "linear-mapping",
         "linear mapping",
-        "math",
-        "linear-algebra",
-        "linear algebra"
+        "math/linear-algebra/linear-mapping"
       ],
-      "desc": "研究线性映射是研究线性空间之间的映射．"
+      "desc": "研究线性映射是研究线性空间之间的映射．",
+      "tier": 0
     },
     {
       "path": "math/linear-algebra/matrix.md",
-      "name": "矩阵",
+      "name": "矩阵乘法",
       "keys": [
-        "矩阵",
         "矩阵乘法",
-        "math",
-        "linear-algebra",
-        "linear algebra",
-        "matrix"
+        "矩阵快速幂",
+        "matrix",
+        "math/linear-algebra/matrix"
       ],
-      "desc": "本文介绍线性代数中一个非常重要的内容——矩阵（Matrix），主要讲解矩阵的性质、运算，以及矩阵乘法的一些应用．"
+      "desc": "本文介绍线性代数中一个非常重要的内容——矩阵（Matrix），主要讲解矩阵的性质、运算，以及矩阵乘法的一些应用．",
+      "tier": 2
     },
     {
       "path": "math/linear-algebra/product.md",
       "name": "product",
       "keys": [
         "product",
-        "math",
-        "linear-algebra",
-        "linear algebra"
+        "math/linear-algebra/product"
       ],
-      "desc": "本文介绍向量之间的简单运算．"
+      "desc": "本文介绍向量之间的简单运算．",
+      "tier": 0
     },
     {
       "path": "math/linear-algebra/vector-space.md",
@@ -2768,22 +2967,20 @@
       "keys": [
         "vector-space",
         "vector space",
-        "math",
-        "linear-algebra",
-        "linear algebra"
+        "math/linear-algebra/vector-space"
       ],
-      "desc": "线性空间是 d 维欧氏空间（0\\leq d\\leq 3）等的推广，相关概念的关系可参照 欧氏空间与线性空间的关系．"
+      "desc": "线性空间是 d 维欧氏空间（0\\leq d\\leq 3）等的推广，相关概念的关系可参照 欧氏空间与线性空间的关系．",
+      "tier": 0
     },
     {
       "path": "math/linear-algebra/vector.md",
       "name": "vector",
       "keys": [
         "vector",
-        "math",
-        "linear-algebra",
-        "linear algebra"
+        "math/linear-algebra/vector"
       ],
-      "desc": "在本文之前，特别说明一下翻译的相关问题．由于历史原因，数学学科和物理学科关于「vector」一词的翻译不同．"
+      "desc": "在本文之前，特别说明一下翻译的相关问题．由于历史原因，数学学科和物理学科关于「vector」一词的翻译不同．",
+      "tier": 0
     },
     {
       "path": "math/linear-programming.md",
@@ -2791,40 +2988,43 @@
       "keys": [
         "linear-programming",
         "linear programming",
-        "math"
+        "math/linear-programming"
       ],
-      "desc": "线性规划（linear programming, LP）是研究线性约束条件下线性目标函数最值问题的方法总称，是运筹学的一个分支，在多方面均有应用．线性规划的某些特殊情况，如网络流、多商品流量等问题都有可能在算法竞赛题目中出现．算法竞赛很少会出现只能用线性规划算法解决的问题，绝大多数这类问题可以通过网络流建模等方法更高效"
+      "desc": "线性规划（linear programming, LP）是研究线性约束条件下线性目标函数最值问题的方法总称，是运筹学的一个分支，在多方面均有应用．线性规划的某些特殊情况，如网络流、多商品流量等问题都有可能在算法竞赛题目中出现．算法竞赛很少会出现只能用线性规划算法解决的问题，绝大多数这类问题可以通过网络流建模等方法更高效",
+      "tier": 0
     },
     {
       "path": "math/matroid.md",
       "name": "matroid",
       "keys": [
         "matroid",
-        "math"
+        "math/matroid"
       ],
-      "desc": "拟阵为处理与独立性相关的优化问题提供了强大的理论工具，广泛应用于组合数学、图论、算法设计等领域，尤其在为贪心算法等优化方法提供数学理论支持方面发挥了重要作用．"
+      "desc": "拟阵为处理与独立性相关的优化问题提供了强大的理论工具，广泛应用于组合数学、图论、算法设计等领域，尤其在为贪心算法等优化方法提供数学理论支持方面发挥了重要作用．",
+      "tier": 0
     },
     {
       "path": "math/number-theory/basic.md",
       "name": "数论基础",
       "keys": [
         "数论基础",
-        "math",
-        "number-theory",
-        "number theory"
+        "素数",
+        "质数",
+        "math/number-theory/basic"
       ],
-      "desc": "本文对于数论的开头部分做一个简介．"
+      "desc": "本文对于数论的开头部分做一个简介．",
+      "tier": 2
     },
     {
       "path": "math/number-theory/bezouts.md",
-      "name": "bezouts",
+      "name": "扩展欧几里得",
       "keys": [
+        "扩展欧几里得",
         "bezouts",
-        "math",
-        "number-theory",
-        "number theory"
+        "math/number-theory/bezouts"
       ],
-      "desc": "裴蜀定理揭示了最大公约数与整数线性组合之间的深刻联系，是数论中最基础也最重要的结论之一．基于此，本文进一步讨论了一次不定方程的求解方法．"
+      "desc": "裴蜀定理揭示了最大公约数与整数线性组合之间的深刻联系，是数论中最基础也最重要的结论之一．基于此，本文进一步讨论了一次不定方程的求解方法．",
+      "tier": 2
     },
     {
       "path": "math/number-theory/congruence-equation.md",
@@ -2832,23 +3032,21 @@
       "keys": [
         "congruence-equation",
         "congruence equation",
-        "math",
-        "number-theory",
-        "number theory"
+        "math/number-theory/congruence-equation"
       ],
-      "desc": "对正整数 m 和一元整系数多项式 f(x)=\\sum{i=0}^n aix^i，其中未知数 x\\in\\mathbf{Z}m，称形如"
+      "desc": "对正整数 m 和一元整系数多项式 f(x)=\\sum{i=0}^n aix^i，其中未知数 x\\in\\mathbf{Z}m，称形如",
+      "tier": 0
     },
     {
       "path": "math/number-theory/continued-fraction.md",
-      "name": "continued-fraction",
+      "name": "分数规划",
       "keys": [
+        "分数规划",
         "continued-fraction",
-        "continued fraction",
-        "math",
-        "number-theory",
-        "number theory"
+        "math/number-theory/continued-fraction"
       ],
-      "desc": "连分数可以将实数表示为一个收敛的有理数数列的极限．这个数列中的有理数易于计算，而且提供了这个实数的最佳逼近，因而在算法竞赛中常常会用到连分数．除此之外，连分数还和欧几里得算法密切相关，因而可以应用到一系列数论问题中．"
+      "desc": "连分数可以将实数表示为一个收敛的有理数数列的极限．这个数列中的有理数易于计算，而且提供了这个实数的最佳逼近，因而在算法竞赛中常常会用到连分数．除此之外，连分数还和欧几里得算法密切相关，因而可以应用到一系列数论问题中．",
+      "tier": 1
     },
     {
       "path": "math/number-theory/crt.md",
@@ -2856,22 +3054,20 @@
       "keys": [
         "中国剩余定理",
         "crt",
-        "math",
-        "number-theory",
-        "number theory"
+        "math/number-theory/crt"
       ],
-      "desc": "即求满足以下条件的整数：除以 3 余 2，除以 5 余 3，除以 7 余 2．"
+      "desc": "即求满足以下条件的整数：除以 3 余 2，除以 5 余 3，除以 7 余 2．",
+      "tier": 2
     },
     {
       "path": "math/number-theory/dirichlet.md",
       "name": "dirichlet",
       "keys": [
         "dirichlet",
-        "math",
-        "number-theory",
-        "number theory"
+        "math/number-theory/dirichlet"
       ],
-      "desc": "本文介绍 Dirichlet 卷积和 Dirichlet 生成函数．"
+      "desc": "本文介绍 Dirichlet 卷积和 Dirichlet 生成函数．",
+      "tier": 0
     },
     {
       "path": "math/number-theory/discrete-logarithm.md",
@@ -2879,58 +3075,52 @@
       "keys": [
         "discrete-logarithm",
         "discrete logarithm",
-        "math",
-        "number-theory",
-        "number theory"
+        "math/number-theory/discrete-logarithm"
       ],
-      "desc": "前置知识：阶与原根．"
+      "desc": "前置知识：阶与原根．",
+      "tier": 0
     },
     {
       "path": "math/number-theory/euclidean.md",
-      "name": "euclidean",
+      "name": "扩展欧几里得",
       "keys": [
+        "扩展欧几里得",
         "euclidean",
-        "math",
-        "number-theory",
-        "number theory"
+        "math/number-theory/euclidean"
       ],
-      "desc": "类欧几里得算法是洪华敦在 2016 年冬令营营员交流中提出的内容．它常用于解决形如"
+      "desc": "类欧几里得算法是洪华敦在 2016 年冬令营营员交流中提出的内容．它常用于解决形如",
+      "tier": 2
     },
     {
       "path": "math/number-theory/euler-totient.md",
       "name": "欧拉函数",
       "keys": [
         "欧拉函数",
-        "phi",
-        "math",
-        "number-theory",
-        "number theory",
         "euler-totient",
-        "euler totient"
+        "math/number-theory/euler-totient"
       ],
-      "desc": "欧拉函数（Euler's totient function），即 \\varphi(n)，表示的是小于等于 n 且与 n 互质的数的个数．"
+      "desc": "欧拉函数（Euler's totient function），即 \\varphi(n)，表示的是小于等于 n 且与 n 互质的数的个数．",
+      "tier": 2
     },
     {
       "path": "math/number-theory/factorial.md",
       "name": "factorial",
       "keys": [
         "factorial",
-        "math",
-        "number-theory",
-        "number theory"
+        "math/number-theory/factorial"
       ],
-      "desc": "本文讨论了某一模数下阶乘计算的相关结论，并提供一种时间复杂度线性相关于模数大小的计算方法，因而该方法主要适用于模数不太大（\\sim 10^6）的情形．除了本文介绍的方法外，根据场景不同，还可以应用 多项式技术 进行快速计算．"
+      "desc": "本文讨论了某一模数下阶乘计算的相关结论，并提供一种时间复杂度线性相关于模数大小的计算方法，因而该方法主要适用于模数不太大（\\sim 10^6）的情形．除了本文介绍的方法外，根据场景不同，还可以应用 多项式技术 进行快速计算．",
+      "tier": 0
     },
     {
       "path": "math/number-theory/fermat.md",
       "name": "fermat",
       "keys": [
         "fermat",
-        "math",
-        "number-theory",
-        "number theory"
+        "math/number-theory/fermat"
       ],
-      "desc": "本文讨论费马小定理、欧拉定理及其扩展．这些定理解决了任意模数下任意大指数的幂的计算问题．"
+      "desc": "本文讨论费马小定理、欧拉定理及其扩展．这些定理解决了任意模数下任意大指数的幂的计算问题．",
+      "tier": 0
     },
     {
       "path": "math/number-theory/gcd.md",
@@ -2938,33 +3128,30 @@
       "keys": [
         "最大公约数",
         "gcd",
-        "math",
-        "number-theory",
-        "number theory"
+        "math/number-theory/gcd"
       ],
-      "desc": "最大公约数即为 Greatest Common Divisor，常缩写为 gcd．"
+      "desc": "最大公约数即为 Greatest Common Divisor，常缩写为 gcd．",
+      "tier": 2
     },
     {
       "path": "math/number-theory/hyperbola.md",
       "name": "hyperbola",
       "keys": [
         "hyperbola",
-        "math",
-        "number-theory",
-        "number theory"
+        "math/number-theory/hyperbola"
       ],
-      "desc": "前置知识：Dirichlet 卷积、数论分块"
+      "desc": "前置知识：Dirichlet 卷积、数论分块",
+      "tier": 0
     },
     {
       "path": "math/number-theory/inverse.md",
       "name": "inverse",
       "keys": [
         "inverse",
-        "math",
-        "number-theory",
-        "number theory"
+        "math/number-theory/inverse"
       ],
-      "desc": "本文介绍模意义下乘法运算的逆元，并讨论它的常见求解方法．"
+      "desc": "本文介绍模意义下乘法运算的逆元，并讨论它的常见求解方法．",
+      "tier": 0
     },
     {
       "path": "math/number-theory/lift-the-exponent.md",
@@ -2972,11 +3159,10 @@
       "keys": [
         "lift-the-exponent",
         "lift the exponent",
-        "math",
-        "number-theory",
-        "number theory"
+        "math/number-theory/lift-the-exponent"
       ],
-      "desc": "升幂（Lift the Exponent，LTE）引理是初等数论中比较常用的一个定理．"
+      "desc": "升幂（Lift the Exponent，LTE）引理是初等数论中比较常用的一个定理．",
+      "tier": 0
     },
     {
       "path": "math/number-theory/linear-equation.md",
@@ -2984,22 +3170,20 @@
       "keys": [
         "linear-equation",
         "linear equation",
-        "math",
-        "number-theory",
-        "number theory"
+        "math/number-theory/linear-equation"
       ],
-      "desc": "本文讨论线性同余方程的求解．"
+      "desc": "本文讨论线性同余方程的求解．",
+      "tier": 0
     },
     {
       "path": "math/number-theory/lucas.md",
       "name": "lucas",
       "keys": [
         "lucas",
-        "math",
-        "number-theory",
-        "number theory"
+        "math/number-theory/lucas"
       ],
-      "desc": "前置知识：阶乘取模"
+      "desc": "前置知识：阶乘取模",
+      "tier": 0
     },
     {
       "path": "math/number-theory/min-25.md",
@@ -3007,22 +3191,22 @@
       "keys": [
         "min-25",
         "min 25",
-        "math",
-        "number-theory",
-        "number theory"
+        "math/number-theory/min-25"
       ],
-      "desc": "从此种筛法的思想方法来说，其又被称为「Extended Eratosthenes Sieve」．"
+      "desc": "从此种筛法的思想方法来说，其又被称为「Extended Eratosthenes Sieve」．",
+      "tier": 0
     },
     {
       "path": "math/number-theory/mobius.md",
-      "name": "mobius",
+      "name": "莫比乌斯反演",
       "keys": [
+        "莫比乌斯反演",
+        "莫反",
         "mobius",
-        "math",
-        "number-theory",
-        "number theory"
+        "math/number-theory/mobius"
       ],
-      "desc": "前置知识：数论分块、Dirichlet 卷积"
+      "desc": "前置知识：数论分块、Dirichlet 卷积",
+      "tier": 2
     },
     {
       "path": "math/number-theory/mod-arithmetic.md",
@@ -3030,11 +3214,10 @@
       "keys": [
         "mod-arithmetic",
         "mod arithmetic",
-        "math",
-        "number-theory",
-        "number theory"
+        "math/number-theory/mod-arithmetic"
       ],
-      "desc": "算法竞赛中，数论部分的一个重要组成部分就是 模算术（modular arithmetic），也就是在某一模数下进行各种整数运算．除了基础的四则运算和求幂外，还可以方便地进行取对数、开各次方、求阶乘和组合数等运算．"
+      "desc": "算法竞赛中，数论部分的一个重要组成部分就是 模算术（modular arithmetic），也就是在某一模数下进行各种整数运算．除了基础的四则运算和求幂外，还可以方便地进行取对数、开各次方、求阶乘和组合数等运算．",
+      "tier": 0
     },
     {
       "path": "math/number-theory/pell-equation.md",
@@ -3042,11 +3225,10 @@
       "keys": [
         "pell-equation",
         "pell equation",
-        "math",
-        "number-theory",
-        "number theory"
+        "math/number-theory/pell-equation"
       ],
-      "desc": "前置知识：连分数、二次域"
+      "desc": "前置知识：连分数、二次域",
+      "tier": 0
     },
     {
       "path": "math/number-theory/pollard-rho.md",
@@ -3054,11 +3236,10 @@
       "keys": [
         "pollard-rho",
         "pollard rho",
-        "math",
-        "number-theory",
-        "number theory"
+        "math/number-theory/pollard-rho"
       ],
-      "desc": "给定一个正整数 N \\in \\mathbf{N}{+}，试快速找到它的一个 非平凡因数．"
+      "desc": "给定一个正整数 N \\in \\mathbf{N}{+}，试快速找到它的一个 非平凡因数．",
+      "tier": 0
     },
     {
       "path": "math/number-theory/powerful-number.md",
@@ -3066,23 +3247,22 @@
       "keys": [
         "powerful-number",
         "powerful number",
-        "math",
-        "number-theory",
-        "number theory"
+        "math/number-theory/powerful-number"
       ],
-      "desc": "Powerful Number（以下简称 PN）筛类似于杜教筛，或者说是杜教筛的一个扩展，可以拿来求一些积性函数的前缀和．"
+      "desc": "Powerful Number（以下简称 PN）筛类似于杜教筛，或者说是杜教筛的一个扩展，可以拿来求一些积性函数的前缀和．",
+      "tier": 0
     },
     {
       "path": "math/number-theory/prime-counting.md",
-      "name": "prime-counting",
+      "name": "素数",
       "keys": [
+        "素数",
+        "质数",
         "prime-counting",
-        "prime counting",
-        "math",
-        "number-theory",
-        "number theory"
+        "math/number-theory/prime-counting"
       ],
-      "desc": "本文介绍素数计数问题的亚线性算法．素数计数问题即计算不超过 n 的素数个数 \\pi(n)．对于 n\\sim 10^8，可以通过 筛法 在 \\tilde O(n) 时间内计算．然而，当 n \\sim 10^{10} 乃至更大时，筛法等基于枚举思想的算法将难以适用．针对这一情形，本文介绍了一系列较易实现的算法，其时间复杂度"
+      "desc": "本文介绍素数计数问题的亚线性算法．素数计数问题即计算不超过 n 的素数个数 \\pi(n)．对于 n\\sim 10^8，可以通过 筛法 在 \\tilde O(n) 时间内计算．然而，当 n \\sim 10^{10} 乃至更大时，筛法等基于枚举思想的算法将难以适用．针对这一情形，本文介绍了一系列较易实现的算法，其时间复杂度",
+      "tier": 1
     },
     {
       "path": "math/number-theory/prime.md",
@@ -3090,13 +3270,11 @@
       "keys": [
         "素数",
         "质数",
-        "素性测试",
-        "math",
-        "number-theory",
-        "number theory",
-        "prime"
+        "prime",
+        "math/number-theory/prime"
       ],
-      "desc": "素数与合数的定义，见 数论基础．"
+      "desc": "素数与合数的定义，见 数论基础．",
+      "tier": 2
     },
     {
       "path": "math/number-theory/primitive-root.md",
@@ -3104,11 +3282,10 @@
       "keys": [
         "primitive-root",
         "primitive root",
-        "math",
-        "number-theory",
-        "number theory"
+        "math/number-theory/primitive-root"
       ],
-      "desc": "前置知识：费马小定理、欧拉定理、拉格朗日定理"
+      "desc": "前置知识：费马小定理、欧拉定理、拉格朗日定理",
+      "tier": 0
     },
     {
       "path": "math/number-theory/quad-residue.md",
@@ -3116,47 +3293,43 @@
       "keys": [
         "quad-residue",
         "quad residue",
-        "math",
-        "number-theory",
-        "number theory"
+        "math/number-theory/quad-residue"
       ],
-      "desc": "二次剩余可以认为是在讨论求模意义下 开平方 运算的可行性．对于更高次方的开方可参见 k 次剩余．"
+      "desc": "二次剩余可以认为是在讨论求模意义下 开平方 运算的可行性．对于更高次方的开方可参见 k 次剩余．",
+      "tier": 0
     },
     {
       "path": "math/number-theory/quadratic.md",
       "name": "quadratic",
       "keys": [
         "quadratic",
-        "math",
-        "number-theory",
-        "number theory"
+        "math/number-theory/quadratic"
       ],
-      "desc": "本文简要介绍二次域的相关概念．与之相关的两个重要例子是 Gauss 整数和 Eisenstein 整数，它们可以用于解决一些数论问题．"
+      "desc": "本文简要介绍二次域的相关概念．与之相关的两个重要例子是 Gauss 整数和 Eisenstein 整数，它们可以用于解决一些数论问题．",
+      "tier": 0
     },
     {
       "path": "math/number-theory/residue.md",
       "name": "residue",
       "keys": [
         "residue",
-        "math",
-        "number-theory",
-        "number theory"
+        "math/number-theory/residue"
       ],
-      "desc": "前置知识：离散对数"
+      "desc": "前置知识：离散对数",
+      "tier": 0
     },
     {
       "path": "math/number-theory/sieve.md",
       "name": "筛法",
       "keys": [
         "筛法",
-        "埃氏筛",
         "线性筛",
-        "math",
-        "number-theory",
-        "number theory",
-        "sieve"
+        "埃氏筛",
+        "sieve",
+        "math/number-theory/sieve"
       ],
-      "desc": "如果我们想要知道小于等于 n 有多少个素数呢？"
+      "desc": "如果我们想要知道小于等于 n 有多少个素数呢？",
+      "tier": 2
     },
     {
       "path": "math/number-theory/sqrt-decomposition.md",
@@ -3164,11 +3337,10 @@
       "keys": [
         "sqrt-decomposition",
         "sqrt decomposition",
-        "math",
-        "number-theory",
-        "number theory"
+        "math/number-theory/sqrt-decomposition"
       ],
-      "desc": "数论分块可以快速计算一些形如"
+      "desc": "数论分块可以快速计算一些形如",
+      "tier": 0
     },
     {
       "path": "math/number-theory/stern-brocot.md",
@@ -3176,22 +3348,20 @@
       "keys": [
         "stern-brocot",
         "stern brocot",
-        "math",
-        "number-theory",
-        "number theory"
+        "math/number-theory/stern-brocot"
       ],
-      "desc": "本文介绍存储最简分数的数据结构以及其它相关概念．它们与 连分数 紧密相关，在算法竞赛中可以用于解决一系列数论问题，并可能作为某些题目的隐含背景出现．"
+      "desc": "本文介绍存储最简分数的数据结构以及其它相关概念．它们与 连分数 紧密相关，在算法竞赛中可以用于解决一系列数论问题，并可能作为某些题目的隐含背景出现．",
+      "tier": 0
     },
     {
       "path": "math/number-theory/zhou.md",
       "name": "zhou",
       "keys": [
         "zhou",
-        "math",
-        "number-theory",
-        "number theory"
+        "math/number-theory/zhou"
       ],
-      "desc": "洲阁筛是一种能在亚线性时间复杂度内求出大多数积性函数前缀和的筛法．"
+      "desc": "洲阁筛是一种能在亚线性时间复杂度内求出大多数积性函数前缀和的筛法．",
+      "tier": 0
     },
     {
       "path": "math/numeral-sys/balanced-ternary.md",
@@ -3199,22 +3369,20 @@
       "keys": [
         "balanced-ternary",
         "balanced ternary",
-        "math",
-        "numeral-sys",
-        "numeral sys"
+        "math/numeral-sys/balanced-ternary"
       ],
-      "desc": "平衡三进制，也称为对称三进制．这是一个广义进位系统．"
+      "desc": "平衡三进制，也称为对称三进制．这是一个广义进位系统．",
+      "tier": 0
     },
     {
       "path": "math/numeral-sys/base.md",
       "name": "base",
       "keys": [
         "base",
-        "math",
-        "numeral-sys",
-        "numeral sys"
+        "math/numeral-sys/base"
       ],
-      "desc": "一般地，我们常将一个 n 进制的数记作 (ak\\cdots a1a0)n、(ak\\cdots a1a0){(n)}、{ak\\cdots a1a0}{(n)}、{ak\\cdots a1a0}{n} 等．若基数隐含在上下文中我们也可以省略下标．注意此处的 ak\\cdots a1a0 并不是 k+1 个数的乘积，而是一串序列"
+      "desc": "一般地，我们常将一个 n 进制的数记作 (ak\\cdots a1a0)n、(ak\\cdots a1a0){(n)}、{ak\\cdots a1a0}{(n)}、{ak\\cdots a1a0}{n} 等．若基数隐含在上下文中我们也可以省略下标．注意此处的 ak\\cdots a1a0 并不是 k+1 个数的乘积，而是一串序列",
+      "tier": 0
     },
     {
       "path": "math/numeral-sys/gray-code.md",
@@ -3222,82 +3390,81 @@
       "keys": [
         "gray-code",
         "gray code",
-        "math",
-        "numeral-sys",
-        "numeral sys"
+        "math/numeral-sys/gray-code"
       ],
-      "desc": "格雷码是一个二进制数字系统，其中两个相邻数的二进制位只有一位不同．举个例子，3 位二进制数的格雷码序列为"
+      "desc": "格雷码是一个二进制数字系统，其中两个相邻数的二进制位只有一位不同．举个例子，3 位二进制数的格雷码序列为",
+      "tier": 0
     },
     {
       "path": "math/numeral-sys/intro.md",
       "name": "intro",
       "keys": [
-        "math",
-        "numeral-sys",
-        "numeral sys"
+        "math/numeral-sys/intro"
       ],
-      "desc": "此处讨论的不是 number system，数学中的数字系统（number system）指的是一类集合，如整数集 \\mathbf{Z}、复数集 \\mathbf{C} 等．"
+      "desc": "此处讨论的不是 number system，数学中的数字系统（number system）指的是一类集合，如整数集 \\mathbf{Z}、复数集 \\mathbf{C} 等．",
+      "tier": 0
     },
     {
       "path": "math/numerical/gauss.md",
-      "name": "gauss",
+      "name": "高斯消元",
       "keys": [
+        "高斯消元",
         "gauss",
-        "math",
-        "numerical"
+        "math/numerical/gauss"
       ],
-      "desc": "高斯消元法（Gaussian elimination）是求解线性方程组的经典算法，它在当代数学中有着重要的地位和价值，是线性代数课程教学的重要组成部分．"
+      "desc": "高斯消元法（Gaussian elimination）是求解线性方程组的经典算法，它在当代数学中有着重要的地位和价值，是线性代数课程教学的重要组成部分．",
+      "tier": 2
     },
     {
       "path": "math/numerical/integral.md",
       "name": "integral",
       "keys": [
         "integral",
-        "math",
-        "numerical"
+        "math/numerical/integral"
       ],
-      "desc": "简单来说，函数 f(x) 在区间 [l,r] 上的定积分 \\int{l}^{r}f(x)\\mathrm{d}x 指的是 f(x) 在区间 [l,r] 中与 x 轴围成的区域的面积（其中 x 轴上方的部分为正值，x 轴下方的部分为负值）．"
+      "desc": "简单来说，函数 f(x) 在区间 [l,r] 上的定积分 \\int{l}^{r}f(x)\\mathrm{d}x 指的是 f(x) 在区间 [l,r] 中与 x 轴围成的区域的面积（其中 x 轴上方的部分为正值，x 轴下方的部分为负值）．",
+      "tier": 0
     },
     {
       "path": "math/numerical/interp.md",
       "name": "interp",
       "keys": [
         "interp",
-        "math",
-        "numerical"
+        "math/numerical/interp"
       ],
-      "desc": "插值是一种通过已知的、离散的数据点推算一定范围内的新数据点的方法．插值法常用于函数拟合中．"
+      "desc": "插值是一种通过已知的、离散的数据点推算一定范围内的新数据点的方法．插值法常用于函数拟合中．",
+      "tier": 0
     },
     {
       "path": "math/numerical/newton.md",
       "name": "newton",
       "keys": [
         "newton",
-        "math",
-        "numerical"
+        "math/numerical/newton"
       ],
-      "desc": "本文介绍如何用牛顿迭代法（Newton's method for finding roots）求方程的近似解，该方法于 17 世纪由牛顿提出．"
+      "desc": "本文介绍如何用牛顿迭代法（Newton's method for finding roots）求方程的近似解，该方法于 17 世纪由牛顿提出．",
+      "tier": 0
     },
     {
       "path": "math/order-theory.md",
-      "name": "偏序",
+      "name": "order-theory",
       "keys": [
-        "偏序",
-        "序理论",
-        "math",
         "order-theory",
-        "order theory"
+        "order theory",
+        "math/order-theory"
       ],
-      "desc": "序理论是利用二元关系来将「次序」这一概念严格化的数学分支，下面将介绍这一分支的基本定义．"
+      "desc": "序理论是利用二元关系来将「次序」这一概念严格化的数学分支，下面将介绍这一分支的基本定义．",
+      "tier": 0
     },
     {
       "path": "math/permutation.md",
       "name": "permutation",
       "keys": [
         "permutation",
-        "math"
+        "math/permutation"
       ],
-      "desc": "置换和排列是各类问题中都很常见的概念．"
+      "desc": "置换和排列是各类问题中都很常见的概念．",
+      "tier": 0
     },
     {
       "path": "math/poly/comp-rev.md",
@@ -3305,30 +3472,30 @@
       "keys": [
         "comp-rev",
         "comp rev",
-        "math",
-        "poly"
+        "math/poly/comp-rev"
       ],
-      "desc": "形式幂级数的复合和复合逆也是常见的形式幂级数操作，对于没有特殊性质的 f 之前我们一直使用的多是 O\\left(n^2\\right) 的算法（该算法仍需使用 FFT）来计算 f(g) \\bmod{x^n} 其中 f\\in\\mathbb{C}\\left\\lbrack\\left\\lbrack x\\right\\rbrack\\"
+      "desc": "形式幂级数的复合和复合逆也是常见的形式幂级数操作，对于没有特殊性质的 f 之前我们一直使用的多是 O\\left(n^2\\right) 的算法（该算法仍需使用 FFT）来计算 f(g) \\bmod{x^n} 其中 f\\in\\mathbb{C}\\left\\lbrack\\left\\lbrack x\\right\\rbrack\\",
+      "tier": 0
     },
     {
       "path": "math/poly/czt.md",
       "name": "czt",
       "keys": [
         "czt",
-        "math",
-        "poly"
+        "math/poly/czt"
       ],
-      "desc": "与离散傅里叶变换类似，Chirp Z 变换是给出多项式 f(x) = \\sum{i = 0}^{m - 1} fi x^i \\in \\mathbb{C}\\lbrack x\\rbrack 和 q \\in \\mathbb{C} \\setminus \\{0\\} 求出 f(1), f(q), \\dots, f(q^{n - 1"
+      "desc": "与离散傅里叶变换类似，Chirp Z 变换是给出多项式 f(x) = \\sum{i = 0}^{m - 1} fi x^i \\in \\mathbb{C}\\lbrack x\\rbrack 和 q \\in \\mathbb{C} \\setminus \\{0\\} 求出 f(1), f(q), \\dots, f(q^{n - 1",
+      "tier": 0
     },
     {
       "path": "math/poly/egf.md",
       "name": "egf",
       "keys": [
         "egf",
-        "math",
-        "poly"
+        "math/poly/egf"
       ],
-      "desc": "序列 a 的指数生成函数（exponential generating function，EGF）定义为形式幂级数："
+      "desc": "序列 a 的指数生成函数（exponential generating function，EGF）定义为形式幂级数：",
+      "tier": 0
     },
     {
       "path": "math/poly/elementary-func.md",
@@ -3336,10 +3503,10 @@
       "keys": [
         "elementary-func",
         "elementary func",
-        "math",
-        "poly"
+        "math/poly/elementary-func"
       ],
-      "desc": "本页面包含多项式常见的初等函数操作．具体而言，本页面包含如下内容："
+      "desc": "本页面包含多项式常见的初等函数操作．具体而言，本页面包含如下内容：",
+      "tier": 0
     },
     {
       "path": "math/poly/fft.md",
@@ -3347,40 +3514,39 @@
       "keys": [
         "fft",
         "快速傅里叶变换",
-        "math",
-        "poly"
+        "math/poly/fft"
       ],
-      "desc": "前置知识：复数．"
+      "desc": "前置知识：复数．",
+      "tier": 2
     },
     {
       "path": "math/poly/fundamental.md",
       "name": "fundamental",
       "keys": [
         "fundamental",
-        "math",
-        "poly"
+        "math/poly/fundamental"
       ],
-      "desc": "任何复系数一元 n 次多项式（n 至少为 1）方程在复数域上至少有一根．"
+      "desc": "任何复系数一元 n 次多项式（n 至少为 1）方程在复数域上至少有一根．",
+      "tier": 0
     },
     {
       "path": "math/poly/fwt.md",
       "name": "FWT",
       "keys": [
         "fwt",
-        "快速沃尔什变换",
-        "math",
-        "poly"
+        "math/poly/fwt"
       ],
-      "desc": "沃尔什转换（Walsh Transform）[^note1]是在频谱分析上作为离散傅立叶变换的替代方案的一种方法，在信号处理中应用很广泛．FFT 是 double 类型的，但是 Walsh 把信号在不同震荡频率方波下拆解，因此所有的系数都是绝对值大小相同的整数，这使得不需要作浮点数的乘法运算，提高了运算速度．"
+      "desc": "沃尔什转换（Walsh Transform）[^note1]是在频谱分析上作为离散傅立叶变换的替代方案的一种方法，在信号处理中应用很广泛．FFT 是 double 类型的，但是 Walsh 把信号在不同震荡频率方波下拆解，因此所有的系数都是绝对值大小相同的整数，这使得不需要作浮点数的乘法运算，提高了运算速度．",
+      "tier": 2
     },
     {
       "path": "math/poly/intro.md",
       "name": "intro",
       "keys": [
-        "math",
-        "poly"
+        "math/poly/intro"
       ],
-      "desc": "操纵 有限项/无限项 的多项式是 OI 数学中，尤其是生成函数中的重要内容．"
+      "desc": "操纵 有限项/无限项 的多项式是 OI 数学中，尤其是生成函数中的重要内容．",
+      "tier": 0
     },
     {
       "path": "math/poly/lagrange-inversion.md",
@@ -3388,10 +3554,10 @@
       "keys": [
         "lagrange-inversion",
         "lagrange inversion",
-        "math",
-        "poly"
+        "math/poly/lagrange-inversion"
       ],
-      "desc": "我们已经知道形式幂级数环 \\mathbb{C}\\lbrack\\lbrack x\\rbrack\\rbrack 了，定义形式 Laurent 级数环："
+      "desc": "我们已经知道形式幂级数环 \\mathbb{C}\\lbrack\\lbrack x\\rbrack\\rbrack 了，定义形式 Laurent 级数环：",
+      "tier": 0
     },
     {
       "path": "math/poly/linear-recurrence.md",
@@ -3399,10 +3565,10 @@
       "keys": [
         "linear-recurrence",
         "linear recurrence",
-        "math",
-        "poly"
+        "math/poly/linear-recurrence"
       ],
-      "desc": "常系数齐次线性递推数列（又称为 C-finite 或 C-recursive 数列）是常见的一类基础的递推数列．"
+      "desc": "常系数齐次线性递推数列（又称为 C-finite 或 C-recursive 数列）是常见的一类基础的递推数列．",
+      "tier": 0
     },
     {
       "path": "math/poly/multipoint-eval-interpolation.md",
@@ -3410,51 +3576,50 @@
       "keys": [
         "multipoint-eval-interpolation",
         "multipoint eval interpolation",
-        "math",
-        "poly"
+        "math/poly/multipoint-eval-interpolation"
       ],
-      "desc": "给出一个多项式 f\\left(x\\right) 和 n 个点 x{1},x{2},\\dots,x{n}，求"
+      "desc": "给出一个多项式 f\\left(x\\right) 和 n 个点 x{1},x{2},\\dots,x{n}，求",
+      "tier": 0
     },
     {
       "path": "math/poly/newton.md",
       "name": "newton",
       "keys": [
         "newton",
-        "math",
-        "poly"
+        "math/poly/newton"
       ],
-      "desc": "给定多项式 G\\left(x, y\\right)，已知多项式 f\\left(x\\right) 满足："
+      "desc": "给定多项式 G\\left(x, y\\right)，已知多项式 f\\left(x\\right) 满足：",
+      "tier": 0
     },
     {
       "path": "math/poly/ntt.md",
       "name": "NTT",
       "keys": [
         "ntt",
-        "快速数论变换",
-        "math",
-        "poly"
+        "math/poly/ntt"
       ],
-      "desc": "NTT 解决的是多项式乘法带模数的情况，可以说有些受模数的限制，数也比较大．目前最常见的模数是 998244353．"
+      "desc": "NTT 解决的是多项式乘法带模数的情况，可以说有些受模数的限制，数也比较大．目前最常见的模数是 998244353．",
+      "tier": 2
     },
     {
       "path": "math/poly/ogf.md",
       "name": "ogf",
       "keys": [
         "ogf",
-        "math",
-        "poly"
+        "math/poly/ogf"
       ],
-      "desc": "序列 a 的普通生成函数（ordinary generating function，OGF）定义为形式幂级数："
+      "desc": "序列 a 的普通生成函数（ordinary generating function，OGF）定义为形式幂级数：",
+      "tier": 0
     },
     {
       "path": "math/poly/shift.md",
       "name": "shift",
       "keys": [
         "shift",
-        "math",
-        "poly"
+        "math/poly/shift"
       ],
-      "desc": "多项式平移是简单情况的多项式复合变换，给出 f(x)=\\sum  {i=0}^nfix^i 的系数和一个常数 c，求 f(x+c) 的系数，即 f(x)\\mapsto f(x+c)．"
+      "desc": "多项式平移是简单情况的多项式复合变换，给出 f(x)=\\sum  {i=0}^nfix^i 的系数和一个常数 c，求 f(x+c) 的系数，即 f(x)\\mapsto f(x+c)．",
+      "tier": 0
     },
     {
       "path": "math/poly/symbolic-method.md",
@@ -3462,74 +3627,75 @@
       "keys": [
         "symbolic-method",
         "symbolic method",
-        "math",
-        "poly"
+        "math/poly/symbolic-method"
       ],
-      "desc": "符号化方法（symbolic method）是将组合对象快速转换成生成函数的一种方法，我们将考虑对于集合上定义的特定运算，然后导出其对应的生成函数的运算．"
+      "desc": "符号化方法（symbolic method）是将组合对象快速转换成生成函数的一种方法，我们将考虑对于集合上定义的特定运算，然后导出其对应的生成函数的运算．",
+      "tier": 0
     },
     {
       "path": "math/probability/basic-conception.md",
-      "name": "basic-conception",
+      "name": "期望",
       "keys": [
+        "期望",
         "basic-conception",
-        "basic conception",
-        "math",
-        "probability"
+        "math/probability/basic-conception"
       ],
-      "desc": "在研究具体的随机现象时我们通常着重关注以下要素："
+      "desc": "在研究具体的随机现象时我们通常着重关注以下要素：",
+      "tier": 1
     },
     {
       "path": "math/probability/concentration-inequality.md",
-      "name": "concentration-inequality",
+      "name": "期望",
       "keys": [
+        "期望",
         "concentration-inequality",
-        "concentration inequality",
-        "math",
-        "probability"
+        "math/probability/concentration-inequality"
       ],
-      "desc": "算法竞赛中有时会用到 随机化算法，这些算法的正确性与时空复杂度通常依赖于「某些随机事件发生的概率很小」这一前提．例如，快速排序的复杂度依赖于「所选的 pivot 元素几乎是最小或最大元素」这一事件较少发生．"
+      "desc": "算法竞赛中有时会用到 随机化算法，这些算法的正确性与时空复杂度通常依赖于「某些随机事件发生的概率很小」这一前提．例如，快速排序的复杂度依赖于「所选的 pivot 元素几乎是最小或最大元素」这一事件较少发生．",
+      "tier": 1
     },
     {
       "path": "math/probability/conditional-probability.md",
-      "name": "conditional-probability",
+      "name": "期望",
       "keys": [
+        "期望",
         "conditional-probability",
-        "conditional probability",
-        "math",
-        "probability"
+        "math/probability/conditional-probability"
       ],
-      "desc": "当某事件已经发生时，一些随机事件的概率会因为已知信息的增加发生变化．例如在手游抽卡时，我们可能会认为单次抽卡出六星与不出六星是等概率的，但随着我们连抽 50 发一个六星都没有，再固执地认为「出六星与不出六星等概率」就显得不是那么明智．"
+      "desc": "当某事件已经发生时，一些随机事件的概率会因为已知信息的增加发生变化．例如在手游抽卡时，我们可能会认为单次抽卡出六星与不出六星是等概率的，但随着我们连抽 50 发一个六星都没有，再固执地认为「出六星与不出六星等概率」就显得不是那么明智．",
+      "tier": 1
     },
     {
       "path": "math/probability/exp-var.md",
-      "name": "exp-var",
+      "name": "期望",
       "keys": [
+        "期望",
         "exp-var",
-        "exp var",
-        "math",
-        "probability"
+        "math/probability/exp-var"
       ],
-      "desc": "本文将介绍随机变量的期望、方差等数字特征．"
+      "desc": "本文将介绍随机变量的期望、方差等数字特征．",
+      "tier": 1
     },
     {
       "path": "math/probability/random-variable.md",
-      "name": "random-variable",
+      "name": "期望",
       "keys": [
+        "期望",
         "random-variable",
-        "random variable",
-        "math",
-        "probability"
+        "math/probability/random-variable"
       ],
-      "desc": "给定概率空间 (\\Omega, \\mathcal{F}, P)，定义在样本空间 \\Omega 上的函数 X : \\Omega \\to \\mathbb{R} 若满足：对任意 t \\in \\mathbb{R} 都有"
+      "desc": "给定概率空间 (\\Omega, \\mathcal{F}, P)，定义在样本空间 \\Omega 上的函数 X : \\Omega \\to \\mathbb{R} 若满足：对任意 t \\in \\mathbb{R} 都有",
+      "tier": 1
     },
     {
       "path": "math/simplex.md",
       "name": "simplex",
       "keys": [
         "simplex",
-        "math"
+        "math/simplex"
       ],
-      "desc": "前置知识：线性规划基础"
+      "desc": "前置知识：线性规划基础",
+      "tier": 0
     },
     {
       "path": "math/young-tableau.md",
@@ -3537,9 +3703,10 @@
       "keys": [
         "young-tableau",
         "young tableau",
-        "math"
+        "math/young-tableau"
       ],
-      "desc": "杨表是一种特殊的矩阵．它便于对称群和一般线性群的群表示和性质研究．杨表由剑桥大学数学家阿尔弗雷德·杨（Alfred Young）于 1900 年首次提出，于 1903 年被德国数学家弗罗贝尼乌斯（Ferdinand Georg Frobenius）应用于对称群的研究．"
+      "desc": "杨表是一种特殊的矩阵．它便于对称群和一般线性群的群表示和性质研究．杨表由剑桥大学数学家阿尔弗雷德·杨（Alfred Young）于 1900 年首次提出，于 1903 年被德国数学家弗罗贝尼乌斯（Ferdinand Georg Frobenius）应用于对称群的研究．",
+      "tier": 0
     },
     {
       "path": "misc/15-puzzle.md",
@@ -3547,21 +3714,22 @@
       "keys": [
         "15-puzzle",
         "15 puzzle",
-        "misc"
+        "misc/15-puzzle"
       ],
-      "desc": "15 - 拼图常见别称为 n - 拼图，其中数字 n 指的是方盘中的方块总数．15 - 拼图的不同尺寸变体亦使用了类似的名称，例如 8 拼图指的是置于 3\\times3 方盘中的 8 个方块．但 15 拼图也可以称为 16 拼图，此处的 16 指的是方块容量．它的扩展问题有时也包括了 n \\times m 的滑动方盘．"
+      "desc": "15 - 拼图常见别称为 n - 拼图，其中数字 n 指的是方盘中的方块总数．15 - 拼图的不同尺寸变体亦使用了类似的名称，例如 8 拼图指的是置于 3\\times3 方盘中的 8 个方块．但 15 拼图也可以称为 16 拼图，此处的 16 指的是方块容量．它的扩展问题有时也包括了 n \\times m 的滑动方盘．",
+      "tier": 0
     },
     {
       "path": "misc/cc-basic.md",
       "name": "复杂度",
       "keys": [
         "复杂度",
-        "复杂度分析",
-        "misc",
+        "时间复杂度",
         "cc-basic",
-        "cc basic"
+        "misc/cc-basic"
       ],
-      "desc": "本部分将介绍基础的计算理论的知识．这部分内容在 OI 中作用不大（但还是略有作用：如果你遇到了一个 NP-hard 问题，你可以认为它是不存在多项式复杂度的解法的），可以作为兴趣了解，或者为以后的学习做准备．"
+      "desc": "本部分将介绍基础的计算理论的知识．这部分内容在 OI 中作用不大（但还是略有作用：如果你遇到了一个 NP-hard 问题，你可以认为它是不存在多项式复杂度的解法的），可以作为兴趣了解，或者为以后的学习做准备．",
+      "tier": 2
     },
     {
       "path": "misc/cdq-divide.md",
@@ -3569,37 +3737,41 @@
       "keys": [
         "cdq-divide",
         "cdq divide",
-        "misc"
+        "misc/cdq-divide"
       ],
-      "desc": "本页面将介绍 CDQ 分治．"
+      "desc": "本页面将介绍 CDQ 分治．",
+      "tier": 0
     },
     {
       "path": "misc/discrete.md",
       "name": "离散化",
       "keys": [
         "离散化",
-        "misc",
-        "discrete"
+        "discrete",
+        "misc/discrete"
       ],
-      "desc": "离散化是一种数据处理的技巧，本质上可以看成是一种 哈希，其保证数据在哈希以后仍然保持原来的 全/偏序 关系．"
+      "desc": "离散化是一种数据处理的技巧，本质上可以看成是一种 哈希，其保证数据在哈希以后仍然保持原来的 全/偏序 关系．",
+      "tier": 2
     },
     {
       "path": "misc/endianness.md",
       "name": "endianness",
       "keys": [
         "endianness",
-        "misc"
+        "misc/endianness"
       ],
-      "desc": "本页面将简要介绍字节顺序的概念和分类．"
+      "desc": "本页面将简要介绍字节顺序的概念和分类．",
+      "tier": 0
     },
     {
       "path": "misc/expression.md",
       "name": "expression",
       "keys": [
         "expression",
-        "misc"
+        "misc/expression"
       ],
-      "desc": "表达式求值要解决的问题一般是输入一个字符串表示的表达式，要求输出它的值．当然也有变种比如表达式中是否包含括号，指数运算，含多少变量，判断多个表达式是否等价，等等．"
+      "desc": "表达式求值要解决的问题一般是输入一个字符串表示的表达式，要求输出它的值．当然也有变种比如表达式中是否包含括号，指数运算，含多少变量，判断多个表达式是否等价，等等．",
+      "tier": 0
     },
     {
       "path": "misc/frac-programming.md",
@@ -3607,18 +3779,20 @@
       "keys": [
         "frac-programming",
         "frac programming",
-        "misc"
+        "misc/frac-programming"
       ],
-      "desc": "分数规划用来求一个分式的极值．其形式化表述是，给出 ai 和 bi，求一组 wi\\in\\{0,1\\}，最小化或最大化"
+      "desc": "分数规划用来求一个分式的极值．其形式化表述是，给出 ai 和 bi，求一组 wi\\in\\{0,1\\}，最小化或最大化",
+      "tier": 0
     },
     {
       "path": "misc/fsm.md",
       "name": "fsm",
       "keys": [
         "fsm",
-        "misc"
+        "misc/fsm"
       ],
-      "desc": "前置知识：语言和判定问题"
+      "desc": "前置知识：语言和判定问题",
+      "tier": 0
     },
     {
       "path": "misc/garsia-wachs.md",
@@ -3626,9 +3800,10 @@
       "keys": [
         "garsia-wachs",
         "garsia wachs",
-        "misc"
+        "misc/garsia-wachs"
       ],
-      "desc": "一个整数 n，对于 n+1 个非负权值 w{0},w{1},\\dots ,w{n}，构造一棵有根且 n 个内部节点都有两个子节点的二叉树，这意味着这棵二叉树有 n+1 个叶节点．我们将 n+1 的输入序列与二叉树结点顺序一一映射，目标是在所有具有 n 个内部节点的可能的树结构中找到一棵树，使外部从根到每个叶子的路径长度"
+      "desc": "一个整数 n，对于 n+1 个非负权值 w{0},w{1},\\dots ,w{n}，构造一棵有根且 n 个内部节点都有两个子节点的二叉树，这意味着这棵二叉树有 n+1 个叶节点．我们将 n+1 的输入序列与二叉树结点顺序一一映射，目标是在所有具有 n 个内部节点的可能的树结构中找到一棵树，使外部从根到每个叶子的路径长度",
+      "tier": 0
     },
     {
       "path": "misc/hill-climbing.md",
@@ -3636,26 +3811,29 @@
       "keys": [
         "hill-climbing",
         "hill climbing",
-        "misc"
+        "misc/hill-climbing"
       ],
-      "desc": "爬山算法是一种局部择优的方法，采用启发式方法，是对深度优先搜索的一种改进，它利用反馈信息帮助生成解的决策．"
+      "desc": "爬山算法是一种局部择优的方法，采用启发式方法，是对深度优先搜索的一种改进，它利用反馈信息帮助生成解的决策．",
+      "tier": 0
     },
     {
       "path": "misc/hoverline.md",
       "name": "hoverline",
       "keys": [
         "hoverline",
-        "misc"
+        "misc/hoverline"
       ],
-      "desc": "悬线法的适用范围是单调栈的子集．具体来说，悬线法可以应用于满足以下条件的题目："
+      "desc": "悬线法的适用范围是单调栈的子集．具体来说，悬线法可以应用于满足以下条件的题目：",
+      "tier": 0
     },
     {
       "path": "misc/index.md",
       "name": "index",
       "keys": [
-        "misc"
+        "misc/index"
       ],
-      "desc": "这个板块主要介绍的是一些难以分类的算法及 OI 相关知识．"
+      "desc": "这个板块主要介绍的是一些难以分类的算法及 OI 相关知识．",
+      "tier": 0
     },
     {
       "path": "misc/job-order.md",
@@ -3663,18 +3841,20 @@
       "keys": [
         "job-order",
         "job order",
-        "misc"
+        "misc/job-order"
       ],
-      "desc": "你有 n 个任务，要求你找到一个代价最小的顺序执行他们．第 i 个任务花费的时间是 ti，而第 i 个任务等待 t 的时间会花费 fi(t) 的代价．"
+      "desc": "你有 n 个任务，要求你找到一个代价最小的顺序执行他们．第 i 个任务花费的时间是 ti，而第 i 个任务等待 t 的时间会花费 fi(t) 的代价．",
+      "tier": 0
     },
     {
       "path": "misc/josephus.md",
       "name": "josephus",
       "keys": [
         "josephus",
-        "misc"
+        "misc/josephus"
       ],
-      "desc": "约瑟夫问题由来已久，而这个问题的解法也在不断改进，只是目前仍没有一个极其高效的算法（log 以内）解决这个问题．"
+      "desc": "约瑟夫问题由来已久，而这个问题的解法也在不断改进，只是目前仍没有一个极其高效的算法（log 以内）解决这个问题．",
+      "tier": 0
     },
     {
       "path": "misc/kahan-summation.md",
@@ -3682,9 +3862,10 @@
       "keys": [
         "kahan-summation",
         "kahan summation",
-        "misc"
+        "misc/kahan-summation"
       ],
-      "desc": "该算法主要由 William Kahan 于 1960s 发现．因为 Ivo Babuška 也曾独立提出了一个类似的算法，Kahan 求和算法又名为 Kahan–Babuška 求和算法．"
+      "desc": "该算法主要由 William Kahan 于 1960s 发现．因为 Ivo Babuška 也曾独立提出了一个类似的算法，Kahan 求和算法又名为 Kahan–Babuška 求和算法．",
+      "tier": 0
     },
     {
       "path": "misc/main-element.md",
@@ -3692,9 +3873,10 @@
       "keys": [
         "main-element",
         "main element",
-        "misc"
+        "misc/main-element"
       ],
-      "desc": "给一个有 n 个元素的序列，保证有一个元素 a 出现的次数 严格大于  n/2，求这个元素．"
+      "desc": "给一个有 n 个元素的序列，保证有一个元素 a 出现的次数 严格大于  n/2，求这个元素．",
+      "tier": 0
     },
     {
       "path": "misc/mo-algo-2dimen.md",
@@ -3702,9 +3884,10 @@
       "keys": [
         "mo-algo-2dimen",
         "mo algo 2dimen",
-        "misc"
+        "misc/mo-algo-2dimen"
       ],
-      "desc": "二维莫队，顾名思义就是每个状态有四个方向可以扩展．"
+      "desc": "二维莫队，顾名思义就是每个状态有四个方向可以扩展．",
+      "tier": 0
     },
     {
       "path": "misc/mo-algo-intro.md",
@@ -3712,9 +3895,10 @@
       "keys": [
         "mo-algo-intro",
         "mo algo intro",
-        "misc"
+        "misc/mo-algo-intro"
       ],
-      "desc": "莫队算法是由莫涛提出的算法．在莫涛提出莫队算法之前，莫队算法已经在 Codeforces 的高手圈里小范围流传，但是莫涛是第一个对莫队算法进行详细归纳总结的人．莫涛提出莫队算法时，只分析了普通莫队算法，但是经过 OIer 和 ACMer 的集体智慧改造，莫队有了多种扩展版本．"
+      "desc": "莫队算法是由莫涛提出的算法．在莫涛提出莫队算法之前，莫队算法已经在 Codeforces 的高手圈里小范围流传，但是莫涛是第一个对莫队算法进行详细归纳总结的人．莫涛提出莫队算法时，只分析了普通莫队算法，但是经过 OIer 和 ACMer 的集体智慧改造，莫队有了多种扩展版本．",
+      "tier": 0
     },
     {
       "path": "misc/mo-algo-on-tree.md",
@@ -3722,9 +3906,10 @@
       "keys": [
         "mo-algo-on-tree",
         "mo algo on tree",
-        "misc"
+        "misc/mo-algo-on-tree"
       ],
-      "desc": "一般的莫队只能处理线性问题，我们要把树强行压成序列．"
+      "desc": "一般的莫队只能处理线性问题，我们要把树强行压成序列．",
+      "tier": 0
     },
     {
       "path": "misc/mo-algo-secondary-offline.md",
@@ -3732,9 +3917,10 @@
       "keys": [
         "mo-algo-secondary-offline",
         "mo algo secondary offline",
-        "misc"
+        "misc/mo-algo-secondary-offline"
       ],
-      "desc": "有时我们会遇见一些题目，这些题目看起来很适合使用莫队算法处理，但是他们的单次转移并非是 O(1) 的，这时直接使用莫队即使调整块长，也会导致复杂度不正确．"
+      "desc": "有时我们会遇见一些题目，这些题目看起来很适合使用莫队算法处理，但是他们的单次转移并非是 O(1) 的，这时直接使用莫队即使调整块长，也会导致复杂度不正确．",
+      "tier": 0
     },
     {
       "path": "misc/mo-algo-with-bitset.md",
@@ -3742,9 +3928,10 @@
       "keys": [
         "mo-algo-with-bitset",
         "mo algo with bitset",
-        "misc"
+        "misc/mo-algo-with-bitset"
       ],
-      "desc": "bitset 常用于常规数据结构难以维护的判定、统计问题，而莫队可以维护常规数据结构难以维护的区间信息．把两者结合起来使用可以同时利用两者的优势．"
+      "desc": "bitset 常用于常规数据结构难以维护的判定、统计问题，而莫队可以维护常规数据结构难以维护的区间信息．把两者结合起来使用可以同时利用两者的优势．",
+      "tier": 0
     },
     {
       "path": "misc/mo-algo.md",
@@ -3752,9 +3939,10 @@
       "keys": [
         "mo-algo",
         "mo algo",
-        "misc"
+        "misc/mo-algo"
       ],
-      "desc": "假设 n=m，那么对于序列上的区间询问问题，如果从 [l,r] 的答案能够 O(1) 扩展到 [l-1,r],[l+1,r],[l,r+1],[l,r-1]（即与 [l,r] 相邻的区间）的答案，那么可以在 O(n\\sqrt{n}) 的复杂度内求出所有询问的答案．"
+      "desc": "假设 n=m，那么对于序列上的区间询问问题，如果从 [l,r] 的答案能够 O(1) 扩展到 [l-1,r],[l+1,r],[l,r+1],[l,r-1]（即与 [l,r] 相邻的区间）的答案，那么可以在 O(n\\sqrt{n}) 的复杂度内求出所有询问的答案．",
+      "tier": 0
     },
     {
       "path": "misc/modifiable-mo-algo.md",
@@ -3762,27 +3950,30 @@
       "keys": [
         "modifiable-mo-algo",
         "modifiable mo algo",
-        "misc"
+        "misc/modifiable-mo-algo"
       ],
-      "desc": "请确保您已经会普通莫队算法了．如果您还不会，请先阅读前面的 普通莫队算法．"
+      "desc": "请确保您已经会普通莫队算法了．如果您还不会，请先阅读前面的 普通莫队算法．",
+      "tier": 0
     },
     {
       "path": "misc/odt.md",
       "name": "odt",
       "keys": [
         "odt",
-        "misc"
+        "misc/odt"
       ],
-      "desc": "珂朵莉树（Chtholly Tree），又名老司机树 ODT（Old Driver Tree）．起源自 CF896C．"
+      "desc": "珂朵莉树（Chtholly Tree），又名老司机树 ODT（Old Driver Tree）．起源自 CF896C．",
+      "tier": 0
     },
     {
       "path": "misc/offline.md",
       "name": "offline",
       "keys": [
         "offline",
-        "misc"
+        "misc/offline"
       ],
-      "desc": "本章将介绍离线算法（Offline Algorithm）的思想、常见算法及优化．"
+      "desc": "本章将介绍离线算法（Offline Algorithm）的思想、常见算法及优化．",
+      "tier": 0
     },
     {
       "path": "misc/parallel-binsearch.md",
@@ -3790,9 +3981,10 @@
       "keys": [
         "parallel-binsearch",
         "parallel binsearch",
-        "misc"
+        "misc/parallel-binsearch"
       ],
-      "desc": "在信息学竞赛中，有一部分题目可以使用二分的办法来解决．但是当这种题目有多次询问且我们每次查询都直接二分可能导致 TLE 时，就会用到整体二分．整体二分的主体思路就是把多个查询一起解决．（所以这是一个离线算法）"
+      "desc": "在信息学竞赛中，有一部分题目可以使用二分的办法来解决．但是当这种题目有多次询问且我们每次查询都直接二分可能导致 TLE 时，就会用到整体二分．整体二分的主体思路就是把多个查询一起解决．（所以这是一个离线算法）",
+      "tier": 0
     },
     {
       "path": "misc/rand-technique.md",
@@ -3800,18 +3992,20 @@
       "keys": [
         "rand-technique",
         "rand technique",
-        "misc"
+        "misc/rand-technique"
       ],
-      "desc": "前置知识：随机函数 和 概率初步"
+      "desc": "前置知识：随机函数 和 概率初步",
+      "tier": 0
     },
     {
       "path": "misc/random.md",
       "name": "random",
       "keys": [
         "random",
-        "misc"
+        "misc/random"
       ],
-      "desc": "要想使用随机化技巧，前提条件是能够快速生成随机数．本文将介绍生成随机数的常见方法．"
+      "desc": "要想使用随机化技巧，前提条件是能够快速生成随机数．本文将介绍生成随机数的常见方法．",
+      "tier": 0
     },
     {
       "path": "misc/rollback-mo-algo.md",
@@ -3819,9 +4013,10 @@
       "keys": [
         "rollback-mo-algo",
         "rollback mo algo",
-        "misc"
+        "misc/rollback-mo-algo"
       ],
-      "desc": "有些题目在区间转移时，可能会出现增加或者删除无法实现的问题．在只有增加不可实现或者只有删除不可实现的时候，就可以使用回滚莫队在 O(n \\sqrt m) 的时间内解决问题．回滚莫队的核心思想就是：既然只能实现一个操作，那么就只使用一个操作，剩下的交给回滚解决．"
+      "desc": "有些题目在区间转移时，可能会出现增加或者删除无法实现的问题．在只有增加不可实现或者只有删除不可实现的时候，就可以使用回滚莫队在 O(n \\sqrt m) 的时间内解决问题．回滚莫队的核心思想就是：既然只能实现一个操作，那么就只使用一个操作，剩下的交给回滚解决．",
+      "tier": 0
     },
     {
       "path": "misc/simulated-annealing.md",
@@ -3829,9 +4024,10 @@
       "keys": [
         "simulated-annealing",
         "simulated annealing",
-        "misc"
+        "misc/simulated-annealing"
       ],
-      "desc": "模拟退火是一种随机化算法．当一个问题的方案数量极大（甚至是无穷的）而且不是一个单峰函数时，我们常使用模拟退火求解．"
+      "desc": "模拟退火是一种随机化算法．当一个问题的方案数量极大（甚至是无穷的）而且不是一个单峰函数时，我们常使用模拟退火求解．",
+      "tier": 0
     },
     {
       "path": "misc/space-optimization.md",
@@ -3839,9 +4035,10 @@
       "keys": [
         "space-optimization",
         "space optimization",
-        "misc"
+        "misc/space-optimization"
       ],
-      "desc": "空间优化相关技巧在算法竞赛中不太常见，但仍有讨论价值．"
+      "desc": "空间优化相关技巧在算法竞赛中不太常见，但仍有讨论价值．",
+      "tier": 0
     },
     {
       "path": "misc/two-pointer.md",
@@ -3849,42 +4046,43 @@
       "keys": [
         "two-pointer",
         "two pointer",
-        "misc"
+        "misc/two-pointer"
       ],
-      "desc": "本页面将简要介绍双指针．"
+      "desc": "本页面将简要介绍双指针．",
+      "tier": 0
     },
     {
       "path": "search/alpha-beta.md",
-      "name": "Alpha-Beta剪枝",
+      "name": "剪枝",
       "keys": [
-        "alpha-beta剪枝",
-        "博弈搜索",
-        "search",
+        "剪枝",
         "alpha-beta",
-        "alpha beta"
+        "search/alpha-beta"
       ],
-      "desc": "本页面将简要介绍 Minimax 算法和 Alpha–Beta 剪枝．"
+      "desc": "本页面将简要介绍 Minimax 算法和 Alpha–Beta 剪枝．",
+      "tier": 2
     },
     {
       "path": "search/astar.md",
-      "name": "A*",
+      "name": "启发式搜索",
       "keys": [
-        "a*",
         "启发式搜索",
-        "search",
-        "astar"
+        "astar",
+        "search/astar"
       ],
-      "desc": "本文介绍 A\\ 搜索算法．"
+      "desc": "本文介绍 A\\ 搜索算法．",
+      "tier": 2
     },
     {
       "path": "search/backtracking.md",
       "name": "回溯",
       "keys": [
         "回溯",
-        "search",
-        "backtracking"
+        "backtracking",
+        "search/backtracking"
       ],
-      "desc": "本页面将简要介绍回溯法的概念和应用．"
+      "desc": "本页面将简要介绍回溯法的概念和应用．",
+      "tier": 2
     },
     {
       "path": "search/bfs.md",
@@ -3892,20 +4090,21 @@
       "keys": [
         "广度优先搜索",
         "bfs",
-        "search"
+        "search/bfs"
       ],
-      "desc": "BFS（广度优先搜索）为图论中的基础算法，详见 BFS（图论） 页面．在 搜索算法 中，该算法通常指利用队列结构逐层扩展状态的搜索方式，与图论中的 BFS 算法思想一致，特别适合求解 最短路径 或 最少步骤 类问题．"
+      "desc": "BFS（广度优先搜索）为图论中的基础算法，详见 BFS（图论） 页面．在 搜索算法 中，该算法通常指利用队列结构逐层扩展状态的搜索方式，与图论中的 BFS 算法思想一致，特别适合求解 最短路径 或 最少步骤 类问题．",
+      "tier": 2
     },
     {
       "path": "search/bidirectional.md",
       "name": "双向搜索",
       "keys": [
         "双向搜索",
-        "meet in middle",
-        "search",
-        "bidirectional"
+        "bidirectional",
+        "search/bidirectional"
       ],
-      "desc": "本页面将简要介绍两种双向搜索算法：「双向同时搜索」和「Meet in the middle」．"
+      "desc": "本页面将简要介绍两种双向搜索算法：「双向同时搜索」和「Meet in the middle」．",
+      "tier": 2
     },
     {
       "path": "search/dfs.md",
@@ -3913,93 +4112,102 @@
       "keys": [
         "深度优先搜索",
         "dfs",
-        "search"
+        "search/dfs"
       ],
-      "desc": "DFS 为图论中的概念，详见 DFS（图论） 页面．在 搜索算法 中，该词常常指利用递归函数方便地实现暴力枚举的算法，与图论中的 DFS 算法有一定相似之处，但并不完全相同．"
+      "desc": "DFS 为图论中的概念，详见 DFS（图论） 页面．在 搜索算法 中，该词常常指利用递归函数方便地实现暴力枚举的算法，与图论中的 DFS 算法有一定相似之处，但并不完全相同．",
+      "tier": 2
     },
     {
       "path": "search/dlx.md",
-      "name": "DLX",
+      "name": "舞蹈链",
       "keys": [
-        "dlx",
         "舞蹈链",
-        "search"
+        "dlx",
+        "search/dlx"
       ],
-      "desc": "本页面将介绍精确覆盖问题、重复覆盖问题，解决这两个问题的算法「X 算法」，以及用来优化 X 算法的双向十字链表 Dancing Link．本页也将介绍如何在建模的配合下使用 DLX 解决一些搜索题．"
+      "desc": "本页面将介绍精确覆盖问题、重复覆盖问题，解决这两个问题的算法「X 算法」，以及用来优化 X 算法的双向十字链表 Dancing Link．本页也将介绍如何在建模的配合下使用 DLX 解决一些搜索题．",
+      "tier": 2
     },
     {
       "path": "search/heuristic.md",
       "name": "heuristic",
       "keys": [
         "heuristic",
-        "search"
+        "search/heuristic"
       ],
-      "desc": "本页面将简要介绍启发式搜索及其用法．"
+      "desc": "本页面将简要介绍启发式搜索及其用法．",
+      "tier": 0
     },
     {
       "path": "search/idastar.md",
-      "name": "idastar",
+      "name": "启发式搜索",
       "keys": [
+        "启发式搜索",
         "idastar",
-        "search"
+        "search/idastar"
       ],
-      "desc": "前置知识：A\\ 算法、迭代加深搜索"
+      "desc": "前置知识：A\\ 算法、迭代加深搜索",
+      "tier": 1
     },
     {
       "path": "search/index.md",
       "name": "index",
       "keys": [
-        "search"
+        "search/index"
       ],
-      "desc": "搜索，也就是对状态空间进行枚举，通过穷尽所有的可能来找到最优解，或者统计合法解的个数．"
+      "desc": "搜索，也就是对状态空间进行枚举，通过穷尽所有的可能来找到最优解，或者统计合法解的个数．",
+      "tier": 0
     },
     {
       "path": "search/iterative.md",
       "name": "迭代加深",
       "keys": [
         "迭代加深",
-        "ida*",
-        "search",
-        "iterative"
+        "iterative",
+        "search/iterative"
       ],
-      "desc": "迭代加深是一种 每次限制搜索深度的 深度优先搜索．"
+      "desc": "迭代加深是一种 每次限制搜索深度的 深度优先搜索．",
+      "tier": 2
     },
     {
       "path": "search/opt.md",
       "name": "opt",
       "keys": [
         "opt",
-        "search"
+        "search/opt"
       ],
-      "desc": "DFS（深度优先搜索）是一种常见的算法，大部分的题目都可以用 DFS 解决，但是大部分情况下，这都是骗分算法，很少会有爆搜为正解的题目．因为 DFS 的时间复杂度特别高．（没学过 DFS 的请自行补上这一课）"
+      "desc": "DFS（深度优先搜索）是一种常见的算法，大部分的题目都可以用 DFS 解决，但是大部分情况下，这都是骗分算法，很少会有爆搜为正解的题目．因为 DFS 的时间复杂度特别高．（没学过 DFS 的请自行补上这一课）",
+      "tier": 0
     },
     {
       "path": "string/ac-automaton.md",
       "name": "AC自动机",
       "keys": [
         "ac自动机",
-        "ac automaton",
-        "string",
-        "ac-automaton"
+        "ac-automaton",
+        "string/ac-automaton"
       ],
-      "desc": "AC（Aho–Corasick）自动机是 以 Trie 的结构为基础，结合 KMP 的思想 建立的自动机，用于解决多模式匹配等任务．"
+      "desc": "AC（Aho–Corasick）自动机是 以 Trie 的结构为基础，结合 KMP 的思想 建立的自动机，用于解决多模式匹配等任务．",
+      "tier": 2
     },
     {
       "path": "string/basic.md",
       "name": "basic",
       "keys": [
-        "string"
+        "string/basic"
       ],
-      "desc": "一个 字符集 \\Sigma 是一个建立了 全序 关系的集合，也就是说，\\Sigma 中的任意两个不同的元素 \\alpha 和 \\beta 都可以比较大小，要么 \\alpha<\\beta，要么 \\beta<\\alpha．字符集 \\Sigma 中的元素称为字符．"
+      "desc": "一个 字符集 \\Sigma 是一个建立了 全序 关系的集合，也就是说，\\Sigma 中的任意两个不同的元素 \\alpha 和 \\beta 都可以比较大小，要么 \\alpha<\\beta，要么 \\beta<\\alpha．字符集 \\Sigma 中的元素称为字符．",
+      "tier": 0
     },
     {
       "path": "string/bm.md",
       "name": "bm",
       "keys": [
         "bm",
-        "string"
+        "string/bm"
       ],
-      "desc": "前置知识：前缀函数与 KMP 算法．"
+      "desc": "前置知识：前缀函数与 KMP 算法．",
+      "tier": 0
     },
     {
       "path": "string/general-sam.md",
@@ -4007,9 +4215,10 @@
       "keys": [
         "general-sam",
         "general sam",
-        "string"
+        "string/general-sam"
       ],
-      "desc": "广义后缀自动机基于下面的知识点"
+      "desc": "广义后缀自动机基于下面的知识点",
+      "tier": 0
     },
     {
       "path": "string/hash.md",
@@ -4017,26 +4226,29 @@
       "keys": [
         "字符串哈希",
         "hash",
-        "string"
+        "string/hash"
       ],
-      "desc": "我们定义一个把字符串映射到整数的函数 f，这个 f 称为是 Hash 函数．"
+      "desc": "我们定义一个把字符串映射到整数的函数 f，这个 f 称为是 Hash 函数．",
+      "tier": 2
     },
     {
       "path": "string/index.md",
       "name": "index",
       "keys": [
-        "string"
+        "string/index"
       ],
-      "desc": "字符串，就是由字符连接而成的序列．"
+      "desc": "字符串，就是由字符连接而成的序列．",
+      "tier": 0
     },
     {
       "path": "string/kmp.md",
       "name": "KMP",
       "keys": [
         "kmp",
-        "string"
+        "string/kmp"
       ],
-      "desc": "关于字符串前缀、真前缀，后缀、真后缀的定义详见 字符串基础"
+      "desc": "关于字符串前缀、真前缀，后缀、真后缀的定义详见 字符串基础",
+      "tier": 2
     },
     {
       "path": "string/lib-func.md",
@@ -4044,18 +4256,20 @@
       "keys": [
         "lib-func",
         "lib func",
-        "string"
+        "string/lib-func"
       ],
-      "desc": "C 标准库操作字符数组 char[]/const char．"
+      "desc": "C 标准库操作字符数组 char[]/const char．",
+      "tier": 0
     },
     {
       "path": "string/lyndon.md",
       "name": "lyndon",
       "keys": [
         "lyndon",
-        "string"
+        "string/lyndon"
       ],
-      "desc": "首先我们介绍 Lyndon 分解的概念．"
+      "desc": "首先我们介绍 Lyndon 分解的概念．",
+      "tier": 0
     },
     {
       "path": "string/main-lorentz.md",
@@ -4063,28 +4277,31 @@
       "keys": [
         "main-lorentz",
         "main lorentz",
-        "string"
+        "string/main-lorentz"
       ],
-      "desc": "给定一个长度为 n 的字符串 s．"
+      "desc": "给定一个长度为 n 的字符串 s．",
+      "tier": 0
     },
     {
       "path": "string/manacher.md",
-      "name": "Manacher",
+      "name": "回文串",
       "keys": [
-        "manacher",
         "回文串",
-        "string"
+        "manacher",
+        "string/manacher"
       ],
-      "desc": "给定一个长度为 n 的字符串 s，请找到所有对 (i, j) 使得子串 s[i \\dots j] 为一个回文串．当 t = t{\\text{rev}} 时，字符串 t 是一个回文串（t{\\text{rev}} 是 t 的反转字符串）．"
+      "desc": "给定一个长度为 n 的字符串 s，请找到所有对 (i, j) 使得子串 s[i \\dots j] 为一个回文串．当 t = t{\\text{rev}} 时，字符串 t 是一个回文串（t{\\text{rev}} 是 t 的反转字符串）．",
+      "tier": 2
     },
     {
       "path": "string/match.md",
       "name": "match",
       "keys": [
         "match",
-        "string"
+        "string/match"
       ],
-      "desc": "本页面将简述字符串匹配问题以及它的解法．"
+      "desc": "本页面将简述字符串匹配问题以及它的解法．",
+      "tier": 0
     },
     {
       "path": "string/minimal-string.md",
@@ -4092,28 +4309,31 @@
       "keys": [
         "minimal-string",
         "minimal string",
-        "string"
+        "string/minimal-string"
       ],
-      "desc": "最小表示法是用于解决字符串最小表示问题的方法．"
+      "desc": "最小表示法是用于解决字符串最小表示问题的方法．",
+      "tier": 0
     },
     {
       "path": "string/pam.md",
       "name": "pam",
       "keys": [
         "pam",
-        "string"
+        "string/pam"
       ],
-      "desc": "回文树（EER Tree，Palindromic Tree，也被称为回文自动机）是一种可以存储一个串中所有回文子串的高效数据结构．最初由 Mikhail Rubinchik 和 Arseny M. Shur 在 2015 年发表．它的灵感来源于后缀树等字符串后缀数据结构，使用回文树可以简单高效地解决一系列涉及回文串的问"
+      "desc": "回文树（EER Tree，Palindromic Tree，也被称为回文自动机）是一种可以存储一个串中所有回文子串的高效数据结构．最初由 Mikhail Rubinchik 和 Arseny M. Shur 在 2015 年发表．它的灵感来源于后缀树等字符串后缀数据结构，使用回文树可以简单高效地解决一系列涉及回文串的问",
+      "tier": 0
     },
     {
       "path": "string/sa-optimal-inplace.md",
-      "name": "sa-optimal-inplace",
+      "name": "后缀数组",
       "keys": [
+        "后缀数组",
         "sa-optimal-inplace",
-        "sa optimal inplace",
-        "string"
+        "string/sa-optimal-inplace"
       ],
-      "desc": "本章介绍线性时间复杂度的后缀排序的就地算法[^in-place-sa-sort]（Optimal In-Place Suffix Sorting）．"
+      "desc": "本章介绍线性时间复杂度的后缀排序的就地算法[^in-place-sa-sort]（Optimal In-Place Suffix Sorting）．",
+      "tier": 1
     },
     {
       "path": "string/sa.md",
@@ -4121,21 +4341,22 @@
       "keys": [
         "后缀数组",
         "sa",
-        "suffix array",
-        "string"
+        "string/sa"
       ],
-      "desc": "字符串相关的定义请参考 字符串基础．"
+      "desc": "字符串相关的定义请参考 字符串基础．",
+      "tier": 2
     },
     {
       "path": "string/sam.md",
       "name": "后缀自动机",
       "keys": [
         "后缀自动机",
+        "后缀数组",
         "sam",
-        "suffix automaton",
-        "string"
+        "string/sam"
       ],
-      "desc": "举个例子，以下的字符串问题都可以在线性时间内通过 SAM 解决："
+      "desc": "举个例子，以下的字符串问题都可以在线性时间内通过 SAM 解决：",
+      "tier": 2
     },
     {
       "path": "string/seq-automaton.md",
@@ -4143,9 +4364,10 @@
       "keys": [
         "seq-automaton",
         "seq automaton",
-        "string"
+        "string/seq-automaton"
       ],
-      "desc": "在阅读本文之前，请先阅读 自动机．"
+      "desc": "在阅读本文之前，请先阅读 自动机．",
+      "tier": 0
     },
     {
       "path": "string/suffix-bst.md",
@@ -4153,9 +4375,10 @@
       "keys": [
         "suffix-bst",
         "suffix bst",
-        "string"
+        "string/suffix-bst"
       ],
-      "desc": "后缀之间的大小由字典序定义，后缀平衡树就是一个维护这些后缀顺序的平衡树，即字符串 T 的后缀平衡树是 T 所有后缀的有序集合．后缀平衡树上的一个节点相当于原字符串的一个后缀．"
+      "desc": "后缀之间的大小由字典序定义，后缀平衡树就是一个维护这些后缀顺序的平衡树，即字符串 T 的后缀平衡树是 T 所有后缀的有序集合．后缀平衡树上的一个节点相当于原字符串的一个后缀．",
+      "tier": 0
     },
     {
       "path": "string/suffix-tree.md",
@@ -4163,9 +4386,10 @@
       "keys": [
         "suffix-tree",
         "suffix tree",
-        "string"
+        "string/suffix-tree"
       ],
-      "desc": "后缀树是一种维护一个字符串所有后缀的数据结构．"
+      "desc": "后缀树是一种维护一个字符串所有后缀的数据结构．",
+      "tier": 0
     },
     {
       "path": "string/trie.md",
@@ -4174,9 +4398,10 @@
         "字典树",
         "trie",
         "前缀树",
-        "string"
+        "string/trie"
       ],
-      "desc": "字典树，英文名 trie．顾名思义，就是一个像字典一样的树．"
+      "desc": "字典树，英文名 trie．顾名思义，就是一个像字典一样的树．",
+      "tier": 2
     },
     {
       "path": "string/z-func.md",
@@ -4184,20 +4409,21 @@
       "keys": [
         "z函数",
         "扩展kmp",
-        "string",
         "z-func",
-        "z func"
+        "string/z-func"
       ],
-      "desc": "约定：字符串下标以 0 为起点．"
+      "desc": "约定：字符串下标以 0 为起点．",
+      "tier": 2
     },
     {
       "path": "topic/bracket.md",
       "name": "bracket",
       "keys": [
         "bracket",
-        "topic"
+        "topic/bracket"
       ],
-      "desc": "定义一个合法括号序列（balanced bracket sequence）为仅由 ( 和 ) 构成的字符串且："
+      "desc": "定义一个合法括号序列（balanced bracket sequence）为仅由 ( 和 ) 构成的字符串且：",
+      "tier": 0
     },
     {
       "path": "topic/dsu-app.md",
@@ -4205,18 +4431,20 @@
       "keys": [
         "dsu-app",
         "dsu app",
-        "topic"
+        "topic/dsu-app"
       ],
-      "desc": "并查集、Kruskal 重构树的思维方式是很类似的，它们都能用于处理与连通性有关的问题．本文通过例题讲解的方式给大家介绍并查集思想的应用．"
+      "desc": "并查集、Kruskal 重构树的思维方式是很类似的，它们都能用于处理与连通性有关的问题．本文通过例题讲解的方式给大家介绍并查集思想的应用．",
+      "tier": 0
     },
     {
       "path": "topic/rmq.md",
       "name": "rmq",
       "keys": [
         "rmq",
-        "topic"
+        "topic/rmq"
       ],
-      "desc": "RMQ 是英文 Range Maximum/Minimum Query 的缩写，表示区间最大（最小）值．"
+      "desc": "RMQ 是英文 Range Maximum/Minimum Query 的缩写，表示区间最大（最小）值．",
+      "tier": 0
     },
     {
       "path": "topic/segment-tree-offline.md",
@@ -4224,9 +4452,10 @@
       "keys": [
         "segment-tree-offline",
         "segment tree offline",
-        "topic"
+        "topic/segment-tree-offline"
       ],
-      "desc": "线段树与离线询问结合的问题在 OI 领域也有出现．这种技巧又被称为线段树分治．"
+      "desc": "线段树与离线询问结合的问题在 OI 领域也有出现．这种技巧又被称为线段树分治．",
+      "tier": 0
     }
   ]
 }

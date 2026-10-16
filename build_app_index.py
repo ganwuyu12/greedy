@@ -49,108 +49,155 @@ OUT = BASE / "data" / "kb_index.json"
 REPORT = BASE / "data" / "kb_index_report.md"
 
 # 人工补充的常见叫法（中文用户会这么问，但语料里不这么写）
-# 只补高频的，不追求全 —— 关键词检索的召回率靠「名称 + 别名」已经够
-ALIASES: dict[str, list[str]] = {
-    "ds/seg.md": ["线段树", "segment tree"],
-    "ds/fenwick.md": ["树状数组", "BIT", "binary indexed tree"],
-    "ds/bst.md": ["二叉搜索树", "BST", "二叉查找树"],
-    "ds/segment-tree-beats.md": ["segment tree beats"],
-    "ds/sparse-table.md": ["ST表", "稀疏表"],
-    "ds/dsu.md": ["并查集", "union find", "disjoint set"],
-    "ds/heap.md": ["堆", "优先队列", "priority queue"],
-    "ds/monotonic-queue.md": ["单调队列"],
-    "ds/monotonic-stack.md": ["单调栈"],
-    "ds/persistent-seg.md": ["主席树", "可持久化线段树"],
-    "ds/leftist-tree.md": ["左偏树", "可并堆"],
-    "ds/splay.md": ["Splay", "伸展树"],
-    "ds/treap.md": ["Treap", "树堆"],
-    "ds/block-list.md": ["块状链表"],
-    "ds/queue.md": ["队列"],
-    "ds/stack.md": ["栈"],
-    "ds/linked-list.md": ["链表"],
-    "dp/knapsack.md": ["背包", "背包问题"],
-    "dp/interval.md": ["区间DP"],
-    "dp/tree.md": ["树形DP"],
-    "dp/digit.md": ["数位DP"],
-    "dp/state.md": ["状压DP", "状态压缩"],
-    "dp/plug.md": ["插头DP"],
-    "dp/optimization/monotonic.md": ["单调队列优化"],
-    "dp/optimization/slope.md": ["斜率优化"],
-    "graph/shortest-path.md": ["最短路", "最短路径", "dijkstra", "spfa"],
-    "graph/mst.md": ["最小生成树", "MST", "kruskal", "prim"],
-    "graph/tree-diameter.md": ["树的直径"],
-    "graph/lca.md": ["最近公共祖先", "LCA"],
-    "graph/scc.md": ["强连通分量", "SCC", "tarjan"],
-    "graph/topo.md": ["拓扑排序"],
-    "graph/bipartite-graph.md": ["二分图"],
-    "graph/flow/max-flow.md": ["最大流", "网络流"],
-    "graph/flow/min-cost.md": ["最小费用流", "费用流"],
-    "graph/2-sat.md": ["2-SAT", "2SAT"],
-    "string/kmp.md": ["KMP"],
-    "string/ac-automaton.md": ["AC自动机", "AC automaton"],
-    "string/sa.md": ["后缀数组", "SA", "suffix array"],
-    "string/sam.md": ["后缀自动机", "SAM", "suffix automaton"],
-    "string/trie.md": ["字典树", "Trie", "前缀树"],
-    "string/hash.md": ["字符串哈希", "hash"],
-    "string/manacher.md": ["Manacher", "回文串"],
-    "string/z-func.md": ["Z函数", "扩展KMP"],
-    "math/number-theory/basic.md": ["数论基础"],
-    "math/number-theory/prime.md": ["素数", "质数", "素性测试"],
-    "math/number-theory/sieve.md": ["筛法", "埃氏筛", "线性筛"],
-    "math/number-theory/gcd.md": ["最大公约数", "gcd"],
-    "math/number-theory/euler-totient.md": ["欧拉函数", "phi"],
-    "math/number-theory/crt.md": ["中国剩余定理", "CRT"],
-    "math/number-theory/exgcd.md": ["扩展欧几里得", "exgcd"],
-    "math/number-theory/bsgs.md": ["BSGS", "大步小步"],
-    "math/mobius.md": ["莫比乌斯反演", "莫反"],
-    "math/combinatorics/combination.md": ["组合数"],
-    "math/combinatorics/catalan.md": ["卡特兰数", "Catalan"],
-    "math/combinatorics/inclusion-exclusion.md": ["容斥原理"],
-    "math/combinatorics/drawer-principle.md": ["抽屉原理", "鸽巢原理"],
-    "math/game-theory.md": ["博弈论", "SG函数"],
-    "math/linear-algebra/matrix.md": ["矩阵", "矩阵乘法"],
-    "math/linear-algebra/gauss.md": ["高斯消元"],
-    "math/poly/fft.md": ["FFT", "快速傅里叶变换"],
-    "math/poly/ntt.md": ["NTT", "快速数论变换"],
-    "math/poly/fwt.md": ["FWT", "快速沃尔什变换"],
-    "math/expectation.md": ["期望", "概率期望"],
-    "math/vector.md": ["向量"],
-    "math/order-theory.md": ["偏序", "序理论"],
-    "basic/divide-and-conquer.md": ["分治"],
-    "basic/binary.md": ["二分", "二分查找", "二分答案"],
-    "basic/greedy.md": ["贪心"],
-    "basic/enumerate.md": ["枚举"],
-    "basic/sort.md": ["排序"],
-    "basic/prefix-sum.md": ["前缀和", "差分"],
-    "basic/quick-pow.md": ["快速幂"],
-    "basic/simulate.md": ["模拟"],
-    "basic/merge-sort.md": ["归并排序"],
-    "basic/bubble-sort.md": ["冒泡排序"],
-    "basic/selection-sort.md": ["选择排序"],
-    "basic/insertion-sort.md": ["插入排序"],
-    "basic/counting-sort.md": ["计数排序"],
-    "basic/radix-sort.md": ["基数排序"],
-    "basic/heap-sort.md": ["堆排序"],
-    "basic/stl-sort.md": ["STL排序"],
-    "basic/bucket-sort.md": ["桶排序"],
-    "search/dfs.md": ["深度优先搜索", "DFS"],
-    "search/bfs.md": ["广度优先搜索", "BFS"],
-    "search/backtracking.md": ["回溯"],
-    "search/astar.md": ["A*", "启发式搜索"],
-    "search/alpha-beta.md": ["Alpha-Beta剪枝", "博弈搜索"],
-    "search/dlx.md": ["DLX", "舞蹈链"],
-    "search/iterative.md": ["迭代加深", "IDA*"],
-    "search/bidirectional.md": ["双向搜索", "meet in middle"],
-    "geometry/convex-hull.md": ["凸包"],
-    "geometry/2d.md": ["二维几何", "计算几何基础"],
-    "geometry/inverse.md": ["反演"],
-    "geometry/half-plane.md": ["半平面交"],
-    "geometry/scanning.md": ["扫描线"],
-    "geometry/rotating-calipers.md": ["旋转卡壳"],
-    "misc/cc-basic.md": ["复杂度", "复杂度分析"],
-    "misc/discrete.md": ["离散化"],
-    "misc/fraction-programming.md": ["分数规划", "01分数规划"],
-}
+#
+# ⚠️ 结构说明（这是实测踩坑后改的）：
+#   原来是 {路径: [别名]}，但**路径是猜的，17 条对不上实际文件**
+#   （如 dp/knapsack.md 实际是 dp/knapsack/basic.md + advanced.md）。
+#   现在改成 {别名: [路径关键词]}——用关键词去匹配实际路径，
+#   语料结构变了也不会失效。
+#
+# 匹配规则：关键词出现在路径里即认为该别名适用（允许多个命中）。
+ALIAS_RULES: list[tuple[str, list[str]]] = [
+    # ---- 数据结构 ----
+    ("线段树", ["ds/seg"]),
+    ("segment tree", ["ds/seg"]),
+    ("树状数组", ["ds/fenwick"]),
+    ("BIT", ["ds/fenwick"]),
+    ("二叉搜索树", ["ds/bst"]),
+    ("BST", ["ds/bst"]),
+    ("并查集", ["ds/dsu"]),
+    ("union find", ["ds/dsu"]),
+    ("ST表", ["ds/sparse-table"]),
+    ("稀疏表", ["ds/sparse-table"]),
+    ("主席树", ["ds/persistent-seg"]),
+    ("可持久化线段树", ["ds/persistent-seg"]),
+    ("单调队列", ["monotonic-queue"]),
+    ("单调栈", ["monotonic-stack"]),
+    ("左偏树", ["leftist-tree"]),
+    ("可并堆", ["leftist-tree"]),
+    ("块状链表", ["block-list"]),
+    ("字典树", ["string/trie"]),
+    ("Trie", ["string/trie"]),
+    ("前缀树", ["string/trie"]),
+    ("后缀数组", ["string/sa"]),
+    ("后缀自动机", ["string/sam"]),
+    ("字符串哈希", ["string/hash"]),
+
+    # ---- 动态规划 ----
+    ("背包", ["dp/knapsack"]),
+    ("背包问题", ["dp/knapsack"]),
+    ("区间DP", ["dp/interval"]),
+    ("树形DP", ["dp/tree"]),
+    ("数位DP", ["dp/digit", "dp/number", "dp/count"]),
+    ("数位动态规划", ["dp/digit", "dp/number", "dp/count"]),
+    ("状压DP", ["dp/state", "dp/bit"]),
+    ("状态压缩", ["dp/state", "dp/bit"]),
+    ("插头DP", ["dp/plug"]),
+    ("单调队列优化", ["dp/opt/monotonic", "monotonic-queue-stack"]),
+    ("斜率优化", ["dp/opt/slope", "slope"]),
+    ("四边形不等式", ["dp/opt/quadrangle"]),
+
+    # ---- 图论 ----
+    ("最短路", ["graph/shortest-path"]),
+    ("最短路径", ["graph/shortest-path"]),
+    ("dijkstra", ["graph/shortest-path"]),
+    ("最小生成树", ["graph/mst"]),
+    ("MST", ["graph/mst"]),
+    ("kruskal", ["graph/mst"]),
+    ("拓扑排序", ["graph/topo"]),
+    ("强连通分量", ["graph/scc"]),
+    ("SCC", ["graph/scc"]),
+    ("tarjan", ["graph/scc"]),
+    ("最近公共祖先", ["graph/lca"]),
+    ("LCA", ["graph/lca"]),
+    ("二分图", ["bipartite"]),
+    ("匈牙利算法", ["bipartite", "graph-match"]),
+    ("最大流", ["max-flow"]),
+    ("网络流", ["flow"]),
+    ("最小费用流", ["min-cost"]),
+    ("2-SAT", ["2-sat"]),
+    ("树的直径", ["tree-diameter"]),
+
+    # ---- 字符串 ----
+    ("KMP", ["string/kmp"]),
+    ("AC自动机", ["ac-automaton"]),
+    ("回文串", ["manacher"]),
+    ("Manacher", ["manacher"]),
+    ("Z函数", ["z-func"]),
+    ("扩展KMP", ["z-func"]),
+
+    # ---- 数学 ----
+    ("数论基础", ["number-theory/basic"]),
+    ("素数", ["number-theory/prime", "number-theory/basic"]),
+    ("质数", ["number-theory/prime", "number-theory/basic"]),
+    ("筛法", ["number-theory/sieve"]),
+    ("线性筛", ["number-theory/sieve"]),
+    ("埃氏筛", ["number-theory/sieve"]),
+    ("最大公约数", ["number-theory/gcd"]),
+    ("gcd", ["number-theory/gcd"]),
+    ("欧拉函数", ["euler-totient"]),
+    ("中国剩余定理", ["number-theory/crt"]),
+    ("CRT", ["number-theory/crt"]),
+    ("扩展欧几里得", ["bezouts", "euclidean"]),
+    ("莫比乌斯反演", ["mobius"]),
+    ("莫反", ["mobius"]),
+    ("组合数", ["combinatorics/combination"]),
+    ("卡特兰数", ["catalan"]),
+    ("容斥原理", ["inclusion-exclusion"]),
+    ("抽屉原理", ["drawer-principle"]),
+    ("鸽巢原理", ["drawer-principle"]),
+    ("博弈论", ["game-theory"]),
+    ("SG函数", ["game-theory"]),
+    ("矩阵乘法", ["linear-algebra/matrix"]),
+    ("矩阵快速幂", ["linear-algebra/matrix"]),
+    ("高斯消元", ["gauss"]),
+    ("FFT", ["poly/fft"]),
+    ("快速傅里叶变换", ["poly/fft"]),
+    ("NTT", ["poly/ntt"]),
+    ("FWT", ["poly/fwt"]),
+    ("期望", ["probability", "expectation"]),
+    ("离散化", ["misc/discrete"]),
+
+    # ---- 基础算法 ----
+    ("分治", ["divide-and-conquer"]),
+    ("二分", ["basic/binary"]),
+    ("二分查找", ["basic/binary"]),
+    ("二分答案", ["basic/binary"]),
+    ("贪心", ["basic/greedy", "greedy"]),
+    ("枚举", ["basic/enumerate"]),
+    ("前缀和", ["prefix-sum"]),
+    ("差分", ["prefix-sum", "difference"]),
+    ("快速幂", ["quick-pow", "binary-exponentiation"]),
+    ("归并排序", ["merge-sort"]),
+    ("冒泡排序", ["bubble-sort"]),
+    ("堆排序", ["heap-sort"]),
+    ("计数排序", ["counting-sort"]),
+    ("基数排序", ["radix-sort"]),
+
+    # ---- 搜索 ----
+    ("深度优先搜索", ["search/dfs"]),
+    ("DFS", ["search/dfs"]),
+    ("广度优先搜索", ["search/bfs"]),
+    ("BFS", ["search/bfs"]),
+    ("回溯", ["backtracking"]),
+    ("剪枝", ["pruning", "alpha-beta"]),
+    ("启发式搜索", ["astar"]),
+    ("双向搜索", ["bidirectional", "meet-in-middle"]),
+    ("迭代加深", ["iterative"]),
+    ("舞蹈链", ["dlx"]),
+
+    # ---- 几何 ----
+    ("凸包", ["convex-hull"]),
+    ("扫描线", ["scanning"]),
+    ("旋转卡壳", ["rotating-calipers"]),
+    ("半平面交", ["half-plane"]),
+    ("计算几何", ["geometry/2d"]),
+
+    # ---- 杂项 ----
+    ("复杂度", ["cc-basic"]),
+    ("时间复杂度", ["cc-basic"]),
+    ("分数规划", ["fraction"]),
+]
 
 # 文件名里无意义的词（不该当检索键）
 STOP_TOKENS = {"index", "basic", "intro", "md"}
@@ -192,6 +239,49 @@ def split_camel(name: str) -> str:
     return re.sub(r"(?<=[a-z])(?=[A-Z])", " ", name)
 
 
+def match_aliases(rel: str) -> list[str]:
+    """按关键词匹配出适用于该路径的所有别名
+
+    为什么要这样：原来按完整路径精确匹配，路径猜错就彻底失效
+    （实测 17 条对不上）。改成关键词模糊匹配后，
+    语料结构调整（如 dp/knapsack.md 拆成 basic/advanced）也不会失效。
+
+    ⚠️ 但关键词匹配会过宽：「ds/seg」同时命中 seg.md 和 seg-beats.md。
+    所以返回值带上**匹配强度**，由调用方优先取强的：
+      2 = 路径以关键词结尾（最精确，如 ds/seg 命中 ds/seg.md）
+      1 = 关键词只是路径的一部分（如 ds/seg 命中 ds/seg-beats.md）
+    """
+    low = rel.lower().replace(".md", "")
+    out: list[tuple[str, int]] = []
+    for alias, keywords in ALIAS_RULES:
+        best = 0
+        for kw in keywords:
+            k = kw.lower()
+            if low.endswith("/" + k) or low == k:
+                best = max(best, 2)      # 精确：路径结尾就是它
+            elif k in low:
+                best = max(best, 1)      # 宽泛：只是包含
+        if best > 0:
+            out.append((alias, best))
+    # 强的排前面，这样 name 取到的是最精确的那个
+    out.sort(key=lambda x: -x[1])
+    return [a for a, _ in out]
+
+
+def alias_strength(rel: str) -> int:
+    """该路径的别名匹配强度（2 精确 / 1 宽泛 / 0 无）"""
+    low = rel.lower().replace(".md", "")
+    best = 0
+    for _alias, keywords in ALIAS_RULES:
+        for kw in keywords:
+            k = kw.lower()
+            if low.endswith("/" + k) or low == k:
+                best = max(best, 2)
+            elif k in low:
+                best = max(best, 1)
+    return best
+
+
 def build() -> dict:
     entries = []
     no_desc = 0
@@ -199,13 +289,12 @@ def build() -> dict:
         rel = str(f.relative_to(CLEAN)).replace("\\", "/")
         text = f.read_text(encoding="utf-8", errors="ignore")
 
-        # 名称：优先用人工表里的中文名，否则用文件名
         stem = f.stem
         keys: list[str] = []
-        name = ""
 
-        manual = ALIASES.get(rel)
+        manual = match_aliases(rel)
         if manual:
+            # 有中文别名时，用第一个当名字
             name = manual[0]
             for a in manual:
                 keys.append(a)
@@ -215,15 +304,16 @@ def build() -> dict:
             keys.append(stem)
             if "-" in stem:
                 keys.append(stem.replace("-", " "))
+        # 文件名本身始终保留为检索键——这样中英文都能搜到
+        keys.append(stem)
 
-        # 路径片段也能当检索键（如 math/number-theory/basic.md → number theory）
-        parts = rel.replace(".md", "").split("/")
-        for p in parts:
-            if p in STOP_TOKENS:
-                continue
-            keys.append(p)
-            if "-" in p:
-                keys.append(p.replace("-", " "))
+        # 删掉路径片段当检索键的做法。
+        #
+        # 为什么：路径片段（如 "seg"、"ds"）会命中一大片无关文件，
+        # 实测「线段树」因此命中 ds/seg-beats.md 而不是 ds/seg.md。
+        # 保留文件名本身就够了，中文靠人工别名。
+        #
+        # 但把「完整相对路径」作为一个检索键——它唯一，不会误伤。
 
         desc = first_paragraph(text)
         if not desc:
@@ -238,12 +328,17 @@ def build() -> dict:
                 continue
             seen.add(kk)
             clean_keys.append(kk)
+        # 完整路径也进检索键（唯一，精确匹配用）
+        clean_keys.append(rel.lower().replace(".md", ""))
 
         entries.append({
             "path": rel,
             "name": name,
             "keys": clean_keys,
             "desc": desc[:160],
+            # 别名匹配强度：检索排序时用来区分主次
+            # （如「线段树」应排 ds/seg.md 而不是 ds/seg-beats.md）
+            "tier": alias_strength(rel),
         })
 
     return {
@@ -257,8 +352,7 @@ def build() -> dict:
 def write_report(idx: dict) -> None:
     entries = idx["entries"]
     no_desc = sum(1 for e in entries if not e["desc"])
-    with_manual = sum(1 for e in entries
-                      if e["path"] in ALIASES)
+    with_manual = sum(1 for e in entries if len(match_aliases(e["path"])) > 0)
     total_keys = sum(len(e["keys"]) for e in entries)
 
     lines = [
@@ -302,7 +396,7 @@ def write_report(idx: dict) -> None:
             "",
         ]
 
-    missing = [e["path"] for e in entries if e["path"] not in ALIASES]
+    missing = [e["path"] for e in entries if len(match_aliases(e["path"])) == 0]
     lines += [
         "## 没有人工别名的词条（靠文件名检索）",
         "",

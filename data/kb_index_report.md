@@ -1,6 +1,6 @@
 # 知识索引构建报告（轻量关键词版）
 
-生成时间：2026-10-15T19:31:06+08:00
+生成时间：2026-10-16T17:40:29+08:00
 
 ## 为什么用关键词而不是向量
 
@@ -24,9 +24,9 @@
 | 项目 | 数值 |
 |---|---|
 | 词条总数 | 418 |
-| 有人工中文别名 | 82 |
-| 检索键总数 | 1300 |
-| 平均每词条键数 | 3 |
+| 有人工中文别名 | 113 |
+| 检索键总数 | 1110 |
+| 平均每词条键数 | 2 |
 | **缺描述** | **3** |
 
 ⚠️ 有 3 个词条没提取到描述——这些页面的开头是表格或列表。
@@ -34,17 +34,21 @@
 
 ## 没有人工别名的词条（靠文件名检索）
 
-共 336 个。这些词条的检索键只有英文文件名和路径片段，
+共 305 个。这些词条的检索键只有英文文件名和路径片段，
 中文用户可能问不中。**优先补高频的**：
 
 - `basic/amortized-analysis.md`
-- `basic/binary-lifting.md`
+- `basic/bucket-sort.md`
 - `basic/complexity.md`
 - `basic/construction.md`
 - `basic/index.md`
+- `basic/insertion-sort.md`
 - `basic/quick-sort.md`
+- `basic/selection-sort.md`
 - `basic/shell-sort.md`
+- `basic/simulate.md`
 - `basic/sort-intro.md`
+- `basic/stl-sort.md`
 - `basic/tim-sort.md`
 - `basic/tournament-sort.md`
 - `basic/use-of-sort.md`
@@ -61,23 +65,19 @@
 - `contest/resources.md`
 - `contest/roadmap.md`
 - `dp/basic.md`
-- `dp/count.md`
 - `dp/dag.md`
 - `dp/dp-of-dp.md`
 - `dp/dynamic.md`
 - `dp/index.md`
-- `dp/knapsack/advanced.md`
-- `dp/knapsack/basic.md`
 - `dp/memo.md`
-- `dp/number.md`
 - `dp/opt/dp-opt.md`
-- `dp/opt/monotonic-queue-stack.md`
-- `dp/opt/quadrangle.md`
-- `dp/opt/slope-trick.md`
-- `dp/opt/slope.md`
 - `dp/opt/state.md`
 - `dp/opt/wqs-binary-search.md`
-- …还有 296 个
+- `ds/aa-tree.md`
+- `ds/avl.md`
+- `ds/balanced-in-seg.md`
+- `ds/binary-heap.md`
+- …还有 265 个
 
 ## 用法
 
