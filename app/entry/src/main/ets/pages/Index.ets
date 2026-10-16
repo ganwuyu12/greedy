@@ -60,6 +60,10 @@ struct Index {
   @State voiceOk: boolean = false;         // 语音可用性
   @State ttsOk: boolean = false;
   @State listening: boolean = false;       // 正在识别
+  /** 正在启动（申请权限 / 建引擎）——这期间用户可能已松手 */
+  private voiceStarting: boolean = false;
+  /** 用户是否已松手 */
+  private released: boolean = false;
   @State partialText: string = '';         // 识别中的实时文字
   @State voiceHint: string = '';           // 语音相关提示
   @State autoSpeak: boolean = true;        // 自动朗读回答
@@ -171,20 +175,27 @@ struct Index {
 
   /** 按下麦克风：开始识别 */
   private async startVoice(): Promise<void> {
-    if (this.listening) {
+    if (this.listening || this.voiceStarting) {
       return;
     }
     if (!this.voiceOk) {
       this.voiceHint = '本设备不支持语音识别，可以用打字';
       return;
     }
+    // 标记「正在启动」——因为申请权限是异步的（首次会弹窗），
+    // 这期间用户可能已经松手了，必须记住这个意图
+    this.voiceStarting = true;
+    this.released = false;
+
     const granted = await this.requestMic();
     if (!granted) {
+      this.voiceStarting = false;
       this.voiceHint = '没有麦克风权限，请在系统设置里允许';
       return;
     }
     this.voice.stopSpeak();      // 说话时打断正在朗读的回答
     this.listening = true;
+    this.voiceStarting = false;
     this.partialText = '';
     this.voiceHint = '正在听…';
 
@@ -206,15 +217,37 @@ struct Index {
         this.voiceHint = m;
       }
     };
-    await this.voice.startAsr(cb);
+    const started = await this.voice.startAsr(cb);
+
+    // 启动期间用户已经松手 → 立刻结束这次识别
+    // （否则会一直录到静音超时，用户以为没反应）
+    if (started && this.released) {
+      this.voice.stopAsr();
+    }
   }
 
-  /** 松开麦克风：结束识别 */
+  /**
+   * 松开麦克风：结束识别
+   *
+   * 注意：不能只判断 this.listening——
+   * 权限申请和引擎创建都是异步的，用户可能在那期间就松手了。
+   * 所以记一个 released 标记，让 startVoice 启动完成后自己收尾。
+   */
   private stopVoice(): void {
+    this.released = true;
     if (!this.listening) {
       return;
     }
+    this.listening = false;
     this.voice.stopAsr();
+    // 兜底：设备没麦克风时引擎不会回调，界面会卡在「正在听…」
+    // 所以等一段时间还没结果就自己复位并给出提示
+    setTimeout(() => {
+      if (this.partialText.length === 0 && this.voiceHint === '正在听…') {
+        this.voiceHint = '没听到声音——模拟器通常没有麦克风，可以打字';
+        this.partialText = '';
+      }
+    }, 2500);
   }
 
   /** 朗读一段回答 */
@@ -755,19 +788,24 @@ struct Index {
           .onChange((v: string) => { this.inputText = v; })
           .onSubmit(() => { this.send(this.inputText); })
 
-        // 按住说话（不支持语音的设备上不显示）
+        // 语音按钮：点一下开始、再点一下结束
+        //
+        // 为什么不做成「按住说话」：
+        //   按住需要 Down/Up 配对，而权限申请和引擎创建是异步的，
+        //   首次使用时用户往往在弹窗期间就松手了，容易「没反应」。
+        //   点按式更宽容：两种操作都支持，也更容易在模拟器上验证。
         if (this.voiceOk) {
-          Button(this.listening ? '松' : '说')
+          Button(this.listening ? '停' : '说')
             .width(46).height(42).fontSize(14)
             .margin({ left: 8 })
             .backgroundColor(this.listening ? '#E6483C' : '#EEF2FF')
             .fontColor(this.listening ? '#FFFFFF' : '#2E6BE6')
             .enabled(!this.sending)
-            .onTouch((e: TouchEvent) => {
-              if (e.type === TouchType.Down) {
-                this.startVoice();
-              } else if (e.type === TouchType.Up || e.type === TouchType.Cancel) {
+            .onClick(() => {
+              if (this.listening) {
                 this.stopVoice();
+              } else {
+                this.startVoice();
               }
             })
         }

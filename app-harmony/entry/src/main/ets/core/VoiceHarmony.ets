@@ -63,8 +63,19 @@ export class HarmonyVoiceService implements IVoiceService {
           online: 1,                      // 1 = 离线（当前只支持离线）
           extraParams: {
             'locate': 'CN',
-            'recognizerMode': 'short',            // 短句
-            'sysGeneralLexicon': ALGO_HOTWORDS    // 算法术语热词，最多 200 个
+            'recognizerMode': 'short'
+            // ⚠️ 热词（sysGeneralLexicon）暂时不加。
+            //
+            // 实测报错：createEngine code = 601
+            // 日志：CheckLexicons: lexicons length exceeds limit, length: 21
+            //       并伴随 not system app! reset config to default
+            //
+            // 查证：热词表本身合规（79 个词，每个 2–7 字，
+            //       文档说限「最多 200 个、每个 2–20 字」，都满足）。
+            // 所以 601 更可能来自「非系统应用不允许配热词」这条限制。
+            //
+            // 热词只是识别率的优化项，不是必需项——先保证功能可用。
+            // 真机 + 系统应用签名时可以再试；热词表见 Voice.ets 的 ALGO_HOTWORDS。
           }
         };
         this.asrEngine = await speechRecognizer.createEngine(params);
@@ -116,11 +127,30 @@ export class HarmonyVoiceService implements IVoiceService {
       engine.startListening(startParams);
       return true;
     } catch (e) {
+      // 把 code 也带出来——只有 message 时经常是空串（实测显示成「msg」），
+      // 错误码才是定位问题的关键
       const err = e as BusinessError;
-      this.lastError = err.message ?? String(e);
-      cb.onError(`启动识别失败：${this.lastError}`);
+      const code: number = err.code ?? -1;
+      const msg: string = err.message ?? String(e);
+      this.lastError = `code=${code} msg=${msg}`;
+      cb.onError(`启动识别失败（${HarmonyVoiceService.explainCode(code)}）`);
       return false;
     }
+  }
+
+  /**
+   * 把错误码翻译成可操作的建议
+   *
+   * 401 = 权限没给；801 = 能力不支持。
+   */
+  private static explainCode(code: number): string {
+    if (code === 401) {
+      return '401 没有录音权限，请在系统设置里允许麦克风';
+    }
+    if (code === 801) {
+      return '801 设备不支持该能力';
+    }
+    return `code=${code}`;
   }
 
   stopAsr(): void {
@@ -132,6 +162,25 @@ export class HarmonyVoiceService implements IVoiceService {
     } catch (e) {
       // 没在识别时调用会抛错
     }
+  }
+
+  /**
+   * 结束并**保证回调一定被触发**
+   *
+   * 为什么需要：如果设备没有麦克风（模拟器常见），
+   * 引擎收不到音频就不会产生 onResult/onComplete，
+   * 界面会永远卡在「正在听…」。
+   * 所以这里做一个兜底：等一小段时间，没等到回调就主动报错让 UI 复位。
+   */
+  finishWithFallback(onTimeout: () => void, waitMs: number = 2500): void {
+    this.stopAsr();
+    setTimeout(() => {
+      // 若引擎已释放或已回调过，说明正常结束，不用兜底
+      if (this.asrEngine === null) {
+        return;
+      }
+      onTimeout();
+    }, waitMs);
   }
 
   cancelAsr(): void {

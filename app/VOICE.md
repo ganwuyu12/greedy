@@ -295,10 +295,92 @@ extraParams: {
 
 ---
 
+## 第 5 步：实测验证（模拟器）
 
+### 结论：代码全链路正确，卡在模拟器没有麦克风
 
+**验证到的（日志为证）**：
 
+| 环节 | 证据 | 状态 |
+|---|---|---|
+| 语音能力检测 | `canIUse` 通过，「说」按钮正常显示 | ✅ |
+| 麦克风权限 | `ATM: GetSelfPermissionState MICROPHONE status: 0` | ✅ |
+| 引擎创建 | `AI_TEXT: verify callbackInfo asrEngineOptions [language: zh-CN, online: 1.00, locate: CN, recognizerMode: short]` | ✅ |
+| 开始识别 | `HiAI_ASR_AsrEntryManager: calling startListening`<br>`ReportCoreManager: result_code: "0", message: "success"` | ✅ |
+| 界面响应 | 截图显示「正在听…」+ 按钮变红「停」 | ✅ |
+| 结束识别 | `Handle TouchUp → calling finish function`<br>`FinishRecognizerSync: Finish result code: 0` | ✅ |
+| **音频输入** | **`"audioTimeLong": 0`** | ❌ |
+| 识别出文字 | 无 `onResult` 回调（因上一条） | ❌ |
 
+**根因**：模拟器没有音频输入设备。
+
+```
+"device_model": "emulator"
+"audioTimeLong": 0          ← 录到的音频长度是 0
+```
+
+`/proc/asound/cards` 为空，模拟器镜像未提供麦克风输入。
+
+**这不是代码问题**——同一套代码在真机上应该能识别。
+
+### 顺带修掉的两个真 bug
+
+**① 「按住说话」的竞态**
+
+```typescript
+private async startVoice() {
+  const granted = await this.requestMic();   // 异步！首次会弹权限窗
+  ...
+  this.listening = true;                     // 这里才置位
+}
+private stopVoice() {
+  if (!this.listening) return;               // 松手时还没置位 → 被挡掉
+}
+```
+
+首次使用时权限弹窗要等几秒，用户松手时 `listening` 还是 `false`，
+`stopVoice` 直接 return —— 表现为「松手没反应」。
+
+**修法**：加 `released` 标记记住「用户已松手」，
+`startVoice` 启动完成后自己收尾。
+
+**② 按钮从「按住」改成「点按」**
+
+按住式需要 Down/Up 配对，在模拟器上用鼠标很难操作。
+点按式更宽容，也更容易验证。
+
+### 顺带发现：热词导致引擎创建失败
+
+配了 79 个算法术语热词后，`createEngine` 报错：
+
+```
+E AI_TEXT: [CheckLexicons] lexicons length exceeds limit, length: 21
+I AI_TEXT: [CommonCallbackRoutine] createEngine code = 601
+W AI_TEXT: [ParseAsrEngineOptions] not system app! reset config to default
+```
+
+**查证发现矛盾**：文档说「最多 200 个热词，每个 2–20 字符」，
+而我的热词表是 79 个词、每个 2–7 字，**完全合规**。
+
+所以 `601` 更可能来自 `not system app` 这条限制——
+**非系统应用不允许配置热词**，配置被重置时校验失败。
+
+**处理**：去掉热词（它只是识别率优化项，非必需），功能先跑通。
+热词表保留在 `Voice.ets` 的 `ALGO_HOTWORDS` 里，
+真机 + 系统签名时可以再试。
+
+### 真机验证清单（待办）
+
+在真机上应确认：
+
+1. 识别是否能出文字（模拟器因无麦克风无法验证）
+2. TTS 是否有声音
+3. 热词在真机 + 系统签名下能否生效
+4. 完整链路：说话 → 识别 → Agent 回答 → 朗读
+
+---
+
+## 附：DevEco「模块显示 [none]、无法运行」的解决
 ## 附：DevEco「模块显示 [none]、无法运行」的解决
 
 **症状**：打开工程后，`Edit Configurations` 里模块显示 `[none]`、目标为空，
