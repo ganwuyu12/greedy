@@ -221,11 +221,80 @@ greedy-harmony/     鸿蒙单端工程
 
 ---
 
-## 实际决定
+## 实际决定：方案 C（双工程）
 
-（待定 —— 需要确认）
+**已实施并验证。**
+
+### 两个工程
+
+| 工程 | 路径 | 作用 | 语音 |
+|---|---|---|---|
+| **greedy-app** | `E:\projects\greedy-app` | ArkUI-X 跨端（鸿蒙 + Android） | ❌ 占位实现 |
+| **greedy-harmony** | `E:\projects\greedy-harmony` | 鸿蒙单端 | ✅ **真实实现** |
+
+### 结果
+
+✅ **鸿蒙单端工程 `BUILD SUCCESSFUL`** —— 语音 API 静态 import 可用
+（`11706007 can't support crossplatform` 完全消失）
+
+```
+HAP: entry-default-unsigned.hap   517 KB
+     （比跨端版 474 KB 大，因为含真实语音实现）
+```
+
+### 共享机制
+
+新建 `sync_shared.py` 保证两边一致：
+
+```bash
+python sync_shared.py          # 检查一致性
+python sync_shared.py --diff   # 显示差异
+python sync_shared.py --apply  # 跨端 → 鸿蒙 同步
+```
+
+**共享清单怎么定的**：逐个查 import，只有不含平台特有 API 的文件才能共享。
+
+| 类别 | 文件 | 数量 |
+|---|---|---|
+| **共享**（两边必须一致） | `Agent` `CFClient` `Config` `Persona` `SessionStore` `Tools` `WikiIndex` `Voice`(接口) `Index`(UI) + 3 个资源/配置 | **12** |
+| **平台特有**（各管各的） | `VoiceHarmony.ets` | **1** |
+
+**实测结果**：`一致 12 / 不一致 0 / 缺失 0`
+
+**为什么 `Voice.ets` 能共享**：它只定义接口 + 空实现 + 热词表 + Markdown 清理，
+**不含任何平台 API**，所以跨端与单端都能编译。
+
+### 修掉的 4 处 API 误用
+
+写第一版时我按印象猜了参数，编译器逐条纠正（**这些只有真实编译才能发现**）：
+
+| # | 我猜的 | 实际定义 |
+|---|---|---|
+| 1 | `finish()` / `cancel()` 无参 | `finish(sessionId)` / `cancel(sessionId)` |
+| 2 | `StartParams.audioSourceType` | `StartParams.audioInfo`（含 4 个必填字段） |
+| 3 | `SpeakParams` 有 speed/volume/pitch | **只有 `requestId` + `extraParams`** |
+| 4 | `onData(requestId, response)` | `onData(requestId, audio: ArrayBuffer, response)` |
+
+顺带发现了正确的参数：
+
+```typescript
+// ASR 音频配置（4 个字段都必填，且只支持这些值）
+audioInfo: {
+  audioType: 'pcm',      // 只支持 pcm
+  sampleRate: 16000,     // 只支持 16000
+  soundChannel: 1,       // 只支持单声道
+  sampleBit: 16          // 只支持 16 位
+}
+
+// TTS 的可用参数（没有语速控制）
+extraParams: {
+  style: 'interaction-broadcast',   // 只支持这一种风格
+  locate: 'CN'
+}
+```
 
 ---
+
 
 
 
