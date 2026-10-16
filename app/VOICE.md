@@ -299,3 +299,46 @@ extraParams: {
 
 
 
+## 附：DevEco「模块显示 [none]、无法运行」的解决
+
+**症状**：打开工程后，`Edit Configurations` 里模块显示 `[none]`、目标为空，
+报「目标不能为空，请检查 build-profile.json5」。
+
+**排查**：`build-profile.json5` 本身是正确的。真正原因是
+**工程缺少 `.idea` 目录**——DevEco 靠它建立模块索引。
+
+```powershell
+# 检查
+Test-Path "E:\projects\greedy-harmony\.idea"   # False ← 这就是原因
+```
+
+**为什么缺**：工程是用 robocopy 从 `greedy-app` 复制出来的，
+当时排除了 `.idea`（它通常被视为 IDE 个人配置，不入库）。
+
+**修复三步**：
+
+1. **补 `.idea` 并改名**
+   ```powershell
+   robocopy "$src\.idea" "$dst\.idea" /E
+   "greedy_harmony" | Out-File "$dst\.idea\.name" -Encoding utf8 -NoNewline
+   ```
+
+2. **清掉从旧工程带来的残留**（否则仍会识别成旧工程）
+   - `.idea/workspace.xml` —— 含 `greedy_app [assembleDevHqf]` 等运行配置
+   - `.idea/.deveco/` —— 旧工程的模块缓存
+   - `.idea/modules/*.iml` 里指向 `.arkui-x` 的 excludeFolder（单端工程没这目录）
+   - `.idea/modules.xml` 与 `.iml` 文件名保持一致
+
+3. **修正 `local.properties`**
+   单端工程不该有 `arkui-x.dir`（那是跨端工程才需要的）：
+   ```properties
+   nodejs.dir=C\:\\Program Files\\nodejs
+   hwsdk.dir=E\:\\deveco studio\\sdk
+   ```
+
+**修复后**：`hvigorw ... assembleHap` → `BUILD SUCCESSFUL`
+
+**教训**：手工复制工程时，`.idea` 不是可有可无的——
+它决定了 IDE 能否识别模块。排查这类问题时先看它。
+
+---
