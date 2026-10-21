@@ -24,3 +24,5 @@ data/output/
 # 用 fetch_corpus.py 或 git clone 重建，见 SETUP.md
 data/oi_wiki_docs/
 data/oi_wiki_clean/
+# 临时文件
+_*.txt
